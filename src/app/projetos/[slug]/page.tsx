@@ -24,7 +24,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   const projectDetails = [
-    { label: "Data", value: project.date },
+    { label: "Ano de conclusão", value: project.date },
     { label: "Local", value: project.place },
     { label: "Arquitetura", value: project.architecture },
     { label: "Fotografia", value: project.photo },

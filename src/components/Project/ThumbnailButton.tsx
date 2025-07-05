@@ -18,7 +18,7 @@ export default function ThumbnailButton({
   return (
     <button
       onClick={onClick}
-      className={`relative flex-shrink-0 w-16 h-16 overflow-hidden rounded-sm transition-all duration-200 
+      className={`relative flex-shrink-0 w-10 h-10 overflow-hidden rounded-sm transition-all duration-200 
                  border-2 ${
                    isSelected
                      ? "border-white opacity-100"

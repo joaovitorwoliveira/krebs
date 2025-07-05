@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
+
 import NavigationButton from "./NavigationButton";
 import ThumbnailButton from "./ThumbnailButton";
 
@@ -90,17 +91,17 @@ export default function ImageModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex flex-col bg-black/50 backdrop-blur-lg"
+      className="fixed inset-0 z-50 flex flex-col bg-dark"
       onClick={handleBackdropClick}
     >
-      <div className="relative z-20 p-6 flex justify-between items-center backdrop-blur-sm">
+      <div className="relative z-20 p-6 flex justify-between items-center">
         <div className="text-white text-sm font-medium">
           {selectedImageIndex + 1} / {images.length}
         </div>
 
         <button
           onClick={onClose}
-          className="text-white text-4xl hover:text-gray-300 transition-all duration-200 cursor-pointer 
+          className="text-white text-4xl hover:text-green-1 transition-all duration-200 cursor-pointer 
                      w-10 h-10 flex items-center justify-center
                      hover:scale-110"
         >
@@ -109,7 +110,7 @@ export default function ImageModal({
       </div>
 
       <div
-        className="flex-1 flex items-center justify-center relative px-0 sm:px-4"
+        className="flex-1 flex items-center justify-center relative px-0 sm:px-2"
         onClick={handleBackdropClick}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
@@ -128,7 +129,7 @@ export default function ImageModal({
         )}
 
         <div
-          className="relative max-w-[100vw] sm:max-w-[85vw] max-h-[80vh] w-full h-full flex items-center justify-center"
+          className="relative w-full h-full flex items-center justify-center"
           onClick={(e) => e.stopPropagation()}
         >
           <Image
@@ -140,8 +141,8 @@ export default function ImageModal({
         </div>
       </div>
 
-      <div className="p-4 backdrop-blur-sm">
-        <div className="flex gap-2 justify-center overflow-x-auto max-w-full scrollbar-hide">
+      <div className="p-2">
+        <div className="flex gap-1 justify-center overflow-x-auto max-w-full scrollbar-hide">
           {images.map((image, index) => (
             <ThumbnailButton
               key={index}
@@ -157,3 +158,5 @@ export default function ImageModal({
     </div>
   );
 }
+
+// max-w-[120vw] sm:max-w-[85vw] max-h-[100vh]
