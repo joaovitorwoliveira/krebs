@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Encode_Sans } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import CopyrightTooltip from "@/components/CopyrightTooltip";
 
 const encodeSans = Encode_Sans({
   variable: "--font-encode-sans",
@@ -22,9 +24,15 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${encodeSans.variable} ${encodeSans.className} antialiased`}
+        className={`${encodeSans.variable} ${encodeSans.className} antialiased bg-light text-dark select-none`}
       >
-        {children}
+        <div className="pointer-events-auto">
+          <Header />
+          <div className="select-none [&_img]:pointer-events-none [&_img]:select-none [&_img]:drag-none">
+            {children}
+          </div>
+        </div>
+        <CopyrightTooltip />
       </body>
     </html>
   );

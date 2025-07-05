@@ -43,12 +43,10 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #f3efeb;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: var(--font-encode-sans), sans-serif;
 }
