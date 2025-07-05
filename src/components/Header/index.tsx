@@ -36,7 +36,7 @@ export default function Header() {
   return (
     <>
       <header className="bg-white h-14 flex items-center relative z-50">
-        <div className="container mx-auto px-4 py-3 md:px-6">
+        <div className="container mx-auto px-4 py-3 md:px-6 ">
           <div className="flex items-center justify-between">
             <div className="flex-shrink-0">
               <Link href="/">
@@ -59,7 +59,7 @@ export default function Header() {
               ))}
             </nav>
 
-            <div className="hidden md:flex items-center space-x-2">
+            <div className="hidden md:flex items-center space-x-4">
               {socialLinks.map((social, index) => (
                 <SocialIcon
                   key={index}
@@ -78,7 +78,7 @@ export default function Header() {
                 alt={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
                 width={50}
                 height={40}
-                className={`h-5 w-auto transition-transform duration-500 ease-in-out ${
+                className={`h-5 w-auto transition-transform duration-400 ease-in-out ${
                   isMobileMenuOpen ? "-rotate-45" : "rotate-0"
                 }`}
               />

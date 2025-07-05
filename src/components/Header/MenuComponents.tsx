@@ -36,9 +36,9 @@ export function NavLink({ href, children }: NavLinkProps) {
   );
 }
 
-export function SocialIcon({ href, iconName, size = 16 }: SocialIconProps) {
+export function SocialIcon({ href, iconName, size = 18 }: SocialIconProps) {
   const baseClasses =
-    "w-6 h-6 flex items-center justify-center text-dark hover:text-green-2 transition-all duration-200";
+    "flex items-center justify-center text-dark hover:text-green-2 transition-all duration-200";
 
   const IconComponent = (
     LucideIcons as unknown as Record<
@@ -57,7 +57,7 @@ export function SocialIcon({ href, iconName, size = 16 }: SocialIconProps) {
 
   return (
     <a href={href} target="_blank" className={baseClasses}>
-      <IconComponent size={size} strokeWidth={2} />
+      <IconComponent size={size} strokeWidth={1} />
     </a>
   );
 }

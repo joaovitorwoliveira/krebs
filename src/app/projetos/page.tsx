@@ -1,32 +1,111 @@
+"use client";
+
 import { projects } from "./projects";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, Variants, useInView } from "framer-motion";
+import { useMemo, useRef } from "react";
 
 export default function Projects() {
+  const projectRows = useMemo(() => {
+    const rows = [];
+    const itemsPerRow = 3;
+
+    for (let i = 0; i < projects.length; i += itemsPerRow) {
+      rows.push(projects.slice(i, i + itemsPerRow));
+    }
+    return rows;
+  }, []);
+
+  const rowVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 60,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94],
+        staggerChildren: 0.05,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.95,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.4,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
+  };
+
+  function ProjectRow({
+    row,
+    rowIndex,
+  }: {
+    row: typeof projects;
+    rowIndex: number;
+  }) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+    return (
+      <motion.div
+        ref={ref}
+        variants={rowVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-3"
+      >
+        {row.map((project, itemIndex) => {
+          const globalIndex = rowIndex * 3 + itemIndex;
+          return (
+            <motion.div key={globalIndex} variants={itemVariants}>
+              <Link
+                href={`/projetos/${project.slug}`}
+                className="relative group cursor-pointer block"
+              >
+                <motion.div className="aspect-[4/3] relative overflow-hidden">
+                  <Image
+                    src={project.coverPhoto}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-400 group-hover:scale-101"
+                  />
+                  <motion.div
+                    className="absolute inset-0 bg-black"
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 0.2 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </motion.div>
+                <motion.div className="p-2" variants={itemVariants}>
+                  <h3 className="text-dark text-xs font-light text-center">
+                    {project.title}
+                  </h3>
+                </motion.div>
+              </Link>
+            </motion.div>
+          );
+        })}
+      </motion.div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mx-4  md:mx-6">
-        {projects.map((project, index) => (
-          <Link
-            key={index}
-            href={`/projetos/${project.slug}`}
-            className="relative group cursor-pointer"
-          >
-            <div className="aspect-[4/3] relative overflow-hidden">
-              <Image
-                src={project.coverPhoto}
-                alt={project.title}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-101"
-              />
-              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-            </div>
-            <div className="p-2">
-              <h3 className="text-dark text-xs font-light text-center">
-                {project.title}
-              </h3>
-            </div>
-          </Link>
+      <div className="mx-4 md:mx-6">
+        {projectRows.map((row, rowIndex) => (
+          <ProjectRow key={rowIndex} row={row} rowIndex={rowIndex} />
         ))}
       </div>
     </div>

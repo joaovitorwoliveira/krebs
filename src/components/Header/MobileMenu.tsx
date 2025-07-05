@@ -51,14 +51,14 @@ export default function MobileMenu({
   return (
     <>
       <div
-        className={`fixed inset-0 bg-black/20 z-40 transition-opacity duration-500 ${
+        className={`fixed inset-0 bg-black/20 z-40 transition-opacity duration-400 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={onClose}
       />
 
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-52 bg-white shadow-lg z-40 transform transition-transform duration-400 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

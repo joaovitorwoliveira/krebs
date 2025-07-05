@@ -1,7 +1,10 @@
 "use client";
+
+import Image from "next/image";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
-import Image from "next/image";
+import { motion } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -18,8 +21,26 @@ const images = [
 ];
 
 export default function HeroCarousel() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
-    <div className="h-full w-full relative overflow-hidden">
+    <motion.div
+      className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 backdrop-blur-[1px]"
+      initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+      animate={{ opacity: 1, backdropFilter: "blur(1px)" }}
+      transition={{ duration: 1.2, delay: 0.5 }}
+    >
       <Swiper
         modules={[Autoplay, EffectFade, Pagination]}
         effect="fade"
@@ -41,21 +62,37 @@ export default function HeroCarousel() {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="relative h-full w-full">
+            <motion.div
+              className="relative h-full w-full"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.6,
+                delay: index === 0 ? 0.3 : 0,
+                ease: "easeOut",
+              }}
+            >
               <Image
                 src={image}
                 alt={`Slide ${index + 1}`}
                 fill
-                className="object-cover"
+                className="object-cover object-center sm:object-center md:object-center"
                 priority={index === 0}
                 sizes="100vw"
+                quality={80}
+                unoptimized={isMobile}
               />
 
-              <div className="absolute inset-0 bg-black/10"></div>
-            </div>
+              <motion.div
+                className="absolute inset-0 bg-black/10"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              />
+            </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </motion.div>
   );
 }
