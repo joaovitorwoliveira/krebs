@@ -1,5 +1,6 @@
 import { projects } from "../projects";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import ImageGallery from "../../../components/Project/ImageGallery";
 import { ProjectDetail } from "../../../components/Project/ProjectDetails";
 
@@ -32,7 +33,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-8xl mx-auto px-4 md:px-6 py-8">
+      <div className="max-w-8xl mx-auto px-4 md:px-6 py-4">
+        <Link
+          href="/projetos"
+          className="inline-flex items-center text-dark text-xs font-light mb-4 hover:opacity-70 transition-opacity duration-200"
+        >
+          ← Voltar para Projetos
+        </Link>
+
         <h1 className="text-3xl md:text-4xl text-dark font-semibold mb-6">
           {project.title}
         </h1>

@@ -103,7 +103,7 @@ export default function ImageGallery({
                 className="break-inside-avoid mb-3 cursor-pointer"
                 style={{ height }}
                 onClick={() => openModal(index)}
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.3 }}
               >
                 <div className="relative w-full h-full overflow-hidden">
@@ -111,7 +111,7 @@ export default function ImageGallery({
                     src={image}
                     alt={`${projectTitle} - Imagem ${index + 1}`}
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    className="object-cover"
                   />
                   <motion.div
                     className="absolute inset-0 bg-black"
