@@ -1,20 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Instagram, Linkedin, LucideIcon } from "lucide-react";
 
-interface NavLinkProps {
-  href: string;
-  children: React.ReactNode;
-}
-
-interface SocialIconProps {
-  href: string;
-  icon: LucideIcon;
-  size?: number;
-}
+import { NavLink, SocialIcon } from "./MenuComponents";
 
 const navigationLinks = [
   { href: "/projetos", label: "PROJETOS" },
@@ -24,45 +11,16 @@ const navigationLinks = [
 ];
 
 const socialLinks = [
-  { href: "#", icon: Instagram },
-  { href: "#", icon: Linkedin },
+  { href: "https://www.instagram.com/krebsmais/", iconName: "Instagram" },
+  {
+    href: "https://www.linkedin.com/company/krebsmais/posts/?feedView=all",
+    iconName: "Linkedin",
+  },
 ];
-
-function NavLink({ href, children }: NavLinkProps) {
-  const pathname = usePathname();
-  const isActive = pathname === href;
-
-  return (
-    <Link
-      href={href}
-      className={`text-dark hover:text-green-4 transition-colors duration-200 font-light relative group ${
-        isActive ? "text-green-4" : ""
-      }`}
-    >
-      {children}
-      <span
-        className={`absolute bottom-0 left-0 h-[0.5px] bg-green-4 transition-all duration-300 ease-out ${
-          isActive ? "w-full" : "w-0 group-hover:w-full"
-        }`}
-      ></span>
-    </Link>
-  );
-}
-
-function SocialIcon({ href, icon: Icon, size = 16 }: SocialIconProps) {
-  const baseClasses =
-    "w-7 h-7 flex items-center justify-center text-dark hover:text-green-2 transition-all duration-200";
-
-  return (
-    <a href={href} className={baseClasses}>
-      <Icon size={size} />
-    </a>
-  );
-}
 
 export default function Header() {
   return (
-    <header className="bg-white h-14 flex items-center">
+    <header className="bg-white h-14 flex items-center relative z-10">
       <div className="container mx-auto px-4 py-3 md:px-6">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
@@ -73,6 +31,7 @@ export default function Header() {
                 width={200}
                 height={40}
                 className="h-7 w-auto"
+                priority
               />
             </Link>
           </div>
@@ -87,7 +46,11 @@ export default function Header() {
 
           <div className="hidden md:flex items-center space-x-2">
             {socialLinks.map((social, index) => (
-              <SocialIcon key={index} href={social.href} icon={social.icon} />
+              <SocialIcon
+                key={index}
+                href={social.href}
+                iconName={social.iconName}
+              />
             ))}
           </div>
 

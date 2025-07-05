@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Projects() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mx-4 pt-2 md:mx-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mx-4  md:mx-6">
         {projects.map((project, index) => (
           <Link
             key={index}

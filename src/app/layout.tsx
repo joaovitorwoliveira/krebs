@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "Escritório de paisagismo Krebs + - Criamos paisagens, criamos emoções.",
   icons: {
-    icon: "/images/k-plus-icon.png",
+    icon: "/images/k-plus-icon-gray.png",
   },
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${encodeSans.variable} ${encodeSans.className} antialiased bg-white text-dark select-none`}
+        className={`${encodeSans.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-y-scroll`}
       >
         <div className="pointer-events-auto">
           <Header />

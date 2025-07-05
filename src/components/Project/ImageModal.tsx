@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import NavigationButton from "./NavigationButton";
 import ThumbnailButton from "./ThumbnailButton";
@@ -29,11 +29,14 @@ export default function ImageModal({
 
   const minSwipeDistance = 50;
 
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === "Escape") onClose();
-    if (e.key === "ArrowRight") onNext();
-    if (e.key === "ArrowLeft") onPrevious();
-  };
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowRight") onNext();
+      if (e.key === "ArrowLeft") onPrevious();
+    },
+    [onClose, onNext, onPrevious]
+  );
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
@@ -81,7 +84,7 @@ export default function ImageModal({
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "unset";
     };
-  }, [selectedImageIndex]);
+  }, [selectedImageIndex, handleKeyDown]);
 
   if (selectedImageIndex === null) return null;
 
@@ -112,7 +115,6 @@ export default function ImageModal({
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
-        {/* Mostrar botões de navegação apenas em telas maiores */}
         {selectedImageIndex > 0 && (
           <NavigationButton onClick={onPrevious} position="left">
             ‹

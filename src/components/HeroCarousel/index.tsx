@@ -19,7 +19,7 @@ const images = [
 
 export default function HeroCarousel() {
   return (
-    <div className="h-[calc(100vh-3.5rem)] w-full relative">
+    <div className="h-full w-full relative overflow-hidden">
       <Swiper
         modules={[Autoplay, EffectFade, Pagination]}
         effect="fade"
