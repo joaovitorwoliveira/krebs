@@ -3,13 +3,41 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Paleta de cores principal */
+  --green-1: #6a7c6d; /* Verde mais claro */
+  --green-2: #58695c; /* Verde claro-médio */
+  --green-3: #6a7c6d; /* Verde médio */
+  --green-4: #344339; /* Verde escuro-médio */
+  --green-5: #223028; /* Verde mais escuro */
+  --light: #f3efeb; /* Tom claro/off-white */
+  --dark: #000000; /* Tom escuro/preto */
+
+  /* Paleta secundária */
+  --brown-1: #994215; /* Marrom escuro */
+  --brown-2: #d67f48; /* Marrom médio */
+  --blue-dark: #212c42; /* Azul escuro */
+  --gray-blue: #788990; /* Cinza azulado */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-encode-sans);
+  --font-mono: var(--font-encode-sans);
+
+  --color-green-1: var(--green-1);
+  --color-green-2: var(--green-2);
+  --color-green-3: var(--green-3);
+  --color-green-4: var(--green-4);
+  --color-green-5: var(--green-5);
+  --color-light: var(--light);
+  --color-dark: var(--dark);
+
+  --color-brown-1: var(--brown-1);
+  --color-brown-2: var(--brown-2);
+  --color-blue-dark: var(--blue-dark);
+  --color-gray-blue: var(--gray-blue);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +50,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-encode-sans), sans-serif;
 }
