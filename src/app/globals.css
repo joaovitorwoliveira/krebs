@@ -50,3 +50,24 @@
 body {
   font-family: var(--font-encode-sans), sans-serif;
 }
+
+/* Estilos customizados para o Swiper */
+.custom-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: var(--green-5) !important;
+  opacity: 1 !important;
+  margin: 0 4px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.custom-bullet-active {
+  background-color: var(--green-3) !important;
+  transform: scale(1.25) !important;
+  box-shadow: 0 0 0 1px rgba(106, 124, 109, 0.3) !important;
+}
+
+.swiper-pagination {
+  bottom: 24px !important;
+}

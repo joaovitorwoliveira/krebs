@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Instagram, Linkedin, Search, Menu, LucideIcon } from "lucide-react";
+import { Instagram, Linkedin, LucideIcon } from "lucide-react";
 
 interface NavLinkProps {
   href: string;
@@ -49,20 +49,20 @@ function SocialIcon({ href, icon: Icon, size = 16 }: SocialIconProps) {
 
 export default function Header() {
   return (
-    <header className="bg-light border-b border-gray-200">
-      <div className="container mx-auto px-4 py-3">
+    <header className="bg-light border-b border-gray-200 h-14 flex items-center">
+      <div className="container mx-auto px-4 py-3 md:px-0 lg:px-6">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
             <Image
               src="/images/logo-escrito-sembg.png"
               alt="Krebs +"
               width={200}
-              height={60}
-              className="h-8 w-auto"
+              height={40}
+              className="h-7 w-auto"
             />
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8 text-sm">
+          <nav className="hidden md:flex items-center space-x-8 text-sm absolute left-1/2 transform -translate-x-1/2">
             {navigationLinks.map((link) => (
               <NavLink key={link.href} href={link.href}>
                 {link.label}
@@ -77,7 +77,13 @@ export default function Header() {
           </div>
 
           <button className="md:hidden flex items-center justify-center">
-            <Menu size={24} className="text-dark" />
+            <Image
+              src="/images/plus-icon.png"
+              alt="Krebs +"
+              width={50}
+              height={40}
+              className="h-5 w-auto"
+            />
           </button>
         </div>
       </div>

@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: "Krebs +",
   description:
     "Escritório de paisagismo Krebs + - Criamos paisagens, criamos emoções.",
+  icons: {
+    icon: "/images/k-plus-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -28,11 +31,13 @@ export default function RootLayout({
       >
         <div className="pointer-events-auto">
           <Header />
-          <div className="select-none [&_img]:pointer-events-none [&_img]:select-none [&_img]:drag-none">
+          <div
+          // className="select-none [&_img]:pointer-events-none [&_img]:select-none [&_img]:drag-none"
+          >
             {children}
           </div>
         </div>
-        <CopyrightTooltip />
+        {/* <CopyrightTooltip /> */}
       </body>
     </html>
   );
