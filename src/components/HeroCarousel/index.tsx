@@ -51,7 +51,7 @@ export default function HeroCarousel() {
                 sizes="100vw"
               />
 
-              <div className="absolute inset-0 bg-black/20"></div>
+              <div className="absolute inset-0 bg-black/10"></div>
             </div>
           </SwiperSlide>
         ))}

@@ -27,17 +27,15 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${encodeSans.variable} ${encodeSans.className} antialiased bg-light text-dark select-none`}
+        className={`${encodeSans.variable} ${encodeSans.className} antialiased bg-white text-dark select-none`}
       >
         <div className="pointer-events-auto">
           <Header />
-          <div
-          // className="select-none [&_img]:pointer-events-none [&_img]:select-none [&_img]:drag-none"
-          >
+          <div className="select-none [&_img]:pointer-events-none [&_img]:select-none [&_img]:drag-none">
             {children}
           </div>
         </div>
-        {/* <CopyrightTooltip /> */}
+        <CopyrightTooltip />
       </body>
     </html>
   );
