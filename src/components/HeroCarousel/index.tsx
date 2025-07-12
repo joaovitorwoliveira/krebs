@@ -57,7 +57,7 @@ export default function HeroCarousel() {
           bulletActiveClass: "custom-bullet-active",
         }}
         loop={true}
-        speed={1000}
+        speed={3000}
         className="h-full w-full active:cursor-grabbing"
       >
         {images.map((image, index) => (

@@ -26,9 +26,10 @@ export default function Projects() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94],
-        staggerChildren: 0.05,
+        duration: 1.5,
+        ease: [0.25, 0.5, 0.7, 1.2],
+        staggerChildren: 0.15,
+        delayChildren: 0.3,
       },
     },
   };
@@ -36,13 +37,13 @@ export default function Projects() {
   const itemVariants: Variants = {
     hidden: {
       opacity: 0,
-      scale: 0.95,
+      scale: 0.9,
     },
     visible: {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 0.4,
+        duration: 1.5,
         ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
@@ -79,7 +80,9 @@ export default function Projects() {
                     src={project.coverPhoto}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-400 group-hover:scale-101"
+                    className="object-cover transition-transform duration-500 group-hover:scale-101"
+                    priority={rowIndex === 0}
+                    loading={rowIndex === 0 ? "eager" : "lazy"}
                   />
                   <motion.div
                     className="absolute inset-0 bg-black"
