@@ -22,16 +22,11 @@ export function NavLink({ href, children }: NavLinkProps) {
   return (
     <Link
       href={href}
-      className={`text-dark hover:text-green-4 transition-colors duration-200 font-light relative group ${
-        isActive ? "text-green-4" : ""
+      className={`text-dark hover:text-green-4 transition-colors duration-200 font-light underline-hover ${
+        isActive ? "text-green-4 active" : ""
       }`}
     >
       {children}
-      <span
-        className={`absolute bottom-0 left-0 h-[0.5px] bg-green-4 transition-all duration-300 ease-out ${
-          isActive ? "w-full" : "w-0 group-hover:w-full"
-        }`}
-      ></span>
     </Link>
   );
 }

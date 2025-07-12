@@ -1,17 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-
   /* Paleta de cores principal */
+  --light: #f3efeb; /* Tom claro/off-white */
+  --dark: #000000; /* Tom escuro/preto */
   --green-1: #6a7c6d; /* Verde mais claro */
   --green-2: #58695c; /* Verde claro-médio */
   --green-3: #6a7c6d; /* Verde médio */
   --green-4: #344339; /* Verde escuro-médio */
   --green-5: #223028; /* Verde mais escuro */
-  --light: #f3efeb; /* Tom claro/off-white */
-  --dark: #000000; /* Tom escuro/preto */
 
   /* Paleta secundária */
   --brown-1: #994215; /* Marrom escuro */
@@ -21,8 +18,6 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-encode-sans);
   --font-mono: var(--font-encode-sans);
 
@@ -40,29 +35,60 @@
   --color-gray-blue: var(--gray-blue);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #f3efeb;
-  }
+/* Texture */
+
+.texture-overlay {
+  position: fixed;
+  inset: 0;
+  background-image: url("/images/texture-01.png");
+  background-repeat: repeat;
+  background-size: auto;
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 999;
 }
 
-body {
-  font-family: var(--font-encode-sans), sans-serif;
+/* Efeito de sublinhado hover reutilizável */
+.underline-hover {
+  position: relative;
 }
+
+.underline-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.5px;
+  width: 0;
+  background-color: var(--green-4);
+  transition: width 0.3s ease-out;
+}
+
+.underline-hover:hover::after {
+  width: 100%;
+}
+
+.underline-hover.active::after {
+  width: 100%;
+}
+/* Swiper bullet styles */
 
 .custom-bullet {
   width: 8px !important;
   height: 8px !important;
   background-color: var(--light) !important;
-  opacity: 1 !important;
   margin: 0 4px !important;
   transition: all 0.3s ease !important;
   cursor: pointer !important;
+  border-radius: 1 !important;
+  opacity: 0.8;
 }
 
 .custom-bullet-active {
   background-color: white !important;
+  width: 16px !important;
+  opacity: 1 !important;
   transform: scale(1.25) !important;
   box-shadow: 0 0 0 0.5px rgba(106, 124, 109, 0.3) !important;
 }

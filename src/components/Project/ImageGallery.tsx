@@ -50,8 +50,8 @@ export default function ImageGallery({
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
+        staggerChildren: 0.2,
+        delayChildren: 0.5,
       },
     },
   };
@@ -59,15 +59,15 @@ export default function ImageGallery({
   const itemVariants: Variants = {
     hidden: {
       opacity: 0,
-      y: 20,
-      scale: 0.95,
+      y: 30,
+      scale: 0.9,
     },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.8,
         ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
@@ -112,6 +112,8 @@ export default function ImageGallery({
                     alt={`${projectTitle} - Imagem ${index + 1}`}
                     fill
                     className="object-cover"
+                    priority={index < 3}
+                    loading={index < 3 ? "eager" : "lazy"}
                   />
                   <motion.div
                     className="absolute inset-0 bg-black"

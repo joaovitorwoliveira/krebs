@@ -1,0 +1,75 @@
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+import NavigationButton from "../NavigationButton";
+
+interface ImageModalContentProps {
+  images: string[];
+  projectTitle: string;
+  selectedImageIndex: number;
+  onNext: () => void;
+  onPrevious: () => void;
+  onBackdropClick: (e: React.MouseEvent) => void;
+  onTouchStart: (e: React.TouchEvent) => void;
+  onTouchMove: (e: React.TouchEvent) => void;
+  onTouchEnd: () => void;
+}
+
+export default function ImageModalContent({
+  images,
+  projectTitle,
+  selectedImageIndex,
+  onNext,
+  onPrevious,
+  onBackdropClick,
+  onTouchStart,
+  onTouchMove,
+  onTouchEnd,
+}: ImageModalContentProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      transition={{
+        duration: 0.4,
+        delay: 0.1,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      }}
+      className="flex-1 flex items-center justify-center relative px-0 sm:px-2"
+      onClick={onBackdropClick}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
+      {selectedImageIndex > 0 && (
+        <NavigationButton onClick={onPrevious} position="left">
+          ‹
+        </NavigationButton>
+      )}
+
+      {selectedImageIndex < images.length - 1 && (
+        <NavigationButton onClick={onNext} position="right">
+          ›
+        </NavigationButton>
+      )}
+
+      <motion.div
+        key={selectedImageIndex}
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -20 }}
+        transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="relative w-full h-full flex items-center justify-center"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <Image
+          src={images[selectedImageIndex]}
+          alt={`${projectTitle} - Imagem ${selectedImageIndex + 1}`}
+          fill
+          className="object-contain"
+        />
+      </motion.div>
+    </motion.div>
+  );
+}
