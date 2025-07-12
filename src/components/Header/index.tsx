@@ -45,7 +45,15 @@ export default function Header() {
                   alt="Krebs +"
                   width={200}
                   height={40}
-                  className="h-7 w-auto"
+                  className="h-7 w-auto hidden md:block"
+                  priority
+                />
+                <Image
+                  src="/images/k-plus-icon.png"
+                  alt="Krebs +"
+                  width={180}
+                  height={30}
+                  className="h-8 w-auto md:hidden"
                   priority
                 />
               </Link>

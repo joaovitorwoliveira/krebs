@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, Variants, useInView } from "framer-motion";
+
 import { ProjectDetail } from "./ProjectDetails";
 
 interface ProjectTextsProps {
