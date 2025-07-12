@@ -1,10 +1,11 @@
 "use client";
 
-import { projects } from "./projects";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, Variants, useInView } from "framer-motion";
 import { useMemo, useRef } from "react";
+import { motion, Variants, useInView } from "framer-motion";
+
+import { projects } from "./projects";
 
 export default function Projects() {
   const projectRows = useMemo(() => {

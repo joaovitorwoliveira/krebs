@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
+
 import { workMethodContent } from "@/app/escritorio/office";
 
 export default function WorkMethodSection() {
@@ -64,7 +65,7 @@ export default function WorkMethodSection() {
 
         <motion.div variants={itemVariants} className="order-2 lg:order-2">
           <Image
-            className="shadow-lg"
+            className="shadow-lg w-full"
             src={workMethodContent.image.src}
             alt={workMethodContent.image.alt}
             unoptimized

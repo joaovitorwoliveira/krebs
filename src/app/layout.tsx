@@ -28,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${encodeSans.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-y-scroll`}
       >
+        <div className="texture-overlay"></div>
         <div className="pointer-events-auto">
           <Header />
           <div

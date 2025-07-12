@@ -1,9 +1,10 @@
 "use client";
 
-import HeroCarousel from "@/components/HeroCarousel";
-import Loading from "@/components/Loading";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+import HeroCarousel from "@/components/HeroCarousel";
+import Loading from "@/components/Loading";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);

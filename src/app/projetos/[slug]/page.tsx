@@ -1,8 +1,9 @@
-import { projects } from "../projects";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+
+import { projects } from "../projects";
 import ImageGallery from "../../../components/Project/ImageGallery";
-import { ProjectDetail } from "../../../components/Project/ProjectDetails";
+import ProjectTexts from "../../../components/Project/ProjectTexts";
 
 interface ProjectPageProps {
   params: Promise<{
@@ -41,27 +42,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           ← Voltar para Projetos
         </Link>
 
-        <h1 className="text-3xl md:text-4xl text-dark font-semibold mb-6">
-          {project.title}
-        </h1>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          <div className="md:col-span-2">
-            <p className="text-dark font-light text-sm leading-relaxed">
-              {project.texto}
-            </p>
-          </div>
-
-          <div className="space-y-3">
-            {projectDetails.map((detail) => (
-              <ProjectDetail
-                key={detail.label}
-                label={detail.label}
-                value={detail.value}
-              />
-            ))}
-          </div>
-        </div>
+        <ProjectTexts
+          title={project.title}
+          description={project.texto}
+          projectDetails={projectDetails}
+        />
       </div>
 
       <ImageGallery images={project.images} projectTitle={project.title} />

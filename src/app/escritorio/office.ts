@@ -7,7 +7,7 @@ export const introductionContent = {
     "Nossa jornada iniciou na capital do Rio de Janeiro e, nas últimas duas décadas, mantivemos nossos escritórios em Porto Alegre e Pelotas, no Rio Grande do Sul. Expandimos nossos horizontes com escritórios associados em São Paulo, Minas Gerais, Punta del Este, Nova Iorque, Portugal e Bélgica - sempre procurando as melhores soluções para as mais diversas tipologias de projeto e diferentes perfis de cliente, com propostas exclusivas, inteligentes e sustentáveis.",
   ],
   image: {
-    src: "/images/aerea_temporaria.jpg",
+    src: "/images/team/office-bw.jpg",
     alt: "Escritório",
   },
 };
@@ -19,7 +19,7 @@ export const workMethodContent = {
     "Transformamos cada projeto numa ambientação onde as formas, os materiais naturais, as cores e as texturas sejam capazes de preencher o espaço, servindo como uma contínua e persistente inspiração para superar as expectativas de nossos clientes.",
   ],
   image: {
-    src: "/images/vertical_temporaria.jpg",
+    src: "/images/working-pb.jpg",
     alt: "Como trabalhamos",
   },
 };

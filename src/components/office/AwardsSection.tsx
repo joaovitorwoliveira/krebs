@@ -2,6 +2,7 @@
 
 import { motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
+
 import { awardsContent } from "@/app/escritorio/office";
 
 export default function AwardsSection() {
