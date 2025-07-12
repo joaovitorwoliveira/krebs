@@ -19,7 +19,7 @@ export const workMethodContent = {
     "Transformamos cada projeto numa ambientação onde as formas, os materiais naturais, as cores e as texturas sejam capazes de preencher o espaço, servindo como uma contínua e persistente inspiração para superar as expectativas de nossos clientes.",
   ],
   image: {
-    src: "/images/colegio-farroupilha/foto-4.jpg",
+    src: "/images/vertical_temporaria.jpg",
     alt: "Como trabalhamos",
   },
 };
