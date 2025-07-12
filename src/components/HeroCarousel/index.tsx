@@ -20,8 +20,13 @@ const images = [
   "/images/colegio-farroupilha/foto-7.jpg",
 ];
 
-export default function HeroCarousel() {
+interface HeroCarouselProps {
+  onImagesLoaded?: () => void;
+}
+
+export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
   const [isMobile, setIsMobile] = useState(false);
+  const [loadedImages, setLoadedImages] = useState(0);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -33,6 +38,17 @@ export default function HeroCarousel() {
 
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
+
+  useEffect(() => {
+    if (loadedImages >= 3 && onImagesLoaded) {
+      // Quando pelo menos 3 imagens carregarem, consideramos pronto
+      onImagesLoaded();
+    }
+  }, [loadedImages, onImagesLoaded]);
+
+  const handleImageLoad = () => {
+    setLoadedImages((prev) => prev + 1);
+  };
 
   return (
     <motion.div
@@ -81,6 +97,7 @@ export default function HeroCarousel() {
                 sizes="100vw"
                 quality={80}
                 unoptimized={isMobile}
+                onLoad={handleImageLoad}
               />
 
               <motion.div
@@ -105,7 +122,7 @@ export default function HeroCarousel() {
           alt="K Plus Icon"
           width={120}
           height={120}
-          className="w-auto h-auto opacity-80"
+          className="w-auto h-auto opacity-70"
           priority
         />
       </motion.div>

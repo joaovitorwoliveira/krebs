@@ -35,25 +35,46 @@
   --color-gray-blue: var(--gray-blue);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #f3efeb;
-  }
-} */
+/* Efeito de sublinhado hover reutilizável */
+.underline-hover {
+  position: relative;
+}
+
+.underline-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.5px;
+  width: 0;
+  background-color: var(--green-4);
+  transition: width 0.3s ease-out;
+}
+
+.underline-hover:hover::after {
+  width: 100%;
+}
+
+.underline-hover.active::after {
+  width: 100%;
+}
+/* Swiper bullet styles */
 
 .custom-bullet {
   width: 8px !important;
   height: 8px !important;
   background-color: var(--light) !important;
-  opacity: 1 !important;
   margin: 0 4px !important;
   transition: all 0.3s ease !important;
   cursor: pointer !important;
+  border-radius: 1 !important;
+  opacity: 0.8;
 }
 
 .custom-bullet-active {
   background-color: white !important;
+  width: 16px !important;
+  opacity: 1 !important;
   transform: scale(1.25) !important;
   box-shadow: 0 0 0 0.5px rgba(106, 124, 109, 0.3) !important;
 }
