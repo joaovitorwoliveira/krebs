@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, Variants, useInView } from "framer-motion";
+import { Variants, useInView } from "framer-motion";
+import { motion } from "@/lib/motion";
 
 import { ProjectDetail } from "./ProjectDetails";
 import { ProjectTextsProps } from "./types";

@@ -2,7 +2,8 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { motion, useInView, Variants } from "framer-motion";
+import { useInView, Variants } from "framer-motion";
+import { motion } from "@/lib/motion";
 
 import BackgroundWrapper from "@/components/BackgroundWrapper";
 import { teamMembers } from "./team";

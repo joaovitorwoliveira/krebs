@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Encode_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import MotionProvider from "@/components/MotionProvider";
 
 const encodeSans = Encode_Sans({
   variable: "--font-encode-sans",
@@ -29,14 +30,16 @@ export default function RootLayout({
         className={`${encodeSans.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-y-scroll`}
       >
         <div className="texture-overlay"></div>
-        <div className="pointer-events-auto">
-          <Header />
-          <div
-          // className="select-none [&_img]:pointer-events-none [&_img]:select-none [&_img]:drag-none"
-          >
-            {children}
+        <MotionProvider>
+          <div className="pointer-events-auto">
+            <Header />
+            <div
+            // className="select-none [&_img]:pointer-events-none [&_img]:select-none [&_img]:drag-none"
+            >
+              {children}
+            </div>
           </div>
-        </div>
+        </MotionProvider>
         {/* <CopyrightTooltip /> */}
       </body>
     </html>

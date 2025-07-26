@@ -2,7 +2,8 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
-import { motion, Variants, useInView } from "framer-motion";
+import { Variants, useInView } from "framer-motion";
+import { motion } from "@/lib/motion";
 
 import ImageModal from "./ImageModal";
 import { ImageGalleryProps } from "./types";
