@@ -5,13 +5,13 @@ import { useCallback, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 
 import { motion } from "@/lib/motion";
+import { useFullscreen } from "@/hooks/useFullscreen";
+import { useSwipeHandlers } from "@/hooks/useSwipeHandlers";
 
 import ImageModalContent from "./ImageModalContent";
 import ImageModalHeader from "./ImageModalHeader";
 import ImageModalThumbnails from "./ImageModalThumbnails";
 import { ImageModalProps } from "./types";
-import { useFullscreen } from "./useFullscreen";
-import { useSwipeHandlers } from "./useSwipeHandlers";
 
 export default function ImageModal({
   images,
