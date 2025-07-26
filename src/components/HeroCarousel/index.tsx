@@ -41,7 +41,6 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
 
   useEffect(() => {
     if (loadedImages >= 3 && onImagesLoaded) {
-      // Quando pelo menos 3 imagens carregarem, consideramos pronto
       onImagesLoaded();
     }
   }, [loadedImages, onImagesLoaded]);
@@ -110,22 +109,6 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <motion.div
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 1 }}
-      >
-        <Image
-          src="/images/k-plus-icon-gray.png"
-          alt="K Plus Icon"
-          width={120}
-          height={120}
-          className="w-auto h-auto opacity-70"
-          priority
-        />
-      </motion.div>
     </motion.div>
   );
 }

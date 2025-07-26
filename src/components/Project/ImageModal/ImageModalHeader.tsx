@@ -25,7 +25,7 @@ export default function ImageModalHeader({
         delay: 0.1,
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
-      className="relative z-20 p-6 flex justify-between items-center"
+      className="relative z-20 px-6 py-3 flex justify-between items-center"
     >
       <div className="text-white text-sm font-medium">
         {currentIndex + 1} / {totalImages}

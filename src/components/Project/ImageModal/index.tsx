@@ -36,6 +36,13 @@ export default function ImageModal({
     imagesLength: images.length,
   });
 
+  const handleClose = useCallback(async () => {
+    if (isFullscreen) {
+      await exitFullscreen();
+    }
+    onClose();
+  }, [isFullscreen, exitFullscreen, onClose]);
+
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -64,11 +71,7 @@ export default function ImageModal({
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      if (isFullscreen) {
-        exitFullscreen();
-      } else {
-        onClose();
-      }
+      handleClose();
     }
   };
 
@@ -102,7 +105,7 @@ export default function ImageModal({
             totalImages={images.length}
             isFullscreen={isFullscreen}
             onToggleFullscreen={toggleFullscreen}
-            onClose={onClose}
+            onClose={handleClose} 
           />
 
           <ImageModalContent

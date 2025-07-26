@@ -34,16 +34,26 @@ export function useFullscreen() {
   const exitFullscreen = async () => {
     try {
       const doc = document as DocumentWithFullscreen;
-      if (document.exitFullscreen) {
-        await document.exitFullscreen();
-      } else if (doc.webkitExitFullscreen) {
-        await doc.webkitExitFullscreen();
-      } else if (doc.msExitFullscreen) {
-        await doc.msExitFullscreen();
+      if (
+        document.fullscreenElement ||
+        doc.webkitFullscreenElement ||
+        doc.msFullscreenElement
+      ) {
+        if (document.exitFullscreen) {
+          await document.exitFullscreen();
+        } else if (doc.webkitExitFullscreen) {
+          await doc.webkitExitFullscreen();
+        } else if (doc.msExitFullscreen) {
+          await doc.msExitFullscreen();
+        }
+        setIsFullscreen(false);
+      } else {
+
+        setIsFullscreen(false);
       }
-      setIsFullscreen(false);
     } catch (error) {
       console.error("Error exiting fullscreen:", error);
+      setIsFullscreen(false);
     }
   };
 
