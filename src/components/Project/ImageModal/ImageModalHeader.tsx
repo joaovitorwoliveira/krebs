@@ -1,12 +1,6 @@
 import { motion } from "framer-motion";
 
-interface ImageModalHeaderProps {
-  currentIndex: number;
-  totalImages: number;
-  isFullscreen: boolean;
-  onToggleFullscreen: () => void;
-  onClose: () => void;
-}
+import { ImageModalHeaderProps } from "./types";
 
 export default function ImageModalHeader({
   currentIndex,

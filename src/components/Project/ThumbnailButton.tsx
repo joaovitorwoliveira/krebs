@@ -1,12 +1,6 @@
 import Image from "next/image";
 
-interface ThumbnailButtonProps {
-  image: string;
-  index: number;
-  isSelected: boolean;
-  onClick: () => void;
-  projectTitle: string;
-}
+import { ThumbnailButtonProps } from "./types";
 
 export default function ThumbnailButton({
   image,

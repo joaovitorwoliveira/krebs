@@ -1,11 +1,6 @@
 import { useState } from "react";
 
-interface UseSwipeHandlersProps {
-  onNext: () => void;
-  onPrevious: () => void;
-  selectedImageIndex: number | null;
-  imagesLength: number;
-}
+import { UseSwipeHandlersProps } from "./types";
 
 export function useSwipeHandlers({
   onNext,

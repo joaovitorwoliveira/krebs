@@ -4,16 +4,8 @@ import * as LucideIcons from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-interface NavLinkProps {
-  href: string;
-  children: React.ReactNode;
-}
+import { NavLinkProps, SocialIconProps } from "./types";
 
-interface SocialIconProps {
-  href: string;
-  iconName: string;
-  size?: number;
-}
 
 export function NavLink({ href, children }: NavLinkProps) {
   const pathname = usePathname();

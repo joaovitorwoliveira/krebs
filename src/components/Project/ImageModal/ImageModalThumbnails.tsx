@@ -1,13 +1,7 @@
 import { motion } from "framer-motion";
 
 import ThumbnailButton from "../ThumbnailButton";
-
-interface ImageModalThumbnailsProps {
-  images: string[];
-  selectedImageIndex: number;
-  onSelectImage: (index: number) => void;
-  projectTitle: string;
-}
+import { ImageModalThumbnailsProps } from "./types";
 
 export default function ImageModalThumbnails({
   images,

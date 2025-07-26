@@ -8,16 +8,7 @@ import { useSwipeHandlers } from "./useSwipeHandlers";
 import ImageModalHeader from "./ImageModalHeader";
 import ImageModalContent from "./ImageModalContent";
 import ImageModalThumbnails from "./ImageModalThumbnails";
-
-interface ImageModalProps {
-  images: string[];
-  projectTitle: string;
-  selectedImageIndex: number | null;
-  onClose: () => void;
-  onNext: () => void;
-  onPrevious: () => void;
-  onSelectImage: (index: number) => void;
-}
+import { ImageModalProps } from "./types";
 
 export default function ImageModal({
   images,
@@ -105,7 +96,7 @@ export default function ImageModal({
             totalImages={images.length}
             isFullscreen={isFullscreen}
             onToggleFullscreen={toggleFullscreen}
-            onClose={handleClose} 
+            onClose={handleClose}
           />
 
           <ImageModalContent

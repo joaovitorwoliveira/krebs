@@ -1,8 +1,4 @@
-interface NavigationButtonProps {
-  onClick: () => void;
-  children: React.ReactNode;
-  position: "left" | "right";
-}
+import { NavigationButtonProps } from "./types";
 
 export default function NavigationButton({
   onClick,

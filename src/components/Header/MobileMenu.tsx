@@ -1,13 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
-import { NavLink } from "./MenuComponents";
 
-interface MobileMenuProps {
-  isOpen: boolean;
-  onClose: () => void;
-  navigationLinks: { href: string; label: string }[];
-}
+import { NavLink } from "./MenuComponents";
+import { MobileMenuProps } from "./types";
 
 export default function MobileMenu({
   isOpen,

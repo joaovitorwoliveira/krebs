@@ -1,7 +1,4 @@
-interface ProjectDetailProps {
-  label: string;
-  value: string;
-}
+import { ProjectDetailProps } from "./types";
 
 export const ProjectDetail = ({ label, value }: ProjectDetailProps) => (
   <div>

@@ -4,15 +4,7 @@ import { useRef } from "react";
 import { motion, Variants, useInView } from "framer-motion";
 
 import { ProjectDetail } from "./ProjectDetails";
-
-interface ProjectTextsProps {
-  title: string;
-  description: string;
-  projectDetails: Array<{
-    label: string;
-    value: string;
-  }>;
-}
+import { ProjectTextsProps } from "./types";
 
 export default function ProjectTexts({
   title,

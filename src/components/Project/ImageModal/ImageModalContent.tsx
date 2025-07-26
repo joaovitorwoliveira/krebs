@@ -2,18 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 import NavigationButton from "../NavigationButton";
-
-interface ImageModalContentProps {
-  images: string[];
-  projectTitle: string;
-  selectedImageIndex: number;
-  onNext: () => void;
-  onPrevious: () => void;
-  onBackdropClick: (e: React.MouseEvent) => void;
-  onTouchStart: (e: React.TouchEvent) => void;
-  onTouchMove: (e: React.TouchEvent) => void;
-  onTouchEnd: () => void;
-}
+import { ImageModalContentProps } from "./types";
 
 export default function ImageModalContent({
   images,

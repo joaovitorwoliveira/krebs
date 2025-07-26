@@ -5,11 +5,7 @@ import Image from "next/image";
 import { motion, Variants, useInView } from "framer-motion";
 
 import ImageModal from "./ImageModal";
-
-interface ImageGalleryProps {
-  images: string[];
-  projectTitle: string;
-}
+import { ImageGalleryProps } from "./types";
 
 export default function ImageGallery({
   images,
@@ -73,6 +69,17 @@ export default function ImageGallery({
     },
   };
 
+  const heights = [
+    "250px",
+    "320px",
+    "280px",
+    "400px",
+    "350px",
+    "300px",
+    "450px",
+    "270px",
+  ];
+
   return (
     <>
       <div className="px-4 md:px-6 pb-8">
@@ -84,16 +91,6 @@ export default function ImageGallery({
           className="columns-1 md:columns-2 lg:columns-3 gap-3"
         >
           {images.map((image, index) => {
-            const heights = [
-              "250px",
-              "320px",
-              "280px",
-              "400px",
-              "350px",
-              "300px",
-              "450px",
-              "270px",
-            ];
             const height = heights[index % heights.length];
 
             return (
