@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 
 import "swiper/css";
 import "swiper/css/effect-fade";

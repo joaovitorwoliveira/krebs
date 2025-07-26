@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import Image from "next/image";
 
 import NavigationButton from "../NavigationButton";

@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useInView, Variants } from "framer-motion";
+import { useInView, Variants } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { useRef } from "react";
 
 import { awardsContent } from "@/app/escritorio/office";

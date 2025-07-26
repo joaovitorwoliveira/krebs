@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useInView, Variants } from "framer-motion";
+import { useInView, Variants } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { useRef } from "react";
 
 import { workMethodContent } from "@/app/escritorio/office";

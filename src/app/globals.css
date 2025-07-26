@@ -82,7 +82,6 @@
   transition: all 0.3s ease !important;
   cursor: pointer !important;
   border-radius: 1 !important;
-  opacity: 0.8;
 }
 
 .custom-bullet-active {
@@ -95,4 +94,17 @@
 
 .swiper-pagination {
   bottom: 24px !important;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
 }
