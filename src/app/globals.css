@@ -82,7 +82,6 @@
   transition: all 0.3s ease !important;
   cursor: pointer !important;
   border-radius: 1 !important;
-  opacity: 0.8;
 }
 
 .custom-bullet-active {

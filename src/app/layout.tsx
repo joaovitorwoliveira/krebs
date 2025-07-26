@@ -1,8 +1,10 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Encode_Sans } from "next/font/google";
-import "./globals.css";
+
 import Header from "@/components/Header";
-import MotionProvider from "@/components/MotionProvider";
+import MotionProvider from "@/context/MotionProvider";
+import CopyrightTooltip from "@/components/CopyrightTooltip";
 
 const encodeSans = Encode_Sans({
   variable: "--font-encode-sans",
@@ -33,14 +35,12 @@ export default function RootLayout({
         <MotionProvider>
           <div className="pointer-events-auto">
             <Header />
-            <div
-            // className="select-none [&_img]:pointer-events-none [&_img]:select-none [&_img]:drag-none"
-            >
+            <div className="select-none [&_img]:pointer-events-none [&_img]:select-none [&_img]:drag-none">
               {children}
             </div>
           </div>
         </MotionProvider>
-        {/* <CopyrightTooltip /> */}
+        <CopyrightTooltip />
       </body>
     </html>
   );
