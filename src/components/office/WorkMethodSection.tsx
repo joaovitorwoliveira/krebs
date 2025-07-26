@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useInView, Variants } from "framer-motion";
-import { motion } from "@/lib/motion";
 import { useRef } from "react";
+import { useInView, Variants } from "framer-motion";
 
+import { motion } from "@/lib/motion";
 import { workMethodContent } from "@/app/escritorio/office";
 
 export default function WorkMethodSection() {

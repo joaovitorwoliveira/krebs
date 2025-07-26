@@ -1,6 +1,6 @@
-import { motion } from "@/lib/motion";
 import Image from "next/image";
 
+import { motion } from "@/lib/motion";
 import NavigationButton from "../NavigationButton";
 import { ImageModalContentProps } from "./types";
 

@@ -1,9 +1,9 @@
 "use client";
 
-import { useInView, Variants } from "framer-motion";
-import { motion } from "@/lib/motion";
 import { useRef } from "react";
+import { useInView, Variants } from "framer-motion";
 
+import { motion } from "@/lib/motion";
 import { awardsContent } from "@/app/escritorio/office";
 
 export default function AwardsSection() {

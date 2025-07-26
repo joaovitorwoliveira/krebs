@@ -1,5 +1,4 @@
 import { motion } from "@/lib/motion";
-
 import ThumbnailButton from "../ThumbnailButton";
 import { ImageModalThumbnailsProps } from "./types";
 
