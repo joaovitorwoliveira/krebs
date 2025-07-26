@@ -1,11 +1,11 @@
 "use client";
 
-import * as LucideIcons from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { NavLinkProps, SocialIconProps } from "./types";
+import * as LucideIcons from "lucide-react";
 
+import { NavLinkProps, SocialIconProps } from "./types";
 
 export function NavLink({ href, children }: NavLinkProps) {
   const pathname = usePathname();

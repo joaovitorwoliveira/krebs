@@ -1,15 +1,17 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
+import { useCallback, useEffect } from "react";
+
 import { AnimatePresence } from "framer-motion";
 
 import { motion } from "@/lib/motion";
-import { useFullscreen } from "./useFullscreen";
-import { useSwipeHandlers } from "./useSwipeHandlers";
-import ImageModalHeader from "./ImageModalHeader";
+
 import ImageModalContent from "./ImageModalContent";
+import ImageModalHeader from "./ImageModalHeader";
 import ImageModalThumbnails from "./ImageModalThumbnails";
 import { ImageModalProps } from "./types";
+import { useFullscreen } from "./useFullscreen";
+import { useSwipeHandlers } from "./useSwipeHandlers";
 
 export default function ImageModal({
   images,

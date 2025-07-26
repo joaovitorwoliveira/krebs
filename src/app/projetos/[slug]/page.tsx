@@ -1,9 +1,9 @@
-import { notFound } from "next/navigation";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
-import { projects } from "../projects";
 import ImageGallery from "../../../components/Project/ImageGallery";
 import ProjectTexts from "../../../components/Project/ProjectTexts";
+import { projects } from "../projects";
 
 interface ProjectPageProps {
   params: Promise<{

@@ -1,9 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import { motion } from "@/lib/motion";
 

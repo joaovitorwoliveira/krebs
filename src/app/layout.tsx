@@ -1,10 +1,12 @@
 import "./globals.css";
+
 import type { Metadata } from "next";
 import { Encode_Sans } from "next/font/google";
 
-import Header from "@/components/Header";
 import MotionProvider from "@/context/MotionProvider";
+
 import CopyrightTooltip from "@/components/CopyrightTooltip";
+import Header from "@/components/Header";
 
 const encodeSans = Encode_Sans({
   variable: "--font-encode-sans",

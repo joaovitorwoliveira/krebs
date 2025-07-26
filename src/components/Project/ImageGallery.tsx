@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
-import { Variants, useInView } from "framer-motion";
+
+import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
+
 import ImageModal from "./ImageModal";
 import { ImageGalleryProps } from "./types";
 

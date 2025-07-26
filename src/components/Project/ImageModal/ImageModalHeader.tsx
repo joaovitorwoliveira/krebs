@@ -1,4 +1,5 @@
 import { motion } from "@/lib/motion";
+
 import { ImageModalHeaderProps } from "./types";
 
 export default function ImageModalHeader({

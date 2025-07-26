@@ -1,6 +1,6 @@
 "use client";
 
-import { LazyMotion, domAnimation, MotionConfig } from "framer-motion";
+import { domAnimation, LazyMotion, MotionConfig } from "framer-motion";
 
 export default function MotionProvider({
   children,

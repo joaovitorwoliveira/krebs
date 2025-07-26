@@ -1,9 +1,11 @@
 "use client";
 
+import { useMemo, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useRef } from "react";
-import { Variants, useInView } from "framer-motion";
+
+import { useInView, Variants } from "framer-motion";
+
 import { motion } from "@/lib/motion";
 
 import { projects } from "./projects";

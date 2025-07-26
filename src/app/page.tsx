@@ -1,9 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
-import { motion } from "@/lib/motion";
+import { useEffect, useState } from "react";
 
+import { AnimatePresence } from "framer-motion";
+
+import "framer-motion";
+
+import { motion } from "@/lib/motion";
 import HeroCarousel from "@/components/HeroCarousel";
 import Loading from "@/components/Loading";
 
