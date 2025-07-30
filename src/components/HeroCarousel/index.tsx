@@ -13,13 +13,13 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
 const images = [
-  "/images/colegio-farroupilha/foto-1.jpg",
-  "/images/colegio-farroupilha/foto-2.jpg",
-  "/images/colegio-farroupilha/foto-3.jpg",
-  "/images/colegio-farroupilha/foto-4.jpg",
-  "/images/colegio-farroupilha/foto-5.jpg",
-  "/images/colegio-farroupilha/foto-6.jpg",
-  "/images/colegio-farroupilha/foto-7.jpg",
+  "/images/projects/jardim-svg/foto-5.jpg",
+  "/images/projects/jardim-ltx/foto-8.jpg",
+  "/images/projects/jardim-svg/foto-2.jpg",
+  "/images/projects/jardim-svg/foto-4.jpg",
+  "/images/projects/jardim-atj/foto-3.jpg",
+  "/images/projects/jardim-malu/foto-2.jpg",
+  "/images/projects/jardim-atj/foto-1.jpg",
 ];
 
 interface HeroCarouselProps {
@@ -56,7 +56,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
       className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 backdrop-blur-[1px]"
       initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
       animate={{ opacity: 1, backdropFilter: "blur(1px)" }}
-      transition={{ duration: 1.2, delay: 0.5 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
     >
       <Swiper
         modules={[Autoplay, EffectFade, Pagination]}
@@ -65,7 +65,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
           crossFade: true,
         }}
         autoplay={{
-          delay: 4000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -74,7 +74,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
           bulletActiveClass: "custom-bullet-active",
         }}
         loop={true}
-        speed={3000}
+        speed={2000}
         className="h-full w-full active:cursor-grabbing"
       >
         {images.map((image, index) => (

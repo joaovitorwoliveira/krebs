@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -18,26 +18,6 @@ export default function Home() {
       setIsLoading(false);
     }, 300);
   };
-
-  useEffect(() => {
-    const img = new Image();
-    img.onload = () => {
-      setIsLoading(false);
-    };
-    img.onerror = () => {
-      setIsLoading(true);
-    };
-
-    const startTime = Date.now();
-    img.onload = () => {
-      const loadTime = Date.now() - startTime;
-      if (loadTime < 50) {
-        setIsLoading(false);
-      }
-    };
-
-    img.src = "/images/colegio-farroupilha/foto-1.jpg";
-  }, []);
 
   return (
     <div className="h-screen w-full fixed inset-0 overflow-hidden">
