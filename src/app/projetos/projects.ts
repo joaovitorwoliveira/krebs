@@ -1,25 +1,5 @@
 export const projects = [
   {
-    slug: "colegio-farroupilha",
-    title: "Colégio Farroupilha",
-    texto:
-      "No coração do bairro Três Figueiras, em Porto Alegre, a primeira etapa do paisagismo do Colégio Farroupilha revela um novo gesto urbano. Mais do que uma intervenção estética, o projeto propõe uma reconfiguração sensível da relação entre escola, cidade e comunidade. O que antes era apenas fachada torna-se espaço de convivência e permanência. As calçadas expandem sua função e se transformam em ambientes de estar, onde bancos, vegetações, sombras e mobiliários compõem uma ambiência acolhedora — um convite à pausa, ao encontro e à observação. As linhas orgânicas do traçado e a escolha criteriosa das espécies revelam um paisagismo autoral que suaviza o ritmo da cidade e acolhe quem por ali passa. Em uma capital marcada por contrastes e escassez de áreas públicas de qualidade, abrir-se ao entorno é um ato de generosidade. Cada decisão — do desenho fluido ao mobiliário integrado — reflete um compromisso com a gentileza urbana, transformando o cotidiano com sutileza e intenção. É um lugar pensado para todos, onde o projeto encontra seu sentido na experiência compartilhada.",
-    date: "2025",
-    place: "Porto Alegre, RS",
-    architecture: "ZeBL+",
-    photo: "Lucas Daneris",
-    coverPhoto: "/images/projects/colegio-farroupilha/foto-1.jpg",
-    images: [
-      "/images/projects/colegio-farroupilha/foto-1.jpg",
-      "/images/projects/colegio-farroupilha/foto-2.jpg",
-      "/images/projects/colegio-farroupilha/foto-3.jpg",
-      "/images/projects/colegio-farroupilha/foto-4.jpg",
-      "/images/projects/colegio-farroupilha/foto-5.jpg",
-      "/images/projects/colegio-farroupilha/foto-6.jpg",
-      "/images/projects/colegio-farroupilha/foto-7.jpg",
-    ],
-  },
-  {
     slug: "jardim-svg",
     title: "Jardim SVG",
     texto:
@@ -57,7 +37,7 @@ export const projects = [
       "/images/projects/jardim-atj/foto-5.jpg",
       "/images/projects/jardim-atj/foto-6.jpg",
       "/images/projects/jardim-atj/foto-7.jpg",
-      "/images/jardim-atj/foto-8.jpg",
+      "/images/projects/jardim-atj/foto-8.jpg",
     ],
   },
   {
@@ -100,6 +80,26 @@ export const projects = [
       "/images/projects/jardim-malu/foto-4.jpg",
       "/images/projects/jardim-malu/foto-5.jpg",
       "/images/projects/jardim-malu/foto-6.jpg",
+    ],
+  },
+  {
+    slug: "colegio-farroupilha",
+    title: "Colégio Farroupilha",
+    texto:
+      "No coração do bairro Três Figueiras, em Porto Alegre, a primeira etapa do paisagismo do Colégio Farroupilha revela um novo gesto urbano. Mais do que uma intervenção estética, o projeto propõe uma reconfiguração sensível da relação entre escola, cidade e comunidade. O que antes era apenas fachada torna-se espaço de convivência e permanência. As calçadas expandem sua função e se transformam em ambientes de estar, onde bancos, vegetações, sombras e mobiliários compõem uma ambiência acolhedora — um convite à pausa, ao encontro e à observação. As linhas orgânicas do traçado e a escolha criteriosa das espécies revelam um paisagismo autoral que suaviza o ritmo da cidade e acolhe quem por ali passa. Em uma capital marcada por contrastes e escassez de áreas públicas de qualidade, abrir-se ao entorno é um ato de generosidade. Cada decisão — do desenho fluido ao mobiliário integrado — reflete um compromisso com a gentileza urbana, transformando o cotidiano com sutileza e intenção. É um lugar pensado para todos, onde o projeto encontra seu sentido na experiência compartilhada.",
+    date: "2025",
+    place: "Porto Alegre, RS",
+    architecture: "ZeBL+",
+    photo: "Lucas Daneris",
+    coverPhoto: "/images/projects/colegio-farroupilha/foto-1.jpg",
+    images: [
+      "/images/projects/colegio-farroupilha/foto-1.jpg",
+      "/images/projects/colegio-farroupilha/foto-2.jpg",
+      "/images/projects/colegio-farroupilha/foto-3.jpg",
+      "/images/projects/colegio-farroupilha/foto-4.jpg",
+      "/images/projects/colegio-farroupilha/foto-5.jpg",
+      "/images/projects/colegio-farroupilha/foto-6.jpg",
+      "/images/projects/colegio-farroupilha/foto-7.jpg",
     ],
   },
 ];
