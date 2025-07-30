@@ -10,16 +10,16 @@ export interface NavigationButtonProps {
 }
 
 export interface ProjectDetailProps {
-  label: string;
-  value: string;
+  label?: string;
+  value?: string;
 }
 
 export interface ProjectTextsProps {
   title: string;
   description: string;
   projectDetails: Array<{
-    label: string;
-    value: string;
+    label?: string;
+    value?: string;
   }>;
 }
 

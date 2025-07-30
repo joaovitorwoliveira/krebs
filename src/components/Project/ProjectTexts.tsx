@@ -95,7 +95,7 @@ export default function ProjectTexts({
       <motion.div variants={detailsVariants} className="space-y-3">
         {projectDetails.map((detail) => (
           <motion.div key={detail.label} variants={detailItemVariants}>
-            <ProjectDetail label={detail.label} value={detail.value} />
+            <ProjectDetail label={detail?.label} value={detail?.value} />
           </motion.div>
         ))}
       </motion.div>
