@@ -5,7 +5,7 @@ import { Encode_Sans } from "next/font/google";
 
 import MotionProvider from "@/context/MotionProvider";
 
-// import CopyrightTooltip from "@/components/CopyrightTooltip";
+import CopyrightTooltip from "@/components/CopyrightTooltip";
 import Header from "@/components/Header";
 
 const encodeSans = Encode_Sans({
@@ -37,14 +37,12 @@ export default function RootLayout({
         <MotionProvider>
           <div className="pointer-events-auto">
             <Header />
-            <div 
-            // className="select-none [&_img]:pointer-events-none [&_img]:select-none [&_img]:drag-none"
-            >
+            <div className="select-none [&_img]:pointer-events-none [&_img]:select-none [&_img]:drag-none">
               {children}
             </div>
           </div>
         </MotionProvider>
-        {/* <CopyrightTooltip /> */}
+        <CopyrightTooltip />
       </body>
     </html>
   );

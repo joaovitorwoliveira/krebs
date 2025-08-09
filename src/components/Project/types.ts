@@ -5,8 +5,7 @@ export interface ImageGalleryProps {
 
 export interface NavigationButtonProps {
   onClick: () => void;
-  children: React.ReactNode;
-  position: "left" | "right";
+  direction: "left" | "right";
 }
 
 export interface ProjectDetailProps {

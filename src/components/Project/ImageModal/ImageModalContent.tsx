@@ -33,15 +33,11 @@ export default function ImageModalContent({
       onTouchEnd={onTouchEnd}
     >
       {selectedImageIndex > 0 && (
-        <NavigationButton onClick={onPrevious} position="left">
-          ‹
-        </NavigationButton>
+        <NavigationButton onClick={onPrevious} direction="left" />
       )}
 
       {selectedImageIndex < images.length - 1 && (
-        <NavigationButton onClick={onNext} position="right">
-          ›
-        </NavigationButton>
+        <NavigationButton onClick={onNext} direction="right" />
       )}
 
       <motion.div

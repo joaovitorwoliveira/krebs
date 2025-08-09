@@ -86,7 +86,7 @@ export default function Header() {
                 alt={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
                 width={50}
                 height={40}
-                className={`h-5 w-auto transition-transform duration-400 ease-in-out ${
+                className={`h-6 w-auto transition-transform duration-400 ease-in-out ${
                   isMobileMenuOpen ? "-rotate-45" : "rotate-0"
                 }`}
               />
