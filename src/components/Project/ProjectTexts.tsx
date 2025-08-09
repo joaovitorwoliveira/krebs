@@ -69,6 +69,11 @@ export default function ProjectTexts({
     },
   };
 
+  const paragraphs = description
+    .trim()
+    .split(/\n\s*\n+/) 
+    .map((p) => p.replace(/\s*\n\s*/g, " ").replace(/\s{2,}/g, " ").trim());
+
   return (
     <motion.div
       ref={ref}
@@ -84,12 +89,16 @@ export default function ProjectTexts({
         >
           {title}
         </motion.h1>
-        <motion.p
-          variants={itemVariants}
-          className="text-dark font-light text-sm leading-relaxed"
-        >
-          {description}
-        </motion.p>
+
+        {paragraphs.map((paragraph, i) => (
+          <motion.p
+            key={i}
+            variants={itemVariants}
+            className="text-dark font-light text-sm leading-relaxed mb-4 last:mb-0"
+          >
+            {paragraph}
+          </motion.p>
+        ))}
       </motion.div>
 
       <motion.div variants={detailsVariants} className="space-y-3">

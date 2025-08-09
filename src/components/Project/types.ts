@@ -17,10 +17,7 @@ export interface ProjectDetailProps {
 export interface ProjectTextsProps {
   title: string;
   description: string;
-  projectDetails: Array<{
-    label?: string;
-    value?: string;
-  }>;
+  projectDetails: ProjectDetailProps[];
 }
 
 export interface ThumbnailButtonProps {
