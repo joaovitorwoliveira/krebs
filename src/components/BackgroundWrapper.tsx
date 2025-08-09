@@ -16,7 +16,7 @@ export default function BackgroundWrapper({
           backgroundAttachment: "fixed",
         }}
       />
-      <div className="relative z-10 max-w-[1250px] mx-auto">{children}</div>
+      <div className="relative z-10 px-2 lg:px-10 mx-auto">{children}</div>
     </div>
   );
 }

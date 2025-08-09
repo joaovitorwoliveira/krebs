@@ -69,7 +69,7 @@ export default function Team() {
         variants={sectionVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="container mx-auto px-4 py-16"
+        className="container mx-auto px-4 py-4 lg:py-10"
       >
         <div className="text-center mb-12">
           <motion.h1

@@ -71,7 +71,7 @@ export default function TeamSection() {
         </motion.div>
         <motion.div
           variants={itemVariants}
-          className="text-sm font-light text-green-5"
+          className="text-sm font-light text-green-5 mt-8"
         >
           <Link
             href="/equipe"

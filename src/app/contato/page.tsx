@@ -1,3 +1,5 @@
+import BackgroundWrapper from "@/components/BackgroundWrapper";
+
 export default function Contact() {
-  return <div>Contato</div>;
+  return <BackgroundWrapper>Contato</BackgroundWrapper>;
 }

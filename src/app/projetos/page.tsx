@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
+import BackgroundWrapper from "@/components/BackgroundWrapper";
 
 import { projects } from "./projects";
 
@@ -109,12 +110,14 @@ export default function Projects() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="mx-4 md:mx-6">
-        {projectRows.map((row, rowIndex) => (
-          <ProjectRow key={rowIndex} row={row} rowIndex={rowIndex} />
-        ))}
+    <BackgroundWrapper>
+      <div className="min-h-screen ">
+        <div className="mx-4 md:mx-6 py-4">
+          {projectRows.map((row, rowIndex) => (
+            <ProjectRow key={rowIndex} row={row} rowIndex={rowIndex} />
+          ))}
+        </div>
       </div>
-    </div>
+    </BackgroundWrapper>
   );
 }
