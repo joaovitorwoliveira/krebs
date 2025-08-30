@@ -14,11 +14,12 @@ export function NavLink({ href, children }: NavLinkProps) {
   return (
     <Link
       href={href}
-      className={`text-dark hover:text-green-4 transition-colors duration-200 font-light underline-hover ${
-        isActive ? "text-green-4 active" : ""
-      }`}
+      className={`text-white font-semibold text-base duration-200 relative group ${
+        isActive ? "opacity-90" : ""
+      } hover:opacity-90 transition-opacity`}
     >
       {children}
+      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-200 group-hover:w-full"></span>
     </Link>
   );
 }

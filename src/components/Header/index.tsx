@@ -4,6 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { cn } from "@/lib/utils";
+
 import { NavLink, SocialIcon } from "./MenuComponents";
 import MobileMenu from "./MobileMenu";
 
@@ -35,46 +37,38 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-white h-14 flex items-center relative z-50">
-        <div className="container mx-auto px-4 py-3 md:px-6 ">
-          <div className="flex items-center justify-between">
-            <div className="flex-shrink-0">
-              <Link href="/">
-                <Image
-                  src="/images/logo-escrito-sembg.png"
-                  alt="Krebs +"
-                  width={200}
-                  height={40}
-                  className="h-7 w-auto hidden md:block"
-                  priority
-                />
-                <Image
-                  src="/images/k-plus-icon.png"
-                  alt="Krebs +"
-                  width={180}
-                  height={30}
-                  className="h-8 w-auto md:hidden"
-                  priority
-                />
+      <header className="h-20 flex items-center relative z-50">
+        <div className="w-full px-4 md:px-6 lg:px-10">
+          <div className="flex items-center justify-between h-full">
+            <div className="flex items-center">
+              <Link href="/" className="flex items-center">
+                <div className="flex items-center justify-center">
+                  <h1 className="text-4xl lg:text-[46px] font-bold text-white leading-none">
+                    KREBS+
+                  </h1>
+                </div>
               </Link>
             </div>
 
             <nav className="hidden md:flex items-center space-x-8 text-sm absolute left-1/2 transform -translate-x-1/2">
               {navigationLinks.map((link) => (
                 <NavLink key={link.href} href={link.href}>
-                  {link.label}
+                  <span className="">{link.label}</span>
                 </NavLink>
               ))}
             </nav>
 
             <div className="hidden md:flex items-center space-x-4">
-              {socialLinks.map((social, index) => (
-                <SocialIcon
-                  key={index}
-                  href={social.href}
-                  iconName={social.iconName}
-                />
-              ))}
+              <button
+                className={cn(
+                  "bg-black rounded-full px-6 py-2 flex items-center justify-center cursor-pointer",
+                  "hover:bg-green-2 transition-colors duration-300"
+                )}
+              >
+                <span className="text-white font-semibold text-lg">
+                  CONTATO
+                </span>
+              </button>
             </div>
 
             <button

@@ -60,14 +60,14 @@ export default function MobileMenu({
       >
         <div className="p-6 pt-20">
           <div className="mb-8">
-            <h2 className="text-dark font-semibold text-lg">Menu</h2>
+            <h2 className="text-dark font-semibold text-lg">MENU</h2>
           </div>
 
           <nav className="space-y-6">
             {navigationLinks.map((link) => (
               <div key={link.href} onClick={onClose}>
                 <NavLink href={link.href}>
-                  <span className="text-base font-light">{link.label}</span>
+                  <span className="text-dark text-sm">{link.label}</span>
                 </NavLink>
               </div>
             ))}
