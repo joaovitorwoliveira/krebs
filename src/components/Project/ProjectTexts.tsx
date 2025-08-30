@@ -71,8 +71,13 @@ export default function ProjectTexts({
 
   const paragraphs = description
     .trim()
-    .split(/\n\s*\n+/) 
-    .map((p) => p.replace(/\s*\n\s*/g, " ").replace(/\s{2,}/g, " ").trim());
+    .split(/\n\s*\n+/)
+    .map((p) =>
+      p
+        .replace(/\s*\n\s*/g, " ")
+        .replace(/\s{2,}/g, " ")
+        .trim()
+    );
 
   return (
     <motion.div
@@ -85,7 +90,7 @@ export default function ProjectTexts({
       <motion.div variants={itemVariants} className="md:col-span-2">
         <motion.h1
           variants={itemVariants}
-          className="text-3xl md:text-4xl text-dark font-semibold mb-6"
+          className="text-3xl md:text-4xl text-dark font-semibold mb-6 lowercase"
         >
           {title}
         </motion.h1>

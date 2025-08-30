@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 
+import ContactDrawer from "../ContactDrawer";
 import Button from "../ui/button";
 import { NavLink } from "./MenuComponents";
 import MobileMenu from "./MobileMenu";
@@ -18,16 +19,9 @@ const navigationLinks = [
   { href: "/contato", label: "CONTATO" },
 ];
 
-const socialLinks = [
-  { href: "https://www.instagram.com/krebsmais/", iconName: "Instagram" },
-  {
-    href: "https://www.linkedin.com/company/krebsmais/posts/?feedView=all",
-    iconName: "Linkedin",
-  },
-];
-
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContactDrawerOpen, setIsContactDrawerOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
@@ -37,6 +31,14 @@ export default function Header() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const openContactDrawer = () => {
+    setIsContactDrawerOpen(true);
+  };
+
+  const closeContactDrawer = () => {
+    setIsContactDrawerOpen(false);
   };
 
   return (
@@ -49,7 +51,7 @@ export default function Header() {
                 <div className="flex items-center justify-center">
                   <h1
                     className={cn(
-                      "text-4xl lg:text-[46px] font-bold leading-none drop-shadow-lg",
+                      "text-4xl lg:text-[46px] font-bold leading-none",
                       isHomePage ? "text-white" : "text-black"
                     )}
                   >
@@ -67,10 +69,7 @@ export default function Header() {
                   isHomePage={isHomePage}
                 >
                   <span
-                    className={cn(
-                      "drop-shadow-lg",
-                      isHomePage ? "text-white" : "text-black"
-                    )}
+                    className={cn(isHomePage ? "text-white" : "text-black")}
                   >
                     {link.label}
                   </span>
@@ -79,7 +78,7 @@ export default function Header() {
             </nav>
 
             <div className="hidden md:flex items-center ">
-              <Button text="CONTATO" onClick={() => {}} />
+              <Button text="CONTATO" onClick={openContactDrawer} />
             </div>
 
             <button
@@ -92,7 +91,7 @@ export default function Header() {
                 width={50}
                 height={40}
                 className={cn(
-                  "h-6 w-auto transition-transform duration-400 ease-in-out drop-shadow-lg",
+                  "h-6 w-auto transition-transform duration-400 ease-in-out ",
                   isMobileMenuOpen ? "-rotate-45" : "rotate-0",
                   isHomePage
                     ? "filter brightness-0 invert"
@@ -108,6 +107,11 @@ export default function Header() {
         isOpen={isMobileMenuOpen}
         onClose={closeMobileMenu}
         navigationLinks={navigationLinks}
+      />
+
+      <ContactDrawer
+        isOpen={isContactDrawerOpen}
+        onClose={closeContactDrawer}
       />
     </>
   );

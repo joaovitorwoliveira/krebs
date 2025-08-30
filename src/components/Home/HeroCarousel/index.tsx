@@ -14,17 +14,13 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
-import Button from "../ui/button";
-
-const images = [
-  "/images/projects/jardim-malu/foto-2.jpg",
-  "/images/projects/jardim-svg/foto-5.jpg",
-  "/images/projects/jardim-ltx/foto-8.jpg",
-  "/images/projects/jardim-svg/foto-2.jpg",
-  "/images/projects/jardim-svg/foto-4.jpg",
-  "/images/projects/jardim-atj/foto-3.jpg",
-  "/images/projects/jardim-atj/foto-1.jpg",
-];
+import Button from "../../ui/button";
+import {
+  checkScreenSize,
+  getProjectName,
+  getProjectSlug,
+  images,
+} from "./util";
 
 interface HeroCarouselProps {
   onImagesLoaded?: () => void;
@@ -36,14 +32,14 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768);
+    const updateScreenSize = () => {
+      setIsMobile(checkScreenSize());
     };
 
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
 
-    return () => window.removeEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", updateScreenSize);
   }, []);
 
   useEffect(() => {
@@ -58,20 +54,6 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
 
   const handleSlideChange = (swiper: SwiperType) => {
     setCurrentSlide(swiper.realIndex);
-  };
-
-  const getProjectName = (imagePath: string) => {
-    const pathParts = imagePath.split("/");
-    const projectFolder = pathParts.find((part) => part.startsWith("jardim-"));
-    return projectFolder
-      ? projectFolder.replace("jardim-", "Jardim ").toUpperCase()
-      : "";
-  };
-
-  const getProjectSlug = (imagePath: string) => {
-    const pathParts = imagePath.split("/");
-    const projectFolder = pathParts.find((part) => part.startsWith("jardim-"));
-    return projectFolder || "";
   };
 
   const currentProjectName = getProjectName(images[currentSlide]);

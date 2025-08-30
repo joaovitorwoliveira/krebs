@@ -97,7 +97,7 @@ export default function Projects() {
                   />
                 </motion.div>
                 <motion.div className="p-2" variants={itemVariants}>
-                  <h3 className="text-dark text-xs font-light text-center">
+                  <h3 className="text-dark text-sm font-light text-center lowercase">
                     {project.title}
                   </h3>
                 </motion.div>
