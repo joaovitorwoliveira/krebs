@@ -30,7 +30,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Lógica de envio do formulário
+
     console.log("Form submitted:", formData);
   };
 
@@ -43,13 +43,12 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
       {/* Overlay */}
       <div
         className={cn(
-          "fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-300",
+          "fixed inset-0 bg-black bg-opacity-30 z-50 transition-opacity duration-300",
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         )}
         onClick={onClose}
       />
 
-      {/* Drawer */}
       <div
         className={cn(
           "fixed top-0 right-0 h-full w-full md:w-96 bg-black text-white z-50 transition-transform duration-300 ease-in-out flex flex-col",
@@ -104,7 +103,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
           </div>
 
           {/* Contact Form */}
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-10 py-10">
             <h3 className="text-lg font-bold">ENVIE UMA MENSAGEM</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <input

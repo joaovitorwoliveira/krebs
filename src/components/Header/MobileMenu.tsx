@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 
+import Button from "../ui/button";
 import { NavLink } from "./MenuComponents";
 import { MobileMenuProps } from "./types";
 
@@ -58,8 +59,13 @@ export default function MobileMenu({
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="p-6 pt-20">
+        <div className="p-6 pt-6">
           <div className="mb-8">
+            <Button
+              text="FECHAR"
+              onClick={onClose}
+              className="text-sm mb-6 flex justify-end ml-auto"
+            />
             <h2 className="text-dark font-semibold text-lg">MENU</h2>
           </div>
 

@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
   /* Paleta de cores principal */
   --light: #f3efeb; /* Tom claro/off-white */
@@ -68,6 +66,20 @@
   --color-brown-2: var(--brown-2);
   --color-blue-dark: var(--blue-dark);
   --color-gray-blue: var(--gray-blue);
+}
+
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
 .inter {

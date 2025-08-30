@@ -16,7 +16,6 @@ const navigationLinks = [
   { href: "/projetos", label: "PROJETOS" },
   { href: "/escritorio", label: "ESCRITÓRIO" },
   { href: "/equipe", label: "EQUIPE" },
-  { href: "/contato", label: "CONTATO" },
 ];
 
 export default function Header() {
@@ -77,28 +76,29 @@ export default function Header() {
               ))}
             </nav>
 
-            <div className="hidden md:flex items-center ">
-              <Button text="CONTATO" onClick={openContactDrawer} />
+            {/* Desktop */}
+            <div className="hidden md:flex items-center">
+              <Button
+                text="CONTATO"
+                onClick={openContactDrawer}
+                className="text-sm md:text-base"
+              />
             </div>
 
-            <button
-              className="md:hidden flex items-center justify-center hover:opacity-70 transition-all duration-300 relative z-50"
-              onClick={toggleMobileMenu}
-            >
-              <Image
-                src="/images/plus-icon.png"
-                alt={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
-                width={50}
-                height={40}
-                className={cn(
-                  "h-6 w-auto transition-transform duration-400 ease-in-out ",
-                  isMobileMenuOpen ? "-rotate-45" : "rotate-0",
-                  isHomePage
-                    ? "filter brightness-0 invert"
-                    : "filter brightness-0"
-                )}
+            {/* Mobile */}
+            <div className="md:hidden flex flex-col gap-2 items-end absolute top-6 right-8 z-20">
+              <Button
+                text="MENU"
+                onClick={toggleMobileMenu}
+                variant="secondary"
+                className="flex items-center justify-center relative z-50 text-sm"
               />
-            </button>
+              <Button
+                text="CONTATO"
+                onClick={openContactDrawer}
+                className="text-sm"
+              />
+            </div>
           </div>
         </div>
       </header>
