@@ -151,6 +151,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
             <Button
               key={currentProjectSlug}
               variant="secondary"
+              className="text-xs md:text-base"
               text="VER PROJETO"
             ></Button>
           </Link>

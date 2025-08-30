@@ -64,5 +64,5 @@ export const awardsContent = {
 export const teamContent = {
   title: "Nossa equipe",
   image: "/images/team/socios.jpg",
-  text: "Veja o nosso time completo",
+  text: "NOSSA EQUIPE",
 };

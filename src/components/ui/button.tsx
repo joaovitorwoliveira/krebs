@@ -4,7 +4,7 @@ interface ButtonProps {
   text: string;
   onClick?: () => void;
   className?: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "tertiary";
 }
 
 export default function Button({
@@ -22,8 +22,9 @@ export default function Button({
         "group relative",
         variant === "primary" && ["bg-black text-white "],
         variant === "secondary" && [
-          "bg-transparent border-2 border-white text-white ",
+          "bg-transparent border-2 border-white text-white",
         ],
+        variant === "tertiary" && ["bg-transparent text-white"],
         className
       )}
     >

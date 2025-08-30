@@ -11,9 +11,6 @@ export default function OfficePreview() {
     <motion.div
       className="relative z-40 bg-white min-h-screen"
       initial={{ y: 0 }}
-      style={{
-        boxShadow: "0 -10px 30px rgba(0, 0, 0, 0.1)",
-      }}
     >
       <div className="flex flex-col min-h-screen gap-10 pt-10 px-6 lg:px-10 lg:pt-14">
         <div className="flex flex-col">

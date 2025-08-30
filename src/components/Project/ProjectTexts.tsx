@@ -90,7 +90,7 @@ export default function ProjectTexts({
       <motion.div variants={itemVariants} className="md:col-span-2">
         <motion.h1
           variants={itemVariants}
-          className="text-3xl md:text-4xl text-dark font-semibold mb-6 lowercase"
+          className="text-3xl md:text-4xl text-dark font-semibold mb-6"
         >
           {title}
         </motion.h1>

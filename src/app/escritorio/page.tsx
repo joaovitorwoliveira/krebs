@@ -7,10 +7,12 @@ import WorkMethodSection from "@/components/Office/WorkMethodSection";
 export default function Office() {
   return (
     <BackgroundWrapper>
-      <IntroductionSection />
-      <WorkMethodSection />
-      <AwardsSection />
-      <TeamSection />
+      <div className="pt-10">
+        <IntroductionSection />
+        <WorkMethodSection />
+        <AwardsSection />
+        <TeamSection />
+      </div>
     </BackgroundWrapper>
   );
 }

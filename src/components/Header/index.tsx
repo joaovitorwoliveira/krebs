@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -67,11 +66,7 @@ export default function Header() {
                   href={link.href}
                   isHomePage={isHomePage}
                 >
-                  <span
-                    className={cn(isHomePage ? "text-white" : "text-black")}
-                  >
-                    {link.label}
-                  </span>
+                  {link.label}
                 </NavLink>
               ))}
             </nav>
@@ -91,7 +86,10 @@ export default function Header() {
                 text="MENU"
                 onClick={toggleMobileMenu}
                 variant="secondary"
-                className="flex items-center justify-center relative z-50 text-sm"
+                className={cn(
+                  "flex items-center justify-center relative z-50 text-sm py-1",
+                  !isHomePage && "text-black border-black"
+                )}
               />
               <Button
                 text="CONTATO"

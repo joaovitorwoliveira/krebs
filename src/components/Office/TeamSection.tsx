@@ -9,6 +9,8 @@ import { useInView, Variants } from "framer-motion";
 import { motion } from "@/lib/motion";
 import { teamContent } from "@/app/escritorio/office";
 
+import Button from "../ui/button";
+
 export default function TeamSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -71,13 +73,14 @@ export default function TeamSection() {
         </motion.div>
         <motion.div
           variants={itemVariants}
-          className="text-sm font-light text-green-5 mt-8"
+          className="mt-8 flex flex-col items-center"
         >
-          <Link
-            href="/equipe"
-            className="transition-colors duration-300 border p-2 border-green-4 hover:bg-green-4 hover:text-white"
-          >
-            {teamContent.text}
+          <Link href="/equipe">
+            <Button
+              text={teamContent.text}
+              variant="secondary"
+              className="text-black border-black text-sm"
+            />
           </Link>
         </motion.div>
       </div>

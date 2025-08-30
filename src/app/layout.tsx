@@ -6,6 +6,7 @@ import { Encode_Sans } from "next/font/google";
 import MotionProvider from "@/context/MotionProvider";
 
 import CopyrightTooltip from "@/components/CopyrightTooltip";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 const encodeSans = Encode_Sans({
@@ -36,6 +37,7 @@ export default function RootLayout({
         <div className="texture-overlay"></div>
         <Header />
         <MotionProvider>{children}</MotionProvider>
+        <Footer />
         {/* <CopyrightTooltip /> */}
       </body>
     </html>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 
@@ -34,35 +35,34 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
     console.log("Form submitted:", formData);
   };
 
-  const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999", "_blank");
-  };
-
   return (
     <>
       {/* Overlay */}
       <div
         className={cn(
-          "fixed inset-0 bg-black bg-opacity-30 z-50 transition-opacity duration-300",
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          "fixed inset-0 bg-black/50 transition-opacity duration-300",
+          isOpen
+            ? "opacity-100 z-[9998]"
+            : "opacity-0 pointer-events-none z-[9998]"
         )}
         onClick={onClose}
       />
 
       <div
         className={cn(
-          "fixed top-0 right-0 h-full w-full md:w-96 bg-black text-white z-50 transition-transform duration-300 ease-in-out flex flex-col",
+          "fixed top-0 right-0 h-full w-full md:w-96 bg-black text-white transition-transform duration-300 ease-in-out flex flex-col z-[9999]",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
         {/* Header */}
         <div className="flex justify-between items-center p-6">
-          <h2 className="text-2xl font-bold">CONTATO</h2>
+          <h2 className="text-sm font-semibold">CONTATO</h2>
 
           <Button
             text="FECHAR"
             onClick={onClose}
-            className="p-y px-1 text-xs"
+            variant="tertiary"
+            className="py-1 px-3 text-sm"
           ></Button>
         </div>
 
@@ -70,41 +70,40 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
         <div className="flex-1 p-6 flex flex-col justify-between">
           <div className="space-y-8">
             <div>
-              <div className="flex gap-4 items-center justify-center">
-                <a
+              <div className="flex flex-col gap-4 items-center justify-center">
+                <Link
                   href="https://www.instagram.com/krebsmais/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-white hover:opacity-70 transition-opacity"
+                  className="text-white hover:text-green-1"
                 >
                   INSTAGRAM
-                </a>
-                <span>|</span>
-                <a
+                </Link>
+                <div className="w-full h-[0.5px] bg-white"></div>
+                <Link
                   href="https://www.linkedin.com/company/krebsmais/posts/?feedView=all"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-white hover:opacity-70 transition-opacity"
+                  className="text-white hover:text-green-1"
                 >
                   LINKEDIN
-                </a>
+                </Link>
+                <div className="w-full h-[0.5px] bg-white"></div>
+                <Link
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-green-1"
+                >
+                  WHATSAPP
+                </Link>
               </div>
-            </div>
-
-            {/* WhatsApp Button */}
-            <div>
-              <Button
-                text="WHATSAPP"
-                onClick={handleWhatsApp}
-                className="w-full"
-                variant="secondary"
-              />
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="flex flex-col gap-10 py-10">
-            <h3 className="text-lg font-bold">ENVIE UMA MENSAGEM</h3>
+            <h3 className="text-lg font-bold">NOS CONTE SOBRE O SEU PROJETO</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"

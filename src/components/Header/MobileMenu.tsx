@@ -60,20 +60,22 @@ export default function MobileMenu({
         }`}
       >
         <div className="p-6 pt-6">
-          <div className="mb-8">
+          <div className="mb-4">
             <Button
               text="FECHAR"
               onClick={onClose}
-              className="text-sm mb-6 flex justify-end ml-auto"
+              className="text-sm mb-6 flex justify-end ml-auto py-1 px-3"
             />
             <h2 className="text-dark font-semibold text-lg">MENU</h2>
           </div>
 
-          <nav className="space-y-6">
+          <nav className="space-y-1">
             {navigationLinks.map((link) => (
               <div key={link.href} onClick={onClose}>
                 <NavLink href={link.href}>
-                  <span className="text-dark text-sm">{link.label}</span>
+                  <span className="text-dark text-sm opacity-70">
+                    {link.label}
+                  </span>
                 </NavLink>
               </div>
             ))}
