@@ -70,7 +70,7 @@ export default function Projects() {
         variants={rowVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-3"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-3 pt-10"
       >
         {row.map((project, itemIndex) => {
           const globalIndex = rowIndex * 3 + itemIndex;
@@ -97,7 +97,7 @@ export default function Projects() {
                   />
                 </motion.div>
                 <motion.div className="p-2" variants={itemVariants}>
-                  <h3 className="text-dark text-xs font-light text-center">
+                  <h3 className="text-dark text-sm font-light text-center lowercase">
                     {project.title}
                   </h3>
                 </motion.div>

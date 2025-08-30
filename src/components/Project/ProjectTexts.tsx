@@ -71,8 +71,13 @@ export default function ProjectTexts({
 
   const paragraphs = description
     .trim()
-    .split(/\n\s*\n+/) 
-    .map((p) => p.replace(/\s*\n\s*/g, " ").replace(/\s{2,}/g, " ").trim());
+    .split(/\n\s*\n+/)
+    .map((p) =>
+      p
+        .replace(/\s*\n\s*/g, " ")
+        .replace(/\s{2,}/g, " ")
+        .trim()
+    );
 
   return (
     <motion.div

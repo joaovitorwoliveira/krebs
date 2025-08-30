@@ -5,20 +5,22 @@ import { usePathname } from "next/navigation";
 
 import * as LucideIcons from "lucide-react";
 
+import Button from "../ui/button";
 import { NavLinkProps, SocialIconProps } from "./types";
 
-export function NavLink({ href, children }: NavLinkProps) {
+export function NavLink({ href, children, isHomePage = false }: NavLinkProps) {
   const pathname = usePathname();
   const isActive = pathname === href;
 
   return (
-    <Link
-      href={href}
-      className={`text-dark hover:text-green-4 transition-colors duration-200 font-light underline-hover ${
-        isActive ? "text-green-4 active" : ""
-      }`}
-    >
-      {children}
+    <Link href={href}>
+      <Button
+        text={children as string}
+        variant="tertiary"
+        className={`px-1 ${
+          isHomePage ? "text-white" : "text-black"
+        } ${isActive ? "opacity-90" : ""}`}
+      />
     </Link>
   );
 }

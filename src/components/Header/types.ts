@@ -1,6 +1,7 @@
 export interface NavLinkProps {
   href: string;
   children: React.ReactNode;
+  isHomePage?: boolean;
 }
 
 export interface SocialIconProps {

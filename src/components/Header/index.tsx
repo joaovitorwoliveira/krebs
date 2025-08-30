@@ -1,29 +1,27 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-import { NavLink, SocialIcon } from "./MenuComponents";
+import { cn } from "@/lib/utils";
+
+import ContactDrawer from "../ContactDrawer";
+import Button from "../ui/button";
+import { NavLink } from "./MenuComponents";
 import MobileMenu from "./MobileMenu";
 
 const navigationLinks = [
   { href: "/projetos", label: "PROJETOS" },
   { href: "/escritorio", label: "ESCRITÓRIO" },
   { href: "/equipe", label: "EQUIPE" },
-  { href: "/contato", label: "CONTATO" },
-];
-
-const socialLinks = [
-  { href: "https://www.instagram.com/krebsmais/", iconName: "Instagram" },
-  {
-    href: "https://www.linkedin.com/company/krebsmais/posts/?feedView=all",
-    iconName: "Linkedin",
-  },
 ];
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContactDrawerOpen, setIsContactDrawerOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -33,64 +31,72 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   };
 
+  const openContactDrawer = () => {
+    setIsContactDrawerOpen(true);
+  };
+
+  const closeContactDrawer = () => {
+    setIsContactDrawerOpen(false);
+  };
+
   return (
     <>
-      <header className="bg-white h-14 flex items-center relative z-50">
-        <div className="container mx-auto px-4 py-3 md:px-6 ">
-          <div className="flex items-center justify-between">
-            <div className="flex-shrink-0">
-              <Link href="/">
-                <Image
-                  src="/images/logo-escrito-sembg.png"
-                  alt="Krebs +"
-                  width={200}
-                  height={40}
-                  className="h-7 w-auto hidden md:block"
-                  priority
-                />
-                <Image
-                  src="/images/k-plus-icon.png"
-                  alt="Krebs +"
-                  width={180}
-                  height={30}
-                  className="h-8 w-auto md:hidden"
-                  priority
-                />
+      <header className="h-20 flex items-center relative z-40 bg-transparent">
+        <div className="w-full px-4 md:px-6 lg:px-10">
+          <div className="flex items-center justify-between h-full">
+            <div className="flex items-center">
+              <Link href="/" className="flex items-center">
+                <div className="flex items-center justify-center">
+                  <h1
+                    className={cn(
+                      "text-4xl lg:text-[46px] font-bold leading-none",
+                      isHomePage ? "text-white" : "text-black"
+                    )}
+                  >
+                    KREBS+
+                  </h1>
+                </div>
               </Link>
             </div>
 
-            <nav className="hidden md:flex items-center space-x-8 text-sm absolute left-1/2 transform -translate-x-1/2">
+            <nav className="hidden md:flex items-center space-x-6 text-sm absolute left-1/2 transform -translate-x-1/2">
               {navigationLinks.map((link) => (
-                <NavLink key={link.href} href={link.href}>
+                <NavLink
+                  key={link.href}
+                  href={link.href}
+                  isHomePage={isHomePage}
+                >
                   {link.label}
                 </NavLink>
               ))}
             </nav>
 
-            <div className="hidden md:flex items-center space-x-4">
-              {socialLinks.map((social, index) => (
-                <SocialIcon
-                  key={index}
-                  href={social.href}
-                  iconName={social.iconName}
-                />
-              ))}
+            {/* Desktop */}
+            <div className="hidden md:flex items-center">
+              <Button
+                text="CONTATO"
+                onClick={openContactDrawer}
+                className="text-sm md:text-base"
+              />
             </div>
 
-            <button
-              className="md:hidden flex items-center justify-center hover:opacity-70 transition-all duration-300 relative z-50"
-              onClick={toggleMobileMenu}
-            >
-              <Image
-                src="/images/plus-icon.png"
-                alt={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
-                width={50}
-                height={40}
-                className={`h-6 w-auto transition-transform duration-400 ease-in-out ${
-                  isMobileMenuOpen ? "-rotate-45" : "rotate-0"
-                }`}
+            {/* Mobile */}
+            <div className="md:hidden flex flex-col gap-2 items-end absolute top-6 right-8 z-20">
+              <Button
+                text="MENU"
+                onClick={toggleMobileMenu}
+                variant="secondary"
+                className={cn(
+                  "flex items-center justify-center relative z-50 text-sm py-1",
+                  !isHomePage && "text-black border-black"
+                )}
               />
-            </button>
+              <Button
+                text="CONTATO"
+                onClick={openContactDrawer}
+                className="text-sm"
+              />
+            </div>
           </div>
         </div>
       </header>
@@ -99,6 +105,11 @@ export default function Header() {
         isOpen={isMobileMenuOpen}
         onClose={closeMobileMenu}
         navigationLinks={navigationLinks}
+      />
+
+      <ContactDrawer
+        isOpen={isContactDrawerOpen}
+        onClose={closeContactDrawer}
       />
     </>
   );

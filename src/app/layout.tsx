@@ -6,6 +6,7 @@ import { Encode_Sans } from "next/font/google";
 import MotionProvider from "@/context/MotionProvider";
 
 import CopyrightTooltip from "@/components/CopyrightTooltip";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 const encodeSans = Encode_Sans({
@@ -29,20 +30,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" className="scroll-smooth">
       <body
-        className={`${encodeSans.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-y-scroll`}
+        className={`${encodeSans.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-x-hidden`}
       >
         <div className="texture-overlay"></div>
-        <MotionProvider>
-          <div className="pointer-events-auto">
-            <Header />
-            <div className="select-none [&_img]:pointer-events-none [&_img]:select-none [&_img]:drag-none">
-              {children}
-            </div>
-          </div>
-        </MotionProvider>
-        <CopyrightTooltip />
+        <Header />
+        <MotionProvider>{children}</MotionProvider>
+        <Footer />
+        {/* <CopyrightTooltip /> */}
       </body>
     </html>
   );
