@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
+import type { Swiper as SwiperType } from "swiper";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,13 +14,15 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
+import Button from "../ui/button";
+
 const images = [
+  "/images/projects/jardim-malu/foto-2.jpg",
   "/images/projects/jardim-svg/foto-5.jpg",
   "/images/projects/jardim-ltx/foto-8.jpg",
   "/images/projects/jardim-svg/foto-2.jpg",
   "/images/projects/jardim-svg/foto-4.jpg",
   "/images/projects/jardim-atj/foto-3.jpg",
-  "/images/projects/jardim-malu/foto-2.jpg",
   "/images/projects/jardim-atj/foto-1.jpg",
 ];
 
@@ -29,6 +33,7 @@ interface HeroCarouselProps {
 export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [loadedImages, setLoadedImages] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -51,66 +56,124 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
     setLoadedImages((prev) => prev + 1);
   };
 
-  return (
-    <motion.div
-      className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 backdrop-blur-[1px]"
-      initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
-      animate={{ opacity: 1, backdropFilter: "blur(1px)" }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-    >
-      <Swiper
-        modules={[Autoplay, EffectFade, Pagination]}
-        effect="fade"
-        fadeEffect={{
-          crossFade: true,
-        }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-          bulletClass: "swiper-pagination-bullet custom-bullet",
-          bulletActiveClass: "custom-bullet-active",
-        }}
-        loop={true}
-        speed={2000}
-        className="h-full w-full active:cursor-grabbing"
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <motion.div
-              className="relative h-full w-full"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 0.6,
-                delay: index === 0 ? 0.3 : 0,
-                ease: "easeOut",
-              }}
-            >
-              <Image
-                src={image}
-                alt={`Slide ${index + 1}`}
-                fill
-                className="object-cover object-center sm:object-center md:object-center"
-                priority={index === 0}
-                sizes="100vw"
-                quality={80}
-                unoptimized={isMobile}
-                onLoad={handleImageLoad}
-              />
+  const handleSlideChange = (swiper: SwiperType) => {
+    setCurrentSlide(swiper.realIndex);
+  };
 
+  const getProjectName = (imagePath: string) => {
+    const pathParts = imagePath.split("/");
+    const projectFolder = pathParts.find((part) => part.startsWith("jardim-"));
+    return projectFolder
+      ? projectFolder.replace("jardim-", "Jardim ").toUpperCase()
+      : "";
+  };
+
+  const getProjectSlug = (imagePath: string) => {
+    const pathParts = imagePath.split("/");
+    const projectFolder = pathParts.find((part) => part.startsWith("jardim-"));
+    return projectFolder || "";
+  };
+
+  const currentProjectName = getProjectName(images[currentSlide]);
+  const currentProjectSlug = getProjectSlug(images[currentSlide]);
+
+  return (
+    <div className="absolute inset-0">
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <Swiper
+          modules={[Autoplay, EffectFade, Pagination]}
+          effect="fade"
+          fadeEffect={{
+            crossFade: true,
+          }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+            bulletClass: "swiper-pagination-bullet custom-bullet",
+            bulletActiveClass: "custom-bullet-active",
+          }}
+          loop={true}
+          speed={2000}
+          className="h-full w-full active:cursor-grabbing"
+          onSlideChange={handleSlideChange}
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index}>
               <motion.div
-                className="absolute inset-0 bg-black/20"
+                className="relative h-full w-full"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              />
-            </motion.div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </motion.div>
+                transition={{
+                  duration: 0.6,
+                  delay: index === 0 ? 0.3 : 0,
+                  ease: "easeOut",
+                }}
+              >
+                <Image
+                  src={image}
+                  alt={`Slide ${index + 1}`}
+                  fill
+                  className="object-cover object-center"
+                  priority={index === 0}
+                  sizes="100vw"
+                  quality={80}
+                  unoptimized={isMobile}
+                  onLoad={handleImageLoad}
+                />
+
+                <motion.div
+                  className="absolute inset-0 bg-black/30"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                />
+              </motion.div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Nome do projeto */}
+        <motion.div
+          className="absolute bottom-16 left-8 z-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <motion.h2
+            key={currentProjectName}
+            className="text-white text-xl md:text-2xl font-semibold tracking-wide drop-shadow-lg"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            {currentProjectName}
+          </motion.h2>
+        </motion.div>
+
+        {/* Botão Ver Projeto */}
+        <motion.div
+          className="absolute bottom-16 right-8 z-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <Link href={`/projetos/${currentProjectSlug}`}>
+            <Button
+              key={currentProjectSlug}
+              variant="secondary"
+              text="VER PROJETO"
+            ></Button>
+          </Link>
+        </motion.div>
+      </motion.div>
+    </div>
   );
 }

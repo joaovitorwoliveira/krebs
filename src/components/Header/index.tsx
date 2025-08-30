@@ -3,10 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 
-import { NavLink, SocialIcon } from "./MenuComponents";
+import Button from "../ui/button";
+import { NavLink } from "./MenuComponents";
 import MobileMenu from "./MobileMenu";
 
 const navigationLinks = [
@@ -26,6 +28,8 @@ const socialLinks = [
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -37,38 +41,45 @@ export default function Header() {
 
   return (
     <>
-      <header className="h-20 flex items-center relative z-50">
+      <header className="h-20 flex items-center relative z-40 bg-transparent">
         <div className="w-full px-4 md:px-6 lg:px-10">
           <div className="flex items-center justify-between h-full">
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
                 <div className="flex items-center justify-center">
-                  <h1 className="text-4xl lg:text-[46px] font-bold text-white leading-none">
+                  <h1
+                    className={cn(
+                      "text-4xl lg:text-[46px] font-bold leading-none drop-shadow-lg",
+                      isHomePage ? "text-white" : "text-black"
+                    )}
+                  >
                     KREBS+
                   </h1>
                 </div>
               </Link>
             </div>
 
-            <nav className="hidden md:flex items-center space-x-8 text-sm absolute left-1/2 transform -translate-x-1/2">
+            <nav className="hidden md:flex items-center space-x-6 text-sm absolute left-1/2 transform -translate-x-1/2">
               {navigationLinks.map((link) => (
-                <NavLink key={link.href} href={link.href}>
-                  <span className="">{link.label}</span>
+                <NavLink
+                  key={link.href}
+                  href={link.href}
+                  isHomePage={isHomePage}
+                >
+                  <span
+                    className={cn(
+                      "drop-shadow-lg",
+                      isHomePage ? "text-white" : "text-black"
+                    )}
+                  >
+                    {link.label}
+                  </span>
                 </NavLink>
               ))}
             </nav>
 
-            <div className="hidden md:flex items-center space-x-4">
-              <button
-                className={cn(
-                  "bg-black rounded-full px-6 py-2 flex items-center justify-center cursor-pointer",
-                  "hover:bg-green-2 transition-colors duration-300"
-                )}
-              >
-                <span className="text-white font-semibold text-lg">
-                  CONTATO
-                </span>
-              </button>
+            <div className="hidden md:flex items-center ">
+              <Button text="CONTATO" onClick={() => {}} />
             </div>
 
             <button
@@ -80,9 +91,13 @@ export default function Header() {
                 alt={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
                 width={50}
                 height={40}
-                className={`h-6 w-auto transition-transform duration-400 ease-in-out ${
-                  isMobileMenuOpen ? "-rotate-45" : "rotate-0"
-                }`}
+                className={cn(
+                  "h-6 w-auto transition-transform duration-400 ease-in-out drop-shadow-lg",
+                  isMobileMenuOpen ? "-rotate-45" : "rotate-0",
+                  isHomePage
+                    ? "filter brightness-0 invert"
+                    : "filter brightness-0"
+                )}
               />
             </button>
           </div>
