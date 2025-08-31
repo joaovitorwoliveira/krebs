@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { motion } from "@/lib/motion";
 
@@ -15,7 +16,7 @@ export default function OfficePreview() {
       <div className="flex flex-col min-h-screen gap-10 pt-10 px-6 lg:px-10 lg:pt-14">
         <div className="flex flex-col">
           <motion.h2
-            className="flex flex-col text-black mb-8 leading-tight"
+            className="flex flex-col text-black mb-8 leading-tight "
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -29,7 +30,7 @@ export default function OfficePreview() {
             </span>
           </motion.h2>
         </div>
-        <div className="flex flex-col gap-6 mb-10 items-center justify-center max-w-lg mx-auto">
+        <div className="flex flex-col gap-10 mb-10 items-center justify-center max-w-lg mx-auto">
           <motion.p
             className="text-base text-black leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
@@ -57,7 +58,9 @@ export default function OfficePreview() {
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            <Button text="VER ESCRITÓRIO"></Button>
+            <Link href="/escritorio">
+              <Button text="VER ESCRITÓRIO"></Button>
+            </Link>
           </motion.div>
         </div>
       </div>
