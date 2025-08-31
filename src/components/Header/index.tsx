@@ -42,7 +42,7 @@ export default function Header() {
   return (
     <>
       <header className="h-20 flex items-center relative z-40 bg-transparent">
-        <div className="w-full px-4 md:px-6 lg:px-10">
+        <div className="w-full px-6 lg:px-10">
           <div className="flex items-center justify-between h-full">
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
@@ -81,7 +81,7 @@ export default function Header() {
             </div>
 
             {/* Mobile */}
-            <div className="md:hidden flex flex-col gap-2 items-end absolute top-6 right-8 z-20">
+            <div className="md:hidden flex flex-col gap-2 items-end absolute top-6 right-6 z-20">
               <Button
                 text="MENU"
                 onClick={toggleMobileMenu}

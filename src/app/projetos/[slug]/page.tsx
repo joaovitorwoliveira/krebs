@@ -33,7 +33,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-8xl mx-auto px-4 md:px-6 pt-10">
+      <div className="max-w-8xl mx-auto px-6 md:px-10 pt-10">
         <ProjectTexts
           title={project.title}
           description={project.texto}

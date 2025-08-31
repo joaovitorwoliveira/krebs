@@ -1,5 +1,10 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
+import ContactDrawer from "../ContactDrawer";
 import Button from "../ui/button";
 
 interface LinkItem {
@@ -13,6 +18,16 @@ interface ContactItem {
 }
 
 export default function Footer() {
+  const [isContactDrawerOpen, setIsContactDrawerOpen] = useState(false);
+
+  const openContactDrawer = () => {
+    setIsContactDrawerOpen(true);
+  };
+
+  const closeContactDrawer = () => {
+    setIsContactDrawerOpen(false);
+  };
+
   const navigationLinks: LinkItem[] = [
     { href: "/", text: "Home" },
     { href: "/projetos", text: "Projetos" },
@@ -31,7 +46,6 @@ export default function Footer() {
       text: "LinkedIn",
       external: true,
     },
-    { href: "#", text: "Whatsapp", external: true },
   ];
 
   const contactInfo: ContactItem[] = [
@@ -43,13 +57,12 @@ export default function Footer() {
     <Link
       key={key}
       href={link.href}
-      className="block hover:opacity-70 transition-opacity"
       {...(link.external && { target: "_blank", rel: "noopener noreferrer" })}
     >
       <Button
         variant="tertiary"
         text={link.text}
-        className="font-normal text-sm text-black py-0 px-1"
+        className="font-semibold text-2xl text-black py-0 px-1"
       />
     </Link>
   );
@@ -61,76 +74,95 @@ export default function Footer() {
   );
 
   return (
-    <footer className="relative z-10 bg-white py-10 px-10">
-      <div className="mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {/* Endereço */}
-          <div>
-            <h3 className="text-black font-bold mb-4 uppercase">Endereço</h3>
-            <address className="text-black text-sm leading-relaxed not-italic">
-              Rua das Flores, 123
-              <br />
-              Bairro Jardim
-              <br />
-              São Paulo - SP
-              <br />
-              CEP: 01234-567
-            </address>
-          </div>
-
-          {/* Contato */}
-          <div>
-            <h3 className="text-black font-bold mb-4 uppercase">Contato</h3>
-            <div className="space-y-2">
-              {contactInfo.map((contact, index) =>
-                renderContactItem(contact, `contact-${index}`)
-              )}
-            </div>
-          </div>
-
-          {/* Navegação */}
-          <div>
-            <h3 className="text-black font-bold mb-4 uppercase text-right">
-              NAVEGAÇÃO
-            </h3>
-            <nav className="text-black text-sm space-y-2 flex flex-col items-end">
-              {navigationLinks.map((link, index) =>
-                renderLinkWithButton(link, `nav-${index}`)
-              )}
-            </nav>
-          </div>
-
-          {/* Redes Sociais */}
-          <div>
-            <h3 className="text-black font-bold mb-4 uppercase text-right">
-              Redes Sociais
-            </h3>
-            <div className="text-black text-sm space-y-2 flex flex-col items-end">
-              {socialLinks.map((link, index) =>
-                renderLinkWithButton(link, `social-${index}`)
-              )}
-            </div>
-          </div>
-        </div>
-
-        {/* Copyright */}
-        <div className="flex justify-between text-center pt-10">
-          <p className="text-black text-xs font-bold uppercase flex flex-col text-start">
-            <span> © {new Date().getFullYear()} Krebs +</span>
-            <span>Todos os direitos reservados.</span>
-          </p>
-
-          <div className="flex items-center">
-            <p className="text-xs">FEITO POR</p>
-            <Link href="https://joaovitorwoliveira.com" target="_blank">
-              <Button
-                text="JOAOVITORWOLIVEIRA"
-                className="text-xs py-1 px-2 bg-white text-dark"
+    <>
+      <footer className="relative z-10 bg-white py-10 px-6 md:px-10">
+        <div className="mx-auto">
+          <div className="flex flex-col gap-10 justify-between md:flex-row">
+            {/* Img + Nome */}
+            <div className="flex flex-col gap-2">
+              <Image
+                src={"/images/vertical_temporaria.jpg"}
+                alt={"floresta"}
+                width={250}
+                height={300}
               />
-            </Link>
+              <div className="flex flex-row gap-2 w-[250px] md:w-full">
+                <div className="h-2 w-full bg-brown-1"></div>
+                <div className="h-2 w-full bg-brown-2"></div>
+                <div className="h-2 w-full bg-green-1"></div>
+              </div>
+              <p className="text-black text-2xl font-bold">KREBS +</p>
+            </div>
+            {/* Navegacao */}
+            <div className="flex flex-col gap-4">
+              <p className="text-black text-2xl font-bold">NAVEGAÇÃO</p>
+              <nav className="space-y-2 flex flex-col">
+                {navigationLinks.map((link, index) =>
+                  renderLinkWithButton(link, `nav-${index}`)
+                )}
+              </nav>
+            </div>
+            {/* Social */}
+            <div className="flex flex-col gap-3">
+              <p className="text-black text-2xl font-bold">SOCIAL</p>
+              <div className="text-black text-sm space-y-2 flex flex-col">
+                {socialLinks.map((link, index) =>
+                  renderLinkWithButton(link, `social-${index}`)
+                )}
+              </div>
+            </div>
+            {/* Endereco + Contato */}
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-2">
+                <p className="text-black text-2xl font-bold">ENDEREÇO</p>
+                <address className="text-black text-sm leading-relaxed not-italic">
+                  Rua das Flores, 123
+                  <br />
+                  Bairro X
+                  <br />
+                  Pelotas - RS
+                </address>
+              </div>
+              <div className="flex flex-col gap-2">
+                <p className="text-black text-2xl font-bold">CONTATO</p>
+                <div className="space-y-2">
+                  {contactInfo.map((contact, index) =>
+                    renderContactItem(contact, `contact-${index}`)
+                  )}
+                </div>
+                <Button
+                  text="FALE CONOSCO"
+                  onClick={openContactDrawer}
+                  className="mt-2 text-sm"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="flex justify-between text-center pt-10">
+            <p className="text-black text-xs font-bold uppercase flex flex-col text-start">
+              <span> © {new Date().getFullYear()} Krebs +</span>
+              <span>Todos os direitos reservados.</span>
+            </p>
+
+            <div className="flex flex-col md:flex-row md:items-center">
+              <p className="text-xs text-start pl-1 md:pl-0">FEITO POR</p>
+              <Link href="https://joaovitorwoliveira.com" target="_blank">
+                <Button
+                  text="JOAOVITORWOLIVEIRA"
+                  className="text-xs py-1 px-1 bg-white text-dark"
+                />
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+
+      <ContactDrawer
+        isOpen={isContactDrawerOpen}
+        onClose={closeContactDrawer}
+      />
+    </>
   );
 }

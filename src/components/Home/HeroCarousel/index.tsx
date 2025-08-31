@@ -124,7 +124,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
 
         {/* Nome do projeto */}
         <motion.div
-          className="absolute bottom-16 left-8 z-20"
+          className="absolute z-20 bottom-24 left-6 md:left-10 md:bottom-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -142,7 +142,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
 
         {/* Botão Ver Projeto */}
         <motion.div
-          className="absolute bottom-16 right-8 z-20"
+          className="absolute z-20 bottom-24 right-6 md:right-10 md:bottom-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -151,7 +151,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
             <Button
               key={currentProjectSlug}
               variant="secondary"
-              className="text-xs md:text-base"
+              className="text-sm md:text-base"
               text="VER PROJETO"
             ></Button>
           </Link>

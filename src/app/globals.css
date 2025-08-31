@@ -103,7 +103,7 @@ html {
   background-repeat: repeat;
   background-size: auto;
   mix-blend-mode: multiply;
-  opacity: 0.5;
+  opacity: 0.9;
   pointer-events: none;
   z-index: 999;
 }
@@ -114,7 +114,7 @@ html {
   width: 8px !important;
   height: 8px !important;
   background-color: var(--light) !important;
-  margin: 0 4px !important;
+  margin: 20 4px !important;
   transition: all 0.3s ease !important;
   cursor: pointer !important;
   border-radius: 999 !important;

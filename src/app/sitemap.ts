@@ -5,7 +5,7 @@ import { projects } from "./projetos/projects";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://krebsmais.com.br";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = ["", "contato", "equipe", "escritorio", "projetos"];
+  const staticPages = ["", "equipe", "escritorio", "projetos"];
 
   const dynamicProjectPages = projects.map((project) => ({
     url: `${siteUrl}/projetos/${project.slug}`,

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -70,7 +71,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
         <div className="flex-1 p-6 flex flex-col justify-between">
           <div className="space-y-8">
             <div>
-              <div className="flex flex-col gap-4 items-center justify-center">
+              <div className="flex flex-col gap-6 items-start">
                 <Link
                   href="https://www.instagram.com/krebsmais/"
                   target="_blank"
@@ -79,7 +80,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 >
                   INSTAGRAM
                 </Link>
-                <div className="w-full h-[0.5px] bg-white"></div>
+
                 <Link
                   href="https://www.linkedin.com/company/krebsmais/posts/?feedView=all"
                   target="_blank"
@@ -88,7 +89,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 >
                   LINKEDIN
                 </Link>
-                <div className="w-full h-[0.5px] bg-white"></div>
+
                 <Link
                   href="#"
                   target="_blank"
@@ -99,6 +100,12 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 </Link>
               </div>
             </div>
+            <Image
+              src={"/images/vertical_temporaria.jpg"}
+              alt={"floresta"}
+              width={250}
+              height={300}
+            />
           </div>
 
           {/* Contact Form */}
@@ -111,7 +118,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 placeholder="NOME"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-400 pb-2 focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-transparent border-b border-gray-500 text-white placeholder-white pb-2 focus:outline-none focus:border-white transition-colors"
                 required
               />
               <input
@@ -120,7 +127,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 placeholder="EMAIL"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-400 pb-2 focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-transparent border-b border-gray-500 text-white placeholder-white pb-2 focus:outline-none focus:border-white transition-colors"
                 required
               />
               <textarea
@@ -128,8 +135,8 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 placeholder="MENSAGEM"
                 value={formData.message}
                 onChange={handleInputChange}
-                rows={3}
-                className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-400 pb-2 focus:outline-none focus:border-white transition-colors resize-none"
+                rows={2}
+                className="w-full bg-transparent border-b border-gray-500 text-white placeholder-white pb-2 focus:outline-none focus:border-white transition-colors resize-none"
                 required
               />
             </form>
