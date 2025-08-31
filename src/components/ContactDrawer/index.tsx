@@ -69,43 +69,44 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
 
         {/* Content */}
         <div className="flex-1 p-6 flex flex-col justify-between">
-          <div className="space-y-8">
-            <div>
-              <div className="flex flex-col gap-6 items-start">
-                <Link
-                  href="https://www.instagram.com/krebsmais/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-green-1"
-                >
-                  INSTAGRAM
-                </Link>
+          <div className="flex gap-2 justify-between pt-6">
+            <div className="flex flex-col gap-6 items-start">
+              <Link
+                href="https://www.instagram.com/krebsmais/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-green-1"
+              >
+                INSTAGRAM
+              </Link>
 
-                <Link
-                  href="https://www.linkedin.com/company/krebsmais/posts/?feedView=all"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-green-1"
-                >
-                  LINKEDIN
-                </Link>
+              <Link
+                href="https://www.linkedin.com/company/krebsmais/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-green-1"
+              >
+                LINKEDIN
+              </Link>
 
-                <Link
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-green-1"
-                >
-                  WHATSAPP
-                </Link>
-              </div>
+              <Link
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-green-1"
+              >
+                WHATSAPP
+              </Link>
             </div>
-            <Image
-              src={"/images/vertical_temporaria.jpg"}
-              alt={"floresta"}
-              width={250}
-              height={300}
-            />
+            <div className={cn("h-44 w-40")}>
+              <Image
+                src={"/images/vertical_temporaria.jpg"}
+                alt={"floresta"}
+                width={200}
+                height={200}
+                className="w-full h-full object-cover "
+              />
+            </div>
           </div>
 
           {/* Contact Form */}

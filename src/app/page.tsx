@@ -7,9 +7,9 @@ import { AnimatePresence, useScroll, useTransform } from "framer-motion";
 import "framer-motion";
 
 import { motion } from "@/lib/motion";
-import { Progress } from "@/components/ui/progress";
 import HeroCarousel from "@/components/Home/HeroCarousel";
 import OfficePreview from "@/components/Home/OfficePreview";
+import Loading from "@/components/Loading";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,24 +28,7 @@ export default function Home() {
   return (
     <>
       <AnimatePresence>
-        {isLoading && (
-          <motion.div
-            key="loading"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="fixed inset-0 z-50"
-          >
-            <div className="absolute inset-0 bg-black flex items-center justify-center">
-              <div className="w-80 max-w-[80vw]">
-                <Progress
-                  value={loadingProgress}
-                  className="h-1 bg-green-5 [&>div]:bg-white"
-                />
-              </div>
-            </div>
-          </motion.div>
-        )}
+        {isLoading && <Loading progress={loadingProgress} />}
       </AnimatePresence>
 
       <motion.div

@@ -7,17 +7,17 @@ export interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     name: "André Krebs",
-    role: "Sócio / Arquiteto Paisagista",
+    role: "Diretor Executivo - Fundador",
     imageUrl: "/images/team/andre.jpg",
   },
   {
     name: "Victor Krebs",
-    role: "Sócio / Arquiteto Paisagista",
+    role: "Diretor Comercial - Sócio",
     imageUrl: "/images/team/victor.jpg",
   },
   {
     name: "João Pedro Wouters",
-    role: "Sócio / Arquiteto Paisagista",
+    role: "Diretor de Projetos - Sócio",
     imageUrl: "/images/team/jp.jpg",
   },
 ];

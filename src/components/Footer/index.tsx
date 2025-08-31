@@ -62,7 +62,7 @@ export default function Footer() {
       <Button
         variant="tertiary"
         text={link.text}
-        className="font-semibold text-2xl text-black py-0 px-1"
+        className="font-normal text-xl text-black py-0 px-1"
       />
     </Link>
   );
@@ -133,7 +133,8 @@ export default function Footer() {
                 <Button
                   text="FALE CONOSCO"
                   onClick={openContactDrawer}
-                  className="mt-2 text-sm"
+                  className="mt-2 text-sm text-black border-black"
+                  variant="secondary"
                 />
               </div>
             </div>
