@@ -5,23 +5,26 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/context/LanguageProvider";
 
 import ContactDrawer from "../ContactDrawer";
 import Button from "../ui/button";
+import LanguageSelector from "../LanguageSelector";
 import { NavLink } from "./MenuComponents";
 import MobileMenu from "./MobileMenu";
-
-const navigationLinks = [
-  { href: "/projetos", label: "PROJETOS" },
-  { href: "/escritorio", label: "ESCRITÓRIO" },
-  { href: "/equipe", label: "EQUIPE" },
-];
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isContactDrawerOpen, setIsContactDrawerOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+  const { t } = useLanguage();
+
+  const navigationLinks = [
+    { href: "/projetos", label: t.header.projects },
+    { href: "/escritorio", label: t.header.office },
+    { href: "/equipe", label: t.header.team },
+  ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -72,9 +75,10 @@ export default function Header() {
             </nav>
 
             {/* Desktop */}
-            <div className="hidden md:flex items-center">
+            <div className="hidden md:flex items-center gap-4">
+              <LanguageSelector variant="desktop" isHomePage={isHomePage} />
               <Button
-                text="CONTATO"
+                text={t.header.contact}
                 onClick={openContactDrawer}
                 className="text-sm md:text-base"
               />
@@ -83,7 +87,7 @@ export default function Header() {
             {/* Mobile */}
             <div className="md:hidden flex flex-col gap-2 items-end absolute top-6 right-6 z-20">
               <Button
-                text="MENU"
+                text={t.header.menu}
                 onClick={toggleMobileMenu}
                 variant="secondary"
                 className={cn(
@@ -92,7 +96,7 @@ export default function Header() {
                 )}
               />
               <Button
-                text="CONTATO"
+                text={t.header.contact}
                 onClick={openContactDrawer}
                 className="text-sm"
               />

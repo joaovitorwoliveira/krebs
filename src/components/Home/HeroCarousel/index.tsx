@@ -9,6 +9,7 @@ import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { motion } from "@/lib/motion";
+import { useLanguage } from "@/context/LanguageProvider";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -30,6 +31,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [loadedImages, setLoadedImages] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const updateScreenSize = () => {
@@ -152,7 +154,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
               key={currentProjectSlug}
               variant="secondary"
               className="text-sm md:text-base"
-              text="VER PROJETO"
+              text={t.home.seeProject}
             ></Button>
           </Link>
         </motion.div>

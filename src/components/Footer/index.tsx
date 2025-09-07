@@ -4,6 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { useLanguage } from "@/context/LanguageProvider";
+
 import ContactDrawer from "../ContactDrawer";
 import Button from "../ui/button";
 
@@ -19,6 +21,7 @@ interface ContactItem {
 
 export default function Footer() {
   const [isContactDrawerOpen, setIsContactDrawerOpen] = useState(false);
+  const { t } = useLanguage();
 
   const openContactDrawer = () => {
     setIsContactDrawerOpen(true);
@@ -29,28 +32,28 @@ export default function Footer() {
   };
 
   const navigationLinks: LinkItem[] = [
-    { href: "/", text: "Home" },
-    { href: "/projetos", text: "Projetos" },
-    { href: "/escritorio", text: "Escritório" },
-    { href: "/equipe", text: "Equipe" },
+    { href: "/", text: t.footer.navigationLinks.home },
+    { href: "/projetos", text: t.footer.navigationLinks.projects },
+    { href: "/escritorio", text: t.footer.navigationLinks.office },
+    { href: "/equipe", text: t.footer.navigationLinks.team },
   ];
 
   const socialLinks: LinkItem[] = [
     {
       href: "https://instagram.com/krebsmais",
-      text: "Instagram",
+      text: t.footer.socialLinks.instagram,
       external: true,
     },
     {
       href: "https://linkedin.com/company/krebsmais",
-      text: "LinkedIn",
+      text: t.footer.socialLinks.linkedin,
       external: true,
     },
   ];
 
   const contactInfo: ContactItem[] = [
-    { text: "(11) 99999-9999" },
-    { text: "contato@krebsmais.com.br" },
+    { text: t.footer.contactInfo[0] },
+    { text: t.footer.contactInfo[1] },
   ];
 
   const renderLinkWithButton = (link: LinkItem, key: string) => (
@@ -95,7 +98,7 @@ export default function Footer() {
             </div>
             {/* Navegacao */}
             <div className="flex flex-col gap-4">
-              <p className="text-black text-2xl font-bold">NAVEGAÇÃO</p>
+              <p className="text-black text-2xl font-bold">{t.footer.navigation}</p>
               <nav className="space-y-2 flex flex-col">
                 {navigationLinks.map((link, index) =>
                   renderLinkWithButton(link, `nav-${index}`)
@@ -104,7 +107,7 @@ export default function Footer() {
             </div>
             {/* Social */}
             <div className="flex flex-col gap-3">
-              <p className="text-black text-2xl font-bold">SOCIAL</p>
+              <p className="text-black text-2xl font-bold">{t.footer.social}</p>
               <div className="text-black text-sm space-y-2 flex flex-col">
                 {socialLinks.map((link, index) =>
                   renderLinkWithButton(link, `social-${index}`)
@@ -114,24 +117,25 @@ export default function Footer() {
             {/* Endereco + Contato */}
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
-                <p className="text-black text-2xl font-bold">ENDEREÇO</p>
+                <p className="text-black text-2xl font-bold">{t.footer.address}</p>
                 <address className="text-black text-sm leading-relaxed not-italic">
-                  Rua das Flores, 123
-                  <br />
-                  Bairro X
-                  <br />
-                  Pelotas - RS
+                  {t.footer.addressText.split('\n').map((line, index) => (
+                    <span key={index}>
+                      {line}
+                      {index < t.footer.addressText.split('\n').length - 1 && <br />}
+                    </span>
+                  ))}
                 </address>
               </div>
               <div className="flex flex-col gap-2">
-                <p className="text-black text-2xl font-bold">CONTATO</p>
+                <p className="text-black text-2xl font-bold">{t.footer.contact}</p>
                 <div className="space-y-2">
                   {contactInfo.map((contact, index) =>
                     renderContactItem(contact, `contact-${index}`)
                   )}
                 </div>
                 <Button
-                  text="FALE CONOSCO"
+                  text={t.footer.talkToUs}
                   onClick={openContactDrawer}
                   className="mt-2 text-sm text-black border-black"
                   variant="secondary"
@@ -146,11 +150,11 @@ export default function Footer() {
           <div className="flex justify-between text-center pt-10">
             <p className="text-black text-xs font-bold uppercase flex flex-col text-start">
               <span> © {new Date().getFullYear()} Krebs +</span>
-              <span>Todos os direitos reservados.</span>
+              <span>{t.footer.copyright}</span>
             </p>
 
             <div className="flex flex-col md:flex-row md:items-center">
-              <p className="text-xs text-start pl-1 md:pl-0">FEITO POR</p>
+              <p className="text-xs text-start pl-1 md:pl-0">{t.footer.madeBy}</p>
               <Link href="https://joaovitorwoliveira.com" target="_blank">
                 <Button
                   text="JOAOVITORWOLIVEIRA"

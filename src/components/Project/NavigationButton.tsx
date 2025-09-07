@@ -1,15 +1,18 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import { useLanguage } from "@/context/LanguageProvider";
+
 import { NavigationButtonProps } from "./types";
 
 export default function NavigationButton({
   onClick,
   direction,
 }: NavigationButtonProps) {
+  const { t } = useLanguage();
   const Icon = direction === "left" ? ChevronLeft : ChevronRight;
   const sideClass =
     direction === "left" ? "left-3 md:left-6" : "right-3 md:right-6";
-  const label = direction === "left" ? "Imagem anterior" : "Próxima imagem";
+  const label = direction === "left" ? t.projectDetails.previousImage : t.projectDetails.nextImage;
 
   return (
     <button

@@ -1,4 +1,5 @@
 import { motion } from "@/lib/motion";
+import { useLanguage } from "@/context/LanguageProvider";
 
 import { ImageModalHeaderProps } from "./types";
 
@@ -9,6 +10,8 @@ export default function ImageModalHeader({
   onToggleFullscreen,
   onClose,
 }: ImageModalHeaderProps) {
+  const { t } = useLanguage();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -20 }}
@@ -31,7 +34,7 @@ export default function ImageModalHeader({
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           className="hidden lg:flex items-center justify-center w-8 h-8 p-2 bg-white text-dark hover:bg-gray-100 transition-all duration-200 cursor-pointer rounded-[2px] text-3xl leading-none"
-          title={isFullscreen ? "Sair da tela cheia (F)" : "Tela cheia (F)"}
+          title={isFullscreen ? t.projectDetails.exitFullscreen : t.projectDetails.fullscreen}
         >
           {isFullscreen ? (
             <svg
@@ -59,7 +62,7 @@ export default function ImageModalHeader({
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           className="flex items-center justify-center w-8 h-8 p-2 bg-white text-dark font-normal hover:bg-gray-100 transition-all duration-200 cursor-pointer rounded-[2px] text-3xl leading-none"
-          title="Fechar (Esc)"
+          title={t.projectDetails.closeModal}
         >
           ×
         </motion.button>

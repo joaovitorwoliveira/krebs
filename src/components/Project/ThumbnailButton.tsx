@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { useLanguage } from "@/context/LanguageProvider";
+
 import { ThumbnailButtonProps } from "./types";
 
 export default function ThumbnailButton({
@@ -9,6 +11,8 @@ export default function ThumbnailButton({
   onClick,
   projectTitle,
 }: ThumbnailButtonProps) {
+  const { t } = useLanguage();
+
   return (
     <button
       onClick={onClick}
@@ -21,7 +25,7 @@ export default function ThumbnailButton({
     >
       <Image
         src={image}
-        alt={`${projectTitle} - Miniatura ${index + 1}`}
+        alt={`${projectTitle} - ${t.projectDetails.thumbnail} ${index + 1}`}
         fill
         className="object-cover"
       />

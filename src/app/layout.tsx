@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Encode_Sans } from "next/font/google";
 
 import MotionProvider from "@/context/MotionProvider";
+import { LanguageProvider } from "@/context/LanguageProvider";
 
 import CopyrightTooltip from "@/components/CopyrightTooltip";
 import Footer from "@/components/Footer";
@@ -35,10 +36,12 @@ export default function RootLayout({
         className={`${encodeSans.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-x-hidden`}
       >
         <div className="texture-overlay"></div>
-        <Header />
-        <MotionProvider>{children}</MotionProvider>
-        <Footer />
-        {/* <CopyrightTooltip /> */}
+        <LanguageProvider>
+          <Header />
+          <MotionProvider>{children}</MotionProvider>
+          <Footer />
+          {/* <CopyrightTooltip /> */}
+        </LanguageProvider>
       </body>
     </html>
   );

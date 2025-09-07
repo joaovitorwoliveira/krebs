@@ -7,11 +7,14 @@ import Link from "next/link";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
+import { useLanguage } from "@/context/LanguageProvider";
 import BackgroundWrapper from "@/components/BackgroundWrapper";
 
 import { projects } from "./projects";
 
 export default function Projects() {
+  const { t } = useLanguage();
+  
   const projectRows = useMemo(() => {
     const rows = [];
     const itemsPerRow = 3;
@@ -98,7 +101,7 @@ export default function Projects() {
                 </motion.div>
                 <motion.div className="p-2" variants={itemVariants}>
                   <h3 className="text-dark text-sm font-light text-center lowercase">
-                    {project.title}
+                    {t.projects.items[project.slug as keyof typeof t.projects.items]?.title || project.title}
                   </h3>
                 </motion.div>
               </Link>

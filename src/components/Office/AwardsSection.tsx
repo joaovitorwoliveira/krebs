@@ -5,11 +5,12 @@ import { useRef } from "react";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
-import { awardsContent } from "@/app/escritorio/office";
+import { useLanguage } from "@/context/LanguageProvider";
 
 export default function AwardsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const sectionVariants: Variants = {
     hidden: {
@@ -70,10 +71,10 @@ export default function AwardsSection() {
           variants={titleVariants}
           className="text-3xl font-semibold text-dark mb-6"
         >
-          {awardsContent.title}
+          {t.office.awards.title}
         </motion.h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          {awardsContent.awards.map((award, index) => (
+          {t.office.awards.list.map((award, index) => (
             <motion.div
               key={index}
               variants={itemVariants}

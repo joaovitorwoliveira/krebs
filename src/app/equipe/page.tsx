@@ -6,13 +6,13 @@ import Image from "next/image";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
+import { useLanguage } from "@/context/LanguageProvider";
 import BackgroundWrapper from "@/components/BackgroundWrapper";
-
-import { teamMembers } from "./team";
 
 export default function Team() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const sectionVariants: Variants = {
     hidden: {
@@ -76,12 +76,12 @@ export default function Team() {
             variants={titleVariants}
             className="text-3xl font-semibold text-dark mb-4"
           >
-            Equipe
+            {t.team.title}
           </motion.h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {teamMembers.map((member, index) => (
+          {t.team.members.map((member, index) => (
             <motion.div
               key={index}
               variants={memberVariants}
@@ -89,7 +89,7 @@ export default function Team() {
             >
               <div className="relative overflow-hidden mb-4 aspect-square">
                 <Image
-                  src={member.imageUrl}
+                  src={`/images/team/${index === 0 ? 'andre' : index === 1 ? 'victor' : 'jp'}.jpg`}
                   alt={member.name}
                   fill
                   className="object-cover"

@@ -2,7 +2,10 @@
 
 import { useEffect } from "react";
 
+import { useLanguage } from "@/context/LanguageProvider";
+
 import Button from "../ui/button";
+import LanguageSelector from "../LanguageSelector";
 import { NavLink } from "./MenuComponents";
 import { MobileMenuProps } from "./types";
 
@@ -11,6 +14,8 @@ export default function MobileMenu({
   onClose,
   navigationLinks,
 }: MobileMenuProps) {
+  const { t } = useLanguage();
+
   useEffect(() => {
     if (isOpen) {
       const scrollbarWidth =
@@ -62,14 +67,14 @@ export default function MobileMenu({
         <div className="p-6 pt-6">
           <div className="mb-4">
             <Button
-              text="FECHAR"
+              text={t.header.close}
               onClick={onClose}
               className="text-sm mb-6 flex justify-end ml-auto py-1 px-3"
             />
-            <h2 className="text-dark font-semibold text-lg">MENU</h2>
+            <h2 className="text-dark font-semibold text-lg">{t.header.menu}</h2>
           </div>
 
-          <nav className="space-y-1">
+          <nav className="space-y-1 mb-6">
             {navigationLinks.map((link) => (
               <div key={link.href} onClick={onClose}>
                 <NavLink href={link.href}>
@@ -80,6 +85,11 @@ export default function MobileMenu({
               </div>
             ))}
           </nav>
+
+          {/* Language Selector for Mobile */}
+          <div className="border-t pt-4">
+            <LanguageSelector variant="mobile" />
+          </div>
         </div>
       </div>
     </>

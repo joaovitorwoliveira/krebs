@@ -7,13 +7,14 @@ import Link from "next/link";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
-import { teamContent } from "@/app/escritorio/office";
+import { useLanguage } from "@/context/LanguageProvider";
 
 import Button from "../ui/button";
 
 export default function TeamSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const sectionVariants: Variants = {
     hidden: {
@@ -59,13 +60,13 @@ export default function TeamSection() {
           variants={itemVariants}
           className="text-3xl font-semibold text-dark mb-6"
         >
-          {teamContent.title}
+          {t.office.team.title}
         </motion.h2>
         <motion.div variants={itemVariants} className="mb-6">
           <Image
             className="w-full max-w-md h-auto shadow-lg mx-auto grayscale"
-            src={teamContent.image}
-            alt={teamContent.title}
+            src="/images/team/socios.jpg"
+            alt={t.office.team.title}
             unoptimized
             width={400}
             height={400}
@@ -77,7 +78,7 @@ export default function TeamSection() {
         >
           <Link href="/equipe">
             <Button
-              text={teamContent.text}
+              text={t.office.team.buttonText}
               variant="secondary"
               className="text-black border-black text-sm"
             />

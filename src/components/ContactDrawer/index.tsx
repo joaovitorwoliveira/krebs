@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/context/LanguageProvider";
 
 import Button from "../ui/button";
 
@@ -14,6 +15,7 @@ interface ContactDrawerProps {
 }
 
 export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,7 +34,6 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     console.log("Form submitted:", formData);
   };
 
@@ -57,10 +58,10 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
       >
         {/* Header */}
         <div className="flex justify-between items-center p-6">
-          <h2 className="text-sm font-semibold">CONTATO</h2>
+          <h2 className="text-sm font-semibold">{t.contactDrawer.title}</h2>
 
           <Button
-            text="FECHAR"
+            text={t.contactDrawer.close}
             onClick={onClose}
             variant="tertiary"
             className="py-1 px-3 text-sm"
@@ -77,7 +78,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 rel="noopener noreferrer"
                 className="text-white hover:text-green-1"
               >
-                INSTAGRAM
+                {t.contactDrawer.instagram}
               </Link>
 
               <Link
@@ -86,7 +87,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 rel="noopener noreferrer"
                 className="text-white hover:text-green-1"
               >
-                LINKEDIN
+                {t.contactDrawer.linkedin}
               </Link>
 
               <Link
@@ -95,7 +96,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 rel="noopener noreferrer"
                 className="text-white hover:text-green-1"
               >
-                WHATSAPP
+                {t.contactDrawer.whatsapp}
               </Link>
             </div>
             <div className={cn("h-44 w-40")}>
@@ -111,12 +112,12 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
 
           {/* Contact Form */}
           <div className="flex flex-col gap-10 py-10">
-            <h3 className="text-lg font-bold">NOS CONTE SOBRE O SEU PROJETO</h3>
+            <h3 className="text-lg font-bold">{t.contactDrawer.projectTitle}</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
                 name="name"
-                placeholder="NOME"
+                placeholder={t.contactDrawer.namePlaceholder}
                 value={formData.name}
                 onChange={handleInputChange}
                 className="w-full bg-transparent border-b border-gray-500 text-white placeholder-white pb-2 focus:outline-none focus:border-white transition-colors"
@@ -125,7 +126,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
               <input
                 type="email"
                 name="email"
-                placeholder="EMAIL"
+                placeholder={t.contactDrawer.emailPlaceholder}
                 value={formData.email}
                 onChange={handleInputChange}
                 className="w-full bg-transparent border-b border-gray-500 text-white placeholder-white pb-2 focus:outline-none focus:border-white transition-colors"
@@ -133,7 +134,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
               />
               <textarea
                 name="message"
-                placeholder="MENSAGEM"
+                placeholder={t.contactDrawer.messagePlaceholder}
                 value={formData.message}
                 onChange={handleInputChange}
                 rows={2}
@@ -141,7 +142,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 required
               />
             </form>
-            <Button text="ENVIAR" variant="secondary" />
+            <Button text={t.contactDrawer.send} variant="secondary" />
           </div>
         </div>
       </div>

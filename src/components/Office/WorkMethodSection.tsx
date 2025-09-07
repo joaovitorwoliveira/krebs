@@ -6,11 +6,12 @@ import Image from "next/image";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
-import { workMethodContent } from "@/app/escritorio/office";
+import { useLanguage } from "@/context/LanguageProvider";
 
 export default function WorkMethodSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const sectionVariants: Variants = {
     hidden: {
@@ -54,10 +55,10 @@ export default function WorkMethodSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         <motion.div variants={itemVariants} className="order-1 lg:order-1">
           <h2 className="text-3xl font-semibold text-dark mb-6">
-            {workMethodContent.title}
+            {t.office.workMethod.title}
           </h2>
           <div className="text-sm font-light text-green-5 mb-4">
-            {workMethodContent.text.map((paragraph, index) => (
+            {t.office.workMethod.text.map((paragraph, index) => (
               <p key={index} className="mb-4 last:mb-0">
                 {paragraph}
               </p>
@@ -68,8 +69,8 @@ export default function WorkMethodSection() {
         <motion.div variants={itemVariants} className="order-2 lg:order-2">
           <Image
             className="shadow-lg w-full"
-            src={workMethodContent.image.src}
-            alt={workMethodContent.image.alt}
+            src="/images/working-pb.jpg"
+            alt={t.office.workMethod.imageAlt}
             unoptimized
             width={400}
             height={200}

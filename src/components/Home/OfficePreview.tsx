@@ -4,10 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { motion } from "@/lib/motion";
+import { useLanguage } from "@/context/LanguageProvider";
 
 import Button from "../ui/button";
 
 export default function OfficePreview() {
+  const { t } = useLanguage();
+
   return (
     <motion.div
       className="relative z-40 bg-white min-h-screen"
@@ -23,10 +26,10 @@ export default function OfficePreview() {
             viewport={{ once: true }}
           >
             <h1 className="font-semibold text-5xl lg:text-6xl xl:text-8xl">
-              KREBS+ Arquitetura Paisagística
+              {t.home.heroTitle}
             </h1>
             <p className="font-normal pt-2 text-3xl lg:text-4xl xl:text-6xl">
-              Criamos paisagens. Criamos emoções.
+              {t.home.heroSubtitle}
             </p>
           </motion.div>
         </div>
@@ -46,12 +49,7 @@ export default function OfficePreview() {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            A KREBS+ nasceu do olhar visionário de André Krebs e evoluiu para
-            uma estrutura profissional que integra estratégia (consultoria e
-            viabilidade), design (projeto) e execução (obra e fornecimento).
-            Atuamos lado a lado com incorporadoras, construtoras e escritórios
-            de arquitetura para transformar áreas externas em ativos que elevam
-            VGV, experiência e marca
+            {t.home.heroDescription}
           </motion.p>
 
           <motion.div
@@ -61,7 +59,7 @@ export default function OfficePreview() {
             viewport={{ once: true }}
           >
             <Link href="/escritorio">
-              <Button text="VER ESCRITÓRIO"></Button>
+              <Button text={t.home.seeOffice}></Button>
             </Link>
           </motion.div>
         </div>
