@@ -1,3 +1,5 @@
+import type { TranslationKeys } from "@/languages";
+
 export const images = [
   "/images/projects/jardim-malu/foto-2.jpg",
   "/images/projects/jardim-svg/foto-5.jpg",
@@ -8,12 +10,29 @@ export const images = [
   "/images/projects/jardim-atj/foto-1.jpg",
 ];
 
-export const getProjectName = (imagePath: string): string => {
+export const getProjectName = (
+  imagePath: string,
+  translations: TranslationKeys
+): string => {
   const pathParts = imagePath.split("/");
-  const projectFolder = pathParts.find((part) => part.startsWith("jardim-"));
-  return projectFolder
-    ? projectFolder.replace("jardim-", "Jardim ").toUpperCase()
-    : "";
+  const projectSlug = pathParts.find((part) => part.startsWith("jardim-"));
+
+  if (
+    !projectSlug ||
+    !translations.projects?.items?.[
+      projectSlug as keyof typeof translations.projects.items
+    ]
+  ) {
+    return projectSlug
+      ? projectSlug.replace("jardim-", "Jardim ").toUpperCase()
+      : "";
+  }
+
+  return (
+    translations.projects.items[
+      projectSlug as keyof typeof translations.projects.items
+    ]?.title || ""
+  );
 };
 
 export const getProjectSlug = (imagePath: string): string => {

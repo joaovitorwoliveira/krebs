@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { useLanguage } from "@/context/LanguageProvider";
 import type { Swiper as SwiperType } from "swiper";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { motion } from "@/lib/motion";
-import { useLanguage } from "@/context/LanguageProvider";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -58,7 +58,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
     setCurrentSlide(swiper.realIndex);
   };
 
-  const currentProjectName = getProjectName(images[currentSlide]);
+  const currentProjectName = getProjectName(images[currentSlide], t);
   const currentProjectSlug = getProjectSlug(images[currentSlide]);
 
   return (

@@ -156,7 +156,7 @@ export const pt = {
         architecture: "Ambidestro",
         photo: "Lucas Daneris",
       },
-      "rampa": {
+      rampa: {
         title: "Rampa",
         description: `
           Em Pelotas, o projeto Rampa transforma a cobertura do edifício em espaço público ativo e acessível. 
@@ -316,5 +316,9 @@ export const pt = {
 
   loading: {
     percentage: "%",
+  },
+
+  backToTop: {
+    label: "Voltar ao topo",
   },
 };

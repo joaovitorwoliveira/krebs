@@ -3,9 +3,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Encode_Sans } from "next/font/google";
 
-import MotionProvider from "@/context/MotionProvider";
 import { LanguageProvider } from "@/context/LanguageProvider";
+import MotionProvider from "@/context/MotionProvider";
 
+import BackToTopButton from "@/components/BackToTop";
 import CopyrightTooltip from "@/components/CopyrightTooltip";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -40,6 +41,7 @@ export default function RootLayout({
           <Header />
           <MotionProvider>{children}</MotionProvider>
           <Footer />
+          <BackToTopButton />
           {/* <CopyrightTooltip /> */}
         </LanguageProvider>
       </body>

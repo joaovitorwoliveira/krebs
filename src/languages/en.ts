@@ -158,7 +158,7 @@ export const en = {
         architecture: "Ambidestro",
         photo: "Lucas Daneris",
       },
-      "rampa": {
+      rampa: {
         title: "Ramp",
         description: `
           In Pelotas, the Ramp project transforms the building's roof into an active 
@@ -321,5 +321,9 @@ export const en = {
 
   loading: {
     percentage: "%",
+  },
+
+  backToTop: {
+    label: "Back to top",
   },
 };

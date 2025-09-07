@@ -157,7 +157,7 @@ export const es = {
         architecture: "Ambidestro",
         photo: "Lucas Daneris",
       },
-      "rampa": {
+      rampa: {
         title: "Rampa",
         description: `
           En Pelotas, el proyecto Rampa transforma la cubierta del edificio en espacio 
@@ -320,5 +320,9 @@ export const es = {
 
   loading: {
     percentage: "%",
+  },
+
+  backToTop: {
+    label: "Volver arriba",
   },
 };
