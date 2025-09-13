@@ -3,8 +3,7 @@
 import { useCallback, useMemo, useRef, useState } from "react";
 
 import { useLanguage } from "@/context/LanguageProvider";
-
-import { projects } from "@/app/projetos/projects";
+import { projects } from "@/features/Projects/projects";
 
 import { FilterHookReturn } from "./types";
 
@@ -26,10 +25,10 @@ export function useProjectFilters(): FilterHookReturn {
 
       const matchesSearch =
         searchQuery === "" ||
-        (projectTranslation?.title || project.title)
+        (projectTranslation?.title)
           .toLowerCase()
           .includes(searchQuery.toLowerCase()) ||
-        (projectTranslation?.place || project.place)
+        (projectTranslation?.place)
           .toLowerCase()
           .includes(searchQuery.toLowerCase());
 
