@@ -44,7 +44,6 @@ export const pt = {
         piscina: "Piscina",
         bosque: "Bosque",
         revitalização: "Revitalização",
-        esporte: "Esporte",
         internacional: "Internacional",
         institucional: "Institucional",
         urbano: "Urbano",
@@ -54,7 +53,6 @@ export const pt = {
         terraço: "Terraço",
         cobertura: "Cobertura",
         comercial: "Comercial",
-        acesso: "Acesso",
       },
     },
     items: {

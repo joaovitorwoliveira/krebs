@@ -1,14 +1,13 @@
 "use client";
 
+import BackgroundWrapper from "@/common/components/BackgroundWrapper";
 import { useLanguage } from "@/context/LanguageProvider";
-
-import BackgroundWrapper from "@/components/BackgroundWrapper";
 import {
   NoResults,
   ProjectFilters,
   useProjectFilters,
-} from "@/components/Project/Filter";
-import ProjectRow from "@/components/Project/ProjectRow";
+} from "@/features/Filter";
+import ProjectRow from "@/features/Projects/components/ProjectRow";
 
 export default function Projects() {
   const { t } = useLanguage();

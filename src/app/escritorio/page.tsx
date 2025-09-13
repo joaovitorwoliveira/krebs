@@ -1,8 +1,8 @@
-import BackgroundWrapper from "@/components/BackgroundWrapper";
-import AwardsSection from "@/components/Office/AwardsSection";
-import IntroductionSection from "@/components/Office/IntroductionSection";
-import TeamSection from "@/components/Office/TeamSection";
-import WorkMethodSection from "@/components/Office/WorkMethodSection";
+import BackgroundWrapper from "@/common/components/BackgroundWrapper";
+import AwardsSection from "@/features/Office/AwardsSection";
+import IntroductionSection from "@/features/Office/IntroductionSection";
+import TeamSection from "@/features/Office/TeamSection";
+import WorkMethodSection from "@/features/Office/WorkMethodSection";
 
 export default function Office() {
   return (

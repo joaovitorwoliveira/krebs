@@ -137,7 +137,7 @@ export const projects: Project[] = [
     architecture: "Estudio Obra Prima",
     photo: "Lucas Daneris",
     coverPhoto: "/images/projects/jardim-malu/foto-2.jpg",
-    tags: ["residencial", "jardim", "esporte", "internacional"],
+    tags: ["residencial", "jardim", "internacional"],
     images: [
       "/images/projects/jardim-malu/foto-1.jpg",
       "/images/projects/jardim-malu/foto-2.jpg",
@@ -256,7 +256,7 @@ export const projects: Project[] = [
     place: "Porto Alegre, RS",
     photo: "Vanessa Bohn",
     coverPhoto: "/images/projects/shopping-iguatemi/foto-4.jpg",
-    tags: ["comercial", "urbano", "público", "acesso"],
+    tags: ["comercial", "urbano", "público"],
     images: [
       "/images/projects/shopping-iguatemi/foto-1.jpg",
       "/images/projects/shopping-iguatemi/foto-2.jpg",

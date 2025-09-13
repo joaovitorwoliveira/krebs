@@ -44,7 +44,6 @@ export const en = {
         piscina: "Pool",
         bosque: "Forest",
         revitalização: "Revitalization",
-        esporte: "Sports",
         internacional: "International",
         institucional: "Institutional",
         urbano: "Urban",
@@ -54,7 +53,6 @@ export const en = {
         terraço: "Terrace",
         cobertura: "Rooftop",
         comercial: "Commercial",
-        acesso: "Access",
       },
     },
     items: {
