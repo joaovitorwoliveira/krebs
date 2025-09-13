@@ -32,6 +32,31 @@ export const pt = {
 
   projects: {
     title: "Projetos",
+    filters: {
+      searchPlaceholder: "Buscar por título ou local...",
+      allTags: "Todas as tags",
+      clearFilters: "Limpar filtros",
+      noResults: "Nenhum projeto encontrado",
+      tags: {
+        residencial: "Residencial",
+        jardim: "Jardim",
+        praia: "Praia",
+        piscina: "Piscina",
+        bosque: "Bosque",
+        revitalização: "Revitalização",
+        esporte: "Esporte",
+        internacional: "Internacional",
+        institucional: "Institucional",
+        urbano: "Urbano",
+        escola: "Escola",
+        público: "Público",
+        varanda: "Varanda",
+        terraço: "Terraço",
+        cobertura: "Cobertura",
+        comercial: "Comercial",
+        acesso: "Acesso",
+      },
+    },
     items: {
       "jardim-svg": {
         title: "Jardim SVG",
