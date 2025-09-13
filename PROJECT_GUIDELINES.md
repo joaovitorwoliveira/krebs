@@ -17,14 +17,23 @@ src/
 │   ├── escritorio/         # Página do escritório
 │   └── projetos/           # Páginas de projetos
 │       └── [slug]/         # Projeto individual (dynamic routing)
-├── components/             # Componentes reutilizáveis
-│   ├── ui/                 # Componentes de interface base
+├── common/                 # Componentes e recursos compartilhados
+│   └── components/         # Componentes reutilizáveis globais
+│       ├── BackgroundWrapper.tsx
+│       ├── BackToTop.tsx
+│       ├── Button.tsx
+│       ├── CopyrightTooltip.tsx
+│       ├── Footer.tsx
+│       ├── LanguageSelector.tsx
+│       ├── Loading.tsx
+│       ├── Progress.tsx
+│       └── Header/         # Componentes do cabeçalho
+├── features/               # Funcionalidades organizadas por domínio
+│   ├── ContactDrawer/      # Drawer de contato
+│   ├── Filter/             # Sistema de filtros
 │   ├── Home/               # Componentes específicos da home
-│   ├── Project/            # Componentes de projeto
 │   ├── Office/             # Componentes do escritório
-│   ├── Header/             # Componentes do cabeçalho
-│   ├── Footer/             # Componentes do rodapé
-│   └── [Feature]/          # Componentes por funcionalidade
+│   └── Projects/           # Componentes de projetos
 ├── context/                # Contextos React
 │   ├── LanguageProvider.tsx # Gerenciamento de idiomas
 │   └── MotionProvider.tsx   # Configuração do Framer Motion
@@ -75,19 +84,62 @@ const { t } = useLanguage();
 
 ### 🧩 Componentização
 
-- Separe componentes por funcionalidade em pastas próprias
-- Crie um arquivo `index.tsx` para exportação principal
-- Use `types.ts` para interfaces quando necessário
-- Componentes devem ter responsabilidade única e clara
+**Organização por Escopo de Uso:**
+
+#### 📁 `common/components/`
+
+Componentes **reutilizáveis** que são usados em **múltiplas páginas/features**:
+
+- Header, Footer, Button, Loading
+- BackToTop, LanguageSelector, Progress
+- Wrappers e layouts compartilhados
+- Componentes de UI genéricos
+
+#### 📁 `features/`
+
+Componentes **específicos** de uma **funcionalidade única**:
+
+- ContactDrawer (apenas no drawer de contato)
+- Filter (apenas na página de projetos)
+- Home/ (apenas na página inicial)
+- Office/ (apenas na página do escritório)
+- Projects/ (apenas nas páginas de projetos)
+
+**Regra de Ouro:** Se o componente é usado em 2+ lugares diferentes, va para `common/`. Se é específico de uma feature, va para `features/`.
+
+**Estrutura Padrão:**
 
 ```
-components/
-└── Feature/
-    ├── index.tsx          # Componente principal
-    ├── ComponentA.tsx     # Subcomponente
-    ├── ComponentB.tsx     # Subcomponente
-    └── types.ts           # Interfaces
+common/components/
+└── SharedComponent/
+    ├── index.tsx          # Componente principal exportado
+    ├── SubComponent.tsx   # Subcomponentes (se necessário)
+    └── types.ts           # Interfaces (se necessário)
+
+features/
+└── FeatureName/
+    ├── index.tsx          # Componente principal da feature
+    ├── ComponentA.tsx     # Componentes específicos
+    ├── ComponentB.tsx     # Componentes específicos
+    ├── types.ts           # Interfaces da feature
+    └── components/        # Subcomponentes (se muitos)
+        ├── SubComponent.tsx
+        └── index.ts       # Re-exports
 ```
+
+**Exemplos Práticos:**
+
+```typescript
+// ✅ common/components/Button/ - usado em várias páginas
+// ✅ common/components/Header/ - presente em todas as páginas
+// ✅ features/ContactDrawer/ - funcionalidade específica
+// ✅ features/Home/HeroCarousel/ - específico da home
+// ✅ features/Projects/components/ProjectCard/ - específico de projetos
+```
+
+- Componentes devem ter responsabilidade única e clara
+- Sempre crie um arquivo `index.tsx` para exportação principal
+- Use `types.ts` para interfaces quando necessário
 
 ### 🎯 TypeScript
 
@@ -135,8 +187,6 @@ className={cn("flex flex-col gap-4 p-6 bg-white rounded-lg hover:shadow-lg" , "m
 
 - Paleta definida no arquivo /app/globas.css
 - Use classes semânticas quando possível
-
-## 🔄 Estado e Dados
 
 ### 📊 Gerenciamento de Estado
 

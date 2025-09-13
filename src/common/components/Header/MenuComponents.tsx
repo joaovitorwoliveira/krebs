@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import * as LucideIcons from "lucide-react";
 
-import Button from "../../components/ui/button";
+import Button from "../Button";
 import { NavLinkProps, SocialIconProps } from "./types";
 
 export function NavLink({ href, children, isHomePage = false }: NavLinkProps) {

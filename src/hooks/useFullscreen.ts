@@ -1,6 +1,16 @@
 import { useCallback, useState } from "react";
 
-import { DocumentWithFullscreen, ElementWithFullscreen } from "./types";
+interface ElementWithFullscreen extends Element {
+  webkitRequestFullscreen?: () => Promise<void>;
+  msRequestFullscreen?: () => Promise<void>;
+}
+
+interface DocumentWithFullscreen extends Document {
+  webkitFullscreenElement?: Element;
+  webkitExitFullscreen?: () => Promise<void>;
+  msFullscreenElement?: Element;
+  msExitFullscreen?: () => Promise<void>;
+}
 
 export function useFullscreen() {
   const [isFullscreen, setIsFullscreen] = useState(false);

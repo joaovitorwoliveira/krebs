@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
+
+import { useLanguage } from "@/context/LanguageProvider";
+import { Language, languageLabels } from "@/languages";
 import { ChevronDown, Globe } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { useLanguage } from "@/context/LanguageProvider";
-import { Language, languageLabels } from "@/languages";
 
 interface LanguageSelectorProps {
   variant?: "desktop" | "mobile";
@@ -61,7 +62,6 @@ export default function LanguageSelector({
 
       {isOpen && (
         <>
-          {/* Overlay para fechar ao clicar fora */}
           <div
             className="fixed inset-0 z-40"
             onClick={() => setIsOpen(false)}

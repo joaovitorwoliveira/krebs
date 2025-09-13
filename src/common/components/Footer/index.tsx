@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageProvider";
 import ContactDrawer from "@/features/ContactDrawer";
 
-import Button from "../ui/button";
+import Button from "../Button";
 
 interface LinkItem {
   href: string;

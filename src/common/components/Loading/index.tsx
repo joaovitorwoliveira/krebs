@@ -1,6 +1,6 @@
 "use client";
 
-import { Progress } from "@/common/components/ui/progress";
+import { Progress } from "@/common/components/Progress";
 import { useLanguage } from "@/context/LanguageProvider";
 
 import { motion } from "@/lib/motion";

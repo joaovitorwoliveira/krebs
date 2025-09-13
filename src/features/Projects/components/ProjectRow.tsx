@@ -8,7 +8,8 @@ import { useLanguage } from "@/context/LanguageProvider";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
-import { Project } from "@/app/projetos/projects";
+
+import { Project } from "../types";
 
 interface ProjectRowProps {
   row: Project[];
@@ -71,7 +72,11 @@ export default function ProjectRow({ row, rowIndex }: ProjectRowProps) {
               <motion.div className="aspect-[4/3] relative overflow-hidden">
                 <Image
                   src={project.coverPhoto}
-                  alt={project.title}
+                  alt={
+                    t.projects.items[
+                      project.slug as keyof typeof t.projects.items
+                    ]?.title || project.slug
+                  }
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-101"
                   priority={rowIndex === 0}
@@ -88,7 +93,7 @@ export default function ProjectRow({ row, rowIndex }: ProjectRowProps) {
                 <h3 className="text-dark text-sm font-light text-center lowercase">
                   {t.projects.items[
                     project.slug as keyof typeof t.projects.items
-                  ]?.title || project.title}
+                  ]?.title || project.slug}
                 </h3>
               </motion.div>
             </Link>

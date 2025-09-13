@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Encode_Sans } from "next/font/google";
 
-import BackToTopButton from "@/common/components/BackToTop";
+import BackToTopButton from "@/common/components/BackToTopButton";
 import CopyrightTooltip from "@/common/components/CopyrightTooltip";
 import Footer from "@/common/components/Footer";
 import Header from "@/common/components/Header";

@@ -26,3 +26,19 @@ export interface ThumbnailButtonProps {
   onClick: () => void;
   projectTitle: string;
 }
+
+export interface ProjectsPageProps {
+  className?: string;
+}
+
+export interface ProjectPageProps {
+  slug: string;
+  className?: string;
+}
+
+export interface Project {
+  slug: string;
+  coverPhoto: string;
+  images: string[];
+  tags: string[];
+}
