@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { useLanguage } from "@/context/LanguageProvider";
 
-import { ThumbnailButtonProps } from "./types";
+import { ThumbnailButtonProps } from "../types";
 
 export default function ThumbnailButton({
   image,

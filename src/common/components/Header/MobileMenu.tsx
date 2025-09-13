@@ -4,8 +4,8 @@ import { useEffect } from "react";
 
 import { useLanguage } from "@/context/LanguageProvider";
 
-import Button from "../ui/button";
-import LanguageSelector from "../LanguageSelector";
+import LanguageSelector from "../../components/LanguageSelector";
+import Button from "../../components/ui/button";
 import { NavLink } from "./MenuComponents";
 import { MobileMenuProps } from "./types";
 

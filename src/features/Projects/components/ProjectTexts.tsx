@@ -6,8 +6,8 @@ import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
 
+import { ProjectTextsProps } from "../types";
 import { ProjectDetail } from "./ProjectDetails";
-import { ProjectTextsProps } from "./types";
 
 export default function ProjectTexts({
   title,

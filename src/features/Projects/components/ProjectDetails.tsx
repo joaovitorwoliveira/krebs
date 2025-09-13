@@ -1,4 +1,4 @@
-import { ProjectDetailProps } from "./types";
+import { ProjectDetailProps } from "../types";
 
 export const ProjectDetail = ({ label, value }: ProjectDetailProps) => {
   if (!label || !value) return null;

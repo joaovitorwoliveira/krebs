@@ -1,8 +1,9 @@
 "use client";
 
-import { motion } from "@/lib/motion";
+import { Progress } from "@/common/components/ui/progress";
 import { useLanguage } from "@/context/LanguageProvider";
-import { Progress } from "@/components/ui/progress";
+
+import { motion } from "@/lib/motion";
 
 interface LoadingProps {
   progress: number;
@@ -51,7 +52,8 @@ export default function Loading({ progress }: LoadingProps) {
             transition={{ duration: 0.4, delay: 0.8 }}
             className="text-white/60 text-sm font-light text-center mt-4 tracking-wider"
           >
-            {Math.round(progress)}{t.loading.percentage}
+            {Math.round(progress)}
+            {t.loading.percentage}
           </motion.p>
         </motion.div>
       </div>

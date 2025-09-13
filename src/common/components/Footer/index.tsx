@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useLanguage } from "@/context/LanguageProvider";
+import ContactDrawer from "@/features/ContactDrawer";
 
-import ContactDrawer from "../ContactDrawer";
 import Button from "../ui/button";
 
 interface LinkItem {
@@ -98,7 +98,9 @@ export default function Footer() {
             </div>
             {/* Navegacao */}
             <div className="flex flex-col gap-4">
-              <p className="text-black text-2xl font-bold">{t.footer.navigation}</p>
+              <p className="text-black text-2xl font-bold">
+                {t.footer.navigation}
+              </p>
               <nav className="space-y-2 flex flex-col">
                 {navigationLinks.map((link, index) =>
                   renderLinkWithButton(link, `nav-${index}`)
@@ -117,18 +119,24 @@ export default function Footer() {
             {/* Endereco + Contato */}
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
-                <p className="text-black text-2xl font-bold">{t.footer.address}</p>
+                <p className="text-black text-2xl font-bold">
+                  {t.footer.address}
+                </p>
                 <address className="text-black text-sm leading-relaxed not-italic">
-                  {t.footer.addressText.split('\n').map((line, index) => (
+                  {t.footer.addressText.split("\n").map((line, index) => (
                     <span key={index}>
                       {line}
-                      {index < t.footer.addressText.split('\n').length - 1 && <br />}
+                      {index < t.footer.addressText.split("\n").length - 1 && (
+                        <br />
+                      )}
                     </span>
                   ))}
                 </address>
               </div>
               <div className="flex flex-col gap-2">
-                <p className="text-black text-2xl font-bold">{t.footer.contact}</p>
+                <p className="text-black text-2xl font-bold">
+                  {t.footer.contact}
+                </p>
                 <div className="space-y-2">
                   {contactInfo.map((contact, index) =>
                     renderContactItem(contact, `contact-${index}`)
@@ -154,7 +162,9 @@ export default function Footer() {
             </p>
 
             <div className="flex flex-col md:flex-row md:items-center">
-              <p className="text-xs text-start pl-1 md:pl-0">{t.footer.madeBy}</p>
+              <p className="text-xs text-start pl-1 md:pl-0">
+                {t.footer.madeBy}
+              </p>
               <Link href="https://joaovitorwoliveira.com" target="_blank">
                 <Button
                   text="JOAOVITORWOLIVEIRA"

@@ -4,10 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { cn } from "@/lib/utils";
+import Button from "@/common/components/ui/button";
 import { useLanguage } from "@/context/LanguageProvider";
 
-import Button from "../ui/button";
+import { cn } from "@/lib/utils";
 
 interface ContactDrawerProps {
   isOpen: boolean;
@@ -112,7 +112,9 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
 
           {/* Contact Form */}
           <div className="flex flex-col gap-10 py-10">
-            <h3 className="text-lg font-bold">{t.contactDrawer.projectTitle}</h3>
+            <h3 className="text-lg font-bold">
+              {t.contactDrawer.projectTitle}
+            </h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"

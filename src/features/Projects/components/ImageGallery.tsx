@@ -7,8 +7,8 @@ import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
 
+import { ImageGalleryProps } from "../types";
 import ImageModal from "./ImageModal";
-import { ImageGalleryProps } from "./types";
 
 export default function ImageGallery({
   images,

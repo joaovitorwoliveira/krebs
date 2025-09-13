@@ -3,11 +3,11 @@
 import { useRef } from "react";
 import Image from "next/image";
 
+import BackgroundWrapper from "@/common/components/BackgroundWrapper";
+import { useLanguage } from "@/context/LanguageProvider";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
-import { useLanguage } from "@/context/LanguageProvider";
-import BackgroundWrapper from "@/components/BackgroundWrapper";
 
 export default function Team() {
   const ref = useRef(null);
@@ -89,7 +89,7 @@ export default function Team() {
             >
               <div className="relative overflow-hidden mb-4 aspect-square">
                 <Image
-                  src={`/images/team/${index === 0 ? 'andre' : index === 1 ? 'victor' : 'jp'}.jpg`}
+                  src={`/images/team/${index === 0 ? "andre" : index === 1 ? "victor" : "jp"}.jpg`}
                   alt={member.name}
                   fill
                   className="object-cover"

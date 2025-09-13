@@ -1,4 +1,17 @@
-export const projects = [
+export interface Project {
+  slug: string;
+  title: string;
+  texto: string;
+  date: string;
+  place: string;
+  architecture?: string;
+  photo: string;
+  coverPhoto: string;
+  images: string[];
+  tags: string[];
+}
+
+export const projects: Project[] = [
   {
     slug: "jardim-svg",
     title: "Jardim SVG",
@@ -23,6 +36,7 @@ export const projects = [
     architecture: "Marcia Barbieri - Arte Arquitetura",
     photo: "Lucas Daneris",
     coverPhoto: "/images/projects/jardim-svg/foto-5.jpg",
+    tags: ["residencial", "jardim", "praia", "piscina"],
     images: [
       "/images/projects/jardim-svg/foto-1.jpg",
       "/images/projects/jardim-svg/foto-2.jpg",
@@ -53,6 +67,7 @@ export const projects = [
     place: "Praia da Silvera - Garopaba, SC",
     photo: "Lucas Daneris",
     coverPhoto: "/images/projects/jardim-atj/foto-8.jpg",
+    tags: ["residencial", "jardim", "praia", "piscina", "bosque"],
     images: [
       "/images/projects/jardim-atj/foto-1.jpg",
       "/images/projects/jardim-atj/foto-2.jpg",
@@ -84,6 +99,7 @@ export const projects = [
     place: "Xangri-la, RS",
     photo: "Lucas Daneris",
     coverPhoto: "/images/projects/jardim-ltx/foto-8.jpg",
+    tags: ["residencial", "jardim", "praia", "piscina", "revitalização"],
     images: [
       "/images/projects/jardim-ltx/foto-1.jpg",
       "/images/projects/jardim-ltx/foto-2.jpg",
@@ -121,6 +137,7 @@ export const projects = [
     architecture: "Estudio Obra Prima",
     photo: "Lucas Daneris",
     coverPhoto: "/images/projects/jardim-malu/foto-2.jpg",
+    tags: ["residencial", "jardim", "internacional"],
     images: [
       "/images/projects/jardim-malu/foto-1.jpg",
       "/images/projects/jardim-malu/foto-2.jpg",
@@ -155,6 +172,7 @@ export const projects = [
     architecture: "ZeBL+",
     photo: "Lucas Daneris",
     coverPhoto: "/images/projects/colegio-farroupilha/foto-1.jpg",
+    tags: ["institucional", "urbano", "escola", "público"],
     images: [
       "/images/projects/colegio-farroupilha/foto-1.jpg",
       "/images/projects/colegio-farroupilha/foto-2.jpg",
@@ -183,6 +201,7 @@ export const projects = [
     architecture: "Ambidestro",
     photo: "Lucas Daneris",
     coverPhoto: "/images/projects/varanda-fek/foto-1.jpg",
+    tags: ["residencial", "varanda", "urbano", "terraço"],
     images: [
       "/images/projects/varanda-fek/foto-1.jpg",
       "/images/projects/varanda-fek/foto-2.jpg",
@@ -208,6 +227,7 @@ export const projects = [
     place: "Pelotas, RS",
     photo: "Lucas Daneris",
     coverPhoto: "/images/projects/rampa/foto-3.jpg",
+    tags: ["público", "terraço", "urbano", "cobertura"],
     images: [
       "/images/projects/rampa/foto-1.jpg",
       "/images/projects/rampa/foto-2.jpg",
@@ -236,6 +256,7 @@ export const projects = [
     place: "Porto Alegre, RS",
     photo: "Vanessa Bohn",
     coverPhoto: "/images/projects/shopping-iguatemi/foto-4.jpg",
+    tags: ["comercial", "urbano", "público"],
     images: [
       "/images/projects/shopping-iguatemi/foto-1.jpg",
       "/images/projects/shopping-iguatemi/foto-2.jpg",

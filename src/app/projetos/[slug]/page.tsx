@@ -1,12 +1,11 @@
 "use client";
 
-import { notFound } from "next/navigation";
-import { useParams } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 
 import { useLanguage } from "@/context/LanguageProvider";
 
-import ImageGallery from "../../../components/Project/ImageGallery";
-import ProjectTexts from "../../../components/Project/ProjectTexts";
+import ImageGallery from "../../../features/Projects/components/ImageGallery";
+import ProjectTexts from "../../../features/Projects/components/ProjectTexts";
 import { projects } from "../projects";
 
 export default function ProjectPage() {
@@ -19,15 +18,32 @@ export default function ProjectPage() {
     notFound();
   }
 
+  const projectTranslation =
+    t.projects.items[slug as keyof typeof t.projects.items];
 
-  const projectTranslation = t.projects.items[slug as keyof typeof t.projects.items];
-  
   const projectDetails = [
-    { label: t.projectDetails.completionYear, value: projectTranslation?.date || project.date },
-    { label: t.projectDetails.location, value: projectTranslation?.place || project.place },
-    ...(project.architecture ? [{ label: t.projectDetails.architecture, value: (projectTranslation as any)?.architecture || project.architecture }] : []),
-    { label: t.projectDetails.photography, value: projectTranslation?.photo || project.photo },
-  ].filter(detail => detail.value); 
+    {
+      label: t.projectDetails.completionYear,
+      value: projectTranslation?.date || project.date,
+    },
+    {
+      label: t.projectDetails.location,
+      value: projectTranslation?.place || project.place,
+    },
+    ...(project.architecture
+      ? [
+          {
+            label: t.projectDetails.architecture,
+            value:
+              (projectTranslation as any)?.architecture || project.architecture,
+          },
+        ]
+      : []),
+    {
+      label: t.projectDetails.photography,
+      value: projectTranslation?.photo || project.photo,
+    },
+  ].filter((detail) => detail.value);
 
   return (
     <div className="min-h-screen bg-white">
@@ -39,7 +55,10 @@ export default function ProjectPage() {
         />
       </div>
 
-      <ImageGallery images={project.images} projectTitle={projectTranslation?.title || project.title} />
+      <ImageGallery
+        images={project.images}
+        projectTitle={projectTranslation?.title || project.title}
+      />
     </div>
   );
 }

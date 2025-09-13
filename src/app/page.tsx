@@ -6,10 +6,11 @@ import { AnimatePresence, useScroll, useTransform } from "framer-motion";
 
 import "framer-motion";
 
+import Loading from "@/common/components/Loading";
+import HeroCarousel from "@/features/Home/HeroCarousel";
+import OfficePreview from "@/features/Home/OfficePreview";
+
 import { motion } from "@/lib/motion";
-import HeroCarousel from "@/components/Home/HeroCarousel";
-import OfficePreview from "@/components/Home/OfficePreview";
-import Loading from "@/components/Loading";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);

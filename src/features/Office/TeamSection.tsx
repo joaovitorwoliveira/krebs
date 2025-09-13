@@ -4,12 +4,11 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import Button from "@/common/components/ui/button";
+import { useLanguage } from "@/context/LanguageProvider";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
-import { useLanguage } from "@/context/LanguageProvider";
-
-import Button from "../ui/button";
 
 export default function TeamSection() {
   const ref = useRef(null);

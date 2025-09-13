@@ -3,13 +3,12 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Encode_Sans } from "next/font/google";
 
+import BackToTopButton from "@/common/components/BackToTop";
+import CopyrightTooltip from "@/common/components/CopyrightTooltip";
+import Footer from "@/common/components/Footer";
+import Header from "@/common/components/Header";
 import { LanguageProvider } from "@/context/LanguageProvider";
 import MotionProvider from "@/context/MotionProvider";
-
-import BackToTopButton from "@/components/BackToTop";
-import CopyrightTooltip from "@/components/CopyrightTooltip";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 
 const encodeSans = Encode_Sans({
   variable: "--font-encode-sans",

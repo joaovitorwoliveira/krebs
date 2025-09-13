@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { motion } from "@/lib/motion";
+import Button from "@/common/components/ui/button";
 import { useLanguage } from "@/context/LanguageProvider";
 
-import Button from "../ui/button";
+import { motion } from "@/lib/motion";
 
 export default function OfficePreview() {
   const { t } = useLanguage();

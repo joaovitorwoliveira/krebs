@@ -42,6 +42,7 @@ src/
 ## 📖 Boas Práticas Obrigatórias
 
 ### 🌐 Internacionalização
+
 - **TODOS** os textos devem estar nos arquivos de tradução (`src/languages/`)
 - Use sempre `const { t } = useLanguage()` para acessar traduções
 - Nunca coloque texto hardcoded em componentes
@@ -57,6 +58,7 @@ const { t } = useLanguage();
 ```
 
 ### 🎨 Animações
+
 - Use Framer Motion importado de `@/lib/motion` (não diretamente do pacote)
 - Animações devem ser sutis e elegantes
 - Priorize performance com `initial`, `animate` e `transition` bem definidos
@@ -72,6 +74,7 @@ const { t } = useLanguage();
 ```
 
 ### 🧩 Componentização
+
 - Separe componentes por funcionalidade em pastas próprias
 - Crie um arquivo `index.tsx` para exportação principal
 - Use `types.ts` para interfaces quando necessário
@@ -87,34 +90,30 @@ components/
 ```
 
 ### 🎯 TypeScript
+
 - Use interfaces bem definidas para props
-- Evite `any` - prefira `unknown` quando necessário
+- Proibido o uso de tipagem any
 - Exporte tipos de arquivos dedicados (`types.ts`)
-- Use generics quando apropriado
 
 ### 🎨 Styling
+
 - Use Tailwind CSS como sistema principal
 - Classes devem ser organizadas: layout → spacing → styling → states
 - Use `cn()` utility para concatenação condicional de classes
-- Responsive-first design (mobile → desktop)
 
 ```typescript
 // ✅ Ordem das classes Tailwind
-className="flex flex-col gap-4 p-6 bg-white rounded-lg hover:shadow-lg md:p-8"
+className={cn("flex flex-col gap-4 p-6 bg-white rounded-lg hover:shadow-lg" , "md:p-8")}
 ```
 
-### 🖼️ Imagens e Assets
-- Imagens em `public/images/` organizadas por contexto
-- Use `next/image` sempre com `alt`, `fill` ou dimensões específicas
-- Otimize imagens para web (WebP quando possível)
-- Use `priority` para imagens above-the-fold
-
 ### 📱 Responsividade
+
 - Mobile-first approach obrigatório
 - Breakpoints padrão: `sm:` (640px), `md:` (768px), `lg:` (1024px), `xl:` (1280px)
 - Teste em diferentes dispositivos e orientações
 
 ### ⚡ Performance
+
 - Lazy loading para componentes pesados
 - Use `"use client"` apenas quando necessário
 - Implemente loading states para melhor UX
@@ -123,74 +122,35 @@ className="flex flex-col gap-4 p-6 bg-white rounded-lg hover:shadow-lg md:p-8"
 ## 🛠️ Convenções de Código
 
 ### 📁 Nomenclatura
+
 - **Componentes**: PascalCase (`HeroCarousel`, `ProjectDetails`)
 - **Arquivos**: camelCase para utilities, PascalCase para componentes
 - **Pastas**: kebab-case para rotas, PascalCase para componentes
 - **Variáveis**: camelCase
 - **Constantes**: SCREAMING_SNAKE_CASE
 
-### 📝 Comentários
-- Use comentários em português para explicar lógica complexa
-- JSDoc para funções exportadas
-- Seções importantes marcadas com `// Seção`
-
-### 🔧 Imports
-- Organize imports: externos → internos → relativos
-- Use path mapping (`@/` para `src/`)
-- Agrupe imports relacionados
-
-```typescript
-// ✅ Ordem de imports
-import React from "react";
-import { motion } from "framer-motion";
-
-import { useLanguage } from "@/context/LanguageProvider";
-import { cn } from "@/lib/utils";
-
-import Button from "../ui/button";
-import { ProjectType } from "./types";
-```
-
 ## 🎨 Design System
 
 ### 🎨 Cores
+
 - Paleta definida no arquivo /app/globas.css
 - Use classes semânticas quando possível
-- Modo escuro considerado (se implementado)
-
-### 📝 Tipografia
-- Hierarquia clara com classes Tailwind
-- Contraste adequado para acessibilidade
-- Responsive typography
-
-### 🔘 Componentes UI
-- Componentes base em `src/components/ui/`
-- Use shadcn/ui como base quando apropriado
-- Mantenha consistência visual
 
 ## 🔄 Estado e Dados
 
 ### 📊 Gerenciamento de Estado
+
 - Context API para estado global (idioma, tema)
 - useState para estado local
 - Minimize prop drilling com contextos bem definidos
 
 ### 📡 Dados
+
 - Dados estáticos em arquivos TypeScript (`projects.ts`, `team.ts`)
 - Interfaces bem definidas para estruturas de dados
 - Validação de tipos em runtime quando necessário
 
 ## 🧪 Qualidade e Testes
-
-### 🔍 Linting e Formatação
-- ESLint configurado com rules específicas
-- Prettier para formatação automática
-- Pre-commit hooks recomendados
-
-### 🏗️ Build e Deploy
-- Build otimizado para produção
-- Verificação de tipos antes do build
-- Otimização de imagens automática
 
 ## 🚀 Comandos Essenciais
 
@@ -229,10 +189,10 @@ interface ComponentProps {
   children: React.ReactNode;
 }
 
-export default function Component({ 
-  className, 
-  variant = "primary", 
-  children 
+export default function Component({
+  className,
+  variant = "primary",
+  children
 }: ComponentProps) {
   const { t } = useLanguage();
 
