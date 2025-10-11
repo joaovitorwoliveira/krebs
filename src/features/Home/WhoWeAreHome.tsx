@@ -14,11 +14,8 @@ export default function WhoWeAreHome() {
   const { t } = useLanguage();
 
   return (
-    <motion.div
-      className="relative z-40 bg-white min-h-screen"
-      initial={{ y: 0 }}
-    >
-      <div className="flex flex-col min-h-screen gap-6 pt-10 px-6 lg:px-10 lg:pt-14">
+    <motion.div className="relative z-40 bg-white" initial={{ y: 0 }}>
+      <div className="flex flex-col  gap-6 pt-10 px-6 lg:px-10 lg:py-20">
         <div className="flex flex-col max-w-[1440px] mx-auto w-full">
           <motion.div
             className="flex flex-col text-black mb-8 leading-tight"

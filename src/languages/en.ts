@@ -39,6 +39,17 @@ export const en = {
         "From strategic conception to the execution of complete gardens, we work in residences, condominiums and also in large-scale developments. Always with the same essence: creating landscapes that value space and the life of those who live in it.",
       cta: "Learn our history",
     },
+
+    partners: {
+      numbers: {
+        projects: "+ 500 projects",
+        cities: "+70 cities",
+        countries: "3 countries",
+        developers: "+ 25 developers",
+        partners: "+30 partner offices",
+      },
+      subtitle: "Some of the clients and partners who trusted KREBS+:",
+    },
   },
 
   projects: {

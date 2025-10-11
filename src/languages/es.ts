@@ -39,6 +39,17 @@ export const es = {
         "Desde la concepción estratégica hasta la ejecución de jardines completos, actuamos en residencias, condominios y también en emprendimientos de gran porte. Siempre con la misma esencia: crear paisajes que valorizan el espacio y la vida de quien vive en él.",
       cta: "Conoce nuestra historia",
     },
+
+    partners: {
+      numbers: {
+        projects: "+ 500 proyectos",
+        cities: "+70 ciudades",
+        countries: "3 países",
+        developers: "+ 25 desarrolladoras",
+        partners: "+30 oficinas socias",
+      },
+      subtitle: "Algunos de los clientes y socios que confiaron en KREBS+:",
+    },
   },
 
   projects: {

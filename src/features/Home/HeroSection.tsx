@@ -6,8 +6,8 @@ import { Mouse } from "lucide-react";
 import { motion } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
+import type { HeroSectionProps } from "../WhoWeAre/types";
 import HeroCarousel from "./HeroCarousel";
-import type { HeroSectionProps } from "./types";
 
 export default function HeroSection({
   onImagesLoaded,
