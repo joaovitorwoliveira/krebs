@@ -29,6 +29,16 @@ export const en = {
     seeOffice: "SEE OFFICE",
     seeProject: "SEE PROJECT",
     scrollDown: "Scroll down",
+    whoWeAre: {
+      title: "We create landscapes, we create emotions.",
+      paragraph1:
+        "KREBS+ was born from **André Krebs'** visionary perspective, who since 1982 has dedicated his life to transforming spaces into unique gardens.",
+      paragraph2:
+        "Today, this history combines with the strategic vision of the new generation — **Victor Krebs, João Pedro Wouters and team** — to deliver projects that unite **aesthetics, technique and emotion**.",
+      paragraph3:
+        "From strategic conception to the execution of complete gardens, we work in residences, condominiums and also in large-scale developments. Always with the same essence: creating landscapes that value space and the life of those who live in it.",
+      cta: "Learn our history",
+    },
   },
 
   projects: {

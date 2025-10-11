@@ -6,8 +6,8 @@ import Loading from "@/common/components/Loading";
 import { AnimatePresence } from "framer-motion";
 
 import HeroSection from "./HeroSection";
-import OfficePreview from "./OfficePreview";
 import type { HomePageProps } from "./types";
+import WhoWeAreHome from "./WhoWeAreHome";
 
 export default function HomePage({ className }: HomePageProps) {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +33,7 @@ export default function HomePage({ className }: HomePageProps) {
 
       <div className="h-screen"></div>
 
-      <OfficePreview />
+      <WhoWeAreHome />
     </>
   );
 }

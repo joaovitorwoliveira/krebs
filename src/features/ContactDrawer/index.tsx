@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Button from "@/common/components/Button";
+import { INSTAGRAM_URL, LINKEDIN_URL, WHATSAPP_URL } from "@/common/constants";
 import { useLanguage } from "@/context/LanguageProvider";
 
 import { cn } from "@/lib/utils";
@@ -73,7 +74,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
           <div className="flex gap-2 justify-between pt-6">
             <div className="flex flex-col gap-6 items-start">
               <Link
-                href="https://www.instagram.com/krebsmais/"
+                href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-green-1"
@@ -82,7 +83,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
               </Link>
 
               <Link
-                href="https://www.linkedin.com/company/krebsmais/posts/?feedView=all"
+                href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-green-1"
@@ -91,7 +92,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
               </Link>
 
               <Link
-                href="#"
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-green-1"

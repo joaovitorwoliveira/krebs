@@ -29,6 +29,16 @@ export const pt = {
     seeOffice: "VER ESCRITÓRIO",
     seeProject: "VER PROJETO",
     scrollDown: "Role para baixo",
+    whoWeAre: {
+      title: "Criamos paisagens, criamos emoções.",
+      paragraph1:
+        "A KREBS+ nasceu do olhar visionário de **André Krebs**, que desde 1982 dedica sua vida a transformar espaços em jardins únicos.",
+      paragraph2:
+        "Hoje, essa história se soma à visão estratégica da nova geração — **Victor Krebs, João Pedro Wouters e equipe** — para entregar projetos que unem **estética, técnica e emoção**.",
+      paragraph3:
+        "Da concepção estratégica à execução de jardins completos, atuamos em residências, condomínios e também em empreendimentos de grande porte. Sempre com a mesma essência: criar paisagens que valorizam o espaço e a vida de quem vive nele.",
+      cta: "Conheça nossa história",
+    },
   },
 
   projects: {

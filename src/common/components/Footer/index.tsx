@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { INSTAGRAM_URL, LINKEDIN_URL } from "@/common/constants";
 import { useLanguage } from "@/context/LanguageProvider";
 import ContactDrawer from "@/features/ContactDrawer";
 
@@ -40,12 +41,12 @@ export default function Footer() {
 
   const socialLinks: LinkItem[] = [
     {
-      href: "https://instagram.com/krebsmais",
+      href: INSTAGRAM_URL,
       text: t.footer.socialLinks.instagram,
       external: true,
     },
     {
-      href: "https://linkedin.com/company/krebsmais",
+      href: LINKEDIN_URL,
       text: t.footer.socialLinks.linkedin,
       external: true,
     },
