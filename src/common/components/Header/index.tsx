@@ -22,9 +22,9 @@ export default function Header() {
   const { t } = useLanguage();
 
   const navigationLinks = [
+    { href: "/quem-somos", label: t.header.whoWeAre },
     { href: "/projetos", label: t.header.projects },
-    { href: "/escritorio", label: t.header.office },
-    { href: "/equipe", label: t.header.team },
+    { href: "/servicos", label: t.header.services },
   ];
 
   const toggleMobileMenu = () => {

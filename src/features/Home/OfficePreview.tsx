@@ -58,7 +58,7 @@ export default function OfficePreview() {
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            <Link href="/escritorio">
+            <Link href="/quem-somos">
               <Button text={t.home.seeOffice}></Button>
             </Link>
           </motion.div>

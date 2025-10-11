@@ -1,8 +1,8 @@
 export const pt = {
   header: {
     projects: "PROJETOS",
-    office: "ESCRITÓRIO",
-    team: "EQUIPE",
+    whoWeAre: "QUEM SOMOS",
+    services: "SERVIÇOS",
     contact: "CONTATO",
     menu: "MENU",
     close: "FECHAR",
@@ -320,8 +320,8 @@ export const pt = {
     navigationLinks: {
       home: "Home",
       projects: "Projetos",
-      office: "Escritório",
-      team: "Equipe",
+      whoWeAre: "Quem somos",
+      services: "Serviços",
     },
     socialLinks: {
       instagram: "Instagram",

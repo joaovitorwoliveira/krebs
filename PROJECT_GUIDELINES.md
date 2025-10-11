@@ -13,8 +13,8 @@ src/
 │   ├── layout.tsx          # Layout principal
 │   ├── page.tsx            # Página inicial
 │   ├── sitemap.ts          # Geração de sitemap
-│   ├── equipe/             # Página da equipe
-│   ├── escritorio/         # Página do escritório
+│   ├── quem-somos/         # Página quem somos (antigo escritório)
+│   ├── servicos/           # Página de serviços
 │   └── projetos/           # Páginas de projetos
 │       └── [slug]/         # Projeto individual (dynamic routing)
 ├── common/                 # Componentes e recursos compartilhados
@@ -201,6 +201,29 @@ className={cn("flex flex-col gap-4 p-6 bg-white rounded-lg hover:shadow-lg" , "m
 - Validação de tipos em runtime quando necessário
 
 ## 🧪 Qualidade e Testes
+
+## 🛣️ Estrutura de Rotas
+
+### Rotas Principais
+
+- `/` - Página inicial (Home)
+- `/quem-somos` - Página institucional (antigo /escritorio)
+- `/projetos` - Lista de projetos
+- `/projetos/[slug]` - Projeto individual
+- `/servicos` - Página de serviços (em desenvolvimento)
+
+### Mudanças de Rotas
+
+**Atualizações realizadas:**
+
+- `/escritorio` → `/quem-somos` (conteúdo migrado)
+- `/equipe` → removido (conteúdo integrado em quem-somos)
+- `/servicos` → nova rota criada (página em desenvolvimento)
+
+**Navegação atualizada:**
+
+- Header: Quem somos | Projetos | Serviços
+- Footer: Home | Projetos | Quem somos | Serviços
 
 ## 🚀 Comandos Essenciais
 

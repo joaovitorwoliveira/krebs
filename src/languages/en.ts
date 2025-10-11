@@ -1,8 +1,8 @@
 export const en = {
   header: {
     projects: "PROJECTS",
-    office: "OFFICE",
-    team: "TEAM",
+    whoWeAre: "WHO WE ARE",
+    services: "SERVICES",
     contact: "CONTACT",
     menu: "MENU",
     close: "CLOSE",
@@ -325,8 +325,8 @@ export const en = {
     navigationLinks: {
       home: "Home",
       projects: "Projects",
-      office: "Office",
-      team: "Team",
+      whoWeAre: "Who we are",
+      services: "Services",
     },
     socialLinks: {
       instagram: "Instagram",

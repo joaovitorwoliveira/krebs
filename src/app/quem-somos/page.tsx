@@ -1,10 +1,10 @@
 import BackgroundWrapper from "@/common/components/BackgroundWrapper";
-import Office from "@/features/Office";
+import WhoWeAre from "@/features/WhoWeAre";
 
 export default function OfficePage() {
   return (
     <BackgroundWrapper>
-      <Office />
+      <WhoWeAre />
     </BackgroundWrapper>
   );
 }

@@ -1,8 +1,8 @@
 export const es = {
   header: {
     projects: "PROYECTOS",
-    office: "OFICINA",
-    team: "EQUIPO",
+    whoWeAre: "QUIÉNES SOMOS",
+    services: "SERVICIOS",
     contact: "CONTACTO",
     menu: "MENÚ",
     close: "CERRAR",
@@ -324,8 +324,8 @@ export const es = {
     navigationLinks: {
       home: "Inicio",
       projects: "Proyectos",
-      office: "Oficina",
-      team: "Equipo",
+      whoWeAre: "Quiénes somos",
+      services: "Servicios",
     },
     socialLinks: {
       instagram: "Instagram",
