@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useLanguage } from "@/context/LanguageProvider";
+import { useScroll, useTransform } from "framer-motion";
 import type { Swiper as SwiperType } from "swiper";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -33,6 +34,10 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
   const [loadedImages, setLoadedImages] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
   const { t } = useLanguage();
+  const { scrollY } = useScroll();
+
+  const y = useTransform(scrollY, [0, 300], [0, -100]);
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   useEffect(() => {
     const updateScreenSize = () => {
@@ -80,11 +85,11 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
             delay: 5000,
             disableOnInteraction: false,
           }}
-          pagination={{
-            clickable: true,
-            bulletClass: "swiper-pagination-bullet custom-bullet",
-            bulletActiveClass: "custom-bullet-active",
-          }}
+          // pagination={{
+          //   clickable: true,
+          //   bulletClass: "swiper-pagination-bullet custom-bullet",
+          //   bulletActiveClass: "custom-bullet-active",
+          // }}
           loop={true}
           speed={2000}
           className="h-full w-full active:cursor-grabbing"
@@ -115,7 +120,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
                 />
 
                 <motion.div
-                  className="absolute inset-0 bg-black/30"
+                  className="absolute inset-0 bg-black/40"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -158,6 +163,36 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
               text={t.home.seeProject}
             ></Button>
           </Link>
+        </motion.div>
+      </motion.div>
+
+      {/* Texto centralizado com efeito de scroll */}
+      <motion.div
+        className="fixed inset-0 flex flex-col items-center justify-center z-30 pointer-events-none"
+        style={{ y, opacity }}
+      >
+        <motion.div
+          className="text-center px-6"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
+          <motion.h1
+            className="text-light text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide drop-shadow-2xl mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
+            {t.home.heroTitle}
+          </motion.h1>
+          <motion.p
+            className="text-light text-lg md:text-xl lg:text-2xl font-base tracking-wide drop-shadow-lg"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+          >
+            {t.home.heroSubtitle}
+          </motion.p>
         </motion.div>
       </motion.div>
     </div>
