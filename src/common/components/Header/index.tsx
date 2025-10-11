@@ -45,7 +45,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="h-20 flex items-center relative z-40 bg-transparent">
+      <header className="h-20 flex items-center relative z-40 bg-transparent lg:h-28">
         <div className="w-full px-6 lg:px-10">
           <div className="flex items-center justify-between h-full">
             <div className="flex items-center">

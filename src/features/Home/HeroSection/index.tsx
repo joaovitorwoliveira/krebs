@@ -1,12 +1,12 @@
 "use client";
 
+import { HeroSectionProps } from "@/features/Home/HeroSection/types";
 import { useScroll, useTransform } from "framer-motion";
 import { Mouse } from "lucide-react";
 
 import { motion } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
-import type { HeroSectionProps } from "../WhoWeAre/types";
 import HeroCarousel from "./HeroCarousel";
 
 export default function HeroSection({

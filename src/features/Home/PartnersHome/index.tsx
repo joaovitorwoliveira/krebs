@@ -32,7 +32,7 @@ function CardBigNumber({
       transition={{ duration: 0.6, delay }}
       viewport={{ once: true }}
     >
-      <div className="border-2 border-light rounded-lg p-6 h-full flex flex-col justify-center bg-green-5">
+      <div className="border-2 border-light p-6 h-full flex flex-col justify-center bg-green-5">
         <div className="text-5xl lg:text-6xl xl:text-7xl font-black text-light mb-2">
           {number}
         </div>
@@ -52,12 +52,7 @@ export default function PartnersHome() {
       className={cn("relative z-40 bg-white py-10 px-6 ", "lg:px-10 lg:py-40")}
       initial={{ y: 0 }}
     >
-      <div
-        className={cn(
-          "max-w-[1440px] mx-auto flex flex-col gap-10",
-          "lg:gap-20"
-        )}
-      >
+      <div className={cn("w-full mx-auto flex flex-col gap-10", "lg:gap-20")}>
         {/* Números em destaque */}
         <div className="mb-16">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-8">

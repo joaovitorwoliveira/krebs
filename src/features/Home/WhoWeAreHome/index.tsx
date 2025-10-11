@@ -15,8 +15,8 @@ export default function WhoWeAreHome() {
 
   return (
     <motion.div className="relative z-40 bg-white" initial={{ y: 0 }}>
-      <div className="flex flex-col  gap-6 pt-10 px-6 lg:px-10 lg:py-20">
-        <div className="flex flex-col max-w-[1440px] mx-auto w-full">
+      <div className="flex flex-col  gap-6 py-10 px-6 lg:px-10 lg:py-20">
+        <div className="flex flex-col mx-auto w-full">
           <motion.div
             className="flex flex-col text-black mb-8 leading-tight"
             initial={{ opacity: 0, y: 50 }}
@@ -25,7 +25,7 @@ export default function WhoWeAreHome() {
             viewport={{ once: true }}
           >
             {/* Título principal */}
-            <h1 className="font-semibold text-4xl lg:text-4xl xl:text-6xl mb-8">
+            <h1 className="font-semibold text-4xl lg:text-4xl xl:text-7xl mb-20">
               {t.home.whoWeAre.title}
             </h1>
           </motion.div>
@@ -39,14 +39,14 @@ export default function WhoWeAreHome() {
             <Image
               src="/images/vertical_temporaria.jpg"
               alt="Krebs+ Arquitetura Paisagística"
-              width={400}
-              height={400}
+              width={500}
+              height={500}
             />
 
-            <div className="flex flex-col gap-6 lg:w-1/2 lg:justify-between">
+            <div className="flex flex-col gap-6 lg:justify-between">
               <div className="flex flex-col gap-6">
                 <motion.p
-                  className="text-base text-black leading-relaxed"
+                  className="text-xl text-black leading-relaxed md:text-2xl xl:text-3xl"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
@@ -56,7 +56,7 @@ export default function WhoWeAreHome() {
                 </motion.p>
 
                 <motion.p
-                  className="text-base text-black leading-relaxed"
+                  className="text-xl text-black leading-relaxed md:text-2xl xl:text-3xl"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
@@ -66,7 +66,7 @@ export default function WhoWeAreHome() {
                 </motion.p>
 
                 <motion.p
-                  className="text-base text-black leading-relaxed"
+                  className="text-xl text-black leading-relaxed md:text-2xl xl:text-3xl"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
@@ -76,8 +76,15 @@ export default function WhoWeAreHome() {
                 </motion.p>
               </div>
 
-              <Link href="/quem-somos" className={cn("hidden", "lg:block")}>
-                <Button variant="primary" text={t.home.whoWeAre.cta}></Button>
+              <Link
+                href="/quem-somos"
+                className={cn("hidden", "lg:block lg:w-full")}
+              >
+                <Button
+                  variant="primary"
+                  className="w-full bg-green-4 uppercase"
+                  text={t.home.whoWeAre.cta}
+                ></Button>
               </Link>
             </div>
           </div>
@@ -90,7 +97,11 @@ export default function WhoWeAreHome() {
             viewport={{ once: true }}
           >
             <Link href="/quem-somos">
-              <Button variant="primary" text={t.home.whoWeAre.cta}></Button>
+              <Button
+                variant="primary"
+                className="w-full bg-green-4 uppercase"
+                text={t.home.whoWeAre.cta}
+              ></Button>
             </Link>
           </motion.div>
         </div>

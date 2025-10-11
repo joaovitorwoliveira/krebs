@@ -50,6 +50,28 @@ export const es = {
       },
       subtitle: "Algunos de los clientes y socios que confiaron en KREBS+:",
     },
+
+    differentials: {
+      title: "Nuestros Diferenciadores",
+      items: [
+        {
+          title: "Red propia de proveedores y viveros socios",
+          description: "plantas seleccionadas y rastreables",
+        },
+        {
+          title: "Equipo multidisciplinario",
+          description: "con más de 40 años de legado en paisajismo",
+        },
+        {
+          title: "Integración completa:",
+          description: "consultoría → proyecto → ejecución → post-obra",
+        },
+        {
+          title: "La mente de uno de los íconos del paisajismo brasileño",
+          description: "André Krebs",
+        },
+      ],
+    },
   },
 
   projects: {

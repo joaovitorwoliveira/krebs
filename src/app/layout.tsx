@@ -1,7 +1,7 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Encode_Sans } from "next/font/google";
+import { Bebas_Neue, Encode_Sans } from "next/font/google";
 
 import BackToTopButton from "@/common/components/BackToTopButton";
 import CopyrightTooltip from "@/common/components/CopyrightTooltip";
@@ -14,6 +14,12 @@ const encodeSans = Encode_Sans({
   variable: "--font-encode-sans",
   subsets: ["latin"],
   weight: ["300", "400", "600", "700"],
+});
+
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className="scroll-smooth">
       <body
-        className={`${encodeSans.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-x-hidden`}
+        className={`${encodeSans.variable} ${bebasNeue.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-x-hidden`}
       >
         <div className="texture-overlay"></div>
         <LanguageProvider>

@@ -16,12 +16,12 @@
   --brown-2: #d67f48; /* Marrom médio */
   --blue-dark: #212c42; /* Azul escuro */
   --gray-blue: #788990; /* Cinza azulado */
-
 }
 
 @theme inline {
   --font-sans: var(--font-encode-sans);
   --font-mono: var(--font-encode-sans);
+  --font-bebas: var(--font-bebas-neue);
 
   --color-green-1: var(--green-1);
   --color-green-2: var(--green-2);
@@ -61,6 +61,12 @@ html {
     "Helvetica Neue",
     Arial,
     sans-serif;
+}
+
+.bebas {
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 /* Texture */

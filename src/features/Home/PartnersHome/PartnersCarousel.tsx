@@ -32,7 +32,7 @@ export default function PartnersCarousel() {
   }, []);
 
   return (
-    <>
+    <div>
       <h3 className="text-xl lg:text-2xl text-black mb-10 text-center">
         {t.home.partners.subtitle}
       </h3>
@@ -95,6 +95,6 @@ export default function PartnersCarousel() {
           transition-timing-function: linear !important;
         }
       `}</style>
-    </>
+    </div>
   );
 }

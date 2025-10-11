@@ -50,6 +50,28 @@ export const en = {
       },
       subtitle: "Some of the clients and partners who trusted KREBS+:",
     },
+
+    differentials: {
+      title: "Our Differentiators",
+      items: [
+        {
+          title: "Own network of suppliers and partner nurseries",
+          description: "selected and traceable plants",
+        },
+        {
+          title: "Multidisciplinary team",
+          description: "with more than 40 years of legacy in landscaping",
+        },
+        {
+          title: "Complete integration:",
+          description: "consulting → project → execution → post-construction",
+        },
+        {
+          title: "The mind of one of the icons of Brazilian landscaping",
+          description: "André Krebs",
+        },
+      ],
+    },
   },
 
   projects: {

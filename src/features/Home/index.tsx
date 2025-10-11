@@ -5,8 +5,9 @@ import { useState } from "react";
 import Loading from "@/common/components/Loading";
 import { AnimatePresence } from "framer-motion";
 
-import type { HomePageProps } from "../WhoWeAre/types";
+import DifferentialHome from "./DifferentialHome";
 import HeroSection from "./HeroSection";
+import type { HomePageProps } from "./HeroSection/types";
 import PartnersHome from "./PartnersHome";
 import WhoWeAreHome from "./WhoWeAreHome";
 
@@ -36,6 +37,7 @@ export default function HomePage({ className }: HomePageProps) {
 
       <WhoWeAreHome />
       <PartnersHome />
+      <DifferentialHome />
     </>
   );
 }
