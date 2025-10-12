@@ -72,6 +72,64 @@ export const pt = {
         },
       ],
     },
+
+    services: {
+      title: "Serviços",
+      subtitle:
+        "Na KREBS+, o paisagismo é um processo integrado — **cérebro, coração e braço**",
+      sections: [
+        {
+          title: "1. Consultoria — O Cérebro",
+          items: [
+            {
+              label: "Consultoria estratégica:",
+              description:
+                "alinhamos expectativas, estilo de vida e orçamento.",
+            },
+            {
+              label: "Estudo de viabilidade:",
+              description: "cruzamos custos, espécies e fornecedores.",
+            },
+          ],
+          description:
+            "Clareza de investimento e segurança para começar sem surpresas.",
+          cta: "Saiba mais",
+        },
+        {
+          title: "2. Projeto — O Coração",
+          items: [
+            {
+              label: "Investigação e estudo preliminar:",
+              description: "traduzimos desejos em formas, texturas e imagens.",
+            },
+            {
+              label: "Anteprojeto e executivo:",
+              description:
+                "definição de espécies, harmonização com arquitetura e detalhamento técnico.",
+            },
+          ],
+          cta: "Saiba mais",
+        },
+        {
+          title: "3. Execução — O Braço",
+          items: [
+            {
+              label: "Acompanhamento de obra",
+              description: "integrado com arquitetos e engenheiros.",
+            },
+            {
+              label: "Execução completa:",
+              description: "do preparo do solo ao plantio final.",
+            },
+            {
+              label: "Fornecimento de plantas",
+              description: "via rede de viveiros, com rastreabilidade.",
+            },
+          ],
+          cta: "Saiba mais",
+        },
+      ],
+    },
   },
 
   projects: {

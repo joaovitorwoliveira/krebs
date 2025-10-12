@@ -14,8 +14,6 @@ export default function DifferentialHome() {
       className={cn("relative z-40 bg-green-1 py-10 px-6", "lg:px-10 lg:py-20")}
       initial={{ y: 0 }}
     >
-      <div className="hidden lg:block bg-light/25 h-[0.50px] my-10 absolute -top-10 inset-x-10" />
-
       <div className="w-full mx-auto">
         {/* Título principal */}
         <motion.div

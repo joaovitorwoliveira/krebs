@@ -9,6 +9,7 @@ import DifferentialHome from "./DifferentialHome";
 import HeroSection from "./HeroSection";
 import type { HomePageProps } from "./HeroSection/types";
 import PartnersHome from "./PartnersHome";
+import ServicesHome from "./ServicesHome";
 import WhoWeAreHome from "./WhoWeAreHome";
 
 export default function HomePage({ className }: HomePageProps) {
@@ -38,6 +39,7 @@ export default function HomePage({ className }: HomePageProps) {
       <WhoWeAreHome />
       <PartnersHome />
       <DifferentialHome />
+      <ServicesHome />
     </>
   );
 }

@@ -30,7 +30,7 @@ function CardBigNumber({
       transition={{ duration: 0.6, delay }}
       viewport={{ once: true }}
     >
-      <div className="p-6 h-full flex flex-col justify-center bg-light">
+      <div className="p-6 h-full flex flex-col justify-center bg-white">
         <div className="text-5xl lg:text-6xl xl:text-7xl font-black text-green-4 mb-2">
           {number}
         </div>
@@ -79,7 +79,7 @@ export default function PartnersHome() {
         </div>
 
         {/* Carousel de marcas parceiras */}
-        <div className="mb-8">
+        <div className="">
           <PartnersCarousel />
         </div>
       </div>
