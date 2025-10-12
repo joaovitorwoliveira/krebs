@@ -15,8 +15,8 @@ export default function WhoWeAreHome() {
 
   return (
     <motion.div className="relative z-40 bg-white" initial={{ y: 0 }}>
-      <div className="flex flex-col  gap-6 py-10 px-6 lg:px-10 lg:py-20">
-        <div className="flex flex-col mx-auto w-full">
+      <div className="flex flex-col gap-6 py-10 px-6 lg:px-10 lg:py-20">
+        <div className="flex flex-col mx-auto w-full ">
           <motion.div
             className="flex flex-col text-black mb-8 leading-tight"
             initial={{ opacity: 0, y: 50 }}
@@ -25,28 +25,40 @@ export default function WhoWeAreHome() {
             viewport={{ once: true }}
           >
             {/* Título principal */}
-            <h1 className="font-semibold text-4xl lg:text-4xl xl:text-7xl mb-20">
+            <h1
+              className={cn(
+                "font-semibold text-3xl mb-12",
+                "md:text-4xl",
+                "lg:text-6xl"
+              )}
+            >
               {t.home.whoWeAre.title}
             </h1>
           </motion.div>
           {/* Texto +Imagem */}
           <div
             className={cn(
-              "flex flex-col gap-6",
-              "lg:flex-row lg:gap-10 lg:min-h-[500px]"
+              "flex flex-col gap-8",
+              "lg:flex-row lg:gap-12 lg:min-h-[600px] lg:items-end"
             )}
           >
-            <Image
-              src="/images/vertical_temporaria.jpg"
-              alt="Krebs+ Arquitetura Paisagística"
-              width={500}
-              height={500}
-            />
+            <div className="lg:w-1/2">
+              <Image
+                src="/images/vertical_temporaria.jpg"
+                alt="Krebs+ Arquitetura Paisagística"
+                width={600}
+                height={600}
+                className="w-full h-auto object-cover"
+              />
+            </div>
 
-            <div className="flex flex-col gap-6 lg:justify-between">
-              <div className="flex flex-col gap-6">
+            <div className="flex flex-col lg:w-1/2">
+              <div className="flex flex-col gap-4">
                 <motion.p
-                  className="text-xl text-black leading-relaxed md:text-2xl xl:text-3xl"
+                  className={cn(
+                    "text-dark font-light text-sm leading-relaxed",
+                    "lg:text-base"
+                  )}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
@@ -56,7 +68,10 @@ export default function WhoWeAreHome() {
                 </motion.p>
 
                 <motion.p
-                  className="text-xl text-black leading-relaxed md:text-2xl xl:text-3xl"
+                  className={cn(
+                    "text-dark font-light text-sm leading-relaxed",
+                    "lg:text-base"
+                  )}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
@@ -66,7 +81,10 @@ export default function WhoWeAreHome() {
                 </motion.p>
 
                 <motion.p
-                  className="text-xl text-black leading-relaxed md:text-2xl xl:text-3xl"
+                  className={cn(
+                    "text-dark font-light text-sm leading-relaxed",
+                    "lg:text-base"
+                  )}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
@@ -78,11 +96,11 @@ export default function WhoWeAreHome() {
 
               <Link
                 href="/quem-somos"
-                className={cn("hidden", "lg:block lg:w-full")}
+                className={cn("hidden", "lg:block lg:w-fit mt-6")}
               >
                 <Button
                   variant="primary"
-                  className="w-full bg-green-4 uppercase"
+                  className="bg-green-4 uppercase"
                   text={t.home.whoWeAre.cta}
                 ></Button>
               </Link>
@@ -90,7 +108,7 @@ export default function WhoWeAreHome() {
           </div>
 
           <motion.div
-            className={cn("block mt-10", "lg:hidden")}
+            className={cn("block mt-8", "lg:hidden")}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}

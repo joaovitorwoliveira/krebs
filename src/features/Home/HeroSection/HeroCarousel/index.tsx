@@ -185,14 +185,14 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
           >
             {t.home.heroTitle}
           </motion.h1>
-          <motion.p
+          {/* <motion.p
             className="text-light text-lg md:text-xl lg:text-2xl font-base tracking-wide drop-shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
           >
             {t.home.heroSubtitle}
-          </motion.p>
+          </motion.p> */}
         </motion.div>
       </motion.div>
     </div>
