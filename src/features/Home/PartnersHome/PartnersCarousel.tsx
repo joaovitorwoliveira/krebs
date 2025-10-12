@@ -9,17 +9,43 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 
+import { IMAGE_DB_URL } from "@/common/constants/db-images";
+
 import { cn } from "@/lib/utils";
 
 const partners = [
-  { name: "Melnick", logo: "/images/partners/melnick.png" },
-  { name: "Obra Prima Arquitetura", logo: "/images/partners/melnick.png" },
-  { name: "Condomínios de Alto Padrão", logo: "/images/partners/melnick.png" },
-  { name: "Resorts Parceiros", logo: "/images/partners/melnick.png" },
-  { name: "Clubes Parceiros", logo: "/images/partners/melnick.png" },
-  { name: "Parceiro 6", logo: "/images/partners/melnick.png" },
-  { name: "Parceiro 7", logo: "/images/partners/melnick.png" },
-  { name: "Parceiro 8", logo: "/images/partners/melnick.png" },
+  {
+    name: "Melnick",
+    logo: `${IMAGE_DB_URL}SLdhHfnzGw1tzUue1Bw5pzaSolJvN3eILXkZqrGHbfRuW9jh`,
+  },
+  {
+    name: "Obra Prima Arquitetura",
+    logo: `${IMAGE_DB_URL}SLdhHfnzGw1tzUue1Bw5pzaSolJvN3eILXkZqrGHbfRuW9jh`,
+  },
+  {
+    name: "Condomínios de Alto Padrão",
+    logo: `${IMAGE_DB_URL}SLdhHfnzGw1tzUue1Bw5pzaSolJvN3eILXkZqrGHbfRuW9jh`,
+  },
+  {
+    name: "Resorts Parceiros",
+    logo: `${IMAGE_DB_URL}SLdhHfnzGw1tzUue1Bw5pzaSolJvN3eILXkZqrGHbfRuW9jh`,
+  },
+  {
+    name: "Clubes Parceiros",
+    logo: `${IMAGE_DB_URL}SLdhHfnzGw1tzUue1Bw5pzaSolJvN3eILXkZqrGHbfRuW9jh`,
+  },
+  {
+    name: "Parceiro 6",
+    logo: `${IMAGE_DB_URL}SLdhHfnzGw1tzUue1Bw5pzaSolJvN3eILXkZqrGHbfRuW9jh`,
+  },
+  {
+    name: "Parceiro 7",
+    logo: `${IMAGE_DB_URL}SLdhHfnzGw1tzUue1Bw5pzaSolJvN3eILXkZqrGHbfRuW9jh`,
+  },
+  {
+    name: "Parceiro 8",
+    logo: `${IMAGE_DB_URL}SLdhHfnzGw1tzUue1Bw5pzaSolJvN3eILXkZqrGHbfRuW9jh`,
+  },
 ];
 
 export default function PartnersCarousel() {

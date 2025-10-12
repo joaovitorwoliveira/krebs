@@ -5,7 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Button from "@/common/components/Button";
-import { INSTAGRAM_URL, LINKEDIN_URL, WHATSAPP_URL } from "@/common/constants";
+import {
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+  WHATSAPP_URL,
+} from "@/common/constants/social";
 import { useLanguage } from "@/context/LanguageProvider";
 
 import { cn } from "@/lib/utils";

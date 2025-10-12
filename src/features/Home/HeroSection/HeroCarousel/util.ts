@@ -1,44 +1,90 @@
-import type { TranslationKeys } from "@/languages";
+import {
+  JARDIM_MALU_IMAGE_1,
+  JARDIM_MALU_IMAGE_2,
+  JARDIM_MALU_IMAGE_3,
+  JARDIM_MALU_IMAGE_4,
+  JARDIM_MALU_IMAGE_5,
+  JARDIM_MALU_IMAGE_6,
+} from "@/common/constants/db-images";
 
-export const images = [
-  "/images/projects/jardim-malu/foto-2.jpg",
-  "/images/projects/jardim-svg/foto-5.jpg",
-  "/images/projects/jardim-ltx/foto-8.jpg",
-  "/images/projects/jardim-svg/foto-2.jpg",
-  "/images/projects/jardim-svg/foto-4.jpg",
-  "/images/projects/jardim-atj/foto-3.jpg",
-  "/images/projects/jardim-atj/foto-1.jpg",
+export interface HeroImage {
+  url: string;
+  projectSlug: string;
+  projectName: {
+    pt: string;
+    en: string;
+    es: string;
+  };
+}
+
+export const heroImages: HeroImage[] = [
+  {
+    url: JARDIM_MALU_IMAGE_1,
+    projectSlug: "jardim-malu",
+    projectName: {
+      pt: "Jardim MALU",
+      en: "MALU Garden",
+      es: "Jardín MALU",
+    },
+  },
+  {
+    url: JARDIM_MALU_IMAGE_2,
+    projectSlug: "jardim-malu",
+    projectName: {
+      pt: "Jardim MALU",
+      en: "MALU Garden",
+      es: "Jardín MALU",
+    },
+  },
+  {
+    url: JARDIM_MALU_IMAGE_3,
+    projectSlug: "jardim-malu",
+    projectName: {
+      pt: "Jardim MALU",
+      en: "MALU Garden",
+      es: "Jardín MALU",
+    },
+  },
+  {
+    url: JARDIM_MALU_IMAGE_4,
+    projectSlug: "jardim-malu",
+    projectName: {
+      pt: "Jardim MALU",
+      en: "MALU Garden",
+      es: "Jardín MALU",
+    },
+  },
+  {
+    url: JARDIM_MALU_IMAGE_5,
+    projectSlug: "jardim-malu",
+    projectName: {
+      pt: "Jardim MALU",
+      en: "MALU Garden",
+      es: "Jardín MALU",
+    },
+  },
+  {
+    url: JARDIM_MALU_IMAGE_6,
+    projectSlug: "jardim-malu",
+    projectName: {
+      pt: "Jardim MALU",
+      en: "MALU Garden",
+      es: "Jardín MALU",
+    },
+  },
 ];
 
+export { heroImages as images };
+
 export const getProjectName = (
-  imagePath: string,
-  translations: TranslationKeys
+  heroImage: HeroImage,
+  currentLanguage: "pt" | "en" | "es"
 ): string => {
-  const pathParts = imagePath.split("/");
-  const projectSlug = pathParts.find((part) => part.startsWith("jardim-"));
-
-  if (
-    !projectSlug ||
-    !translations.projects?.items?.[
-      projectSlug as keyof typeof translations.projects.items
-    ]
-  ) {
-    return projectSlug
-      ? projectSlug.replace("jardim-", "Jardim ").toUpperCase()
-      : "";
-  }
-
-  return (
-    translations.projects.items[
-      projectSlug as keyof typeof translations.projects.items
-    ]?.title || ""
-  );
+  return heroImage.projectName[currentLanguage] || heroImage.projectName.pt;
 };
 
-export const getProjectSlug = (imagePath: string): string => {
-  const pathParts = imagePath.split("/");
-  const projectFolder = pathParts.find((part) => part.startsWith("jardim-"));
-  return projectFolder || "";
+export const getProjectSlug = (heroImage: HeroImage): string => {
+  return heroImage.projectSlug;
 };
 
 export const checkScreenSize = (): boolean => {

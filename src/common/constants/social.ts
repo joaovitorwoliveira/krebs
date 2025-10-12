@@ -1,4 +1,3 @@
-// SOCIAL
 const INSTAGRAM_URL = "https://www.instagram.com/krebsmais/";
 const LINKEDIN_URL = "https://linkedin.com/company/krebsmais";
 const WHATSAPP_URL = "https://wa.me/5553999999999";

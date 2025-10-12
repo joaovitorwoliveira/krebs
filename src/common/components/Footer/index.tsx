@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { INSTAGRAM_URL, LINKEDIN_URL } from "@/common/constants";
+import { INSTAGRAM_URL, LINKEDIN_URL } from "@/common/constants/social";
 import { useContactDrawer } from "@/context/ContactDrawerProvider";
 import { useLanguage } from "@/context/LanguageProvider";
 import ContactDrawer from "@/features/ContactDrawer";

@@ -17,6 +17,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
 import Button from "@/common/components/Button";
+import type { HeroImage } from "@/common/constants/db-images";
 
 import {
   checkScreenSize,
@@ -33,7 +34,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [loadedImages, setLoadedImages] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { scrollY } = useScroll();
 
   const y = useTransform(scrollY, [0, 300], [0, -100]);
@@ -64,8 +65,9 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
     setCurrentSlide(swiper.realIndex);
   };
 
-  const currentProjectName = getProjectName(images[currentSlide], t);
-  const currentProjectSlug = getProjectSlug(images[currentSlide]);
+  const currentImage: HeroImage = images[currentSlide];
+  const currentProjectName = getProjectName(currentImage, language);
+  const currentProjectSlug = getProjectSlug(currentImage);
 
   return (
     <div className="absolute inset-0">
@@ -108,8 +110,8 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
                 }}
               >
                 <Image
-                  src={image}
-                  alt={`Slide ${index + 1}`}
+                  src={image.url}
+                  alt={`${image.projectName.pt} - Slide ${index + 1}`}
                   fill
                   className="object-cover object-center"
                   priority={index === 0}
