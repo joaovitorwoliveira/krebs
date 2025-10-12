@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import Button from "@/common/components/Button";
+import { useContactDrawer } from "@/context/ContactDrawerProvider";
 import { useLanguage } from "@/context/LanguageProvider";
 import ContactDrawer from "@/features/ContactDrawer";
 
@@ -10,16 +11,9 @@ import { motion } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 export default function CtaHome() {
-  const [isContactDrawerOpen, setIsContactDrawerOpen] = useState(false);
+  const { isContactDrawerOpen, openContactDrawer, closeContactDrawer } =
+    useContactDrawer();
   const { t } = useLanguage();
-
-  const openContactDrawer = () => {
-    setIsContactDrawerOpen(true);
-  };
-
-  const closeContactDrawer = () => {
-    setIsContactDrawerOpen(false);
-  };
   return (
     <motion.div
       className="relative z-40 bg-white py-10 px-6 lg:px-10 lg:py-20"

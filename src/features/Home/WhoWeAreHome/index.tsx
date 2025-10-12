@@ -25,7 +25,13 @@ export default function WhoWeAreHome() {
             viewport={{ once: true }}
           >
             {/* Título principal */}
-            <h1 className={cn("text-3xl mb-12", "md:text-4xl", "lg:text-6xl")}>
+            <h1
+              className={cn(
+                "font-semibold text-3xl mb-12",
+                "md:text-4xl",
+                "lg:text-6xl"
+              )}
+            >
               {t.home.whoWeAre.title}
             </h1>
           </motion.div>
@@ -46,12 +52,12 @@ export default function WhoWeAreHome() {
               />
             </div>
 
-            <div className="flex flex-col ">
+            <div className="flex flex-col">
               <div className="flex flex-col gap-4 ">
                 <motion.p
                   className={cn(
-                    "text-dark font-light text-sm leading-relaxed",
-                    "lg:text-base"
+                    "text-dark font-normal text-sm leading-relaxed",
+                    "lg:text-lg"
                   )}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -63,8 +69,8 @@ export default function WhoWeAreHome() {
 
                 <motion.p
                   className={cn(
-                    "text-dark font-light text-sm leading-relaxed",
-                    "lg:text-base"
+                    "text-dark font-normal text-sm leading-relaxed",
+                    "lg:text-lg"
                   )}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -76,8 +82,8 @@ export default function WhoWeAreHome() {
 
                 <motion.p
                   className={cn(
-                    "text-dark font-light text-sm leading-relaxed",
-                    "lg:text-base"
+                    "text-dark font-normal text-sm leading-relaxed",
+                    "lg:text-lg"
                   )}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}

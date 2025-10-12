@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
+import { useContactDrawer } from "@/context/ContactDrawerProvider";
 import { useLanguage } from "@/context/LanguageProvider";
 
 import { AnimatePresence, motion } from "@/lib/motion";
@@ -17,6 +18,7 @@ export default function BackToTopButton({
   showAfter = 300,
 }: BackToTopButtonProps) {
   const { t } = useLanguage();
+  const { isContactDrawerOpen } = useContactDrawer();
   const [isVisible, setIsVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
@@ -24,7 +26,7 @@ export default function BackToTopButton({
     const updateScrollPosition = () => {
       const currentScrollY = window.scrollY || window.pageYOffset;
       setScrollY(currentScrollY);
-      setIsVisible(currentScrollY > showAfter);
+      setIsVisible(currentScrollY > showAfter && !isContactDrawerOpen);
     };
 
     updateScrollPosition();
@@ -33,7 +35,7 @@ export default function BackToTopButton({
     return () => {
       window.removeEventListener("scroll", updateScrollPosition);
     };
-  }, [showAfter]);
+  }, [showAfter, isContactDrawerOpen]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -50,8 +52,8 @@ export default function BackToTopButton({
             "fixed bottom-16 right-6 z-50 cursor-pointer",
             "flex items-center justify-center",
             "w-12 h-12 rounded-full",
-            "bg-black/80 backdrop-blur-sm",
-            "text-white hover:bg-black",
+            "bg-dark/80 backdrop-blur-sm",
+            "text-white hover:bg-dark",
             "transition-colors duration-300",
             "focus:outline-none focus:ring-2 focus:ring-white/20",
             "shadow-lg",

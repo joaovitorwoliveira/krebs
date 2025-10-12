@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { useContactDrawer } from "@/context/ContactDrawerProvider";
 import { useLanguage } from "@/context/LanguageProvider";
 import ContactDrawer from "@/features/ContactDrawer";
 
@@ -16,7 +17,8 @@ import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isContactDrawerOpen, setIsContactDrawerOpen] = useState(false);
+  const { isContactDrawerOpen, openContactDrawer, closeContactDrawer } =
+    useContactDrawer();
   const pathname = usePathname();
   const isHomePage = pathname === "/";
   const { t } = useLanguage();
@@ -33,14 +35,6 @@ export default function Header() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-  };
-
-  const openContactDrawer = () => {
-    setIsContactDrawerOpen(true);
-  };
-
-  const closeContactDrawer = () => {
-    setIsContactDrawerOpen(false);
   };
 
   return (

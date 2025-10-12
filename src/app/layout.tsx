@@ -8,6 +8,7 @@ import BackToTopButton from "@/common/components/BackToTopButton";
 import CopyrightTooltip from "@/common/components/CopyrightTooltip";
 import Footer from "@/common/components/Footer";
 import Header from "@/common/components/Header";
+import { ContactDrawerProvider } from "@/context/ContactDrawerProvider";
 import { LanguageProvider } from "@/context/LanguageProvider";
 import MotionProvider from "@/context/MotionProvider";
 
@@ -56,11 +57,13 @@ export default function RootLayout({
       >
         <div className="texture-overlay"></div>
         <LanguageProvider>
-          <Header />
-          <MotionProvider>{children}</MotionProvider>
-          <Footer />
-          <BackToTopButton />
-          {/* <CopyrightTooltip /> */}
+          <ContactDrawerProvider>
+            <Header />
+            <MotionProvider>{children}</MotionProvider>
+            <Footer />
+            <BackToTopButton />
+            {/* <CopyrightTooltip /> */}
+          </ContactDrawerProvider>
         </LanguageProvider>
       </body>
     </html>

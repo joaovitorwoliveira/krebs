@@ -48,7 +48,7 @@ export const es = {
     partners: {
       numbers: {
         projects: {
-          number: "+ 500",
+          number: "+500",
           text: "proyectos",
         },
         cities: {
@@ -60,7 +60,7 @@ export const es = {
           text: "países",
         },
         developers: {
-          number: "+ 25",
+          number: "+25",
           text: "desarrolladoras",
         },
         partners: {
@@ -454,8 +454,9 @@ export const es = {
       instagram: "Instagram",
       linkedin: "LinkedIn",
     },
-    addressText: "Rua das Flores, 123\nBairro X\nPelotas - RS",
-    contactInfo: ["(11) 99999-9999", "contato@krebsmais.com.br"],
+    addressText:
+      "Calle João Jacob Bainy, 835 - sala 604\nTres Vendas\nPelotas - RS",
+    contactInfo: ["(53)30274303", "comercial@krebsmais.com"],
   },
 
   language: {

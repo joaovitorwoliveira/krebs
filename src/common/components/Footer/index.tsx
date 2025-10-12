@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { INSTAGRAM_URL, LINKEDIN_URL } from "@/common/constants";
+import { useContactDrawer } from "@/context/ContactDrawerProvider";
 import { useLanguage } from "@/context/LanguageProvider";
 import ContactDrawer from "@/features/ContactDrawer";
 
@@ -21,16 +21,9 @@ interface ContactItem {
 }
 
 export default function Footer() {
-  const [isContactDrawerOpen, setIsContactDrawerOpen] = useState(false);
+  const { isContactDrawerOpen, openContactDrawer, closeContactDrawer } =
+    useContactDrawer();
   const { t } = useLanguage();
-
-  const openContactDrawer = () => {
-    setIsContactDrawerOpen(true);
-  };
-
-  const closeContactDrawer = () => {
-    setIsContactDrawerOpen(false);
-  };
 
   const navigationLinks: LinkItem[] = [
     { href: "/", text: t.footer.navigationLinks.home },
