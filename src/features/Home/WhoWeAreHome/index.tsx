@@ -100,7 +100,7 @@ export default function WhoWeAreHome() {
               >
                 <Button
                   variant="primary"
-                  className="bg-green-4 uppercase"
+                  className="bg-green-1 uppercase"
                   text={t.home.whoWeAre.cta}
                 ></Button>
               </Link>
@@ -117,7 +117,7 @@ export default function WhoWeAreHome() {
             <Link href="/quem-somos">
               <Button
                 variant="primary"
-                className="w-full bg-green-4 uppercase"
+                className="w-full bg-green-1 uppercase"
                 text={t.home.whoWeAre.cta}
               ></Button>
             </Link>

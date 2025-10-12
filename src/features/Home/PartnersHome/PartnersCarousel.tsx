@@ -9,15 +9,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 
+import { cn } from "@/lib/utils";
+
 const partners = [
-  { name: "Melnick", logo: null },
-  { name: "Obra Prima Arquitetura", logo: null },
-  { name: "Condomínios de Alto Padrão", logo: null },
-  { name: "Resorts Parceiros", logo: null },
-  { name: "Clubes Parceiros", logo: null },
-  { name: "Parceiro 6", logo: null },
-  { name: "Parceiro 7", logo: null },
-  { name: "Parceiro 8", logo: null },
+  { name: "Melnick", logo: "/images/partners/melnick.png" },
+  { name: "Obra Prima Arquitetura", logo: "/images/partners/melnick.png" },
+  { name: "Condomínios de Alto Padrão", logo: "/images/partners/melnick.png" },
+  { name: "Resorts Parceiros", logo: "/images/partners/melnick.png" },
+  { name: "Clubes Parceiros", logo: "/images/partners/melnick.png" },
+  { name: "Parceiro 6", logo: "/images/partners/melnick.png" },
+  { name: "Parceiro 7", logo: "/images/partners/melnick.png" },
+  { name: "Parceiro 8", logo: "/images/partners/melnick.png" },
 ];
 
 export default function PartnersCarousel() {
@@ -33,7 +35,13 @@ export default function PartnersCarousel() {
 
   return (
     <div>
-      <h3 className="text-xl lg:text-2xl text-black mb-10 text-center">
+      <h3
+        className={cn(
+          "text-xl text-light mb-20 font-semibold",
+          "lg:text-4xl",
+          "xl:text-5xl"
+        )}
+      >
         {t.home.partners.subtitle}
       </h3>
 
@@ -74,7 +82,7 @@ export default function PartnersCarousel() {
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="w-full h-30 lg:h-40 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                className="w-full h-30 lg:h-40 object-contain grayscale transition-all duration-300"
               />
             ) : (
               <div className="w-full h-30 lg:h-40 bg-gray-300 rounded-lg flex items-center justify-center">

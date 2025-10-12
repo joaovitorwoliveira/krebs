@@ -11,9 +11,11 @@ export default function DifferentialHome() {
 
   return (
     <motion.div
-      className={cn("relative z-40 bg-white py-10 px-6", "lg:px-10 lg:py-20")}
+      className={cn("relative z-40 bg-green-1 py-10 px-6", "lg:px-10 lg:py-20")}
       initial={{ y: 0 }}
     >
+      <div className="hidden lg:block bg-light/25 h-[0.50px] my-10 absolute -top-10 inset-x-10" />
+
       <div className="w-full mx-auto">
         {/* Título principal */}
         <motion.div
@@ -23,7 +25,13 @@ export default function DifferentialHome() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-semibold text-3xl lg:text-4xl xl:text-5xl text-black">
+          <h2
+            className={cn(
+              "font-semibold text-3xl text-light",
+              "lg:text-4xl",
+              "xl:text-5xl"
+            )}
+          >
             {t.home.differentials.title}
           </h2>
         </motion.div>
@@ -39,17 +47,15 @@ export default function DifferentialHome() {
               transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
               viewport={{ once: true }}
             >
-              {/* Ícone */}
               <div className="flex-shrink-0 mt-1">
-                <CheckCircle className="w-5 h-5 text-green-5" />
+                <CheckCircle className="w-5 h-5 text-light" />
               </div>
 
-              {/* Conteúdo */}
               <div className="flex-1">
-                <h3 className="font-semibold text-lg lg:text-xl text-black mb-2">
+                <h3 className="font-semibold text-lg lg:text-xl text-light mb-2">
                   {differential.title}
                 </h3>
-                <p className="text-base text-gray-700 leading-relaxed">
+                <p className="text-base text-light leading-relaxed">
                   {differential.description}
                 </p>
               </div>

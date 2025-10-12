@@ -1,7 +1,5 @@
 "use client";
 
-import { useLanguage } from "@/context/LanguageProvider";
-
 import { motion } from "@/lib/motion";
 
 import "swiper/css";
@@ -32,11 +30,11 @@ function CardBigNumber({
       transition={{ duration: 0.6, delay }}
       viewport={{ once: true }}
     >
-      <div className="border-2 border-light p-6 h-full flex flex-col justify-center bg-green-5">
-        <div className="text-5xl lg:text-6xl xl:text-7xl font-black text-light mb-2">
+      <div className="p-6 h-full flex flex-col justify-center bg-light">
+        <div className="text-5xl lg:text-6xl xl:text-7xl font-black text-green-4 mb-2">
           {number}
         </div>
-        <div className="text-sm lg:text-base font-medium text-light">
+        <div className="text-sm lg:text-base font-medium text-green-4">
           {text}
         </div>
       </div>
@@ -45,16 +43,17 @@ function CardBigNumber({
 }
 
 export default function PartnersHome() {
-  const { t } = useLanguage();
-
   return (
     <motion.div
-      className={cn("relative z-40 bg-white py-10 px-6 ", "lg:px-10 lg:py-40")}
+      className={cn(
+        "relative z-40 bg-green-1 py-10 px-6 ",
+        "lg:px-10 lg:py-20"
+      )}
       initial={{ y: 0 }}
     >
       <div className={cn("w-full mx-auto flex flex-col gap-10", "lg:gap-20")}>
         {/* Números em destaque */}
-        <div className="mb-16">
+        <div className="mb-32">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <CardBigNumber number="+ 500" text="projetos" delay={0.1} />
 
