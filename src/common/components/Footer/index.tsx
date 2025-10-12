@@ -66,7 +66,7 @@ export default function Footer() {
       <Button
         variant="tertiary"
         text={link.text}
-        className="font-normal text-xl text-black py-0 px-1"
+        className="font-normal text-xl text-black py-0 px-0 rounded-none"
       />
     </Link>
   );
@@ -79,7 +79,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="relative z-10 bg-white py-10 px-6 md:px-10 ">
+      <footer className="relative z-10 bg-light py-10 px-6 md:px-10 ">
         <div className="mx-auto">
           <div className="flex flex-col gap-10 justify-between md:flex-row">
             {/* Img + Nome */}
@@ -169,7 +169,7 @@ export default function Footer() {
               <Link href="https://joaovitorwoliveira.com" target="_blank">
                 <Button
                   text="JOAOVITORWOLIVEIRA"
-                  className="text-xs py-1 px-1 bg-white text-dark"
+                  className="text-xs py-1 px-1 text-dark bg-light"
                 />
               </Link>
             </div>
