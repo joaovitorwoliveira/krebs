@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/context/LanguageProvider";
-import { CheckCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { motion } from "@/lib/motion";
 import { cn } from "@/lib/utils";
@@ -46,14 +46,14 @@ export default function DifferentialHome() {
               viewport={{ once: true }}
             >
               <div className="flex-shrink-0 mt-1">
-                <CheckCircle className="w-5 h-5 text-light" />
+                <ArrowRight className="w-5 h-5 text-light" />
               </div>
 
               <div className="flex-1">
                 <h3 className="font-semibold text-lg lg:text-xl text-light mb-2">
                   {differential.title}
                 </h3>
-                <p className="text-base text-light leading-relaxed">
+                <p className="text-base text-light silka-mono">
                   {differential.description}
                 </p>
               </div>

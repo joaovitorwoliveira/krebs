@@ -40,6 +40,11 @@ export const en = {
       cta: "Learn our history",
     },
 
+    ctaHome: {
+      title: "Want to request a quote?",
+      button: "Schedule a meeting",
+    },
+
     partners: {
       numbers: {
         projects: {

@@ -12,7 +12,6 @@ export default function ServicesOptions() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
       {t.home.services.sections.map((section, index) => {
-        // Ícones para cada seção
         const icons = [Brain, Heart, Wrench];
         const IconComponent = icons[index];
 
@@ -36,7 +35,7 @@ export default function ServicesOptions() {
             </div>
 
             {/* Título da seção */}
-            <h3 className="font-semibold text-xl lg:text-2xl text-dark mb-10 text-center">
+            <h3 className="font-semibold text-xl lg:text-2xl text-dark mb-10 text-center silka-mono">
               {section.title}
             </h3>
 
@@ -44,10 +43,10 @@ export default function ServicesOptions() {
             <div className="space-y-6 mb-20 flex-1 lg:text-left lg:mb-0">
               {section.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="flex flex-col">
-                  <span className="font-semibold text-dark text-sm lg:text-base">
+                  <span className="font-semibold text-dark text-sm lg:text-base mb-2">
                     {item.label}
                   </span>
-                  <span className="text-dark text-sm lg:text-base">
+                  <span className="text-dark text-sm lg:text-base silka-mono">
                     {item.description}
                   </span>
                 </div>
@@ -56,8 +55,8 @@ export default function ServicesOptions() {
 
             {/* Botão Saiba mais */}
             <Button
-              variant="primary"
-              className="bg-dark text-white uppercase w-full"
+              variant="secondary"
+              className="border-dark text-dark uppercase w-full"
               text={section.cta}
             />
           </motion.div>

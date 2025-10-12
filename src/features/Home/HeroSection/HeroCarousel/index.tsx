@@ -120,7 +120,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
                 />
 
                 <motion.div
-                  className="absolute inset-0 bg-black/40"
+                  className="absolute inset-0 bg-black/30"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -139,7 +139,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
         >
           <motion.h2
             key={currentProjectName}
-            className="text-white text-xl md:text-2xl font-semibold tracking-wide drop-shadow-lg"
+            className="text-white text-base uppercase font-semibold tracking-wide drop-shadow-lg silka-mono"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}

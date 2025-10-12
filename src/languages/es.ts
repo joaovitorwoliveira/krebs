@@ -40,6 +40,11 @@ export const es = {
       cta: "Conoce nuestra historia",
     },
 
+    ctaHome: {
+      title: "¿Quieres solicitar un presupuesto?",
+      button: "Agenda una reunión",
+    },
+
     partners: {
       numbers: {
         projects: {

@@ -72,7 +72,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
         {/* Content */}
         <div className="flex-1 p-6 flex flex-col justify-between">
           <div className="flex gap-2 justify-between pt-6">
-            <div className="flex flex-col gap-6 items-start">
+            <div className="flex flex-col gap-6 items-start silka-mono">
               <Link
                 href={INSTAGRAM_URL}
                 target="_blank"
@@ -116,7 +116,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
             <h3 className="text-lg font-bold">
               {t.contactDrawer.projectTitle}
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4 silka-mono">
               <input
                 type="text"
                 name="name"

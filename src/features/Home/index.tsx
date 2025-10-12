@@ -5,6 +5,7 @@ import { useState } from "react";
 import Loading from "@/common/components/Loading";
 import { AnimatePresence } from "framer-motion";
 
+import CtaHome from "./CtaHome";
 import DifferentialHome from "./DifferentialHome";
 import HeroSection from "./HeroSection";
 import type { HomePageProps } from "./HeroSection/types";
@@ -40,6 +41,7 @@ export default function HomePage({ className }: HomePageProps) {
       <PartnersHome />
       <DifferentialHome />
       <ServicesHome />
+      <CtaHome />
     </>
   );
 }

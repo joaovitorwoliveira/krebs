@@ -25,13 +25,7 @@ export default function WhoWeAreHome() {
             viewport={{ once: true }}
           >
             {/* Título principal */}
-            <h1
-              className={cn(
-                "font-semibold text-3xl mb-12",
-                "md:text-4xl",
-                "lg:text-6xl"
-              )}
-            >
+            <h1 className={cn("text-3xl mb-12", "md:text-4xl", "lg:text-6xl")}>
               {t.home.whoWeAre.title}
             </h1>
           </motion.div>
@@ -42,18 +36,18 @@ export default function WhoWeAreHome() {
               "lg:flex-row lg:gap-12 lg:min-h-[600px] lg:items-end"
             )}
           >
-            <div className="lg:w-1/2">
+            <div className="">
               <Image
                 src="/images/vertical_temporaria.jpg"
                 alt="Krebs+ Arquitetura Paisagística"
-                width={600}
-                height={600}
+                width={1600}
+                height={1000}
                 className="w-full h-auto object-cover"
               />
             </div>
 
-            <div className="flex flex-col lg:w-1/2">
-              <div className="flex flex-col gap-4">
+            <div className="flex flex-col ">
+              <div className="flex flex-col gap-4 ">
                 <motion.p
                   className={cn(
                     "text-dark font-light text-sm leading-relaxed",
@@ -99,8 +93,8 @@ export default function WhoWeAreHome() {
                 className={cn("hidden", "lg:block lg:w-fit mt-6")}
               >
                 <Button
-                  variant="primary"
-                  className="bg-green-1 uppercase"
+                  variant="secondary"
+                  className="border-green-1 text-green-1 uppercase"
                   text={t.home.whoWeAre.cta}
                 ></Button>
               </Link>

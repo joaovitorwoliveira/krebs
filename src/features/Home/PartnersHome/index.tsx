@@ -10,7 +10,6 @@ import { cn } from "@/lib/utils";
 
 import PartnersCarousel from "./PartnersCarousel";
 
-// Componente para cards de números grandes
 interface CardBigNumberProps {
   number: string;
   text: string;
@@ -32,11 +31,11 @@ function CardBigNumber({
       transition={{ duration: 0.6, delay }}
       viewport={{ once: true }}
     >
-      <div className="p-6 h-full flex flex-col justify-center bg-white">
-        <div className="text-5xl lg:text-6xl xl:text-7xl font-black text-green-4 mb-2">
+      <div className="p-6 h-full flex flex-col justify-center bg-white silka-mono">
+        <div className="text-5xl lg:text-6xl xl:text-7xl font-black text-green-1 mb-2 break-words">
           {number}
         </div>
-        <div className="text-sm lg:text-base font-medium text-green-4">
+        <div className="text-xs sm:text-sm lg:text-base font-medium text-green-4 text-center break-words">
           {text}
         </div>
       </div>
@@ -57,7 +56,7 @@ export default function PartnersHome() {
     >
       <div className={cn("w-full mx-auto flex flex-col gap-10", "lg:gap-20")}>
         {/* Números em destaque */}
-        <div className="mb-32">
+        <div className="mb-20">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <CardBigNumber
               number={t.home.partners.numbers.projects.number}

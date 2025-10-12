@@ -39,7 +39,7 @@ export default function HeroSection({
           style={{ animationDuration: "1.5s" }}
         />
 
-        <span className="text-light text-xs font-semibold mt-2 drop-shadow-lg">
+        <span className="text-light text-xs font-semibold mt-2 drop-shadow-lg silka-mono">
           SCROLL
         </span>
       </motion.div>

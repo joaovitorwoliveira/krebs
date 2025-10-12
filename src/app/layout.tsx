@@ -1,7 +1,8 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Bebas_Neue, Encode_Sans } from "next/font/google";
+import { Encode_Sans } from "next/font/google";
+import localFont from "next/font/local";
 
 import BackToTopButton from "@/common/components/BackToTopButton";
 import CopyrightTooltip from "@/common/components/CopyrightTooltip";
@@ -16,10 +17,22 @@ const encodeSans = Encode_Sans({
   weight: ["300", "400", "600", "700"],
 });
 
-const bebasNeue = Bebas_Neue({
-  variable: "--font-bebas-neue",
-  subsets: ["latin"],
-  weight: "400",
+const silkaMono = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Silka-Mono-Regular/Silka_Mono_Regular_Webfont/webfontkit/silkamono-regular-webfont.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Silka-Mono-Regular/Silka_Mono_Regular_Webfont/webfontkit/silkamono-regular-webfont.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-silka-mono",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -39,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className="scroll-smooth">
       <body
-        className={`${encodeSans.variable} ${bebasNeue.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-x-hidden`}
+        className={`${encodeSans.variable} ${silkaMono.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-x-hidden`}
       >
         <div className="texture-overlay"></div>
         <LanguageProvider>
