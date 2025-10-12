@@ -1,5 +1,7 @@
 "use client";
 
+import { useLanguage } from "@/context/LanguageProvider";
+
 import { motion } from "@/lib/motion";
 
 import "swiper/css";
@@ -43,6 +45,8 @@ function CardBigNumber({
 }
 
 export default function PartnersHome() {
+  const { t } = useLanguage();
+
   return (
     <motion.div
       className={cn(
@@ -55,24 +59,36 @@ export default function PartnersHome() {
         {/* Números em destaque */}
         <div className="mb-32">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <CardBigNumber number="+ 500" text="projetos" delay={0.1} />
-
-            <CardBigNumber number="+70" text="cidades" delay={0.2} />
+            <CardBigNumber
+              number={t.home.partners.numbers.projects.number}
+              text={t.home.partners.numbers.projects.text}
+              delay={0.1}
+            />
 
             <CardBigNumber
-              number="3"
-              text="países"
+              number={t.home.partners.numbers.cities.number}
+              text={t.home.partners.numbers.cities.text}
+              delay={0.2}
+            />
+
+            <CardBigNumber
+              number={t.home.partners.numbers.countries.number}
+              text={t.home.partners.numbers.countries.text}
               delay={0.3}
               className="col-span-2 lg:col-span-1"
             />
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-2 gap-6">
-            <CardBigNumber number="+ 25" text="incorporadoras" delay={0.4} />
+            <CardBigNumber
+              number={t.home.partners.numbers.developers.number}
+              text={t.home.partners.numbers.developers.text}
+              delay={0.4}
+            />
 
             <CardBigNumber
-              number="+30"
-              text="escritórios parceiros"
+              number={t.home.partners.numbers.partners.number}
+              text={t.home.partners.numbers.partners.text}
               delay={0.5}
             />
           </div>

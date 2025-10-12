@@ -42,11 +42,26 @@ export const pt = {
 
     partners: {
       numbers: {
-        projects: "+ 500 projetos",
-        cities: "+70 cidades",
-        countries: "3 países",
-        developers: "+ 25 incorporadoras",
-        partners: "+30 escritórios parceiros",
+        projects: {
+          number: "+ 500",
+          text: "projetos",
+        },
+        cities: {
+          number: "+70",
+          text: "cidades",
+        },
+        countries: {
+          number: "3",
+          text: "países",
+        },
+        developers: {
+          number: "+ 25",
+          text: "incorporadoras",
+        },
+        partners: {
+          number: "+30",
+          text: "escritórios parceiros",
+        },
       },
       subtitle: "Alguns dos clientes e parceiros que confiaram na KREBS+:",
     },

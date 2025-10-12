@@ -42,11 +42,26 @@ export const en = {
 
     partners: {
       numbers: {
-        projects: "+ 500 projects",
-        cities: "+70 cities",
-        countries: "3 countries",
-        developers: "+ 25 developers",
-        partners: "+30 partner offices",
+        projects: {
+          number: "+ 500",
+          text: "projects",
+        },
+        cities: {
+          number: "+70",
+          text: "cities",
+        },
+        countries: {
+          number: "3",
+          text: "countries",
+        },
+        developers: {
+          number: "+ 25",
+          text: "developers",
+        },
+        partners: {
+          number: "+30",
+          text: "partner offices",
+        },
       },
       subtitle: "Some of the clients and partners who trusted KREBS+:",
     },
@@ -69,6 +84,64 @@ export const en = {
         {
           title: "The mind of one of the icons of Brazilian landscaping",
           description: "André Krebs",
+        },
+      ],
+    },
+
+    services: {
+      title: "Services",
+      subtitle:
+        "At KREBS+, landscaping is an integrated process — **brain, heart and arm**",
+      sections: [
+        {
+          title: "1. Consulting — The Brain",
+          items: [
+            {
+              label: "Strategic consulting:",
+              description: "we align expectations, lifestyle and budget.",
+            },
+            {
+              label: "Feasibility study:",
+              description: "we cross-reference costs, species and suppliers.",
+            },
+          ],
+          description:
+            "Investment clarity and security to start without surprises.",
+          cta: "Learn more",
+        },
+        {
+          title: "2. Project — The Heart",
+          items: [
+            {
+              label: "Investigation and preliminary study:",
+              description:
+                "we translate desires into forms, textures and images.",
+            },
+            {
+              label: "Preliminary and executive design:",
+              description:
+                "species definition, harmonization with architecture and technical detailing.",
+            },
+          ],
+          cta: "Learn more",
+        },
+        {
+          title: "3. Execution — The Arm",
+          items: [
+            {
+              label: "Construction supervision",
+              description: "integrated with architects and engineers.",
+            },
+            {
+              label: "Complete execution:",
+              description: "from soil preparation to final planting.",
+            },
+            {
+              label: "Plant supply",
+              description: "via nursery network, with traceability.",
+            },
+          ],
+          cta: "Learn more",
         },
       ],
     },

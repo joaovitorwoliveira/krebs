@@ -42,11 +42,26 @@ export const es = {
 
     partners: {
       numbers: {
-        projects: "+ 500 proyectos",
-        cities: "+70 ciudades",
-        countries: "3 países",
-        developers: "+ 25 desarrolladoras",
-        partners: "+30 oficinas socias",
+        projects: {
+          number: "+ 500",
+          text: "proyectos",
+        },
+        cities: {
+          number: "+70",
+          text: "ciudades",
+        },
+        countries: {
+          number: "3",
+          text: "países",
+        },
+        developers: {
+          number: "+ 25",
+          text: "desarrolladoras",
+        },
+        partners: {
+          number: "+30",
+          text: "oficinas socias",
+        },
       },
       subtitle: "Algunos de los clientes y socios que confiaron en KREBS+:",
     },
@@ -69,6 +84,65 @@ export const es = {
         {
           title: "La mente de uno de los íconos del paisajismo brasileño",
           description: "André Krebs",
+        },
+      ],
+    },
+
+    services: {
+      title: "Servicios",
+      subtitle:
+        "En KREBS+, el paisajismo es un proceso integrado — **cerebro, corazón y brazo**",
+      sections: [
+        {
+          title: "1. Consultoría — El Cerebro",
+          items: [
+            {
+              label: "Consultoría estratégica:",
+              description:
+                "alineamos expectativas, estilo de vida y presupuesto.",
+            },
+            {
+              label: "Estudio de viabilidad:",
+              description: "cruzamos costos, especies y proveedores.",
+            },
+          ],
+          description:
+            "Claridad de inversión y seguridad para comenzar sin sorpresas.",
+          cta: "Saber más",
+        },
+        {
+          title: "2. Proyecto — El Corazón",
+          items: [
+            {
+              label: "Investigación y estudio preliminar:",
+              description: "traducimos deseos en formas, texturas e imágenes.",
+            },
+            {
+              label: "Anteproyecto y ejecutivo:",
+              description:
+                "definición de especies, armonización con arquitectura y detallado técnico.",
+            },
+          ],
+          cta: "Saber más",
+        },
+        {
+          title: "3. Ejecución — El Brazo",
+          items: [
+            {
+              label: "Supervisión de obra",
+              description: "integrada con arquitectos e ingenieros.",
+            },
+            {
+              label: "Ejecución completa:",
+              description:
+                "desde la preparación del suelo hasta la plantación final.",
+            },
+            {
+              label: "Suministro de plantas",
+              description: "vía red de viveros, con trazabilidad.",
+            },
+          ],
+          cta: "Saber más",
         },
       ],
     },
