@@ -18,26 +18,34 @@ src/
 │   └── projetos/           # Páginas de projetos
 │       └── [slug]/         # Projeto individual (dynamic routing)
 ├── common/                 # Componentes e recursos compartilhados
-│   └── components/         # Componentes reutilizáveis globais
-│       ├── BackgroundWrapper.tsx
-│       ├── BackToTop.tsx
-│       ├── Button.tsx
-│       ├── CopyrightTooltip.tsx
-│       ├── Footer.tsx
-│       ├── LanguageSelector.tsx
-│       ├── Loading.tsx
-│       ├── Progress.tsx
-│       └── Header/         # Componentes do cabeçalho
+│   ├── components/         # Componentes reutilizáveis globais
+│   │   ├── BackgroundWrapper/
+│   │   ├── BackToTopButton/
+│   │   ├── Button/
+│   │   ├── CopyrightTooltip/
+│   │   ├── Footer/
+│   │   ├── Header/         # Componentes do cabeçalho
+│   │   ├── LanguageSelector/
+│   │   ├── Loading/
+│   │   └── Progress/
+│   ├── constants/          # Constantes e configurações
+│   │   ├── db-images.ts    # URLs das imagens do banco de dados
+│   │   └── social.ts       # URLs das redes sociais
+│   └── utils/              # Utilitários compartilhados
+│       └── textUtils.ts    # Funções de manipulação de texto
 ├── features/               # Funcionalidades organizadas por domínio
 │   ├── ContactDrawer/      # Drawer de contato
 │   ├── Filter/             # Sistema de filtros
 │   ├── Home/               # Componentes específicos da home
-│   ├── Office/             # Componentes do escritório
-│   └── Projects/           # Componentes de projetos
+│   ├── Projects/           # Componentes de projetos
+│   └── WhoWeAre/           # Componentes da página quem somos
 ├── context/                # Contextos React
-│   ├── LanguageProvider.tsx # Gerenciamento de idiomas
-│   └── MotionProvider.tsx   # Configuração do Framer Motion
+│   ├── ContactDrawerProvider.tsx # Gerenciamento do drawer de contato
+│   ├── LanguageProvider.tsx     # Gerenciamento de idiomas
+│   └── MotionProvider.tsx       # Configuração do Framer Motion
 ├── hooks/                  # Hooks customizados
+│   ├── useFullscreen.ts    # Hook para controle de tela cheia
+│   └── useSwipeHandlers.ts # Hook para gestos de swipe
 ├── languages/              # Sistema de internacionalização
 │   ├── index.ts            # Configuração principal
 │   ├── pt.ts               # Português
@@ -102,8 +110,8 @@ Componentes **específicos** de uma **funcionalidade única**:
 - ContactDrawer (apenas no drawer de contato)
 - Filter (apenas na página de projetos)
 - Home/ (apenas na página inicial)
-- Office/ (apenas na página do escritório)
 - Projects/ (apenas nas páginas de projetos)
+- WhoWeAre/ (apenas na página quem somos)
 
 **Regra de Ouro:** Se o componente é usado em 2+ lugares diferentes, va para `common/`. Se é específico de uma feature, va para `features/`.
 
@@ -135,6 +143,7 @@ features/
 // ✅ features/ContactDrawer/ - funcionalidade específica
 // ✅ features/Home/HeroCarousel/ - específico da home
 // ✅ features/Projects/components/ProjectCard/ - específico de projetos
+// ✅ features/WhoWeAre/TeamSection/ - específico da página quem somos
 ```
 
 - Componentes devem ter responsabilidade única e clara
@@ -171,6 +180,21 @@ className={cn("flex flex-col gap-4 p-6 bg-white rounded-lg hover:shadow-lg" , "m
 - Implemente loading states para melhor UX
 - Otimize bundle com imports dinâmicos quando apropriado
 
+### 🎣 Hooks Customizados
+
+**Hooks disponíveis:**
+
+- `useFullscreen`: Controle de tela cheia para galeria de imagens
+- `useSwipeHandlers`: Gestos de swipe para navegação em carrosséis
+- `useLanguage`: Acesso ao sistema de internacionalização (via Context)
+- `useInView`: Detecção de elementos em viewport (Framer Motion)
+
+````typescript
+// Exemplo de uso dos hooks
+import { useFullscreen } from "@/hooks/useFullscreen";
+import { useSwipeHandlers } from "@/hooks/useSwipeHandlers";
+import { useLanguage } from "@/context/LanguageProvider";
+
 ## 🛠️ Convenções de Código
 
 ### 📁 Nomenclatura
@@ -199,6 +223,42 @@ className={cn("flex flex-col gap-4 p-6 bg-white rounded-lg hover:shadow-lg" , "m
 - Dados estáticos em arquivos TypeScript (`projects.ts`, `team.ts`)
 - Interfaces bem definidas para estruturas de dados
 - Validação de tipos em runtime quando necessário
+- **Imagens**: URLs centralizadas em `common/constants/db-images.ts`
+- **Constantes**: URLs de redes sociais em `common/constants/social.ts`
+
+### 🖼️ Gerenciamento de Imagens
+
+**Sistema de Imagens Centralizado:**
+
+- Todas as imagens de projetos são gerenciadas via `common/constants/db-images.ts`
+- URLs apontam para banco de dados externo (`https://8vncue4ikz.ufs.sh/f/`)
+- Nomenclatura padronizada: `{PROJECT_NAME}_IMAGE_{NUMBER}`
+- **NUNCA** use paths locais (`/images/...`) - sempre importe as constantes
+
+```typescript
+// ✅ CORRETO
+import { JARDIM_SVG_IMAGE_1, JARDIM_SVG_IMAGE_2 } from "@/common/constants/db-images";
+
+const project = {
+  images: [JARDIM_SVG_IMAGE_1, JARDIM_SVG_IMAGE_2]
+};
+
+// ❌ INCORRETO
+const project = {
+  images: ["/images/projects/jardim-svg/foto-1.jpg"]
+};
+````
+
+**Projetos com Imagens Disponíveis:**
+
+- Jardim SVG (7 imagens)
+- Jardim ATJ (8 imagens)
+- Jardim LTX (11 imagens)
+- Jardim Malu (6 imagens)
+- Colégio Farroupilha (7 imagens)
+- Varanda FEK (4 imagens)
+- Rampa (7 imagens)
+- Shopping Iguatemi (5 imagens)
 
 ## 🧪 Qualidade e Testes
 
@@ -225,6 +285,16 @@ className={cn("flex flex-col gap-4 p-6 bg-white rounded-lg hover:shadow-lg" , "m
 - Header: Quem somos | Projetos | Serviços
 - Footer: Home | Projetos | Quem somos | Serviços
 
+### Estrutura de Features
+
+**Features implementadas:**
+
+- **Home**: HeroSection, PartnersHome, ServicesHome, WhoWeAreHome, CtaHome, DifferentialHome
+- **Projects**: Sistema completo de galeria, filtros, modal de imagens, navegação
+- **WhoWeAre**: IntroductionSection, WorkMethodSection, AwardsSection, TeamSection
+- **Filter**: Sistema de filtros com busca, tags e limpeza de filtros
+- **ContactDrawer**: Drawer lateral para informações de contato
+
 ## 🚀 Comandos Essenciais
 
 ```bash
@@ -245,6 +315,8 @@ npm run prettier     # Formatação de código
 - [ ] Performance verificada
 - [ ] Acessibilidade considerada
 - [ ] Código formatado e sem warnings
+- [ ] Imagens referenciam constantes de `db-images.ts`
+- [ ] URLs de redes sociais usam constantes de `social.ts`
 
 ## 🎯 Exemplo de Componente Padrão
 

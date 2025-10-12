@@ -17,12 +17,12 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
 import Button from "@/common/components/Button";
-import type { HeroImage } from "@/common/constants/db-images";
 
 import {
   checkScreenSize,
   getProjectName,
   getProjectSlug,
+  HeroImage,
   images,
 } from "./util";
 

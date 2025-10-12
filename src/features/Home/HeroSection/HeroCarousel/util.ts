@@ -1,10 +1,8 @@
 import {
   JARDIM_MALU_IMAGE_1,
   JARDIM_MALU_IMAGE_2,
-  JARDIM_MALU_IMAGE_3,
-  JARDIM_MALU_IMAGE_4,
-  JARDIM_MALU_IMAGE_5,
-  JARDIM_MALU_IMAGE_6,
+  JARDIM_SVG_IMAGE_6,
+  VARANDA_FEK_IMAGE_1,
 } from "@/common/constants/db-images";
 
 export interface HeroImage {
@@ -37,39 +35,21 @@ export const heroImages: HeroImage[] = [
     },
   },
   {
-    url: JARDIM_MALU_IMAGE_3,
-    projectSlug: "jardim-malu",
+    url: VARANDA_FEK_IMAGE_1,
+    projectSlug: "varanda-fek",
     projectName: {
-      pt: "Jardim MALU",
-      en: "MALU Garden",
-      es: "Jardín MALU",
+      pt: "Varanda FEK",
+      en: "FEK Veranda",
+      es: "Varanda FEK",
     },
   },
   {
-    url: JARDIM_MALU_IMAGE_4,
-    projectSlug: "jardim-malu",
+    url: JARDIM_SVG_IMAGE_6,
+    projectSlug: "jardim-svg",
     projectName: {
-      pt: "Jardim MALU",
-      en: "MALU Garden",
-      es: "Jardín MALU",
-    },
-  },
-  {
-    url: JARDIM_MALU_IMAGE_5,
-    projectSlug: "jardim-malu",
-    projectName: {
-      pt: "Jardim MALU",
-      en: "MALU Garden",
-      es: "Jardín MALU",
-    },
-  },
-  {
-    url: JARDIM_MALU_IMAGE_6,
-    projectSlug: "jardim-malu",
-    projectName: {
-      pt: "Jardim MALU",
-      en: "MALU Garden",
-      es: "Jardín MALU",
+      pt: "Jardim SVG",
+      en: "SVG Garden",
+      es: "Jardín SVG",
     },
   },
 ];
