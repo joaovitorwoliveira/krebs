@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 import Button from "@/common/components/Button";
 import { useContactDrawer } from "@/context/ContactDrawerProvider";
 import { useLanguage } from "@/context/LanguageProvider";
@@ -16,7 +14,7 @@ export default function CtaHome() {
   const { t } = useLanguage();
   return (
     <motion.div
-      className="relative z-40 bg-light py-10 px-6 lg:px-10 lg:py-20"
+      className="relative z-40 bg-green-3 py-10 px-6 lg:px-10"
       initial={{ y: 0 }}
     >
       <div className="w-full mx-auto">
@@ -28,15 +26,15 @@ export default function CtaHome() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-2 mb-10">
-            <div className="rounded-full bg-dark w-[10px] h-[10px]"></div>
-            <h2 className={cn("text-sm text-dark uppercase font-inter-light")}>
+            <div className="rounded-full bg-light w-[10px] h-[10px]"></div>
+            <h2 className={cn("text-sm text-light uppercase font-inter-light")}>
               Contato
             </h2>
           </div>
 
           <h2
             className={cn(
-              "font-semibold text-4xl text-dark mb-8 text-center leading-tight",
+              "font-semibold text-4xl text-light mb-8 text-center leading-tight",
               "lg:text-6xl lg:mb-12"
             )}
           >
@@ -45,8 +43,7 @@ export default function CtaHome() {
 
           <motion.p
             className={cn(
-              "text-dark/80 text-lg text-center max-w-2xl mx-auto leading-relaxed",
-              "lg:text-xl"
+              "text-light/80 text-lg text-center mx-auto leading-relaxed"
             )}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +55,6 @@ export default function CtaHome() {
           </motion.p>
         </motion.div>
 
-        {/* Botao que abre o Drawer de Contato */}
         <motion.div
           className="flex justify-center"
           initial={{ opacity: 0, y: 30 }}
@@ -69,7 +65,7 @@ export default function CtaHome() {
           <Button
             text={t.home.ctaHome.button}
             onClick={openContactDrawer}
-            className="text-lg px-8 py-3 uppercase bg-brown-2 text-light"
+            className="px-8 py-3 uppercase bg-brown-2 text-light"
           />
         </motion.div>
       </div>

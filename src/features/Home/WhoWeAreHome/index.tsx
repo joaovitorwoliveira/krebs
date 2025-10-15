@@ -5,7 +5,10 @@ import Link from "next/link";
 
 import Button from "@/common/components/Button";
 import {
+  JARDIM_SVG_IMAGE_1,
   JARDIM_SVG_IMAGE_2,
+  JARDIM_SVG_IMAGE_3,
+  JARDIM_SVG_IMAGE_4,
   JARDIM_SVG_IMAGE_5,
 } from "@/common/constants/db-images";
 import { BoldText } from "@/common/utils/textUtils";
@@ -28,7 +31,7 @@ export default function WhoWeAreHome() {
         </div>
         <div className="flex flex-col mx-auto w-full">
           <motion.div
-            className="flex flex-col text-dark mb-8 leading-tight"
+            className="flex flex-col text-dark mb-8 leading-tight max-w-1/2"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -116,8 +119,7 @@ export default function WhoWeAreHome() {
                     <Image
                       src={JARDIM_SVG_IMAGE_5}
                       alt="Projeto Varanda Fek - Krebs+ Arquitetura Paisagística"
-                      width={800}
-                      height={400}
+                      fill
                       className="w-full h-full object-cover"
                       quality={70}
                     />
@@ -126,7 +128,7 @@ export default function WhoWeAreHome() {
               </div>
             </div>
 
-            {/* Segunda linha - Imagem inferior ocupando toda a largura */}
+            {/* Segunda linha - Grid de imagens */}
             <motion.div
               className="relative lg:mt-4"
               initial={{ opacity: 0, y: 30 }}
@@ -134,15 +136,43 @@ export default function WhoWeAreHome() {
               transition={{ duration: 0.6, delay: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="w-full h-[600px] overflow-hidden">
-                <Image
-                  src={JARDIM_SVG_IMAGE_2}
-                  alt="Projeto Varanda Fek - Krebs+ Arquitetura Paisagística"
-                  width={1200}
-                  height={500}
-                  className="w-full h-full object-cover"
-                  quality={70}
-                />
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 h-[800px]">
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={JARDIM_SVG_IMAGE_1}
+                    alt="Projeto Jardim SVG - Krebs+ Arquitetura Paisagística"
+                    fill
+                    className="object-cover"
+                    quality={70}
+                  />
+                </div>
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={JARDIM_SVG_IMAGE_2}
+                    alt="Projeto Jardim SVG - Krebs+ Arquitetura Paisagística"
+                    fill
+                    className="object-cover"
+                    quality={70}
+                  />
+                </div>
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={JARDIM_SVG_IMAGE_3}
+                    alt="Projeto Jardim SVG - Krebs+ Arquitetura Paisagística"
+                    fill
+                    className="object-cover"
+                    quality={70}
+                  />
+                </div>
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={JARDIM_SVG_IMAGE_4}
+                    alt="Projeto Jardim SVG - Krebs+ Arquitetura Paisagística"
+                    fill
+                    className="object-cover"
+                    quality={70}
+                  />
+                </div>
               </div>
             </motion.div>
           </div>
