@@ -73,7 +73,7 @@ export default function LanguageSelector({
                 key={code}
                 onClick={() => handleLanguageChange(code as Language)}
                 className={cn(
-                  "w-full text-left px-4 py-2 text-sm hover:bg-light transition-colors first:rounded-t-md last:rounded-b-md text-regular",
+                  "w-full text-left px-4 py-2 text-sm transition-colors first:rounded-t-md last:rounded-b-md text-regular hover:cursor-pointer hover:bg-green-1 hover:text-light",
                   language === code && "bg-light font-medium"
                 )}
               >
