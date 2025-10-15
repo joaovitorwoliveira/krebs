@@ -16,13 +16,15 @@
   --brown-2: #d67f48; /* Marrom médio */
   --blue-dark: #212c42; /* Azul escuro */
   --gray-blue: #788990; /* Cinza azulado */
+
+  --white: #f3efeb;
 }
 
 @theme inline {
   --font-sans: var(--font-encode-sans);
   --font-mono: var(--font-encode-sans);
   --font-bebas: var(--font-bebas-neue);
-  --font-silka-mono: var(--font-silka-mono);
+  --font-inter: var(--font-inter);
 
   --color-green-1: var(--green-1);
   --color-green-2: var(--green-2);
@@ -31,6 +33,7 @@
   --color-green-5: var(--green-5);
   --color-light: var(--light);
   --color-dark: var(--dark);
+  --color-white: var(--white);
 
   --color-brown-1: var(--brown-1);
   --color-brown-2: var(--brown-2);
@@ -52,64 +55,57 @@ html {
   scroll-snap-type: y proximity;
 }
 
-/* Silka Mono - Base */
-.silka-mono {
-  font-family: var(--font-silka-mono), monospace;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-}
+/* Sistema Semântico de Fontes */
 
-/* Silka Mono - Variações de peso visual */
-.silka-mono-light {
-  font-family: var(--font-silka-mono), monospace;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  opacity: 0.8;
-}
-
-.silka-mono-regular {
-  font-family: var(--font-silka-mono), monospace;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-}
-
-.silka-mono-medium {
-  font-family: var(--font-silka-mono), monospace;
-  font-weight: 500;
-  letter-spacing: 0.005em;
-}
-
-.silka-mono-semibold {
-  font-family: var(--font-silka-mono), monospace;
+/* Títulos - Encode Sans */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+.title,
+.heading {
+  font-family: var(--font-encode-sans), sans-serif;
   font-weight: 600;
   letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 
-.silka-mono-bold {
-  font-family: var(--font-silka-mono), monospace;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-/* Silka Mono - Variações de estilo */
-.silka-mono-condensed {
-  font-family: var(--font-silka-mono), monospace;
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  font-stretch: condensed;
-}
-
-.silka-mono-wide {
-  font-family: var(--font-silka-mono), monospace;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-}
-
-.silka-mono-italic {
-  font-family: var(--font-silka-mono), monospace;
-  font-weight: 400;
-  font-style: italic;
+/* Parágrafos e texto corrido - Inter */
+p,
+span,
+div,
+a,
+input,
+textarea,
+label,
+.text,
+.paragraph {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 500;
   letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+/* Classes específicas para fontes */
+.font-encode {
+  font-family: var(--font-encode-sans), sans-serif;
+}
+
+.font-encode-semibold {
+  font-family: var(--font-encode-sans), sans-serif;
+  font-weight: 600;
+}
+
+.font-encode-bold {
+  font-family: var(--font-encode-sans), sans-serif;
+  font-weight: 700;
+}
+
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
 }
 
 /* Texture */
@@ -125,8 +121,6 @@ html {
   pointer-events: none;
   z-index: 999;
 }
-
-/* Swiper bullet styles */
 
 .custom-bullet {
   width: 8px !important;

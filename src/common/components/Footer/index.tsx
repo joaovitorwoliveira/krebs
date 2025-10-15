@@ -65,7 +65,7 @@ export default function Footer() {
   );
 
   const renderContactItem = (contact: ContactItem, key: string) => (
-    <p key={key} className="text-black text-sm silka-mono">
+    <p key={key} className="text-black text-sm text-regular">
       {contact.text}
     </p>
   );
@@ -116,7 +116,7 @@ export default function Footer() {
                 <p className="text-black text-2xl font-bold">
                   {t.footer.address}
                 </p>
-                <address className="text-black text-sm leading-relaxed not-italic silka-mono">
+                <address className="text-black text-sm leading-relaxed not-italic text-regular">
                   {t.footer.addressText.split("\n").map((line, index) => (
                     <span key={index}>
                       {line}
@@ -149,7 +149,7 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="flex justify-between text-center pt-10 silka-mono">
+          <div className="flex justify-between text-center pt-10 text-regular">
             <p className="text-black text-xs font-bold uppercase flex flex-col text-start">
               <span> © {new Date().getFullYear()} Krebs +</span>
               <span>{t.footer.copyright}</span>

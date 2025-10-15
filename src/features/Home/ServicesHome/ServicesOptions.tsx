@@ -35,7 +35,7 @@ export default function ServicesOptions() {
             </div>
 
             {/* Título da seção */}
-            <h3 className="font-semibold text-xl lg:text-2xl text-dark mb-10 text-center silka-mono">
+            <h3 className="font-semibold text-xl lg:text-2xl text-dark mb-10 text-center title-medium">
               {section.title}
             </h3>
 
@@ -46,7 +46,7 @@ export default function ServicesOptions() {
                   <span className="font-semibold text-dark text-sm lg:text-base mb-2">
                     {item.label}
                   </span>
-                  <span className="text-dark text-sm lg:text-base silka-mono">
+                  <span className="text-dark text-sm lg:text-base text-regular">
                     {item.description}
                   </span>
                 </div>

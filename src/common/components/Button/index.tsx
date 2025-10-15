@@ -18,8 +18,8 @@ export default function Button({
       onClick={onClick}
       className={cn(
         "rounded-full px-6 py-2 flex items-center justify-center cursor-pointer",
-        "transition-colors duration-200 font-semibold text-base overflow-hidden",
-        "group relative",
+        "transition-colors duration-200 text-base overflow-hidden",
+        "group relative ",
         variant === "primary" && ["bg-black text-white "],
         variant === "secondary" && [
           "bg-transparent border-2 border-white text-white",
@@ -32,7 +32,7 @@ export default function Button({
         {/* Texto principal */}
         <span
           className={cn(
-            "block transition-transform duration-200 ease-in-out",
+            "block transition-transform duration-200 ease-in-out font-encode-semibold",
             "group-hover:-translate-y-full"
           )}
         >
@@ -42,7 +42,7 @@ export default function Button({
         {/* Texto que entra de baixo */}
         <span
           className={cn(
-            "absolute inset-0 flex items-center justify-center transition-transform duration-200 ease-in-out",
+            "absolute inset-0 flex items-center justify-center transition-transform duration-200 ease-in-out font-encode-semibold",
             "translate-y-full group-hover:translate-y-0"
           )}
         >

@@ -141,7 +141,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
         >
           <motion.h2
             key={currentProjectName}
-            className="text-white text-base uppercase font-semibold tracking-wide drop-shadow-lg silka-mono"
+            className="text-white text-base uppercase font-semibold tracking-wide drop-shadow-lg text-label"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}

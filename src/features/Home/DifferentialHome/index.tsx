@@ -53,7 +53,7 @@ export default function DifferentialHome() {
                 <h3 className="font-semibold text-lg lg:text-xl text-light mb-2">
                   {differential.title}
                 </h3>
-                <p className="text-base text-light silka-mono">
+                <p className="text-base text-light text-regular">
                   {differential.description}
                 </p>
               </div>

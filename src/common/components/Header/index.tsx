@@ -46,16 +46,12 @@ export default function Header() {
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
                 <div className="flex items-center justify-center">
-                  {/* <h1
-                    className={cn(
-                      "text-4xl lg:text-[46px] font-bold leading-none",
-                      isHomePage ? "text-white" : "text-black"
-                    )}
-                  >
-                    KREBS+
-                  </h1> */}
                   <Image
-                    src={"/images/logo_full_textura.png"}
+                    src={
+                      isHomePage
+                        ? "/images/logo_full_textura.png"
+                        : "/images/logo_full_textura_verde.png"
+                    }
                     alt={"KREBS+"}
                     width={160}
                     height={160}

@@ -50,7 +50,7 @@ export default function LanguageSelector({
     <div className={baseClasses}>
       <button onClick={toggleDropdown} className={buttonClasses}>
         <Globe size={16} />
-        <span className="uppercase silka-mono">{languageLabels[language]}</span>
+        <span className="uppercase text-label">{languageLabels[language]}</span>
         <ChevronDown
           size={14}
           className={cn(
@@ -73,7 +73,7 @@ export default function LanguageSelector({
                 key={code}
                 onClick={() => handleLanguageChange(code as Language)}
                 className={cn(
-                  "w-full text-left px-4 py-2 text-sm hover:bg-light transition-colors first:rounded-t-md last:rounded-b-md silka-mono",
+                  "w-full text-left px-4 py-2 text-sm hover:bg-light transition-colors first:rounded-t-md last:rounded-b-md text-regular",
                   language === code && "bg-light font-medium"
                 )}
               >
