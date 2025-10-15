@@ -57,9 +57,9 @@ export default function Footer() {
       {...(link.external && { target: "_blank", rel: "noopener noreferrer" })}
     >
       <Button
-        variant="tertiary"
+        variant="icon"
         text={link.text}
-        className="font-normal text-xl text-black py-0 px-0 rounded-none"
+        className="font-normal text-black py-0 px-0 rounded-none"
       />
     </Link>
   );
@@ -88,13 +88,19 @@ export default function Footer() {
                 <div className="h-2 w-full bg-brown-2"></div>
                 <div className="h-2 w-full bg-green-1"></div>
               </div>
-              <p className="text-black text-2xl font-bold">KREBS +</p>
+
+              <Image
+                src={"/images/logo_full_textura_verde.png"}
+                alt={"Krebs +"}
+                width={70}
+                height={70}
+              />
             </div>
             {/* Navegacao */}
             <div className="flex flex-col gap-4">
-              <p className="text-black text-2xl font-bold">
+              <h4 className="text-black text-2xl font-bold">
                 {t.footer.navigation}
-              </p>
+              </h4>
               <nav className="space-y-2 flex flex-col">
                 {navigationLinks.map((link, index) =>
                   renderLinkWithButton(link, `nav-${index}`)
@@ -103,7 +109,9 @@ export default function Footer() {
             </div>
             {/* Social */}
             <div className="flex flex-col gap-3">
-              <p className="text-black text-2xl font-bold">{t.footer.social}</p>
+              <h4 className="text-black text-2xl font-bold">
+                {t.footer.social}
+              </h4>
               <div className="text-black text-sm space-y-2 flex flex-col">
                 {socialLinks.map((link, index) =>
                   renderLinkWithButton(link, `social-${index}`)
@@ -113,9 +121,9 @@ export default function Footer() {
             {/* Endereco + Contato */}
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
-                <p className="text-black text-2xl font-bold">
+                <h4 className="text-black text-2xl font-bold">
                   {t.footer.address}
-                </p>
+                </h4>
                 <address className="text-black text-sm leading-relaxed not-italic text-regular">
                   {t.footer.addressText.split("\n").map((line, index) => (
                     <span key={index}>
@@ -128,9 +136,9 @@ export default function Footer() {
                 </address>
               </div>
               <div className="flex flex-col gap-2">
-                <p className="text-black text-2xl font-bold">
+                <h4 className="text-black text-2xl font-bold">
                   {t.footer.contact}
-                </p>
+                </h4>
                 <div className="space-y-2">
                   {contactInfo.map((contact, index) =>
                     renderContactItem(contact, `contact-${index}`)

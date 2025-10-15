@@ -18,7 +18,7 @@ export default function ServicesOptions() {
         return (
           <motion.div
             key={index}
-            className="flex flex-col min-h-[400px] lg:min-h-[600px] relative"
+            className="flex flex-col min-h-[400px] lg:min-h-[600px] relative px-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
@@ -30,9 +30,9 @@ export default function ServicesOptions() {
             )}
 
             {/* Ícone da seção */}
-            <div className="flex justify-center mb-6">
+            {/* <div className="flex justify-center mb-6">
               <IconComponent className="w-26 h-26 text-dark" strokeWidth={1} />
-            </div>
+            </div> */}
 
             {/* Título da seção */}
             <h3 className="font-semibold text-xl lg:text-2xl text-dark mb-10 text-center title-medium">

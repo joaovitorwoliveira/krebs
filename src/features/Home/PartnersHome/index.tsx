@@ -51,8 +51,14 @@ export default function PartnersHome() {
       className={cn("relative z-40 bg-green-1 py-10 px-6", "lg:px-10 lg:py-40")}
       initial={{ y: 0 }}
     >
+      <div className="flex items-center gap-2 mb-10">
+        <div className="rounded-full bg-light w-[10px] h-[10px]"></div>
+        <h2 className={cn("text-sm text-light uppercase font-inter-light")}>
+          {t.home.partners.title}
+        </h2>
+      </div>
+
       <div className={cn("w-full mx-auto flex flex-col gap-10", "lg:gap-20")}>
-        {/* Números em destaque */}
         <div className="mb-20">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <CardBigNumber
@@ -90,7 +96,6 @@ export default function PartnersHome() {
           </div>
         </div>
 
-        {/* Carousel de marcas parceiras */}
         <div className="">
           <PartnersCarousel />
         </div>

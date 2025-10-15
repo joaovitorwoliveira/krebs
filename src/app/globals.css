@@ -102,8 +102,18 @@ label,
   font-weight: 700;
 }
 
+.font-encode-light {
+  font-family: var(--font-encode-sans), sans-serif;
+  font-weight: 300;
+}
+
 .font-inter {
   font-family: var(--font-inter), sans-serif;
+}
+
+.font-inter-light {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 300;
 }
 
 /* Texture */

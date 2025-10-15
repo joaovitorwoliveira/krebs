@@ -30,6 +30,7 @@ export const pt = {
     seeProject: "VER PROJETO",
     scrollDown: "Role para baixo",
     whoWeAre: {
+      subtitle: "Quem somos",
       title: "Criamos paisagens, criamos emoções.",
       paragraph1:
         "A KREBS+ nasceu do olhar visionário de **André Krebs**, que desde 1982 dedica sua vida a transformar espaços em jardins únicos.",
@@ -46,6 +47,7 @@ export const pt = {
     },
 
     partners: {
+      title: "Parceiros",
       numbers: {
         projects: {
           number: "+500",

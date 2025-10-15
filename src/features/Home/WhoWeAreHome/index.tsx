@@ -20,6 +20,12 @@ export default function WhoWeAreHome() {
   return (
     <motion.div className="relative z-40 bg-light" initial={{ y: 0 }}>
       <div className="flex flex-col gap-6 py-10 px-6 lg:px-10 lg:py-40 ">
+        <div className="flex items-center gap-2 mb-10">
+          <div className="rounded-full bg-dark w-[10px] h-[10px]"></div>
+          <h2 className={cn("text-sm text-dark uppercase font-inter-light")}>
+            {t.home.whoWeAre.subtitle}
+          </h2>
+        </div>
         <div className="flex flex-col mx-auto w-full">
           <motion.div
             className="flex flex-col text-dark mb-8 leading-tight"
@@ -93,11 +99,7 @@ export default function WhoWeAreHome() {
                   href="/quem-somos"
                   className={cn("hidden", "lg:block lg:w-fit")}
                 >
-                  <Button
-                    variant="primary"
-                    className="uppercase bg-green-1"
-                    text={t.home.whoWeAre.cta}
-                  ></Button>
+                  <Button variant="icon" text={t.home.whoWeAre.cta}></Button>
                 </Link>
               </div>
 
@@ -154,8 +156,8 @@ export default function WhoWeAreHome() {
           >
             <Link href="/quem-somos">
               <Button
-                variant="primary"
-                className="uppercase bg-green-1 w-full"
+                variant="icon"
+                className="w-full justify-start"
                 text={t.home.whoWeAre.cta}
               ></Button>
             </Link>

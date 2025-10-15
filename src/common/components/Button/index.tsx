@@ -1,10 +1,12 @@
+import { ArrowUpRight } from "lucide-react";
+
 import { cn } from "@/lib/utils";
 
 interface ButtonProps {
   text: string;
   onClick?: () => void;
   className?: string;
-  variant?: "primary" | "secondary" | "tertiary";
+  variant?: "primary" | "secondary" | "tertiary" | "icon";
 }
 
 export default function Button({
@@ -13,6 +15,26 @@ export default function Button({
   className,
   variant = "primary",
 }: ButtonProps) {
+  if (variant === "icon") {
+    return (
+      <button
+        onClick={onClick}
+        className={cn(
+          "flex items-center gap-2 cursor-pointer",
+          "transition-colors duration-200 text-base",
+          "group relative text-dark",
+          className
+        )}
+      >
+        <span className="font-encode relative">
+          {text}
+          <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-dark transition-all duration-300 ease-out group-hover:w-full"></span>
+        </span>
+        <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
+      </button>
+    );
+  }
+
   return (
     <button
       onClick={onClick}

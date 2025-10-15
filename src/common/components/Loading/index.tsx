@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { Progress } from "@/common/components/Progress";
 import { useLanguage } from "@/context/LanguageProvider";
 
@@ -21,16 +23,18 @@ export default function Loading({ progress }: LoadingProps) {
       className="fixed inset-0 z-50"
     >
       <div className="absolute inset-0 bg-black flex flex-col items-center justify-center">
-        {/* Logo/Brand */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-16"
         >
-          <h1 className="text-light text-4xl md:text-5xl font-bold tracking-wider">
-            KREBS<span className="text-green-1 font-bold">+</span>
-          </h1>
+          <Image
+            src={"/images/logo_full_textura.png"}
+            alt="KREBS+ Logo"
+            width={200}
+            height={100}
+          />
         </motion.div>
 
         {/* Progress Bar */}
