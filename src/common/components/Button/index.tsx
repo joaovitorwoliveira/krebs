@@ -17,7 +17,7 @@ export default function Button({
     <button
       onClick={onClick}
       className={cn(
-        "rounded-full px-6 py-2 flex items-center justify-center cursor-pointer",
+        "rounded-full px-6 py-1 flex items-center justify-center cursor-pointer",
         "transition-colors duration-200 text-base overflow-hidden",
         "group relative ",
         variant === "primary" && ["bg-black text-white "],

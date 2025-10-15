@@ -72,7 +72,7 @@ export const en = {
     },
 
     differentials: {
-      title: "Our Differentiators",
+      title: "Our differentiators",
       items: [
         {
           title: "Own network of suppliers and partner nurseries",

@@ -32,12 +32,12 @@ function CardBigNumber({
       viewport={{ once: true }}
     >
       <div className="p-6 h-full flex flex-col justify-center bg-light text-regular">
-        <div className="text-5xl lg:text-6xl xl:text-7xl font-black text-green-1 mb-2 break-words">
+        <span className="text-4xl lg:text-6xl xl:text-7xl text-green-1 break-words font-encode-semibold">
           {number}
-        </div>
-        <div className="text-xs sm:text-sm lg:text-base font-medium text-green-4 text-center break-words">
+        </span>
+        <span className="text-xs sm:text-sm lg:text-base font-medium text-green-1 text-center break-words">
           {text}
-        </div>
+        </span>
       </div>
     </motion.div>
   );
@@ -48,10 +48,7 @@ export default function PartnersHome() {
 
   return (
     <motion.div
-      className={cn(
-        "relative z-40 bg-green-1 py-10 px-6 ",
-        "lg:px-10 lg:py-20"
-      )}
+      className={cn("relative z-40 bg-green-1 py-10 px-6", "lg:px-10 lg:py-40")}
       initial={{ y: 0 }}
     >
       <div className={cn("w-full mx-auto flex flex-col gap-10", "lg:gap-20")}>

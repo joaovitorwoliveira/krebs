@@ -23,11 +23,17 @@ export default function DifferentialHome() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2
+          {/* <h2
             className={cn(
               "font-semibold text-3xl text-light",
               "lg:text-4xl",
               "xl:text-5xl"
+            )}
+          > */}
+          <h2
+            className={cn(
+              "text-2xl text-light mb-6 font-semibold text-center",
+              "lg:text-3xl lg:mb-20"
             )}
           >
             {t.home.differentials.title}
