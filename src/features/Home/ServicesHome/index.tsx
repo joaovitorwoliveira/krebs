@@ -33,7 +33,7 @@ export default function ServicesHome() {
 
           <motion.p
             className={cn(
-              "text-dark text-3xl leading-relaxed pt-10 max-w-[1500px]",
+              "text-dark text-3xl  pt-10 max-w-[1500px]",
               "lg:text-6xl"
             )}
             initial={{ opacity: 0, y: 30 }}

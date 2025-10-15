@@ -116,6 +116,16 @@ label,
   font-weight: 300;
 }
 
+.font-inter-bold {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 700;
+}
+
+.font-inter-semibold {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 600;
+}
+
 /* Texture */
 
 .texture-overlay {
