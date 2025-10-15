@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className="scroll-smooth">
       <body
-        className={`${encodeSans.variable} ${inter.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-x-hidden`}
+        className={`${encodeSans.variable} ${inter.variable} ${encodeSans.className} antialiased bg-light text-dark select-none overflow-x-hidden`}
       >
         <div className="texture-overlay"></div>
         <LanguageProvider>

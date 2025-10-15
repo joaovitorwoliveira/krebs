@@ -28,8 +28,8 @@ export default function TagFilter({
               className={cn(
                 "px-3 py-1.5 text-xs font-medium rounded-full border transition-all duration-200",
                 isSelected
-                  ? "bg-black text-white border-black"
-                  : "bg-white text-gray-600 border-gray-200 hover:border-gray-300 hover:bg-gray-50"
+                  ? "bg-black text-light border-black"
+                  : "bg-light text-gray-600 border-gray-200 hover:border-gray-300 hover:bg-gray-50"
               )}
             >
               {translations[tag] || tag}

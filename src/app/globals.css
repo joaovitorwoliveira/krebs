@@ -16,8 +16,6 @@
   --brown-2: #d67f48; /* Marrom médio */
   --blue-dark: #212c42; /* Azul escuro */
   --gray-blue: #788990; /* Cinza azulado */
-
-  --white: #f3efeb;
 }
 
 @theme inline {
@@ -33,7 +31,6 @@
   --color-green-5: var(--green-5);
   --color-light: var(--light);
   --color-dark: var(--dark);
-  --color-white: var(--white);
 
   --color-brown-1: var(--brown-1);
   --color-brown-2: var(--brown-2);
@@ -84,7 +81,7 @@ label,
 .text,
 .paragraph {
   font-family: var(--font-inter), sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.6;
 }

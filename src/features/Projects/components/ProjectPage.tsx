@@ -46,7 +46,7 @@ export default function ProjectPage({ slug, className }: ProjectPageProps) {
   ].filter((detail) => detail.value);
 
   return (
-    <div className={cn("min-h-screen bg-white", className)}>
+    <div className={cn("min-h-screen bg-light", className)}>
       <div className="max-w-8xl mx-auto px-6 md:px-10 pt-10">
         <ProjectTexts
           title={projectTranslation?.title}

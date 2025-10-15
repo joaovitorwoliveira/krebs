@@ -28,7 +28,7 @@ export default function Loading({ progress }: LoadingProps) {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-16"
         >
-          <h1 className="text-white text-4xl md:text-5xl font-bold tracking-wider">
+          <h1 className="text-light text-4xl md:text-5xl font-bold tracking-wider">
             KREBS<span className="text-green-1 font-bold">+</span>
           </h1>
         </motion.div>
@@ -42,7 +42,7 @@ export default function Loading({ progress }: LoadingProps) {
         >
           <Progress
             value={progress}
-            className="h-1 bg-gray-800 [&>div]:bg-white [&>div]:transition-all [&>div]:duration-300"
+            className="h-1 bg-gray-800 [&>div]:bg-light [&>div]:transition-all [&>div]:duration-300"
           />
 
           {/* Progress percentage */}
@@ -50,7 +50,7 @@ export default function Loading({ progress }: LoadingProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.8 }}
-            className="text-white/60 text-sm font-light text-center mt-4 tracking-wider"
+            className="text-light/60 text-sm font-light text-center mt-4 tracking-wider"
           >
             {Math.round(progress)}
             {t.loading.percentage}

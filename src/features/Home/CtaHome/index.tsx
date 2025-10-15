@@ -16,7 +16,7 @@ export default function CtaHome() {
   const { t } = useLanguage();
   return (
     <motion.div
-      className="relative z-40 bg-white py-10 px-6 lg:px-10 lg:py-20"
+      className="relative z-40 bg-light py-10 px-6 lg:px-10 lg:py-20"
       initial={{ y: 0 }}
     >
       <div className="w-full mx-auto flex flex-col items-center justify-center">

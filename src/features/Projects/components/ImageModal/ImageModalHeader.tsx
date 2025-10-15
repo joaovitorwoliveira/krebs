@@ -1,5 +1,6 @@
-import { motion } from "@/lib/motion";
 import { useLanguage } from "@/context/LanguageProvider";
+
+import { motion } from "@/lib/motion";
 
 import { ImageModalHeaderProps } from "./types";
 
@@ -24,7 +25,7 @@ export default function ImageModalHeader({
       }}
       className="relative z-20 px-6 py-2 flex justify-between items-center"
     >
-      <div className="text-white text-sm font-medium">
+      <div className="text-light text-sm font-medium">
         {currentIndex + 1} / {totalImages}
       </div>
 
@@ -33,8 +34,12 @@ export default function ImageModalHeader({
           onClick={onToggleFullscreen}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="hidden lg:flex items-center justify-center w-8 h-8 p-2 bg-white text-dark hover:bg-gray-100 transition-all duration-200 cursor-pointer rounded-[2px] text-3xl leading-none"
-          title={isFullscreen ? t.projectDetails.exitFullscreen : t.projectDetails.fullscreen}
+          className="hidden lg:flex items-center justify-center w-8 h-8 p-2 bg-light text-dark hover:bg-gray-100 transition-all duration-200 cursor-pointer rounded-[2px] text-3xl leading-none"
+          title={
+            isFullscreen
+              ? t.projectDetails.exitFullscreen
+              : t.projectDetails.fullscreen
+          }
         >
           {isFullscreen ? (
             <svg
@@ -61,7 +66,7 @@ export default function ImageModalHeader({
           onClick={onClose}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center justify-center w-8 h-8 p-2 bg-white text-dark font-normal hover:bg-gray-100 transition-all duration-200 cursor-pointer rounded-[2px] text-3xl leading-none"
+          className="flex items-center justify-center w-8 h-8 p-2 bg-light text-dark font-normal hover:bg-gray-100 transition-all duration-200 cursor-pointer rounded-[2px] text-3xl leading-none"
           title={t.projectDetails.closeModal}
         >
           ×

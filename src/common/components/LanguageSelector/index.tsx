@@ -42,7 +42,7 @@ export default function LanguageSelector({
   );
 
   const dropdownClasses = cn(
-    "absolute z-50 mt-2 bg-white border border-gray-200 rounded-md shadow-lg min-w-[120px]",
+    "absolute z-50 mt-2 bg-light border border-gray-200 rounded-md shadow-lg min-w-[120px]",
     variant === "desktop" ? "right-0" : "right-0"
   );
 
