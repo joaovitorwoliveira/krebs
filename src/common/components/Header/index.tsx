@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -45,19 +46,26 @@ export default function Header() {
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
                 <div className="flex items-center justify-center">
-                  <h1
+                  {/* <h1
                     className={cn(
                       "text-4xl lg:text-[46px] font-bold leading-none",
                       isHomePage ? "text-white" : "text-black"
                     )}
                   >
                     KREBS+
-                  </h1>
+                  </h1> */}
+                  <Image
+                    src={"/images/logo_full_textura.png"}
+                    alt={"KREBS+"}
+                    width={160}
+                    height={160}
+                    className="object-cover"
+                  />
                 </div>
               </Link>
             </div>
 
-            <nav className="hidden md:flex items-center space-x-6 text-sm absolute left-1/2 transform -translate-x-1/2">
+            <nav className="hidden lg:flex items-center space-x-6 text-sm absolute left-1/2 transform -translate-x-1/2">
               {navigationLinks.map((link) => (
                 <NavLink
                   key={link.href}
@@ -70,7 +78,7 @@ export default function Header() {
             </nav>
 
             {/* Desktop */}
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-4">
               <LanguageSelector variant="desktop" isHomePage={isHomePage} />
               <Button
                 text={t.header.contact}
@@ -80,7 +88,7 @@ export default function Header() {
             </div>
 
             {/* Mobile */}
-            <div className="md:hidden flex flex-col gap-2 items-end absolute top-6 right-6 z-20">
+            <div className="lg:hidden flex flex-col gap-2 items-end absolute top-6 right-6 z-20">
               <Button
                 text={t.header.menu}
                 onClick={toggleMobileMenu}
