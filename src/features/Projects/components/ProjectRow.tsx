@@ -90,7 +90,7 @@ export default function ProjectRow({ row, rowIndex }: ProjectRowProps) {
                 />
               </motion.div>
               <motion.div className="p-2" variants={itemVariants}>
-                <h3 className="text-dark text-sm font-light text-center lowercase">
+                <h3 className="text-dark text-sm font-inter-light text-center lowercase">
                   {t.projects.items[
                     project.slug as keyof typeof t.projects.items
                   ]?.title || project.slug}

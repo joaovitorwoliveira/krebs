@@ -22,10 +22,10 @@ export default function DifferentialHome() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="flex items-center gap-2 mb-8">
+          <div className="flex items-center gap-2 mb-10">
             <div className="rounded-full bg-dark w-[10px] h-[10px]"></div>
             <h2 className={cn("text-sm text-dark uppercase font-inter-light")}>
-              Diferenciais
+              {t.home.differentials.subtitle}
             </h2>
           </div>
           <h2
@@ -55,10 +55,10 @@ export default function DifferentialHome() {
               </div>
 
               <div className="flex-1">
-                <h3 className="font-semibold text-xl lg:text-2xl text-dark mb-4 leading-tight">
+                <h3 className="font-semibold texl-base lg:text-xl text-dark mb-4">
                   {differential.title}
                 </h3>
-                <p className="text-base text-dark/80 leading-relaxed">
+                <p className="text-sm lg:text-base text-dark/80">
                   {differential.description}
                 </p>
               </div>

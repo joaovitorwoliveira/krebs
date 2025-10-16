@@ -26,10 +26,10 @@ export default function TagFilter({
               key={tag}
               onClick={() => onTagToggle(tag)}
               className={cn(
-                "px-3 py-1.5 text-xs font-medium rounded-full border transition-all duration-200",
+                "px-4 py-2 text-sm font-medium rounded-full border transition-all duration-200 shadow-sm font-inter",
                 isSelected
-                  ? "bg-black text-light border-black"
-                  : "bg-light text-gray-600 border-gray-200 hover:border-gray-300 hover:bg-gray-50"
+                  ? "bg-green-5 text-light border-dark shadow-md"
+                  : "bg-light text-dark border-dark/20 hover:border-dark/40 hover:bg-dark/5 hover:shadow-md"
               )}
             >
               {translations[tag] || tag}

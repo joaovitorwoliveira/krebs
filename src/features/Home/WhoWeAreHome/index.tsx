@@ -23,7 +23,7 @@ export default function WhoWeAreHome() {
   return (
     <motion.div className="relative z-40 bg-light" initial={{ y: 0 }}>
       <div className="flex flex-col gap-6 py-10 px-6 lg:px-10 lg:py-40 ">
-        <div className="flex items-center gap-2 mb-10">
+        <div className="flex items-center gap-2">
           <div className="rounded-full bg-dark w-[10px] h-[10px]"></div>
           <h2 className={cn("text-sm text-dark uppercase font-inter-light")}>
             {t.home.whoWeAre.subtitle}
@@ -130,13 +130,13 @@ export default function WhoWeAreHome() {
 
             {/* Segunda linha - Grid de imagens */}
             <motion.div
-              className="relative lg:mt-4"
+              className="relative lg:mt-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 h-[800px]">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 h-[800px]">
                 <div className="relative overflow-hidden">
                   <Image
                     src={JARDIM_SVG_IMAGE_1}

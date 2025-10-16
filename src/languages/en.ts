@@ -42,6 +42,7 @@ export const en = {
     },
 
     ctaHome: {
+      subtitle: "Contact",
       title: "Want to request a quote?",
       button: "Schedule a meeting",
     },
@@ -74,6 +75,7 @@ export const en = {
     },
 
     differentials: {
+      subtitle: "Differentiators",
       title: "Our differentiators",
       items: [
         {

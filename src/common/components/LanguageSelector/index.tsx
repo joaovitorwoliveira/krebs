@@ -35,14 +35,14 @@ export default function LanguageSelector({
   );
 
   const buttonClasses = cn(
-    "flex items-center gap-2 px-3 py-2 rounded-md transition-colors text-sm font-medium",
+    "flex items-center gap-2 px-3 py-2 transition-colors text-sm font-medium",
     variant === "desktop" && isHomePage && "text-white hover:text-gray-200",
     variant === "desktop" && !isHomePage && "text-black hover:text-gray-600",
     variant === "mobile" && "text-black hover:text-gray-600"
   );
 
   const dropdownClasses = cn(
-    "absolute z-50 mt-2 bg-light border border-gray-200 rounded-md shadow-lg min-w-[120px]",
+    "absolute z-50 mt-2 bg-light border border-gray-200 shadow-lg min-w-[120px]",
     variant === "desktop" ? "right-0" : "right-0"
   );
 
@@ -73,7 +73,7 @@ export default function LanguageSelector({
                 key={code}
                 onClick={() => handleLanguageChange(code as Language)}
                 className={cn(
-                  "w-full text-left px-4 py-2 text-sm transition-colors first:rounded-t-md last:rounded-b-md text-regular hover:cursor-pointer hover:bg-green-1 hover:text-light",
+                  "w-full text-left px-4 py-2 text-sm transition-colors text-regular hover:cursor-pointer hover:bg-green-1 hover:text-light",
                   language === code && "bg-light font-medium"
                 )}
               >

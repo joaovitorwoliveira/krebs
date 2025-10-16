@@ -42,6 +42,7 @@ export const pt = {
     },
 
     ctaHome: {
+      subtitle: "Contato",
       title: "Quer solicitar um orçamento?",
       button: "Agende uma reunião",
     },
@@ -74,6 +75,7 @@ export const pt = {
     },
 
     differentials: {
+      subtitle: "Diferenciais",
       title: "Nossos diferenciais",
       items: [
         {

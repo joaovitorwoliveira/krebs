@@ -28,7 +28,7 @@ export default function CtaHome() {
           <div className="flex items-center gap-2 mb-10">
             <div className="rounded-full bg-light w-[10px] h-[10px]"></div>
             <h2 className={cn("text-sm text-light uppercase font-inter-light")}>
-              Contato
+              {t.home.ctaHome.subtitle}
             </h2>
           </div>
 
