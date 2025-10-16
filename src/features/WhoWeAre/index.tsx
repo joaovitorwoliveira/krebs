@@ -1,5 +1,6 @@
 import AwardsSection from "./AwardsSection";
-import IntroductionSection from "./IntroductionSection";
+import HeroWhoWeAre from "./HeroWhoWeAre";
+import HistorySection from "./HistorySection";
 import TeamSection from "./TeamSection";
 import { Timeline } from "./Timeline";
 import WorkMethodSection from "./WorkMethodSection";
@@ -39,7 +40,8 @@ const timelineData = [
 export default function WhoWeAre() {
   return (
     <div className="pt-10">
-      <IntroductionSection />
+      <HeroWhoWeAre />
+      <HistorySection />
       <Timeline data={timelineData} />
       <WorkMethodSection />
       <AwardsSection />

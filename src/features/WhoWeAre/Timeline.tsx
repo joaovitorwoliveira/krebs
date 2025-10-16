@@ -114,9 +114,9 @@ const Carousel = () => {
           {slides.map((slide) => (
             <div
               key={slide}
-              className="w-full md:w-1/2 flex-shrink-0 h-48 md:h-64 bg-gray-300 rounded-lg flex items-center justify-center mr-2 last:mr-0"
+              className="w-full md:w-1/2 flex-shrink-0 h-48 md:h-64 bg-green-1 rounded-lg flex items-center justify-center mr-2 last:mr-0"
             >
-              <span className="text-gray-500 font-inter text-sm">
+              <span className="text-light font-inter text-sm">
                 Foto {slide + 1} - André Krebs {1982 + slide}
               </span>
             </div>
@@ -133,7 +133,7 @@ const Carousel = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                index === currentSlide ? "bg-green-4" : "bg-gray-300"
+                index === currentSlide ? "bg-green-4" : "bg-green-1"
               }`}
             />
           )

@@ -362,6 +362,19 @@ export const es = {
   },
 
   office: {
+    hero: {
+      title: "Más de 40 años creando paisajes únicos.",
+      description:
+        "En KREBS+, unimos el legado de André Krebs con la visión estratégica de la nueva generación para transformar espacios en paisajes memorables.",
+      cta: "Ver nuestro portafolio",
+    },
+    history: {
+      title: "Nuestra Historia",
+      paragraph1:
+        "Desde 1982, KREBS+ se dedica a crear paisajes que unen **estética, técnica y emoción**.",
+      paragraph2:
+        "Lo que comenzó en Río de Janeiro con André Krebs se expandió por Brasil y el exterior, consolidando la empresa como referencia en el paisajismo nacional.",
+    },
     introduction: {
       title: "Somos lo que vivimos",
       text: [
