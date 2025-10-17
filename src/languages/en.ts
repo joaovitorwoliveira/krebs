@@ -428,6 +428,9 @@ export const en = {
         },
       ],
     },
+    timeline: {
+      title: "Timeline",
+    },
     team: {
       title: "Our team",
       buttonText: "OUR TEAM",

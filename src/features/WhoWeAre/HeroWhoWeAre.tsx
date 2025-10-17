@@ -55,7 +55,7 @@ export default function HeroWhoWeAre() {
     >
       <div className="flex flex-col gap-6">
         <motion.div variants={itemVariants}>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-encode-bold text-dark mb-8 leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-encode-bold text-dark mb-8 leading-tight">
             {t.office.hero.title}
           </h1>
         </motion.div>
@@ -71,7 +71,7 @@ export default function HeroWhoWeAre() {
             <Button
               text={t.office.hero.cta}
               variant="primary"
-              className="uppercase"
+              className="uppercase py-3"
             />
           </Link>
         </motion.div>

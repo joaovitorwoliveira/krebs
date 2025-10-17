@@ -52,15 +52,15 @@ export default function HistorySection() {
       animate={isInView ? "visible" : "hidden"}
       className="py-10 px-6 lg:px-10 lg:py-20"
     >
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 justify-end items-end">
         <motion.div variants={itemVariants}>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-encode-bold text-dark mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-encode-bold text-dark mb-8">
             {t.office.history.title}
           </h2>
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col justify-end items-end">
             <p className="text-base font-inter text-dark leading-relaxed">
               <BoldText>{t.office.history.paragraph1}</BoldText>
             </p>

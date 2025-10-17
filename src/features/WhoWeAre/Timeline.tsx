@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
+import { useLanguage } from "@/context/LanguageProvider";
 import { motion, useScroll, useTransform } from "motion/react";
 
 interface TimelineEntry {
@@ -96,7 +97,7 @@ const Carousel = () => {
 
   return (
     <div className="mt-6 relative">
-      <div className="relative overflow-hidden rounded-lg">
+      <div className="relative overflow-hidden">
         <div
           className="flex transition-transform duration-300 ease-out cursor-grab active:cursor-grabbing"
           style={{
@@ -114,7 +115,7 @@ const Carousel = () => {
           {slides.map((slide) => (
             <div
               key={slide}
-              className="w-full md:w-1/2 flex-shrink-0 h-48 md:h-64 bg-green-1 rounded-lg flex items-center justify-center mr-2 last:mr-0"
+              className="w-full md:w-1/2 flex-shrink-0 h-48 md:h-64 bg-green-1 flex items-center justify-center mr-2 last:mr-0"
             >
               <span className="text-light font-inter text-sm">
                 Foto {slide + 1} - André Krebs {1982 + slide}
@@ -147,6 +148,7 @@ export const Timeline = ({ data }: TimelineProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
+  const { t } = useLanguage();
 
   useEffect(() => {
     if (ref.current) {
@@ -164,10 +166,10 @@ export const Timeline = ({ data }: TimelineProps) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="w-full bg-light font-sans" ref={containerRef}>
+    <div className="w-full font-sans" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-3xl md:text-5xl font-encode-bold text-dark mb-8">
-          Linha do Tempo
+        <h2 className="text-3xl md:text-5xl font-encode-bold text-dark">
+          {t.office.timeline.title}
         </h2>
       </div>
 
@@ -193,7 +195,7 @@ export const Timeline = ({ data }: TimelineProps) => {
               <h3 className="md:hidden block text-xl mb-4 text-left font-encode-bold text-green-4">
                 {item.year}
               </h3>
-              <p className="text-dark font-inter text-base md:text-lg leading-relaxed">
+              <p className="text-dark font-inter text-base leading-relaxed">
                 {item.description}
               </p>
               {item.hasCarousel && <Carousel />}

@@ -428,6 +428,9 @@ export const es = {
         },
       ],
     },
+    timeline: {
+      title: "Línea de Tiempo",
+    },
     team: {
       title: "Nuestro equipo",
       buttonText: "NUESTRO EQUIPO",
