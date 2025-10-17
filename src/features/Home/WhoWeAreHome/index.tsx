@@ -30,33 +30,33 @@ export default function WhoWeAreHome() {
           </h2>
         </div>
         <div className="flex flex-col mx-auto w-full">
-          <motion.div
-            className="flex flex-col text-dark mb-8 leading-tight max-w-1/2"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <h2
-              className={cn(
-                "font-semibold text-3xl",
-                "md:text-4xl",
-                "lg:text-5xl"
-              )}
-            >
-              {t.home.whoWeAre.title}
-            </h2>
-          </motion.div>
-
           <div className="flex flex-col gap-8 lg:gap-0">
             <div
               className={cn(
                 "flex flex-col gap-8",
-                "lg:flex-row lg:gap-0 lg:min-h-[400px]"
+                "lg:flex-row lg:gap-0 lg:min-h-[600px]"
               )}
             >
-              {/* Seção esquerda - Texto */}
+              {/* Seção esquerda - Título e Texto */}
               <div className={cn("flex flex-col gap-8", "lg:flex-1 lg:pr-8")}>
+                <motion.div
+                  className="flex flex-col text-dark leading-tight"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <h2
+                    className={cn(
+                      "font-semibold text-3xl",
+                      "md:text-4xl",
+                      "lg:text-6xl"
+                    )}
+                  >
+                    {t.home.whoWeAre.title}
+                  </h2>
+                </motion.div>
+
                 <div className="flex flex-col gap-4 opacity-80">
                   <motion.p
                     className={cn(
@@ -106,16 +106,16 @@ export default function WhoWeAreHome() {
                 </Link>
               </div>
 
-              {/* Seção direita - Imagem superior */}
+              {/* Seção direita - Imagem */}
               <div className={cn("lg:flex-1")}>
                 <motion.div
-                  className="relative"
+                  className="relative h-full"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.7 }}
                   viewport={{ once: true }}
                 >
-                  <div className="w-full h-[400px] overflow-hidden">
+                  <div className="w-full h-[400px] lg:h-full overflow-hidden">
                     <Image
                       src={JARDIM_SVG_IMAGE_5}
                       alt="Projeto Varanda Fek - Krebs+ Arquitetura Paisagística"

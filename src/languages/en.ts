@@ -76,7 +76,6 @@ export const en = {
 
     differentials: {
       subtitle: "Differentiators",
-      title: "Our differentiators",
       items: [
         {
           title: "Own network of suppliers and partner nurseries",

@@ -39,8 +39,8 @@ export default function PartnersCarousel() {
     <div>
       <h2
         className={cn(
-          "text-2xl text-light mb-6 font-semibold text-center",
-          "lg:text-3xl lg:mb-20"
+          "text-light text-3xl pt-10 max-w-[1500px] mb-6",
+          "lg:text-6xl lg:mb-20"
         )}
       >
         {t.home.partners.subtitle}

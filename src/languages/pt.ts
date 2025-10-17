@@ -76,7 +76,6 @@ export const pt = {
 
     differentials: {
       subtitle: "Diferenciais",
-      title: "Nossos diferenciais",
       items: [
         {
           title: "Rede própria de fornecedores e viveiros parceiros",
