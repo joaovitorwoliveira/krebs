@@ -22,7 +22,7 @@ export const pt = {
   },
 
   home: {
-    heroTitle: "KREBS+ Arquitetura Paisagística",
+    heroTitle: "Arquitetura Paisagística",
     heroSubtitle: "Criamos paisagens, criamos emoções",
     heroDescription:
       "A KREBS+ nasceu do olhar visionário de André Krebs e evoluiu para uma estrutura profissional que integra estratégia (consultoria e viabilidade), design (projeto) e execução (obra e fornecimento). Atuamos lado a lado com incorporadoras, construtoras e escritórios de arquitetura para transformar áreas externas em ativos que elevam VGV, experiência e marca",

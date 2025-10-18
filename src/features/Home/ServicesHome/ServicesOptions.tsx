@@ -3,8 +3,6 @@
 import Button from "@/common/components/Button";
 import { useLanguage } from "@/context/LanguageProvider";
 
-import { motion } from "@/lib/motion";
-
 export default function ServicesOptions() {
   const { t } = useLanguage();
 
@@ -18,13 +16,9 @@ export default function ServicesOptions() {
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
       {t.home.services.sections.map((section, index) => {
         return (
-          <motion.div
+          <div
             key={index}
             className="flex flex-col h-[800px] border border-dark/10 bg-light"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-            viewport={{ once: true }}
           >
             <div className="relative w-full h-1/2 bg-green-1 flex items-center justify-center">
               <span className="text-light text-lg font-medium">
@@ -58,7 +52,7 @@ export default function ServicesOptions() {
                 />
               </div>
             </div>
-          </motion.div>
+          </div>
         );
       })}
     </div>

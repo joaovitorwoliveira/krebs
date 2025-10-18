@@ -22,7 +22,7 @@ export const en = {
   },
 
   home: {
-    heroTitle: "KREBS+ Landscape Architecture",
+    heroTitle: "Landscape Architecture",
     heroSubtitle: "We create landscapes, we create emotions",
     heroDescription:
       "KREBS+ was born from André Krebs' visionary perspective and evolved into a professional structure that integrates strategy (consulting and feasibility), design (project) and execution (construction and supply). We work side by side with developers, construction companies and architecture firms to transform outdoor areas into assets that elevate GDV, experience and brand",

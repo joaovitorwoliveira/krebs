@@ -2,8 +2,6 @@
 
 import { useLanguage } from "@/context/LanguageProvider";
 
-import { motion } from "@/lib/motion";
-
 import "swiper/css";
 
 import { cn } from "@/lib/utils";
@@ -24,13 +22,7 @@ function CardBigNumber({
   className = "",
 }: CardBigNumberProps) {
   return (
-    <motion.div
-      className={`text-center ${className}`}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay }}
-      viewport={{ once: true }}
-    >
+    <div className={`text-center ${className}`}>
       <div className="p-6 h-full flex flex-col justify-center bg-light text-regular">
         <span className="text-4xl lg:text-6xl xl:text-7xl text-green-1 break-words font-encode-semibold">
           {number}
@@ -39,7 +31,7 @@ function CardBigNumber({
           {text}
         </span>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -47,9 +39,8 @@ export default function PartnersHome() {
   const { t } = useLanguage();
 
   return (
-    <motion.div
+    <div
       className={cn("relative z-40 bg-green-1 py-10 px-6", "lg:px-10 lg:py-40")}
-      initial={{ y: 0 }}
     >
       <div className="flex items-center gap-2 mb-10">
         <div className="rounded-full bg-light w-[10px] h-[10px]"></div>
@@ -100,6 +91,6 @@ export default function PartnersHome() {
           <PartnersCarousel />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

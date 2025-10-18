@@ -4,58 +4,6 @@
 
 Este projeto é um site institucional da KREBS+ Arquitetura Paisagística, desenvolvido com Next.js 15, TypeScript, Tailwind CSS e Framer Motion. O foco está em performance, acessibilidade, internacionalização e experiência visual sofisticada.
 
-## 🏗️ Arquitetura do Projeto
-
-```
-src/
-├── app/                    # App Router do Next.js 15
-│   ├── globals.css         # Estilos globais
-│   ├── layout.tsx          # Layout principal
-│   ├── page.tsx            # Página inicial
-│   ├── sitemap.ts          # Geração de sitemap
-│   ├── quem-somos/         # Página quem somos (antigo escritório)
-│   ├── servicos/           # Página de serviços
-│   └── projetos/           # Páginas de projetos
-│       └── [slug]/         # Projeto individual (dynamic routing)
-├── common/                 # Componentes e recursos compartilhados
-│   ├── components/         # Componentes reutilizáveis globais
-│   │   ├── BackgroundWrapper/
-│   │   ├── BackToTopButton/
-│   │   ├── Button/
-│   │   ├── CopyrightTooltip/
-│   │   ├── Footer/
-│   │   ├── Header/         # Componentes do cabeçalho
-│   │   ├── LanguageSelector/
-│   │   ├── Loading/
-│   │   └── Progress/
-│   ├── constants/          # Constantes e configurações
-│   │   ├── db-images.ts    # URLs das imagens do banco de dados
-│   │   └── social.ts       # URLs das redes sociais
-│   └── utils/              # Utilitários compartilhados
-│       └── textUtils.ts    # Funções de manipulação de texto
-├── features/               # Funcionalidades organizadas por domínio
-│   ├── ContactDrawer/      # Drawer de contato
-│   ├── Filter/             # Sistema de filtros
-│   ├── Home/               # Componentes específicos da home
-│   ├── Projects/           # Componentes de projetos
-│   └── WhoWeAre/           # Componentes da página quem somos
-├── context/                # Contextos React
-│   ├── ContactDrawerProvider.tsx # Gerenciamento do drawer de contato
-│   ├── LanguageProvider.tsx     # Gerenciamento de idiomas
-│   └── MotionProvider.tsx       # Configuração do Framer Motion
-├── hooks/                  # Hooks customizados
-│   ├── useFullscreen.ts    # Hook para controle de tela cheia
-│   └── useSwipeHandlers.ts # Hook para gestos de swipe
-├── languages/              # Sistema de internacionalização
-│   ├── index.ts            # Configuração principal
-│   ├── pt.ts               # Português
-│   ├── en.ts               # Inglês
-│   └── es.ts               # Espanhol
-└── lib/                    # Utilitários e configurações
-    ├── motion.tsx          # Configuração do Framer Motion
-    └── utils.ts            # Funções utilitárias
-```
-
 ## 📖 Boas Práticas Obrigatórias
 
 ### 🌐 Internacionalização
@@ -249,21 +197,6 @@ const project = {
 };
 ````
 
-**Projetos com Imagens Disponíveis:**
-
-- Jardim SVG (7 imagens)
-- Jardim ATJ (8 imagens)
-- Jardim LTX (11 imagens)
-- Jardim Malu (6 imagens)
-- Colégio Farroupilha (7 imagens)
-- Varanda FEK (4 imagens)
-- Rampa (7 imagens)
-- Shopping Iguatemi (5 imagens)
-
-## 🧪 Qualidade e Testes
-
-## 🛣️ Estrutura de Rotas
-
 ### Rotas Principais
 
 - `/` - Página inicial (Home)
@@ -271,29 +204,6 @@ const project = {
 - `/projetos` - Lista de projetos
 - `/projetos/[slug]` - Projeto individual
 - `/servicos` - Página de serviços (em desenvolvimento)
-
-### Mudanças de Rotas
-
-**Atualizações realizadas:**
-
-- `/escritorio` → `/quem-somos` (conteúdo migrado)
-- `/equipe` → removido (conteúdo integrado em quem-somos)
-- `/servicos` → nova rota criada (página em desenvolvimento)
-
-**Navegação atualizada:**
-
-- Header: Quem somos | Projetos | Serviços
-- Footer: Home | Projetos | Quem somos | Serviços
-
-### Estrutura de Features
-
-**Features implementadas:**
-
-- **Home**: HeroSection, PartnersHome, ServicesHome, WhoWeAreHome, CtaHome, DifferentialHome
-- **Projects**: Sistema completo de galeria, filtros, modal de imagens, navegação
-- **WhoWeAre**: IntroductionSection, WorkMethodSection, AwardsSection, TeamSection
-- **Filter**: Sistema de filtros com busca, tags e limpeza de filtros
-- **ContactDrawer**: Drawer lateral para informações de contato
 
 ## 🚀 Comandos Essenciais
 

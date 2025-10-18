@@ -53,8 +53,8 @@ export default function Header() {
                         : "/images/logo_full_textura_verde.png"
                     }
                     alt={"KREBS+"}
-                    width={160}
-                    height={160}
+                    width={140}
+                    height={140}
                     className="object-cover"
                   />
                 </div>

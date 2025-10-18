@@ -14,14 +14,13 @@ import {
 import { BoldText } from "@/common/utils/textUtils";
 import { useLanguage } from "@/context/LanguageProvider";
 
-import { motion } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 export default function WhoWeAreHome() {
   const { t } = useLanguage();
 
   return (
-    <motion.div className="relative z-40 bg-light" initial={{ y: 0 }}>
+    <div className="relative z-40 bg-light">
       <div className="flex flex-col gap-6 py-10 px-6 lg:px-10 lg:py-40 ">
         <div className="flex items-center gap-2">
           <div className="rounded-full bg-dark w-[10px] h-[10px]"></div>
@@ -39,13 +38,7 @@ export default function WhoWeAreHome() {
             >
               {/* Seção esquerda - Título e Texto */}
               <div className={cn("flex flex-col gap-8", "lg:flex-1 lg:pr-8")}>
-                <motion.div
-                  className="flex flex-col text-dark leading-tight"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
+                <div className="flex flex-col text-dark leading-tight">
                   <h2
                     className={cn(
                       "font-semibold text-3xl",
@@ -55,47 +48,35 @@ export default function WhoWeAreHome() {
                   >
                     {t.home.whoWeAre.title}
                   </h2>
-                </motion.div>
+                </div>
 
                 <div className="flex flex-col gap-4 opacity-80">
-                  <motion.p
+                  <p
                     className={cn(
                       "text-dark font-normal text-sm",
                       "lg:text-base"
                     )}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    viewport={{ once: true }}
                   >
                     <BoldText>{t.home.whoWeAre.paragraph1}</BoldText>
-                  </motion.p>
+                  </p>
 
-                  <motion.p
+                  <p
                     className={cn(
                       "text-dark font-normal text-sm",
                       "lg:text-base"
                     )}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                    viewport={{ once: true }}
                   >
                     <BoldText>{t.home.whoWeAre.paragraph2}</BoldText>
-                  </motion.p>
+                  </p>
 
-                  <motion.p
+                  <p
                     className={cn(
                       "text-dark font-normal text-sm",
                       "lg:text-base"
                     )}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                    viewport={{ once: true }}
                   >
                     <BoldText>{t.home.whoWeAre.paragraph3}</BoldText>
-                  </motion.p>
+                  </p>
                 </div>
 
                 <Link
@@ -108,13 +89,7 @@ export default function WhoWeAreHome() {
 
               {/* Seção direita - Imagem */}
               <div className={cn("lg:flex-1")}>
-                <motion.div
-                  className="relative h-full"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.7 }}
-                  viewport={{ once: true }}
-                >
+                <div className="relative h-full">
                   <div className="w-full h-[400px] lg:h-full overflow-hidden">
                     <Image
                       src={JARDIM_SVG_IMAGE_5}
@@ -124,18 +99,12 @@ export default function WhoWeAreHome() {
                       quality={70}
                     />
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
 
             {/* Segunda linha - Grid de imagens */}
-            <motion.div
-              className="relative lg:mt-8"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <div className="relative lg:mt-8">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 h-[800px]">
                 <div className="relative overflow-hidden">
                   <Image
@@ -174,16 +143,10 @@ export default function WhoWeAreHome() {
                   />
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div
-            className={cn("block mt-8", "lg:hidden")}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div className={cn("block mt-8", "lg:hidden")}>
             <Link href="/quem-somos">
               <Button
                 variant="icon"
@@ -191,9 +154,9 @@ export default function WhoWeAreHome() {
                 text={t.home.whoWeAre.cta}
               ></Button>
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

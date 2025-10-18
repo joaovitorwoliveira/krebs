@@ -17,6 +17,9 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
 import Button from "@/common/components/Button";
+import { TextGenerateEffect } from "@/common/components/TextGenerateEffect";
+
+import { cn } from "@/lib/utils";
 
 import {
   checkScreenSize,
@@ -87,11 +90,6 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
             delay: 5000,
             disableOnInteraction: false,
           }}
-          // pagination={{
-          //   clickable: true,
-          //   bulletClass: "swiper-pagination-bullet custom-bullet",
-          //   bulletActiveClass: "custom-bullet-active",
-          // }}
           loop={true}
           speed={2000}
           className="h-full w-full active:cursor-grabbing"
@@ -109,17 +107,36 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
                   ease: "easeOut",
                 }}
               >
-                <Image
-                  src={image.url}
-                  alt={`${image.projectName.pt} - Slide ${index + 1}`}
-                  fill
-                  className="object-cover object-center"
-                  priority={index === 0}
-                  sizes="100vw"
-                  quality={80}
-                  unoptimized={isMobile}
-                  onLoad={handleImageLoad}
-                />
+                <motion.div
+                  className="relative h-full w-full"
+                  initial={{
+                    scale: 1.2,
+                    filter: "blur(10px)",
+                    opacity: 0.5,
+                  }}
+                  animate={{
+                    scale: 1,
+                    filter: "blur(0px)",
+                    opacity: 1,
+                  }}
+                  transition={{
+                    duration: 2.0,
+                    delay: index === 0 ? 0.5 : 0,
+                    ease: "easeOut",
+                  }}
+                >
+                  <Image
+                    src={image.url}
+                    alt={`${image.projectName.pt} - Slide ${index + 1}`}
+                    fill
+                    className="object-cover object-center"
+                    priority={index === 0}
+                    sizes="100vw"
+                    quality={80}
+                    unoptimized={isMobile}
+                    onLoad={handleImageLoad}
+                  />
+                </motion.div>
 
                 <motion.div
                   className="absolute inset-0 bg-black/30"
@@ -174,27 +191,24 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
         style={{ y, opacity }}
       >
         <motion.div
-          className="text-center px-6"
+          className={cn("text-center px-6 flex")}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <motion.h1
+          <motion.div
             className="text-light text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide drop-shadow-2xl mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            {t.home.heroTitle}
-          </motion.h1>
-          {/* <motion.p
-            className="text-light text-lg md:text-xl lg:text-2xl font-base tracking-wide drop-shadow-lg"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-          >
-            {t.home.heroSubtitle}
-          </motion.p> */}
+            {/* {t.home.heroTitle} */}
+            <TextGenerateEffect
+              words={t.home.heroSubtitle}
+              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide drop-shadow-2xl"
+              duration={2.0}
+            />
+          </motion.div>
         </motion.div>
       </motion.div>
     </div>
