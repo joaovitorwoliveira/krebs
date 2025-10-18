@@ -9,7 +9,7 @@ import {
   JARDIM_SVG_IMAGE_2,
   JARDIM_SVG_IMAGE_3,
   JARDIM_SVG_IMAGE_4,
-  JARDIM_SVG_IMAGE_5,
+  JARDIM_SVG_IMAGE_7,
 } from "@/common/constants/db-images";
 import { BoldText } from "@/common/utils/textUtils";
 import { useLanguage } from "@/context/LanguageProvider";
@@ -33,11 +33,13 @@ export default function WhoWeAreHome() {
             <div
               className={cn(
                 "flex flex-col gap-8",
-                "lg:flex-row lg:gap-0 lg:min-h-[600px]"
+                "lg:grid lg:grid-cols-4 lg:gap-8 lg:min-h-[400px]"
               )}
             >
               {/* Seção esquerda - Título e Texto */}
-              <div className={cn("flex flex-col gap-8", "lg:flex-1 lg:pr-8")}>
+              <div
+                className={cn("flex flex-col gap-8", "lg:col-span-3 lg:pr-8")}
+              >
                 <div className="flex flex-col text-dark leading-tight">
                   <h2
                     className={cn(
@@ -88,11 +90,11 @@ export default function WhoWeAreHome() {
               </div>
 
               {/* Seção direita - Imagem */}
-              <div className={cn("lg:flex-1")}>
+              <div className={cn("lg:col-span-1")}>
                 <div className="relative h-full">
-                  <div className="w-full h-[400px] lg:h-full overflow-hidden">
+                  <div className="w-full h-[400px] overflow-hidden">
                     <Image
-                      src={JARDIM_SVG_IMAGE_5}
+                      src={JARDIM_SVG_IMAGE_7}
                       alt="Projeto Varanda Fek - Krebs+ Arquitetura Paisagística"
                       fill
                       className="w-full h-full object-cover"

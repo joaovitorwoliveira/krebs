@@ -26,15 +26,15 @@ export default function DifferentialHome() {
           {t.home.differentials.items.map((differential, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden bg-gradient-to-br from-green-1/10 to-green-1/5 border border-green-1/20 p-6 hover:shadow-lg transition-all duration-300"
+              className="relative overflow-hidden border border-green-1/50 p-6"
             >
               <div className="flex flex-col h-full">
-                <div className="flex items-center justify-center w-12 h-12 bg-green-1/20 rounded-xl mb-4 group-hover:bg-green-1/30 transition-colors duration-300">
-                  <ArrowRight className="w-6 h-6 text-green-1" />
+                <div className="flex items-center justify-center w-12 h-12 bg-green-1 rounded-xl mb-4">
+                  <ArrowRight className="w-6 h-6 text-light" />
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="font-semibold text-lg text-dark mb-3 leading-tight group-hover:text-green-1 transition-colors duration-300">
+                  <h3 className="font-semibold text-lg text-dark mb-3 leading-tight">
                     {differential.title}
                   </h3>
 
@@ -43,8 +43,6 @@ export default function DifferentialHome() {
                   </p>
                 </div>
               </div>
-
-              <div className="absolute top-0 right-0 w-20 h-20 bg-green-1/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-110 transition-transform duration-300"></div>
             </div>
           ))}
         </div>

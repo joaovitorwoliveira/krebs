@@ -205,7 +205,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
             {/* {t.home.heroTitle} */}
             <TextGenerateEffect
               words={t.home.heroSubtitle}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide drop-shadow-2xl"
+              className="text-4xl md:text-6xl xl:text-7xl 2xl:text-[82px] font-bold tracking-wide drop-shadow-2xl"
               duration={2.0}
             />
           </motion.div>
