@@ -21,7 +21,7 @@ export default function WhoWeAreHome() {
 
   return (
     <div className="relative z-40 bg-light">
-      <div className="flex flex-col gap-6 py-10 px-6 lg:px-10 lg:py-40 ">
+      <div className="flex flex-col gap-6 py-10 px-6 lg:px-10 lg:py-20 ">
         <div className="flex items-center gap-2">
           <div className="rounded-full bg-dark w-[10px] h-[10px]"></div>
           <h2 className={cn("text-sm text-dark uppercase font-inter-light")}>

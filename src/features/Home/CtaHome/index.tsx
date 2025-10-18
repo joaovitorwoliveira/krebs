@@ -38,8 +38,7 @@ export default function CtaHome() {
               <p
                 className={cn("text-dark/80 text-lg leading-relaxed max-w-2xl")}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Cupiditate laboriosam quod.
+                Entre em contato conosco.
               </p>
             </div>
 
