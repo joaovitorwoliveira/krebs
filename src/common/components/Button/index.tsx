@@ -54,7 +54,7 @@ export default function Button({
         {/* Texto principal */}
         <span
           className={cn(
-            "block transition-transform duration-200 ease-in-out font-encode-semibold",
+            "block transition-transform duration-400 ease-in-out font-encode-semibold",
             "group-hover:-translate-y-full"
           )}
         >
@@ -64,7 +64,7 @@ export default function Button({
         {/* Texto que entra de baixo */}
         <span
           className={cn(
-            "absolute inset-0 flex items-center justify-center transition-transform duration-200 ease-in-out font-encode-semibold",
+            "absolute inset-0 flex items-center justify-center transition-transform duration-400 ease-in-out font-encode-semibold",
             "translate-y-full group-hover:translate-y-0"
           )}
         >

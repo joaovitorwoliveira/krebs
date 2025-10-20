@@ -46,7 +46,7 @@ export default function CtaHome() {
               <Button
                 text={t.home.ctaHome.button}
                 onClick={openContactDrawer}
-                className="px-8 py-4 uppercase bg-green-1 text-light hover:bg-green-1/90 transition-colors duration-300 font-semibold"
+                className="px-8 py-4 uppercase bg-green-1 text-light font-semibold"
               />
             </div>
           </div>

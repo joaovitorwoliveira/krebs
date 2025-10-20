@@ -76,6 +76,7 @@ export const es = {
 
     differentials: {
       subtitle: "Diferenciadores",
+      title: "Lo que nos hace únicos",
       items: [
         {
           title: "Red propia de proveedores y viveros socios",
