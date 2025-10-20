@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 export default function DifferentialHome() {
   const { t } = useLanguage();
 
-  // Ícones artísticos para cada diferencial usando paleta do projeto
   const differentialIcons = [
     {
       Icon: Leaf,
@@ -62,12 +61,10 @@ export default function DifferentialHome() {
           </p>
         </div>
 
-        {/* Grid com posicionamento sutilmente desalinhado */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8 relative">
           {t.home.differentials.items.map((differential, index) => {
             const { Icon, color, bgColor, accent } = differentialIcons[index];
 
-            // Variações sutis de posicionamento e altura
             const positionVariations = [
               { transform: "translateY(0)", height: "h-[320px]" },
               { transform: "translateY(20px)", height: "h-[340px]" },
@@ -91,7 +88,6 @@ export default function DifferentialHome() {
                 }}
               >
                 <div className="flex flex-col h-full">
-                  {/* Ícone artístico */}
                   <div
                     className={cn(
                       "relative w-16 h-16 mb-6 flex items-center justify-center",
@@ -100,7 +96,6 @@ export default function DifferentialHome() {
                   >
                     <Icon className={cn("w-8 h-8", color)} />
 
-                    {/* Elemento decorativo */}
                     <div
                       className={cn(
                         "absolute -top-1 -right-1 w-4 h-4 rounded-full",
@@ -125,7 +120,6 @@ export default function DifferentialHome() {
           })}
         </div>
 
-        {/* Elementos decorativos de fundo */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-green-1/5 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-blue-1/5 rounded-full blur-2xl" />
