@@ -91,7 +91,7 @@ export default function WhoWeAreHome() {
 
               {/* Seção direita - Imagem */}
               <div className={cn("lg:col-span-1")}>
-                <div className="relative h-full">
+                <div className="relative h-full shadow-lg">
                   <div className="w-full h-[400px] overflow-hidden">
                     <Image
                       src={JARDIM_SVG_IMAGE_7}
@@ -108,7 +108,7 @@ export default function WhoWeAreHome() {
             {/* Segunda linha - Grid de imagens */}
             <div className="relative lg:mt-8">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 h-[800px]">
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden shadow-lg">
                   <Image
                     src={JARDIM_SVG_IMAGE_1}
                     alt="Projeto Jardim SVG - Krebs+ Arquitetura Paisagística"
@@ -117,7 +117,7 @@ export default function WhoWeAreHome() {
                     quality={70}
                   />
                 </div>
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden shadow-lg">
                   <Image
                     src={JARDIM_SVG_IMAGE_2}
                     alt="Projeto Jardim SVG - Krebs+ Arquitetura Paisagística"
@@ -126,7 +126,7 @@ export default function WhoWeAreHome() {
                     quality={70}
                   />
                 </div>
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden shadow-lg">
                   <Image
                     src={JARDIM_SVG_IMAGE_3}
                     alt="Projeto Jardim SVG - Krebs+ Arquitetura Paisagística"
@@ -135,7 +135,7 @@ export default function WhoWeAreHome() {
                     quality={70}
                   />
                 </div>
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden shadow-lg">
                   <Image
                     src={JARDIM_SVG_IMAGE_4}
                     alt="Projeto Jardim SVG - Krebs+ Arquitetura Paisagística"

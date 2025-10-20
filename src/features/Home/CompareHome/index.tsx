@@ -51,7 +51,7 @@ export default function CompareHome() {
             </div>
 
             <div className="flex justify-center">
-              <div className="w-full max-w-7xl">
+              <div className="w-full max-w-7xl shadow-lg">
                 <Compare
                   firstImage={JARDIM_SVG_IMAGE_1}
                   secondImage={SECOND_IMAGE}

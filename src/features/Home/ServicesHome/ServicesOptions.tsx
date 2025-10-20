@@ -12,7 +12,7 @@ export default function ServicesOptions() {
         return (
           <div
             key={index}
-            className="flex flex-col h-[800px] border border-green-1/10 bg-green-1 p-2"
+            className="flex flex-col h-[800px] border border-green-1/10 bg-green-1 p-2 shadow-lg"
           >
             <div
               className="relative w-full h-1/2 bg-cover bg-center bg-no-repeat"
