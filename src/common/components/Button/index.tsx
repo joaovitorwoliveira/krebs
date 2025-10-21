@@ -7,6 +7,8 @@ interface ButtonProps {
   onClick?: () => void;
   className?: string;
   variant?: "primary" | "secondary" | "tertiary" | "icon";
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
 export default function Button({
@@ -14,15 +16,20 @@ export default function Button({
   onClick,
   className,
   variant = "primary",
+  type = "button",
+  disabled = false,
 }: ButtonProps) {
   if (variant === "icon") {
     return (
       <button
+        type={type}
         onClick={onClick}
+        disabled={disabled}
         className={cn(
           "flex items-center gap-2 cursor-pointer",
           "transition-colors duration-200 text-base",
           "group relative text-dark",
+          disabled && "opacity-50 cursor-not-allowed",
           className
         )}
       >
@@ -37,7 +44,9 @@ export default function Button({
 
   return (
     <button
+      type={type}
       onClick={onClick}
+      disabled={disabled}
       className={cn(
         "rounded-full px-6 py-1 flex items-center justify-center cursor-pointer",
         "transition-colors duration-200 text-base overflow-hidden",
@@ -47,6 +56,7 @@ export default function Button({
           "bg-transparent border-2 border-white text-white",
         ],
         variant === "tertiary" && ["bg-transparent text-white"],
+        disabled && "opacity-50 cursor-not-allowed",
         className
       )}
     >

@@ -11,6 +11,7 @@ import {
   WHATSAPP_URL,
 } from "@/common/constants/social";
 import { useLanguage } from "@/context/LanguageProvider";
+import { toast } from "sonner";
 
 import { cn } from "@/lib/utils";
 
@@ -26,6 +27,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
     email: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -37,9 +39,37 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast.success("Mensagem enviada com sucesso!");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => {
+          onClose();
+        }, 2000);
+      } else {
+        toast.error("Erro ao enviar mensagem. Tente novamente.");
+        console.error("Error sending email:", result.error);
+      }
+    } catch (error) {
+      toast.error("Erro ao enviar mensagem. Tente novamente.");
+      console.error("Error sending email:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -70,7 +100,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
             onClick={onClose}
             variant="tertiary"
             className="py-1 px-3 text-sm"
-          ></Button>
+          />
         </div>
 
         {/* Content */}
@@ -148,8 +178,17 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 className="w-full bg-transparent border-b border-gray-500 text-white placeholder-white pb-2 focus:outline-none focus:border-white transition-colors resize-none"
                 required
               />
+              <Button
+                text={isLoading ? "Enviando..." : t.contactDrawer.send}
+                variant="primary"
+                type="submit"
+                disabled={isLoading}
+                className={cn(
+                  "w-full mt-4 bg-light text-dark",
+                  isLoading && "opacity-50 cursor-not-allowed"
+                )}
+              />
             </form>
-            <Button text={t.contactDrawer.send} variant="secondary" />
           </div>
         </div>
       </div>

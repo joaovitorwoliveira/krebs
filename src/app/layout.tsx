@@ -7,6 +7,7 @@ import BackToTopButton from "@/common/components/BackToTopButton";
 import CopyrightTooltip from "@/common/components/CopyrightTooltip";
 import Footer from "@/common/components/Footer";
 import Header from "@/common/components/Header";
+import { Toaster } from "@/common/components/Sonner";
 import { ContactDrawerProvider } from "@/context/ContactDrawerProvider";
 import { LanguageProvider } from "@/context/LanguageProvider";
 import MotionProvider from "@/context/MotionProvider";
@@ -51,6 +52,13 @@ export default function RootLayout({
             <Footer />
             <BackToTopButton />
             {/* <CopyrightTooltip /> */}
+            <Toaster
+              position="top-center"
+              richColors
+              closeButton
+              expand
+              visibleToasts={5}
+            />
           </ContactDrawerProvider>
         </LanguageProvider>
       </body>
