@@ -72,8 +72,8 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="relative z-10 bg-light py-10 px-6 md:px-10 ">
-        <div className="mx-auto">
+      <footer className="relative z-10 bg-light py-10 px-6 md:px-10">
+        <div className="mx-auto pt-10">
           <div className="flex flex-col gap-10 justify-between md:flex-row">
             {/* Img + Nome */}
             <div className="flex flex-col gap-2">

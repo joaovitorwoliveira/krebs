@@ -139,7 +139,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
                 </motion.div>
 
                 <motion.div
-                  className="absolute inset-0 bg-black/30"
+                  className="absolute inset-0 bg-black/25"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -186,7 +186,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
       </motion.div>
 
       {/* Texto centralizado com efeito de scroll */}
-      <motion.div
+      {/* <motion.div
         className="fixed inset-0 flex flex-col items-center justify-center z-30 pointer-events-none"
         style={{ y, opacity }}
       >
@@ -202,7 +202,6 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            {/* {t.home.heroTitle} */}
             <TextGenerateEffect
               words={t.home.heroSubtitle}
               className="text-4xl md:text-6xl xl:text-7xl 2xl:text-[82px] font-bold tracking-wide drop-shadow-2xl"
@@ -210,7 +209,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
             />
           </motion.div>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }
