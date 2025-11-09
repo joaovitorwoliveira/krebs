@@ -170,7 +170,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
 
         {/* Botão Ver Projeto */}
         <motion.div
-          className="absolute z-20 bottom-24 right-6 md:right-10 md:bottom-12"
+          className="absolute z-20 bottom-22 right-6 md:right-10 md:bottom-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}

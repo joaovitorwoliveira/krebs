@@ -10,7 +10,7 @@ import {
 
 import { cn } from "@/lib/utils";
 
-import type { ProjectsPageProps } from "../types";
+import type { Project, ProjectsPageProps } from "../types";
 import ProjectRow from "./ProjectRow";
 
 export default function ProjectsPage({ className }: ProjectsPageProps) {
@@ -44,9 +44,16 @@ export default function ProjectsPage({ className }: ProjectsPageProps) {
           {filteredProjects.length === 0 ? (
             <NoResults message={t.projects.filters.noResults} />
           ) : (
-            projectRows.map((row, rowIndex) => (
-              <ProjectRow key={rowIndex} row={row} rowIndex={rowIndex} />
-            ))
+            projectRows.map((row, rowIndex) => {
+              const rowKey = row.map((p: Project) => p.slug).join("-");
+              return (
+                <ProjectRow
+                  key={`${rowKey}-${rowIndex}`}
+                  row={row}
+                  rowIndex={rowIndex}
+                />
+              );
+            })
           )}
         </div>
       </div>

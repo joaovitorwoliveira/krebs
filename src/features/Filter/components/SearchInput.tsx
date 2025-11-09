@@ -26,7 +26,7 @@ export default function SearchInput({
         placeholder={placeholder}
         value={searchQuery}
         onChange={(e) => onSearchChange(e.target.value)}
-        className="w-full pl-10 pr-4 py-3 border border-dark/20 focus:outline-none focus:ring-2 focus:ring-dark/10 focus:border-dark/40 text-sm bg-light shadow-sm placeholder:text-dark/50"
+        className="w-full pl-10 pr-4 py-3 border border-dark/20 rounded-full focus:outline-none focus:ring-2 focus:ring-dark/10 focus:border-dark/40 text-sm bg-light shadow-sm placeholder:text-dark/50"
       />
     </motion.div>
   );

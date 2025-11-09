@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+import Button from "@/common/components/Button";
 import { useLanguage } from "@/context/LanguageProvider";
 import { X } from "lucide-react";
 
@@ -20,7 +21,6 @@ export default function TagFilter({
   const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
-  // Bloquear scroll do body quando modal estiver aberto
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -104,7 +104,7 @@ export default function TagFilter({
                 </h3>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="text-dark/60 hover:text-dark transition-colors text-2xl leading-none"
+                  className="text-dark/60 hover:text-dark transition-colors text-2xl leading-none uppercase cursor-pointer"
                   aria-label={t.projects.filters.close}
                 >
                   ×
@@ -139,23 +139,22 @@ export default function TagFilter({
                 {onClearFilters && selectedTags.length > 0 && (
                   <button
                     onClick={onClearFilters}
-                    className="flex items-center gap-2 px-6 py-3 text-sm text-dark/70 hover:text-dark transition-colors font-inter border border-dark/20 rounded-full hover:border-dark/40 hover:bg-dark/5"
+                    className="flex items-center gap-2 text-xs px-4 py-2 text-dark/70 hover:text-dark transition-colors font-inter border border-dark/20 rounded-full hover:border-dark/40 hover:bg-dark/5 cursor-pointer lg:text-sm"
                   >
                     <X className="h-4 w-4" />
                     {t.projects.filters.clearFilters}
                   </button>
                 )}
-                <button
+                <Button
                   onClick={() => setIsOpen(false)}
+                  text={t.projects.filters.applyFilters}
                   className={cn(
-                    "px-6 py-3 bg-dark text-light rounded-full font-medium hover:bg-dark/90 transition-colors",
+                    "bg-dark text-light rounded-full text-xs px-4 py-2 font-medium hover:bg-dark/90 transition-colors uppercase lg:text-sm",
                     onClearFilters && selectedTags.length > 0
                       ? "flex-1"
                       : "w-full"
                   )}
-                >
-                  {t.projects.filters.applyFilters}
-                </button>
+                ></Button>
               </div>
             </motion.div>
           </>

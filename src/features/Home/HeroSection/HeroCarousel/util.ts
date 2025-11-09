@@ -1,7 +1,13 @@
 import {
+  JARDIM_FLV_IMAGE_9,
+  JARDIM_FLV_IMAGE_10,
+  JARDIM_FLV_IMAGE_12,
+  JARDIM_FLV_IMAGE_13,
+  JARDIM_FLV_IMAGE_14,
   JARDIM_MALU_IMAGE_1,
   JARDIM_MALU_IMAGE_2,
   JARDIM_SVG_IMAGE_6,
+  RAMPA_IMAGE_5,
   VARANDA_FEK_IMAGE_1,
 } from "@/common/constants/db-images";
 
@@ -17,6 +23,15 @@ export interface HeroImage {
 
 export const heroImages: HeroImage[] = [
   {
+    url: JARDIM_FLV_IMAGE_9,
+    projectSlug: "jardim-flv",
+    projectName: {
+      pt: "Jardim FLV",
+      en: "FLV Garden",
+      es: "Jardín FLV",
+    },
+  },
+  {
     url: JARDIM_MALU_IMAGE_1,
     projectSlug: "jardim-malu",
     projectName: {
@@ -26,12 +41,12 @@ export const heroImages: HeroImage[] = [
     },
   },
   {
-    url: JARDIM_MALU_IMAGE_2,
-    projectSlug: "jardim-malu",
+    url: RAMPA_IMAGE_5,
+    projectSlug: "rampa",
     projectName: {
-      pt: "Jardim MALU",
-      en: "MALU Garden",
-      es: "Jardín MALU",
+      pt: "Rampa",
+      en: "Ramp",
+      es: "Rampa",
     },
   },
   {
