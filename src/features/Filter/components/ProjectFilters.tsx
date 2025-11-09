@@ -20,7 +20,7 @@ export default function ProjectFilters({
   const hasActiveFilters = searchQuery.length > 0 || selectedTags.length > 0;
 
   return (
-    <div className="mb-8 space-y-4 pt-4 lg:pt-0">
+    <div className="mb-0 space-y-4 pt-4 lg:pt-0">
       <SearchInput
         searchQuery={searchQuery}
         onSearchChange={onSearchChange}
@@ -33,6 +33,7 @@ export default function ProjectFilters({
         selectedTags={selectedTags}
         onTagToggle={onTagToggle}
         translations={t.projects.filters.tags}
+        onClearFilters={onClearFilters}
       />
 
       {hasActiveFilters && (

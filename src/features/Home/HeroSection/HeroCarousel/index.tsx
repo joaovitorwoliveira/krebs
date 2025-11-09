@@ -17,9 +17,10 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
 import Button from "@/common/components/Button";
-import { TextGenerateEffect } from "@/common/components/TextGenerateEffect";
 
-import { cn } from "@/lib/utils";
+// import { TextGenerateEffect } from "@/common/components/TextGenerateEffect";
+
+// import { cn } from "@/lib/utils";
 
 import {
   checkScreenSize,

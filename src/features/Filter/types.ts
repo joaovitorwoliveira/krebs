@@ -20,6 +20,7 @@ export interface TagFilterProps {
   selectedTags: string[];
   onTagToggle: (tag: string) => void;
   translations: Record<string, string>;
+  onClearFilters?: () => void;
 }
 
 export interface ClearFiltersButtonProps {
