@@ -218,6 +218,9 @@ export const en = {
         bernardes: "Bernardes",
         novasantarita: "Nova Santa Rita",
         aviva: "Aviva Urbanismo",
+        ruamista: "Mixed Street",
+        condominio: "Condominium",
+        basalto: "Basalt",
       },
     },
     items: {
@@ -385,6 +388,22 @@ export const en = {
       },
       "jardim-flv": {
         title: "FLV Garden",
+        description: `
+          In Nova Santa Rita, the condominium access was conceived under the principles of new urbanism, prioritizing the pedestrian experience and urban coexistence.
+
+          The street was designed at a single level, eliminating level differences between the sidewalk and the roadway and creating a continuous, accessible and inviting space. The natural basalt coating provides visual unity and resistance, dialoguing with local materiality and reinforcing the durable character of the ensemble.
+
+          The trees organize the landscape and draw zones of fresh shade, softening the scale of the street and creating rhythm and thermal comfort along the path. The project incorporates urban furniture in contemporary lines, which offer points of permanence and support for pedestrians, in addition to discrete markers that delimit circulation areas with safety and subtlety.
+
+          More than an access, the space was thought of as an environment of coexistence and qualified passage, where infrastructure, nature and urban design come together to promote a more human, inviting and sustainable daily life.
+        `,
+        date: "2020",
+        place: "Nova Santa Rita, RS",
+        architecture: "Aviva Urbanismo",
+        photo: "Lucas Daneris",
+      },
+      "rua-mista-legano": {
+        title: "Legano Mixed Street",
         description: `
           In Nova Santa Rita, the condominium access was conceived under the principles of new urbanism, prioritizing the pedestrian experience and urban coexistence.
 

@@ -40,7 +40,12 @@ export default function Header() {
 
   return (
     <>
-      <header className="h-20 flex items-center relative z-40 bg-transparent lg:h-28">
+      <header
+        className={cn(
+          "h-20 flex items-center relative z-40 bg-transparent lg:h-28",
+          isHomePage ? "bg-gradient-to-b from-black/45 to-black/0" : undefined
+        )}
+      >
         <div className="w-full px-6 lg:px-10">
           <div className="flex items-center justify-between h-full">
             <div className="flex items-center">

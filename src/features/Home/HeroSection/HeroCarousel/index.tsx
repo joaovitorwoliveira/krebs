@@ -140,7 +140,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
                 </motion.div>
 
                 <motion.div
-                  className="absolute inset-0 bg-black/25"
+                  className="absolute inset-0 bg-black/10"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.4 }}

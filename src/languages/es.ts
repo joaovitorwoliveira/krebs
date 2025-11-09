@@ -219,6 +219,9 @@ export const es = {
         bernardes: "Bernardes",
         novasantarita: "Nova Santa Rita",
         aviva: "Aviva Urbanismo",
+        ruamista: "Calle Mixta",
+        condominio: "Condominio",
+        basalto: "Basalto",
       },
     },
     items: {
@@ -385,6 +388,22 @@ export const es = {
       },
       "jardim-flv": {
         title: "Jardín FLV",
+        description: `
+          En Nova Santa Rita, el acceso al condominio fue concebido bajo los principios del nuevo urbanismo, priorizando la experiencia del peatón y la convivencia urbana.
+
+          La calle fue proyectada en nivel único, eliminando desniveles entre paseo y lecho carrozable y creando un espacio continuo, accesible e invitador. El revestimiento en basalto natural confiere unidad visual y resistencia, dialogando con la materialidad local y reforzando el carácter duradero del conjunto.
+
+          Los árboles organizan el paisaje y dibujan zonas de sombra fresca, suavizando la escala de la vía y creando ritmo y confort térmico a lo largo del recorrido. El proyecto incorpora mobiliarios urbanos en líneas contemporáneas, que ofrecen puntos de permanencia y apoyo a los peatones, además de balizadores discretos que delimitan áreas de circulación con seguridad y sutileza.
+
+          Más que un acceso, el espacio fue pensado como un ambiente de convivencia y pasaje calificado, donde infraestructura, naturaleza y diseño urbano se unen para promover un cotidiano más humano, invitador y sostenible.
+        `,
+        date: "2020",
+        place: "Nova Santa Rita, RS",
+        architecture: "Aviva Urbanismo",
+        photo: "Lucas Daneris",
+      },
+      "rua-mista-legano": {
+        title: "Calle Mixta Legano",
         description: `
           En Nova Santa Rita, el acceso al condominio fue concebido bajo los principios del nuevo urbanismo, priorizando la experiencia del peatón y la convivencia urbana.
 
