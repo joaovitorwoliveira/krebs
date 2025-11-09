@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,26 +19,40 @@ interface ProjectRowProps {
 export default function ProjectRow({ row, rowIndex }: ProjectRowProps) {
   const { t } = useLanguage();
   const ref = useRef<HTMLDivElement>(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const isInView = useInView(ref, {
-    once: false,
+    once: true,
     margin: "-100px",
     amount: 0.1,
   });
-  const [isInitiallyVisible, setIsInitiallyVisible] = useState(false);
 
-  useLayoutEffect(() => {
-    setIsInitiallyVisible(false);
-    if (ref.current) {
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
+    if (ref.current && !hasAnimated) {
       const rect = ref.current.getBoundingClientRect();
       const isVisible =
         rect.top < window.innerHeight + 100 && rect.bottom > -100;
-      if (isVisible) {
-        setIsInitiallyVisible(true);
+      if (isVisible || rowIndex < 2) {
+        setHasAnimated(true);
       }
     }
-  }, [row]);
+  }, [hasAnimated, rowIndex, isMounted]);
 
-  const shouldForceVisible = rowIndex < 2 || isInitiallyVisible;
+  useEffect(() => {
+    if (!isMounted) return;
+
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [isInView, hasAnimated, isMounted]);
+
+  const isVisible = hasAnimated;
 
   const rowVariants: Variants = {
     hidden: {
@@ -72,8 +86,6 @@ export default function ProjectRow({ row, rowIndex }: ProjectRowProps) {
     },
   };
 
-  const isVisible = shouldForceVisible || isInView;
-
   return (
     <motion.div
       ref={ref}
@@ -103,7 +115,7 @@ export default function ProjectRow({ row, rowIndex }: ProjectRowProps) {
                   className="object-cover transition-transform duration-500 group-hover:scale-101"
                   priority={rowIndex === 0 && itemIndex < 3}
                   loading={rowIndex === 0 && itemIndex < 3 ? "eager" : "lazy"}
-                  quality={50}
+                  quality={40}
                 />
                 <motion.div
                   className="absolute inset-0 bg-black pointer-events-none"

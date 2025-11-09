@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import { useInView, Variants } from "framer-motion";
@@ -17,8 +17,34 @@ export default function ImageGallery({
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
     null
   );
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
+    if (ref.current && !hasAnimated) {
+      const rect = (ref.current as HTMLElement).getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight + 50;
+      if (isVisible) {
+        setHasAnimated(true);
+      }
+    }
+  }, [hasAnimated, isMounted]);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [isInView, hasAnimated, isMounted]);
 
   const openModal = (index: number) => {
     setSelectedImageIndex(index);
@@ -90,7 +116,7 @@ export default function ImageGallery({
           ref={ref}
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={hasAnimated ? "visible" : "hidden"}
           className="columns-1 md:columns-2 lg:columns-3 gap-3"
         >
           {images.map((image, index) => {
@@ -114,7 +140,7 @@ export default function ImageGallery({
                     className="object-cover"
                     priority={index < 3}
                     loading={index < 3 ? "eager" : "lazy"}
-                    quality={50}
+                    quality={40}
                   />
                   <motion.div
                     className="absolute inset-0 bg-black"
