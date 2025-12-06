@@ -1,9 +1,9 @@
 // "use client";
 
 // import { useLanguage } from "@/context/LanguageProvider";
+import AwardsSection from "./AwardsSection";
 import HeroWhoWeAre from "./HeroWhoWeAre";
 
-// import AwardsSection from "./AwardsSection";
 // import HistorySection from "./HistorySection";
 // import TeamSection from "./TeamSection";
 // import { Timeline } from "./Timeline";
@@ -46,10 +46,10 @@ export default function WhoWeAre() {
   return (
     <>
       <HeroWhoWeAre />
+      <AwardsSection />
       {/* <HistorySection />
       <Timeline data={timelineData} />
       <WorkMethodSection />
-      <AwardsSection />
       <TeamSection /> */}
     </>
   );
