@@ -1,9 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import Link from "next/link";
+import Image from "next/image";
 
-import Button from "@/common/components/Button";
 import { useLanguage } from "@/context/LanguageProvider";
 import { useInView, Variants } from "framer-motion";
 
@@ -53,27 +52,34 @@ export default function HeroWhoWeAre() {
       animate={isInView ? "visible" : "hidden"}
       className="py-10 px-6 lg:px-10 lg:py-20"
     >
-      <div className="flex flex-col gap-6">
-        <motion.div variants={itemVariants}>
-          <h1 className="text-3xl md:text-4xl lg:text-6xl font-encode-bold text-dark mb-8 leading-tight">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+        {/* Imagem à esquerda */}
+        <motion.div variants={itemVariants} className="w-full lg:w-2/5">
+          <div className="relative w-full aspect-[4/5] lg:aspect-square">
+            <Image
+              src="/images/team/andre-bw.jpg"
+              alt="André Krebs"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </motion.div>
+
+        {/* Texto à direita */}
+        <motion.div
+          variants={itemVariants}
+          className="w-full lg:w-3/5 flex flex-col gap-6"
+        >
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-encode-bold text-dark leading-tight">
             {t.office.hero.title}
           </h1>
-        </motion.div>
 
-        <motion.div variants={itemVariants}>
-          <p className="text-base font-inter text-dark mb-8 leading-relaxed max-w-2xl">
-            {t.office.hero.description}
-          </p>
-        </motion.div>
-
-        <motion.div variants={itemVariants}>
-          <Link href="/projetos">
-            <Button
-              text={t.office.hero.cta}
-              variant="primary"
-              className="uppercase py-3"
-            />
-          </Link>
+          <div className="flex flex-col gap-4 text-base font-inter text-dark leading-relaxed">
+            <p>{t.office.hero.paragraph1}</p>
+            <p>{t.office.hero.paragraph2}</p>
+            <p>{t.office.hero.paragraph3}</p>
+          </div>
         </motion.div>
       </div>
     </motion.section>

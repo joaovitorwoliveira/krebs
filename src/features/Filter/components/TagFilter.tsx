@@ -58,7 +58,7 @@ export default function TagFilter({
             onClick={() => setIsOpen(true)}
             className={cn(
               "px-4 py-2 text-xs font-medium rounded-full border transition-all duration-200 shadow-sm font-inter cursor-pointer",
-              "bg-light text-dark border-dark/20 hover:border-dark/40 hover:bg-dark/5 hover:shadow-md"
+              "bg-white text-dark border-dark/20 hover:border-dark/40 hover:bg-dark/5 hover:shadow-md"
             )}
           >
             {selectedTags.length > 0
@@ -89,7 +89,7 @@ export default function TagFilter({
               exit={{ opacity: 0, scale: 0.95, y: -20 }}
               transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
               className={cn(
-                "fixed bg-light rounded-2xl shadow-2xl z-[99999] flex flex-col",
+                "fixed bg-white rounded-2xl shadow-2xl z-[99999] flex flex-col",
                 "max-w-2xl max-h-[60vh]",
                 "top-1/2 -translate-y-1/2",
                 "left-4 right-4",
@@ -124,7 +124,7 @@ export default function TagFilter({
                           "px-4 py-2 text-[11px] font-medium rounded-full border transition-all duration-200 shadow-sm font-inter cursor-pointer lg:text-xs",
                           isSelected
                             ? "bg-green-5 text-light border-dark shadow-md"
-                            : "bg-light text-dark border-dark/20 hover:border-dark/40 hover:bg-dark/5 hover:shadow-md"
+                            : "bg-white text-dark border-dark/20 hover:border-dark/40 hover:bg-dark/5 hover:shadow-md"
                         )}
                       >
                         {translations[tag] || tag}

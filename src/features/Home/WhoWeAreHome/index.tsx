@@ -70,7 +70,7 @@ export default function WhoWeAreHome() {
           <div className="lg:flex-1 lg:max-w-[50%]">
             <div className="relative w-full h-[400px] lg:h-full lg:min-h-[600px] overflow-hidden">
               <Image
-                src="/images/team/office-bw.jpg"
+                src="/images/team/office-2-bw.jpg"
                 alt="Krebs+ Arquitetura Paisagística"
                 fill
                 className="object-cover"

@@ -33,7 +33,7 @@ export default function Button({
           className
         )}
       >
-        <span className="font-inter-bold relative uppercase ">
+        <span className="font-inter-semibold relative uppercase ">
           {text}
           <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-dark transition-all duration-200 ease-out group-hover:w-full"></span>
         </span>

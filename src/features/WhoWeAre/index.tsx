@@ -1,9 +1,9 @@
 // "use client";
 
 // import { useLanguage } from "@/context/LanguageProvider";
+import HeroWhoWeAre from "./HeroWhoWeAre";
 
 // import AwardsSection from "./AwardsSection";
-// import HeroWhoWeAre from "./HeroWhoWeAre";
 // import HistorySection from "./HistorySection";
 // import TeamSection from "./TeamSection";
 // import { Timeline } from "./Timeline";
@@ -45,21 +45,8 @@ export default function WhoWeAre() {
   // const { t } = useLanguage();
   return (
     <>
-      <div className="min-h-screen bg-light">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">
-              QUEM SOMOS
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Esta página está em desenvolvimento. Em breve você encontrará
-              informações sobre a nossa história.
-            </p>
-          </div>
-        </div>
-      </div>
-      {/* <HeroWhoWeAre />
-      <HistorySection />
+      <HeroWhoWeAre />
+      {/* <HistorySection />
       <Timeline data={timelineData} />
       <WorkMethodSection />
       <AwardsSection />

@@ -11,7 +11,7 @@ export default function ServicosPage() {
 
   return (
     <motion.main
-      className="min-h-screen bg-light"
+      className="min-h-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}

@@ -437,9 +437,13 @@ export const es = {
 
   office: {
     hero: {
-      title: "Más de 40 años creando paisajes únicos.",
-      description:
-        "En KREBS+, unimos el legado de André Krebs con la visión estratégica de la nueva generación para transformar espacios en paisajes memorables.",
+      title: "Por más de cuatro décadas diseñando y ejecutando jardines.",
+      paragraph1:
+        "KREBS+ nació de la trayectoria de André Krebs, quien desde 1982 dedica su vida a transformar espacios en paisajes únicos. Este legado consolidó la empresa como referencia en el paisajismo brasileño y hoy se suma a la visión estratégica de una nueva generación, que une experiencia, innovación y emoción en cada proyecto.",
+      paragraph2:
+        "Desde la concepción estratégica — con conocimiento profundo de mercado y viabilidad — hasta el desarrollo estético y emocional del proyecto, hasta la ejecución de jardines con excelencia y fidelidad al concepto, KREBS+ entrega soluciones completas y reales.",
+      paragraph3:
+        "Actuamos principalmente en condominios, lotificaciones y residencias de alto estándar, y también en parques, rooftops, clubes, shoppings y otros espacios que demandan experiencias únicas a través de la naturaleza. Siempre con la misma esencia: crear paisajes que unen estética, viabilidad y emoción.",
       cta: "Ver nuestro portafolio",
     },
     history: {

@@ -437,9 +437,13 @@ export const en = {
 
   office: {
     hero: {
-      title: "More than 40 years creating unique landscapes.",
-      description:
-        "At KREBS+, we unite André Krebs' legacy with the new generation's strategic vision to transform spaces into memorable landscapes.",
+      title: "For over four decades designing and executing gardens.",
+      paragraph1:
+        "KREBS+ was born from André Krebs' trajectory, who since 1982 has dedicated his life to transforming spaces into unique landscapes. This legacy consolidated the company as a reference in Brazilian landscaping and today is joined by the strategic vision of a new generation, which unites experience, innovation and emotion in each project.",
+      paragraph2:
+        "From strategic conception — with deep market knowledge and viability — to the aesthetic and emotional development of the project, up to the execution of gardens with excellence and fidelity to the concept, KREBS+ delivers complete and real solutions.",
+      paragraph3:
+        "We operate mainly in condominiums, subdivisions and high-end residences, and also in parks, rooftops, clubs, shopping malls and other spaces that demand unique experiences through nature. Always with the same essence: creating landscapes that unite aesthetics, viability, and emotion.",
       cta: "View our portfolio",
     },
     history: {

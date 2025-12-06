@@ -184,7 +184,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 type="submit"
                 disabled={isLoading}
                 className={cn(
-                  "w-full mt-4 bg-light text-dark",
+                  "w-full mt-4 bg-white text-dark",
                   isLoading && "opacity-50 cursor-not-allowed"
                 )}
               />
