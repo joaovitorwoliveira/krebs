@@ -34,9 +34,9 @@ export async function POST(request: Request) {
     console.log("Sending email from:", email);
 
     const { data, error } = await resend.emails.send({
-      from: "João <contact@joaovitorwoliveira.com>",
-      to: ["joaovitorwoliveira@gmail.com"],
-      subject: `Nova mensagem de ${name} - Portfólio`,
+      from: "Website <onboarding@resend.dev>",
+      to: ["contato@krebsmais.com"],
+      subject: `Nova mensagem de ${name} - Website`,
       html: await render(EmailTemplate({ name, email, message })),
     });
 
