@@ -4,13 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Button from "@/common/components/Button";
-import {
-  JARDIM_SVG_IMAGE_1,
-  JARDIM_SVG_IMAGE_2,
-  JARDIM_SVG_IMAGE_3,
-  JARDIM_SVG_IMAGE_4,
-  JARDIM_SVG_IMAGE_7,
-} from "@/common/constants/db-images";
+import { JARDIM_SVG_IMAGE_7 } from "@/common/constants/db-images";
 import { BoldText } from "@/common/utils/textUtils";
 import { useLanguage } from "@/context/LanguageProvider";
 
@@ -20,142 +14,68 @@ export default function WhoWeAreHome() {
   const { t } = useLanguage();
 
   return (
-    <div className="relative z-40 bg-light">
-      <div className="flex flex-col gap-6 py-10 px-6 lg:px-10 lg:py-20 ">
-        <div className="flex items-center gap-2">
-          <div className="rounded-full bg-dark w-[10px] h-[10px]"></div>
-          <h2 className={cn("text-sm text-dark uppercase font-inter-light")}>
-            {t.home.whoWeAre.subtitle}
-          </h2>
-        </div>
-        <div className="flex flex-col mx-auto w-full">
-          <div className="flex flex-col gap-8 lg:gap-0">
-            <div
+    <div className="relative z-40 bg-white">
+      <div className="flex flex-col gap-6 py-10 px-6 lg:px-10 lg:py-20">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full">
+          {/* Seção esquerda - Título e Texto */}
+          <div className="flex flex-col gap-6 lg:gap-8 lg:flex-1 lg:pr-8">
+            <h2
               className={cn(
-                "flex flex-col gap-8",
-                "lg:grid lg:grid-cols-4 lg:gap-8 lg:min-h-[400px]"
+                "text-dark font-semibold leading-tight uppercase max-w-4xl",
+                "text-3xl md:text-5xl",
+                "lg:text-6xl 2xl:text-7xl"
               )}
             >
-              {/* Seção esquerda - Título e Texto */}
-              <div
-                className={cn("flex flex-col gap-8", "lg:col-span-3 lg:pr-8")}
+              {t.home.whoWeAre.title}
+            </h2>
+
+            <div className="flex flex-col gap-4 text-dark max-w-2xl">
+              <p
+                className={cn(
+                  "font-normal",
+                  "text-sm md:text-base",
+                  "lg:text-base"
+                )}
               >
-                <div className="flex flex-col text-dark leading-tight">
-                  <h2
-                    className={cn(
-                      "font-semibold text-3xl",
-                      "md:text-4xl",
-                      "lg:text-6xl"
-                    )}
-                  >
-                    {t.home.whoWeAre.title}
-                  </h2>
-                </div>
+                <BoldText>{t.home.whoWeAre.paragraph1}</BoldText>
+              </p>
 
-                <div className="flex flex-col gap-4 opacity-80">
-                  <p
-                    className={cn(
-                      "text-dark font-normal text-sm",
-                      "lg:text-base"
-                    )}
-                  >
-                    <BoldText>{t.home.whoWeAre.paragraph1}</BoldText>
-                  </p>
+              <p
+                className={cn(
+                  "font-normal",
+                  "text-sm md:text-base",
+                  "lg:text-base"
+                )}
+              >
+                <BoldText>{t.home.whoWeAre.paragraph2}</BoldText>
+              </p>
 
-                  <p
-                    className={cn(
-                      "text-dark font-normal text-sm",
-                      "lg:text-base"
-                    )}
-                  >
-                    <BoldText>{t.home.whoWeAre.paragraph2}</BoldText>
-                  </p>
-
-                  <p
-                    className={cn(
-                      "text-dark font-normal text-sm",
-                      "lg:text-base"
-                    )}
-                  >
-                    <BoldText>{t.home.whoWeAre.paragraph3}</BoldText>
-                  </p>
-                </div>
-
-                <Link
-                  href="/quem-somos"
-                  className={cn("hidden", "lg:block lg:w-fit")}
-                >
-                  <Button variant="icon" text={t.home.whoWeAre.cta}></Button>
-                </Link>
-              </div>
-
-              {/* Seção direita - Imagem */}
-              <div className={cn("lg:col-span-1")}>
-                <div className="relative h-full shadow-lg">
-                  <div className="w-full h-[400px] overflow-hidden">
-                    <Image
-                      src={JARDIM_SVG_IMAGE_7}
-                      alt="Projeto Varanda Fek - Krebs+ Arquitetura Paisagística"
-                      fill
-                      className="w-full h-full object-cover"
-                      quality={70}
-                    />
-                  </div>
-                </div>
-              </div>
+              <p
+                className={cn(
+                  "font-normal",
+                  "text-sm md:text-base",
+                  "lg:text-base"
+                )}
+              >
+                <BoldText>{t.home.whoWeAre.paragraph3}</BoldText>
+              </p>
             </div>
 
-            {/* Segunda linha - Grid de imagens */}
-            <div className="relative lg:mt-8">
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 h-[800px]">
-                <div className="relative overflow-hidden shadow-lg">
-                  <Image
-                    src={JARDIM_SVG_IMAGE_1}
-                    alt="Projeto Jardim SVG - Krebs+ Arquitetura Paisagística"
-                    fill
-                    className="object-cover"
-                    quality={70}
-                  />
-                </div>
-                <div className="relative overflow-hidden shadow-lg">
-                  <Image
-                    src={JARDIM_SVG_IMAGE_2}
-                    alt="Projeto Jardim SVG - Krebs+ Arquitetura Paisagística"
-                    fill
-                    className="object-cover"
-                    quality={70}
-                  />
-                </div>
-                <div className="relative overflow-hidden shadow-lg">
-                  <Image
-                    src={JARDIM_SVG_IMAGE_3}
-                    alt="Projeto Jardim SVG - Krebs+ Arquitetura Paisagística"
-                    fill
-                    className="object-cover"
-                    quality={70}
-                  />
-                </div>
-                <div className="relative overflow-hidden shadow-lg">
-                  <Image
-                    src={JARDIM_SVG_IMAGE_4}
-                    alt="Projeto Jardim SVG - Krebs+ Arquitetura Paisagística"
-                    fill
-                    className="object-cover"
-                    quality={70}
-                  />
-                </div>
-              </div>
-            </div>
+            <Link href="/quem-somos" className={cn("w-fit mt-2", "lg:mt-4")}>
+              <Button variant="icon" text={t.home.whoWeAre.cta}></Button>
+            </Link>
           </div>
 
-          <div className={cn("block mt-8", "lg:hidden")}>
-            <Link href="/quem-somos">
-              <Button
-                variant="icon"
-                className="w-full justify-start"
-                text={t.home.whoWeAre.cta}
-              ></Button>
-            </Link>
+          {/* Seção direita - Imagem */}
+          <div className="lg:flex-1 lg:max-w-[50%]">
+            <div className="relative w-full h-[400px] lg:h-full lg:min-h-[600px] overflow-hidden">
+              <Image
+                src="/images/team/office-bw.jpg"
+                alt="Krebs+ Arquitetura Paisagística"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>

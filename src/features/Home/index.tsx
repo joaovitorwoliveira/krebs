@@ -38,12 +38,7 @@ export default function HomePage({ className }: HomePageProps) {
 
       <div className="h-screen"></div>
 
-      {/* <WhoWeAreHome />
-      <CompareHome />
-      <PartnersHome />
-      <DifferentialHome />
-      <ServicesHome />
-      <CtaHome /> */}
+      <WhoWeAreHome />
     </>
   );
 }

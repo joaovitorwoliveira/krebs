@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Plus } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -26,18 +26,21 @@ export default function Button({
         onClick={onClick}
         disabled={disabled}
         className={cn(
-          "flex items-center gap-2 cursor-pointer",
+          "flex items-center gap-1 cursor-pointer",
           "transition-colors duration-200 text-base",
           "group relative text-dark",
           disabled && "opacity-50 cursor-not-allowed",
           className
         )}
       >
-        <span className="font-encode relative">
+        <span className="font-inter-bold relative uppercase ">
           {text}
-          <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-dark transition-all duration-300 ease-out group-hover:w-full"></span>
+          <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-dark transition-all duration-200 ease-out group-hover:w-full"></span>
         </span>
-        <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
+        <Plus
+          strokeWidth={2.5}
+          className="w-5 h-5 -translate-x-0.0 -translate-y-1 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-1.5"
+        />
       </button>
     );
   }
