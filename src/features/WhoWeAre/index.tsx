@@ -3,11 +3,8 @@
 // import { useLanguage } from "@/context/LanguageProvider";
 import AwardsSection from "./AwardsSection";
 import HeroWhoWeAre from "./HeroWhoWeAre";
-import HistorySection from "./HistorySection";
+import MapSection from "./MapSection";
 import TeamSection from "./TeamSection";
-
-// import { Timeline } from "./Timeline";
-// import WorkMethodSection from "./WorkMethodSection";
 
 // const timelineData = [
 //   {
@@ -46,11 +43,9 @@ export default function WhoWeAre() {
   return (
     <>
       <HeroWhoWeAre />
-      <HistorySection />
       <TeamSection />
+      <MapSection />
       <AwardsSection />
-      {/* <Timeline data={timelineData} />
-      <WorkMethodSection /> */}
     </>
   );
 }
