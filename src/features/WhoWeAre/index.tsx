@@ -3,9 +3,9 @@
 // import { useLanguage } from "@/context/LanguageProvider";
 import AwardsSection from "./AwardsSection";
 import HeroWhoWeAre from "./HeroWhoWeAre";
+import HistorySection from "./HistorySection";
+import TeamSection from "./TeamSection";
 
-// import HistorySection from "./HistorySection";
-// import TeamSection from "./TeamSection";
 // import { Timeline } from "./Timeline";
 // import WorkMethodSection from "./WorkMethodSection";
 
@@ -46,11 +46,11 @@ export default function WhoWeAre() {
   return (
     <>
       <HeroWhoWeAre />
+      <HistorySection />
+      <TeamSection />
       <AwardsSection />
-      {/* <HistorySection />
-      <Timeline data={timelineData} />
-      <WorkMethodSection />
-      <TeamSection /> */}
+      {/* <Timeline data={timelineData} />
+      <WorkMethodSection /> */}
     </>
   );
 }

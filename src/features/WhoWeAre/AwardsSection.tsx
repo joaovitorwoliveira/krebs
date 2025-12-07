@@ -152,7 +152,7 @@ export default function AwardsSection() {
           <motion.div
             key={index}
             variants={rowVariants}
-            className="bg-white border border-[#999] rounded-lg p-4 space-y-2"
+            className="bg-white  border md:border-[#999] p-4 space-y-2"
           >
             <div className="flex justify-between items-start">
               <span className="font-semibold text-dark text-sm">ANO</span>

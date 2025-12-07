@@ -50,12 +50,12 @@ export default function HeroWhoWeAre() {
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className="py-10 px-6 lg:px-10 lg:py-20"
+      className="py-10 px-6 md:px-20 lg:py-40 xl:px-40 2xl:px-80"
     >
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
         {/* Imagem à esquerda */}
         <motion.div variants={itemVariants} className="w-full lg:w-2/5">
-          <div className="relative w-full aspect-[4/5] lg:aspect-square">
+          <div className="relative w-full aspect-[4/5]">
             <Image
               src="/images/team/andre-bw.jpg"
               alt="André Krebs"
@@ -71,11 +71,8 @@ export default function HeroWhoWeAre() {
           variants={itemVariants}
           className="w-full lg:w-3/5 flex flex-col gap-6"
         >
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-encode-bold text-dark leading-tight">
-            {t.office.hero.title}
-          </h1>
-
-          <div className="flex flex-col gap-4 text-base font-inter text-dark leading-relaxed">
+          <div className="flex flex-col gap-3 text-sm md:text-base font-inter text-dark leading-relaxed">
+            <h1 className="font-inter-base">{t.office.hero.title}</h1>
             <p>{t.office.hero.paragraph1}</p>
             <p>{t.office.hero.paragraph2}</p>
             <p>{t.office.hero.paragraph3}</p>

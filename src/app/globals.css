@@ -115,6 +115,11 @@ label,
   font-weight: 300;
 }
 
+.font-inter-base {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 400;
+}
+
 .font-inter-bold {
   font-family: var(--font-inter), sans-serif;
   font-weight: 700;
@@ -135,7 +140,7 @@ label,
   background-repeat: repeat;
   background-size: auto;
   mix-blend-mode: multiply;
-  opacity: 0.8;
+  opacity: 0.2;
   z-index: 999;
 }
 
