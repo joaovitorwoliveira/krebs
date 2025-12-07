@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 
+import Button from "@/common/components/Button";
+import { useContactDrawer } from "@/context/ContactDrawerProvider";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
@@ -48,6 +50,7 @@ const awardsData = [
 export default function AwardsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { openContactDrawer } = useContactDrawer();
 
   const sectionVariants: Variants = {
     hidden: {
@@ -181,6 +184,33 @@ export default function AwardsSection() {
           </motion.div>
         ))}
       </div>
+
+      {/* Architecture + Nature Section */}
+      <motion.div
+        variants={titleVariants}
+        className="mt-40 mb-8 lg:mb-20 lg:mt-40 2xl:mt-60"
+      >
+        <div className="flex flex-col lg:grid lg:grid-cols-3 items-center lg:items-start mb-10">
+          <h3 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-dark lg:text-right lg:pr-10 xl:pr-20">
+            ARQUITETURA
+          </h3>
+          <span className="text-5xl lg:text-6xl xl:text-7xl font-bold text-dark text-center lg:mt-20">
+            +
+          </span>
+          <h3 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-dark lg:text-left lg:pl-10 xl:pl-20 lg:mt-40">
+            NATUREZA
+          </h3>
+        </div>
+
+        <div className="flex justify-center pt-6">
+          <Button
+            text="ENTRE EM CONTATO"
+            onClick={openContactDrawer}
+            variant="primary"
+            className="px-8 py-3"
+          />
+        </div>
+      </motion.div>
     </motion.section>
   );
 }
