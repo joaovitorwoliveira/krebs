@@ -7,7 +7,7 @@ import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
 
-export default function HistorySection() {
+export default function MapSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
