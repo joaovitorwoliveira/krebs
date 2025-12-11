@@ -20,7 +20,7 @@ export const teamMembers: TeamMember[] = [
       "Arquiteto e Urbanista (UFPEL)",
       "Mestrado (UFPEL)",
     ],
-    image: "/images/team/andre-krebs.jpg",
+    image: "/images/team/andre.jpg",
   },
   {
     id: "victor",
@@ -33,7 +33,7 @@ export const teamMembers: TeamMember[] = [
       "+",
       "Arquiteto e Urbanista (UFRGS)",
     ],
-    image: "/images/team/victor-krebs.jpg",
+    image: "/images/team/victor.jpg",
   },
   {
     id: "joao",
@@ -46,7 +46,7 @@ export const teamMembers: TeamMember[] = [
       "+",
       "Administrador (FGV)",
     ],
-    image: "/images/team/joao-wouters.jpg",
+    image: "/images/team/joao-pedro.jpg",
   },
   {
     id: "eduardo",
@@ -58,7 +58,7 @@ export const teamMembers: TeamMember[] = [
       "+",
       "Arquiteto e Urbanista (UFPEL)",
     ],
-    image: "/images/team/eduardo-schuch.jpg",
+    image: "/images/team/eduardo.jpg",
   },
   {
     id: "daniel",
@@ -70,7 +70,7 @@ export const teamMembers: TeamMember[] = [
       "+",
       "Engenheiro Civil (UFRGS)",
     ],
-    image: "/images/team/daniel-bertoldi.jpg",
+    image: "/images/team/daniel.jpg",
   },
   {
     id: "ana-leal",

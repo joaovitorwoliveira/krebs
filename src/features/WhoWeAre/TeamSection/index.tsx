@@ -45,7 +45,7 @@ export default function TeamSection() {
     >
       <div className="">
         {/* Title Above Everything */}
-        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-inter-bold text-green-5 mb-16 tracking-tight lg:pl-12">
+        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-green-5 mb-16 tracking-tight lg:pl-12">
           TIME KREBS+
         </h1>
 
@@ -159,7 +159,7 @@ export default function TeamSection() {
                   className="object-cover grayscale"
                   sizes="(max-width: 768px) 100vw, 300px"
                 />
-                <div className="absolute inset-0 bg-black/50"></div>
+                <div className="absolute inset-0"></div>
               </div>
 
               {/* Member Info */}

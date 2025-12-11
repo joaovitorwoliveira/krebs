@@ -108,7 +108,7 @@ export default function AwardsSection() {
     >
       <motion.h2
         variants={titleVariants}
-        className="text-3xl font-semibold text-dark mb-6"
+        className="text-xl font-semibold text-dark mb-6"
       >
         PREMIAÇÕES
       </motion.h2>
