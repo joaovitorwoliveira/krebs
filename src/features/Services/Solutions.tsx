@@ -1,0 +1,109 @@
+"use client";
+
+import { useRef } from "react";
+
+import { useInView, Variants } from "framer-motion";
+
+import { motion } from "@/lib/motion";
+
+export default function Solutions() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const sectionVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 60,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.5,
+        ease: [0.25, 0.5, 0.7, 1.2],
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 40,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.2,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
+  };
+
+  const services = [
+    "Consultoria Estratégica",
+    "Estudo de Viabilidade",
+    "Master Plan",
+    "Projeto de Arquitetura Paisagística",
+    "Imagem de Venda (renders e visualizações 3D)",
+    "Acompanhamento de Obra",
+    "Execução Completa de Jardim",
+    "Venda de Plantas (via viveiro próprio)",
+  ];
+
+  return (
+    <motion.section
+      ref={ref}
+      variants={sectionVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      className="py-10 px-6 md:px-20 lg:py-40 xl:px-40 2xl:px-80 bg-white"
+    >
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-center items-center max-w-7xl mx-auto">
+        {/* Coluna esquerda - Título e parágrafos */}
+        <motion.div
+          variants={itemVariants}
+          className="w-full lg:w-2/5 flex flex-col gap-6"
+        >
+          <h2 className="font-inter-bold text-dark uppercase">
+            NOSSO ECOSSISTEMA DE SOLUÇÕES
+          </h2>
+          <div className="flex flex-col gap-4 text-sm md:text-base font-inter text-dark">
+            <p className="text-justify">
+              Atuamos de forma integrada, oferecendo soluções completas em
+              paisagismo — da concepção à execução.
+            </p>
+            <p className="text-justify">
+              Nosso ecossistema foi desenhado para atender diferentes demandas
+              com inteligência, beleza e sustentabilidade.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Linha vertical separadora */}
+        <div className="hidden lg:block w-px bg-dark self-stretch" />
+
+        {/* Coluna direita - Lista de serviços */}
+        <motion.div
+          variants={itemVariants}
+          className="w-full lg:w-2/5 flex flex-col py-2"
+        >
+          <ul className="flex flex-col gap-5 md:gap-6 text-sm md:text-base font-inter text-dark">
+            {services.map((service, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="select-none text-dark/60 lg:hidden"
+                >
+                  —
+                </span>
+                <span className="leading-relaxed">{service}</span>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      </div>
+    </motion.section>
+  );
+}

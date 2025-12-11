@@ -16,6 +16,8 @@
   --brown-2: #d67f48; /* Marrom médio */
   --blue-dark: #212c42; /* Azul escuro */
   --gray-blue: #788990; /* Cinza azulado */
+
+  --white: #ffffff;
 }
 
 @theme inline {
