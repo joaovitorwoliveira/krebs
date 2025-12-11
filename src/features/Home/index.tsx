@@ -5,12 +5,8 @@ import { useState } from "react";
 import Loading from "@/common/components/Loading";
 import { AnimatePresence } from "framer-motion";
 
-import CompareHome from "./CompareHome";
-import CtaHome from "./CtaHome";
-import DifferentialHome from "./DifferentialHome";
 import HeroSection from "./HeroSection";
 import type { HomePageProps } from "./HeroSection/types";
-import PartnersHome from "./PartnersHome";
 import ServicesHome from "./ServicesHome";
 import WhoWeAreHome from "./WhoWeAreHome";
 
@@ -39,6 +35,7 @@ export default function HomePage({ className }: HomePageProps) {
       <div className="h-screen"></div>
 
       <WhoWeAreHome />
+      <ServicesHome />
     </>
   );
 }

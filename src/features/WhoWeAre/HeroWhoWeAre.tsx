@@ -73,9 +73,9 @@ export default function HeroWhoWeAre() {
         >
           <div className="flex flex-col gap-3 text-sm md:text-base font-inter text-dark leading-relaxed">
             <h1 className="font-inter-base">{t.office.hero.title}</h1>
-            <p>{t.office.hero.paragraph1}</p>
-            <p>{t.office.hero.paragraph2}</p>
-            <p>{t.office.hero.paragraph3}</p>
+            <p className="text-justify">{t.office.hero.paragraph1}</p>
+            <p className="text-justify">{t.office.hero.paragraph2}</p>
+            <p className="text-justify">{t.office.hero.paragraph3}</p>
           </div>
         </motion.div>
       </div>

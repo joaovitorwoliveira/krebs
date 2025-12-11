@@ -58,31 +58,32 @@ export default function MapSection() {
       className="py-10 px-6 md:px-20 lg:py-20 xl:px-40 2xl:px-60"
     >
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 items-center">
-        {/* Mapa à esquerda - 50% em desktop */}
+        {/* Mapa à esquerda - ~65% em desktop */}
         <motion.div
           variants={itemVariants}
-          className="w-full lg:w-1/2 flex justify-center lg:justify-start"
+          className="w-full lg:w-[65%] flex justify-center lg:justify-start"
         >
           <div className="relative w-full h-[400px] md:h-[500px] lg:h-[800px]">
             <Image
-              src="/images/mapa-temporario.png"
+              src="/images/mapa-sem-fundo-recorte.png"
               alt="Mapa de atuação da Krebs+"
               fill
               className="object-contain"
+              unoptimized
             />
           </div>
         </motion.div>
 
-        {/* Números à direita - 50% em desktop */}
+        {/* Números à direita - ~35% em desktop */}
         <motion.div
           variants={itemVariants}
-          className="w-full lg:w-1/2 flex flex-col gap-3 lg:gap-4"
+          className="w-full lg:w-[35%] flex flex-col gap-3 lg:gap-4"
         >
           <h2 className="text-base lg:text-lg font-inter-base text-dark">
             <span className="font-inter-bold">NÚMEROS</span> DA KREBS+
           </h2>
 
-          <div className="flex flex-col text-base lg:text-lg gap-2 font-inter text-dark  max-w-lg">
+          <div className="flex flex-col text-base gap-2 font-inter text-dark  max-w-lg">
             <p>
               Ao longo da nossa trajetória, crescemos em impacto, qualidade e
               território.
@@ -91,17 +92,17 @@ export default function MapSection() {
           </div>
 
           {/* Grid de números grandes */}
-          <div className="grid grid-cols-2 gap-2 lg:gap-4 mt-4 lg:pr-10 2xl:pr-40">
+          <div className="grid grid-cols-2 gap-2 lg:gap-4 mt-4">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="flex flex-col items-center text-center"
+                className="flex flex-col items-start"
               >
                 <span className="text-5xl md:text-6xl xl:text-7xl font-encode-bold text-dark">
                   {stat.number}
                 </span>
-                <span className="text-base md:text-lg xl:text-xl font-encode text-dark text-center">
+                <span className="text-base md:text-lg xl:text-xl font-encode text-dark">
                   {stat.label}
                 </span>
               </motion.div>

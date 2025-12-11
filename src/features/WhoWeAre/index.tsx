@@ -1,6 +1,3 @@
-// "use client";
-
-// import { useLanguage } from "@/context/LanguageProvider";
 import AwardsSection from "./AwardsSection";
 import HeroWhoWeAre from "./HeroWhoWeAre";
 import MapSection from "./MapSection";
@@ -39,12 +36,11 @@ import TeamSection from "./TeamSection";
 // ];
 
 export default function WhoWeAre() {
-  // const { t } = useLanguage();
   return (
     <>
       <HeroWhoWeAre />
-      <TeamSection />
       <MapSection />
+      <TeamSection />
       <AwardsSection />
     </>
   );
