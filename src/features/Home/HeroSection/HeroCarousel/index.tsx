@@ -18,10 +18,6 @@ import "swiper/css/pagination";
 
 import Button from "@/common/components/Button";
 
-// import { TextGenerateEffect } from "@/common/components/TextGenerateEffect";
-
-// import { cn } from "@/lib/utils";
-
 import {
   checkScreenSize,
   getProjectName,
@@ -185,32 +181,6 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
           </Link>
         </motion.div>
       </motion.div>
-
-      {/* Texto centralizado com efeito de scroll */}
-      {/* <motion.div
-        className="fixed inset-0 flex flex-col items-center justify-center z-30 pointer-events-none"
-        style={{ y, opacity }}
-      >
-        <motion.div
-          className={cn("text-center px-6 flex")}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          <motion.div
-            className="text-light text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide drop-shadow-2xl mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-          >
-            <TextGenerateEffect
-              words={t.home.heroSubtitle}
-              className="text-4xl md:text-6xl xl:text-7xl 2xl:text-[82px] font-bold tracking-wide drop-shadow-2xl"
-              duration={2.0}
-            />
-          </motion.div>
-        </motion.div>
-      </motion.div> */}
     </div>
   );
 }

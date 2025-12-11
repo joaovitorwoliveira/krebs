@@ -155,15 +155,15 @@ export default function AwardsSection() {
           <motion.div
             key={index}
             variants={rowVariants}
-            className="bg-white  border md:border-[#999] p-4 space-y-2"
+            className="bg-white border border-dark/20 p-4 space-y-2"
           >
             <div className="flex justify-between items-start">
               <span className="font-semibold text-dark text-sm">ANO</span>
-              <span className="text-dark text-sm">{award.ano}</span>
+              <span className="text-dark text-xs">{award.ano}</span>
             </div>
             <div className="flex justify-between items-start">
               <span className="font-semibold text-dark text-sm">PROJETO</span>
-              <span className="text-dark text-sm text-right flex-1 ml-4">
+              <span className="text-dark text-xs text-right flex-1 ml-4">
                 {award.projeto}
               </span>
             </div>
@@ -171,13 +171,13 @@ export default function AwardsSection() {
               <span className="font-semibold text-dark text-sm">
                 ARQUITETURA
               </span>
-              <span className="text-dark text-sm text-right flex-1 ml-4">
+              <span className="text-dark text-xs text-right flex-1 ml-4">
                 {award.arquitetura}
               </span>
             </div>
             <div className="flex justify-between items-start">
               <span className="font-semibold text-dark text-sm">PREMIAÇÃO</span>
-              <span className="text-dark text-sm text-right flex-1 ml-4">
+              <span className="text-dark text-xs text-right flex-1 ml-4">
                 {award.premiacao}
               </span>
             </div>

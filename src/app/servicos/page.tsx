@@ -1,5 +1,10 @@
+import BackgroundWrapper from "@/common/components/BackgroundWrapper";
 import ServicesHome from "@/features/Services";
 
 export default function ServicosPage() {
-  return <ServicesHome />;
+  return (
+    <BackgroundWrapper>
+      <ServicesHome />
+    </BackgroundWrapper>
+  );
 }

@@ -20,6 +20,8 @@ export default function TagFilter({
 }: TagFilterProps) {
   const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+  const [pendingTags, setPendingTags] = useState<string[]>(selectedTags);
+  const [isCleared, setIsCleared] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -32,6 +34,36 @@ export default function TagFilter({
       document.body.style.overflow = "unset";
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen) {
+      setPendingTags(selectedTags);
+      setIsCleared(false);
+    }
+  }, [isOpen, selectedTags]);
+
+  const handlePendingToggle = (tag: string) => {
+    setIsCleared(false);
+    setPendingTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    );
+  };
+
+  const handleApplyFilters = () => {
+    if (isCleared) {
+      onClearFilters?.();
+      setIsOpen(false);
+      return;
+    }
+
+    const toAdd = pendingTags.filter((tag) => !selectedTags.includes(tag));
+    const toRemove = selectedTags.filter((tag) => !pendingTags.includes(tag));
+
+    toAdd.forEach(onTagToggle);
+    toRemove.forEach(onTagToggle);
+
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -89,7 +121,7 @@ export default function TagFilter({
               exit={{ opacity: 0, scale: 0.95, y: -20 }}
               transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
               className={cn(
-                "fixed bg-white rounded-2xl shadow-2xl z-[99999] flex flex-col",
+                "fixed bg-white shadow-2xl z-[99999] flex flex-col",
                 "max-w-2xl max-h-[60vh]",
                 "top-1/2 -translate-y-1/2",
                 "left-4 right-4",
@@ -115,11 +147,11 @@ export default function TagFilter({
               <div className="flex-1 overflow-y-auto p-6">
                 <div className="flex flex-wrap gap-2">
                   {availableTags.map((tag: string) => {
-                    const isSelected = selectedTags.includes(tag);
+                    const isSelected = pendingTags.includes(tag);
                     return (
                       <button
                         key={tag}
-                        onClick={() => onTagToggle(tag)}
+                        onClick={() => handlePendingToggle(tag)}
                         className={cn(
                           "px-4 py-2 text-[11px] font-medium rounded-full border transition-all duration-200 shadow-sm font-inter cursor-pointer lg:text-xs",
                           isSelected
@@ -136,9 +168,12 @@ export default function TagFilter({
 
               {/* Footer */}
               <div className="p-6 border-t border-dark/10 flex gap-3">
-                {onClearFilters && selectedTags.length > 0 && (
+                {onClearFilters && pendingTags.length > 0 && (
                   <button
-                    onClick={onClearFilters}
+                    onClick={() => {
+                      setPendingTags([]);
+                      setIsCleared(true);
+                    }}
                     className="flex items-center gap-2 text-xs px-4 py-2 text-dark/70 hover:text-dark transition-colors font-inter border border-dark/20 rounded-full hover:border-dark/40 hover:bg-dark/5 cursor-pointer lg:text-sm"
                   >
                     <X className="h-4 w-4" />
@@ -146,11 +181,11 @@ export default function TagFilter({
                   </button>
                 )}
                 <Button
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleApplyFilters}
                   text={t.projects.filters.applyFilters}
                   className={cn(
                     "bg-dark text-light rounded-full text-xs px-4 py-2 font-medium hover:bg-dark/90 transition-colors uppercase lg:text-sm",
-                    onClearFilters && selectedTags.length > 0
+                    onClearFilters && pendingTags.length > 0
                       ? "flex-1"
                       : "w-full"
                   )}
