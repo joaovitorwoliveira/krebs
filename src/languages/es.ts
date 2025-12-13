@@ -450,6 +450,77 @@ export const es = {
     closeModal: "Cerrar (Esc)",
   },
 
+  whoWeArePage: {
+    mapSection: {
+      title: "NÚMEROS",
+      titleBold: "DE KREBS+",
+      paragraph1:
+        "A lo largo de nuestro recorrido, hemos crecido en impacto, calidad y territorio.",
+      paragraph2:
+        "Nuestros números reflejan la confianza de quienes caminan con nosotros.",
+      stats: {
+        projects: {
+          number: "+516",
+          label: "proyectos realizados",
+        },
+        states: {
+          number: "+10",
+          label: "estados atendidos",
+        },
+        cities: {
+          number: "+71",
+          label: "ciudades",
+        },
+        countries: {
+          number: "+3",
+          label: "países",
+        },
+      },
+    },
+    awardsSection: {
+      title: "PREMIOS",
+      tableHeaders: {
+        year: "AÑO",
+        project: "PROYECTO",
+        architecture: "ARQUITECTURA",
+        award: "PREMIO",
+      },
+      architecturePlusNature: {
+        architecture: "ARQUITECTURA",
+        nature: "NATURALEZA",
+        cta: "PONTE EN CONTACTO",
+      },
+    },
+  },
+
+  servicesPage: {
+    servicesHero: {
+      paragraph1:
+        "En KREBS+, el proyecto es el corazón de nuestro ecosistema y recibe, desde la concepción, la mirada integrada de nuestros directores. A diferencia de procesos donde la creación es simplemente delegada, garantizamos que cada nuevo trabajo nazca con la influencia directa de los socios, asegurando un resultado que es, al mismo tiempo, bello y verdadero. Esta inmersión inicial une la excelencia del diseño con la viabilidad financiera y el profundo conocimiento del mercado, garantizando que las premisas estratégicas orienten cada decisión estética.",
+      paragraph2:
+        "Nuestro proceso creativo traduce esta visión multidisciplinaria en una metodología rigurosa. De la Investigación Proyectual, donde captamos la esencia y alineamos el presupuesto, al Estudio Preliminar y Anteproyecto, transformamos deseos en escenarios de vida tangibles. La evolución culmina en el Proyecto Ejecutivo, un manual técnico detallado que asegura que cada especificación sea una guía inequívoca para la obra, manteniendo la fidelidad a la promesa visual y técnica definida por la dirección.",
+      paragraph3:
+        "Este enfoque estructurado nos permite equilibrar la visión artística con la responsabilidad ejecutiva. Al integrar la creatividad del proyecto con la inteligencia de la consultoría y la fuerza de la ejecución, entregamos al cliente la seguridad de que la inversión estética está fundamentada en soluciones reales. Así, creamos espacios que despiertan bienestar y pertenencia, transformando cada trazo del diseño en un activo de valorización y calidad de vida.",
+    },
+    solutions: {
+      title: "NUESTRO ECOSISTEMA DE SOLUCIONES",
+      paragraph1:
+        "Actuamos de forma integrada, ofreciendo soluciones completas en paisajismo — desde la concepción hasta la ejecución.",
+      paragraph2:
+        "Nuestro ecosistema fue diseñado para atender diferentes demandas con inteligencia, belleza y sostenibilidad.",
+      services: [
+        "Consultoría Estratégica",
+        "Estudio de Viabilidad",
+        "Master Plan",
+        "Proyecto de Arquitectura Paisajística",
+        "Imagen de Venta (renders y visualizaciones 3D)",
+        "Supervisión de Obra",
+        "Ejecución Completa de Jardín",
+        "Venta de Plantas (vía vivero propio)",
+      ],
+    },
+  },
+
   office: {
     hero: {
       title: "Por más de cuatro décadas diseñando y ejecutando jardines.",

@@ -445,6 +445,77 @@ export const pt = {
     closeModal: "Fechar (Esc)",
   },
 
+  whoWeArePage: {
+    mapSection: {
+      title: "NÚMEROS",
+      titleBold: "DA KREBS+",
+      paragraph1:
+        "Ao longo da nossa trajetória, crescemos em impacto, qualidade e território.",
+      paragraph2:
+        "Nossos números refletem a confiança de quem caminha conosco.",
+      stats: {
+        projects: {
+          number: "+516",
+          label: "projetos realizados",
+        },
+        states: {
+          number: "+10",
+          label: "estados atendidos",
+        },
+        cities: {
+          number: "+71",
+          label: "cidades",
+        },
+        countries: {
+          number: "+3",
+          label: "países",
+        },
+      },
+    },
+    awardsSection: {
+      title: "PREMIAÇÕES",
+      tableHeaders: {
+        year: "ANO",
+        project: "PROJETO",
+        architecture: "ARQUITETURA",
+        award: "PREMIAÇÃO",
+      },
+      architecturePlusNature: {
+        architecture: "ARQUITETURA",
+        nature: "NATUREZA",
+        cta: "ENTRE EM CONTATO",
+      },
+    },
+  },
+
+  servicesPage: {
+    servicesHero: {
+      paragraph1:
+        "Na KREBS+, o projeto é o coração do nosso ecossistema e recebe, desde a concepção, o olhar integrado dos nossos diretores. Diferente de processos onde a criação é apenas delegada, garantimos que cada novo trabalho nasça com a influência direta dos sócios, assegurando um resultado que é, ao mesmo tempo, belo e verdadeiro. Essa imersão inicial une a excelência do design à viabilidade financeira e ao profundo conhecimento de mercado, garantindo que as premissas estratégicas orientem cada decisão estética.",
+      paragraph2:
+        "Nosso processo criativo traduz essa visão multidisciplinar em uma metodologia rigorosa. Da Investigação Projetual, onde captamos a essência e alinhamos o budget, ao Estudo Preliminar e Anteprojeto, transformamos desejos em cenários de vida tangíveis. A evolução culmina no Projeto Executivo, um manual técnico detalhado que assegura que cada especificação seja um guia inequívoco para a obra, mantendo a fidelidade à promessa visual e técnica definida pela diretoria.",
+      paragraph3:
+        "Essa abordagem estruturada nos permite equilibrar a visão artística com a responsabilidade executiva. Ao integrar a criatividade do projeto com a inteligência da consultoria e a força da execução, entregamos ao cliente a segurança de que o investimento estético está alicerçado em soluções reais. Assim, criamos espaços que despertam bem-estar e pertencimento, transformando cada traço do desenho em um ativo de valorização e qualidade de vida.",
+    },
+    solutions: {
+      title: "NOSSO ECOSSISTEMA DE SOLUÇÕES",
+      paragraph1:
+        "Atuamos de forma integrada, oferecendo soluções completas em paisagismo — da concepção à execução.",
+      paragraph2:
+        "Nosso ecossistema foi desenhado para atender diferentes demandas com inteligência, beleza e sustentabilidade.",
+      services: [
+        "Consultoria Estratégica",
+        "Estudo de Viabilidade",
+        "Master Plan",
+        "Projeto de Arquitetura Paisagística",
+        "Imagem de Venda (renders e visualizações 3D)",
+        "Acompanhamento de Obra",
+        "Execução Completa de Jardim",
+        "Venda de Plantas (via viveiro próprio)",
+      ],
+    },
+  },
+
   office: {
     hero: {
       title: "Há mais de quatro décadas projetando e executando jardins.",

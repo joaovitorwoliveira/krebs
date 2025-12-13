@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 
+import { useLanguage } from "@/context/LanguageProvider";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
@@ -10,6 +11,7 @@ import { motion } from "@/lib/motion";
 export default function MapSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const sectionVariants: Variants = {
     hidden: {
@@ -43,10 +45,22 @@ export default function MapSection() {
   };
 
   const stats = [
-    { number: "+516", label: "projetos realizados" },
-    { number: "+10", label: "estados atendidos" },
-    { number: "+71", label: "cidades" },
-    { number: "+3", label: "países" },
+    {
+      number: t.whoWeArePage.mapSection.stats.projects.number,
+      label: t.whoWeArePage.mapSection.stats.projects.label,
+    },
+    {
+      number: t.whoWeArePage.mapSection.stats.states.number,
+      label: t.whoWeArePage.mapSection.stats.states.label,
+    },
+    {
+      number: t.whoWeArePage.mapSection.stats.cities.number,
+      label: t.whoWeArePage.mapSection.stats.cities.label,
+    },
+    {
+      number: t.whoWeArePage.mapSection.stats.countries.number,
+      label: t.whoWeArePage.mapSection.stats.countries.label,
+    },
   ];
 
   return (
@@ -80,15 +94,15 @@ export default function MapSection() {
           className="w-full lg:w-[35%] flex flex-col gap-3 lg:gap-4"
         >
           <h2 className="text-base lg:text-lg font-inter-base text-dark">
-            <span className="font-inter-bold">NÚMEROS</span> DA KREBS+
+            <span className="font-inter-bold">
+              {t.whoWeArePage.mapSection.title}
+            </span>{" "}
+            {t.whoWeArePage.mapSection.titleBold}
           </h2>
 
           <div className="flex flex-col text-base gap-2 font-inter text-dark  max-w-lg">
-            <p>
-              Ao longo da nossa trajetória, crescemos em impacto, qualidade e
-              território.
-            </p>
-            <p>Nossos números refletem a confiança de quem caminha conosco.</p>
+            <p>{t.whoWeArePage.mapSection.paragraph1}</p>
+            <p>{t.whoWeArePage.mapSection.paragraph2}</p>
           </div>
 
           {/* Grid de números grandes */}

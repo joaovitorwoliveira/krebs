@@ -4,6 +4,7 @@ import { useRef } from "react";
 
 import Button from "@/common/components/Button";
 import { useContactDrawer } from "@/context/ContactDrawerProvider";
+import { useLanguage } from "@/context/LanguageProvider";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
@@ -51,6 +52,7 @@ export default function AwardsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { openContactDrawer } = useContactDrawer();
+  const { t } = useLanguage();
 
   const sectionVariants: Variants = {
     hidden: {
@@ -110,7 +112,7 @@ export default function AwardsSection() {
         variants={titleVariants}
         className="text-xl font-semibold text-dark mb-6"
       >
-        PREMIAÇÕES
+        {t.whoWeArePage.awardsSection.title}
       </motion.h2>
 
       {/* Desktop Table */}
@@ -119,16 +121,16 @@ export default function AwardsSection() {
           <thead>
             <tr className="border-b border-[#999]">
               <th className="text-left py-2 px-4 font-medium font-inter-semibold text-[#767676] text-sm">
-                ANO
+                {t.whoWeArePage.awardsSection.tableHeaders.year}
               </th>
               <th className="text-left py-2 px-4 font-medium font-inter-semibold text-[#767676] text-sm">
-                PROJETO
+                {t.whoWeArePage.awardsSection.tableHeaders.project}
               </th>
               <th className="text-left py-2 px-4 font-medium font-inter-semibold text-[#767676] text-sm">
-                ARQUITETURA
+                {t.whoWeArePage.awardsSection.tableHeaders.architecture}
               </th>
               <th className="text-left py-2 px-4 font-medium font-inter-semibold text-[#767676] text-sm">
-                PREMIAÇÃO
+                {t.whoWeArePage.awardsSection.tableHeaders.award}
               </th>
             </tr>
           </thead>
@@ -158,25 +160,31 @@ export default function AwardsSection() {
             className="bg-white border border-dark/20 p-4 space-y-2"
           >
             <div className="flex justify-between items-start">
-              <span className="font-semibold text-dark text-sm">ANO</span>
+              <span className="font-semibold text-dark text-sm">
+                {t.whoWeArePage.awardsSection.tableHeaders.year}
+              </span>
               <span className="text-dark text-xs">{award.ano}</span>
             </div>
             <div className="flex justify-between items-start">
-              <span className="font-semibold text-dark text-sm">PROJETO</span>
+              <span className="font-semibold text-dark text-sm">
+                {t.whoWeArePage.awardsSection.tableHeaders.project}
+              </span>
               <span className="text-dark text-xs text-right flex-1 ml-4">
                 {award.projeto}
               </span>
             </div>
             <div className="flex justify-between items-start">
               <span className="font-semibold text-dark text-sm">
-                ARQUITETURA
+                {t.whoWeArePage.awardsSection.tableHeaders.architecture}
               </span>
               <span className="text-dark text-xs text-right flex-1 ml-4">
                 {award.arquitetura}
               </span>
             </div>
             <div className="flex justify-between items-start">
-              <span className="font-semibold text-dark text-sm">PREMIAÇÃO</span>
+              <span className="font-semibold text-dark text-sm">
+                {t.whoWeArePage.awardsSection.tableHeaders.award}
+              </span>
               <span className="text-dark text-xs text-right flex-1 ml-4">
                 {award.premiacao}
               </span>
@@ -192,19 +200,19 @@ export default function AwardsSection() {
       >
         <div className="flex flex-col lg:grid lg:grid-cols-3 items-center lg:items-start mb-10">
           <h3 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-dark lg:text-right lg:pr-10 xl:pr-20">
-            ARQUITETURA
+            {t.whoWeArePage.awardsSection.architecturePlusNature.architecture}
           </h3>
           <span className="text-5xl lg:text-6xl xl:text-7xl font-bold text-dark text-center lg:mt-20">
             +
           </span>
           <h3 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-dark lg:text-left lg:pl-10 xl:pl-20 lg:mt-40">
-            NATUREZA
+            {t.whoWeArePage.awardsSection.architecturePlusNature.nature}
           </h3>
         </div>
 
         <div className="flex justify-center pt-6">
           <Button
-            text="ENTRE EM CONTATO"
+            text={t.whoWeArePage.awardsSection.architecturePlusNature.cta}
             onClick={openContactDrawer}
             variant="primary"
             className="px-8 py-3"

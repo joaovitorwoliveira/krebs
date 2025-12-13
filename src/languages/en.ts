@@ -450,6 +450,76 @@ export const en = {
     closeModal: "Close (Esc)",
   },
 
+  whoWeArePage: {
+    mapSection: {
+      title: "NUMBERS",
+      titleBold: "FROM KREBS+",
+      paragraph1:
+        "Throughout our journey, we have grown in impact, quality and territory.",
+      paragraph2: "Our numbers reflect the trust of those who walk with us.",
+      stats: {
+        projects: {
+          number: "+516",
+          label: "completed projects",
+        },
+        states: {
+          number: "+10",
+          label: "states served",
+        },
+        cities: {
+          number: "+71",
+          label: "cities",
+        },
+        countries: {
+          number: "+3",
+          label: "countries",
+        },
+      },
+    },
+    awardsSection: {
+      title: "AWARDS",
+      tableHeaders: {
+        year: "YEAR",
+        project: "PROJECT",
+        architecture: "ARCHITECTURE",
+        award: "AWARD",
+      },
+      architecturePlusNature: {
+        architecture: "ARCHITECTURE",
+        nature: "NATURE",
+        cta: "GET IN TOUCH",
+      },
+    },
+  },
+
+  servicesPage: {
+    servicesHero: {
+      paragraph1:
+        "At KREBS+, the project is the heart of our ecosystem and receives, from conception, the integrated vision of our directors. Unlike processes where creation is merely delegated, we ensure that each new work is born with the direct influence of the partners, ensuring a result that is both beautiful and true. This initial immersion unites design excellence with financial viability and deep market knowledge, ensuring that strategic premises guide each aesthetic decision.",
+      paragraph2:
+        "Our creative process translates this multidisciplinary vision into a rigorous methodology. From Project Investigation, where we capture the essence and align the budget, to Preliminary Study and Preliminary Project, we transform desires into tangible life scenarios. The evolution culminates in the Executive Project, a detailed technical manual that ensures each specification is an unequivocal guide for construction, maintaining fidelity to the visual and technical promise defined by management.",
+      paragraph3:
+        "This structured approach allows us to balance artistic vision with executive responsibility. By integrating the creativity of the project with the intelligence of consulting and the strength of execution, we deliver to the client the security that the aesthetic investment is grounded in real solutions. Thus, we create spaces that awaken well-being and belonging, transforming each line of the design into an asset of appreciation and quality of life.",
+    },
+    solutions: {
+      title: "OUR ECOSYSTEM OF SOLUTIONS",
+      paragraph1:
+        "We act in an integrated way, offering complete solutions in landscaping — from conception to execution.",
+      paragraph2:
+        "Our ecosystem was designed to meet different demands with intelligence, beauty and sustainability.",
+      services: [
+        "Strategic Consulting",
+        "Feasibility Study",
+        "Master Plan",
+        "Landscape Architecture Project",
+        "Sales Images (renders and 3D visualizations)",
+        "Construction Supervision",
+        "Complete Garden Execution",
+        "Plant Sales (via own nursery)",
+      ],
+    },
+  },
+
   office: {
     hero: {
       title: "For over four decades designing and executing gardens.",
