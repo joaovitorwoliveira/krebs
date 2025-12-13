@@ -221,6 +221,10 @@ export const en = {
         ruamista: "Mixed Street",
         condominio: "Condominium",
         basalto: "Basalt",
+        resort: "Resort",
+        surf: "Surf",
+        parque: "Park",
+        sc: "SC",
       },
     },
     items: {
@@ -416,6 +420,17 @@ export const en = {
         date: "2020",
         place: "Nova Santa Rita, RS",
         architecture: "Aviva Urbanismo",
+        photo: "Lucas Daneris",
+      },
+      surfland: {
+        title: "Surfland",
+        description: `
+          Surfland is not just a project, it's a life story that took shape. Surfing has always been part of our journey as culture, sport and connection with nature, crossing generations. Garopaba is also on this path: a summer vacation place, gatherings, waves and lived time, which shaped who we are.
+
+          When Surfland emerged, everything simply fell into place. The project brings together wellness at scale, active leisure, nature, community and purpose, exactly the kind of impact we believe landscape architecture can generate. More than a surf park, Surfland represents a lifestyle. Being part of this story is something we carry in a very special way.
+        `,
+        date: "2023",
+        place: "Garopaba, SC",
         photo: "Lucas Daneris",
       },
     },
