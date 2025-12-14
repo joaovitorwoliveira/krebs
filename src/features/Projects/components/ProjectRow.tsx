@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { BLUR_PLACEHOLDER } from "@/common/constants/db-images";
 import { useLanguage } from "@/context/LanguageProvider";
 import { useInView, Variants } from "framer-motion";
 
@@ -116,6 +117,8 @@ export default function ProjectRow({ row, rowIndex }: ProjectRowProps) {
                   priority={rowIndex === 0 && itemIndex < 3}
                   loading={rowIndex === 0 && itemIndex < 3 ? "eager" : "lazy"}
                   quality={40}
+                  placeholder="blur"
+                  blurDataURL={BLUR_PLACEHOLDER}
                 />
                 <motion.div
                   className="absolute inset-0 bg-black pointer-events-none"
