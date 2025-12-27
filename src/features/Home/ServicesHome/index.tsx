@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Button from "@/common/components/Button";
-import { BoldText } from "@/common/utils/textUtils";
 import { useLanguage } from "@/context/LanguageProvider";
 
 import { cn } from "@/lib/utils";
@@ -25,7 +24,7 @@ export default function ServicesHome() {
                 "lg:text-6xl 2xl:text-7xl"
               )}
             >
-              DO PROJETO À EXECUÇÃO
+              {t.home.servicesHome.title}
             </h2>
 
             <div className="flex flex-col gap-4 text-dark max-w-2xl">
@@ -36,10 +35,7 @@ export default function ServicesHome() {
                   "text-justify"
                 )}
               >
-                O nosso processo une visão criativa e responsabilidade executiva
-                desde a concepção: os diretores participam diretamente de cada
-                etapa, garantindo que o projeto nasça com propósito, beleza e
-                verdade.
+                {t.home.servicesHome.paragraph1}
               </p>
 
               <p
@@ -49,10 +45,7 @@ export default function ServicesHome() {
                   "text-justify"
                 )}
               >
-                A partir de uma investigação profunda que alinha essência e
-                budget, avançamos por estudos preliminares até um projeto
-                executivo preciso, que traduz a visão em diretrizes técnicas
-                claras.
+                {t.home.servicesHome.paragraph2}
               </p>
 
               <p
@@ -62,15 +55,16 @@ export default function ServicesHome() {
                   "text-justify"
                 )}
               >
-                Essa metodologia integrada conecta design, viabilidade e
-                inteligência de mercado, assegurando que cada decisão estética
-                seja estratégica e que cada espaço entregue bem-estar,
-                pertencimento e valorização real ao cliente.
+                {t.home.servicesHome.paragraph3}
               </p>
             </div>
 
-            <Link href="/servicos" className={cn("w-fit mt-2", "lg:mt-4")}>
-              <Button variant="icon" text="SERVIÇOS"></Button>
+            {/* Botão desktop - visível apenas em lg+ */}
+            <Link
+              href="/servicos"
+              className={cn("w-fit mt-2 hidden lg:block", "lg:mt-4")}
+            >
+              <Button variant="icon" text={t.home.servicesHome.cta}></Button>
             </Link>
           </div>
 
@@ -79,13 +73,18 @@ export default function ServicesHome() {
             <div className="relative w-full h-[400px] lg:h-[500px] xl:h-[700px]">
               <Image
                 src="/images/services-home.jpg"
-                alt="Do Projeto à Execução - Krebs+ Arquitetura Paisagística"
+                alt={t.home.servicesHome.imageAlt}
                 fill
                 className="object-contain"
               />
             </div>
           </div>
         </div>
+
+        {/* Botão mobile - visível apenas até lg */}
+        <Link href="/servicos" className={cn("w-fit mt-2 block lg:hidden")}>
+          <Button variant="icon" text={t.home.servicesHome.cta}></Button>
+        </Link>
       </div>
     </div>
   );

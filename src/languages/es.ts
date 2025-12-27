@@ -97,6 +97,18 @@ export const es = {
       ],
     },
 
+    servicesHome: {
+      title: "DEL PROYECTO A LA EJECUCIÓN",
+      paragraph1:
+        "Nuestro proceso une visión creativa y responsabilidad ejecutiva desde la concepción: los directores participan directamente en cada etapa, garantizando que el proyecto nazca con propósito, belleza y verdad.",
+      paragraph2:
+        "A partir de una investigación profunda que alinea esencia y presupuesto, avanzamos por estudios preliminares hasta un proyecto ejecutivo preciso, que traduce la visión en directrices técnicas claras.",
+      paragraph3:
+        "Esta metodología integrada conecta diseño, viabilidad e inteligencia de mercado, asegurando que cada decisión estética sea estratégica y que cada espacio entregue bienestar, pertenencia y valorización real al cliente.",
+      cta: "SERVICIOS",
+      imageAlt: "Del Proyecto a la Ejecución - Krebs+ Arquitectura Paisajística",
+    },
+
     services: {
       title: "Servicios",
       subtitle:

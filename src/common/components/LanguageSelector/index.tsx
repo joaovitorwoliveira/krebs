@@ -1,10 +1,7 @@
 "use client";
 
-import { useState } from "react";
-
 import { useLanguage } from "@/context/LanguageProvider";
-import { Language, languageLabels } from "@/languages";
-import { ChevronDown, Globe } from "lucide-react";
+import { Language } from "@/languages";
 
 import { cn } from "@/lib/utils";
 
@@ -13,76 +10,48 @@ interface LanguageSelectorProps {
   isHomePage?: boolean;
 }
 
+const languages: Language[] = ["pt", "en", "es"];
+
 export default function LanguageSelector({
   variant = "desktop",
   isHomePage = false,
 }: LanguageSelectorProps) {
-  const { language, setLanguage, t } = useLanguage();
-  const [isOpen, setIsOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
 
   const handleLanguageChange = (newLanguage: Language) => {
     setLanguage(newLanguage);
-    setIsOpen(false);
-  };
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
   };
 
   const baseClasses = cn(
-    "relative",
-    variant === "desktop" ? "hidden md:block" : "md:hidden"
+    "flex items-center gap-1",
+    variant === "desktop" ? "hidden md:flex" : "md:hidden"
   );
 
-  const buttonClasses = cn(
-    "flex items-center gap-2 px-3 py-2 transition-colors text-sm font-medium",
-    variant === "desktop" && isHomePage && "text-white hover:text-gray-200",
-    variant === "desktop" && !isHomePage && "text-black hover:text-gray-600",
-    variant === "mobile" && "text-black hover:text-gray-600"
-  );
-
-  const dropdownClasses = cn(
-    "absolute z-50 mt-2 bg-light border border-gray-200 shadow-lg min-w-[120px]",
-    variant === "desktop" ? "right-0" : "right-0"
+  const textColorClasses = cn(
+    variant === "desktop" && isHomePage && "text-white",
+    variant === "desktop" && !isHomePage && "text-black",
+    variant === "mobile" && "text-black"
   );
 
   return (
-    <div className={baseClasses}>
-      <button onClick={toggleDropdown} className={buttonClasses}>
-        <Globe size={16} />
-        <span className="uppercase text-label">{languageLabels[language]}</span>
-        <ChevronDown
-          size={14}
-          className={cn(
-            "transition-transform duration-200",
-            isOpen && "rotate-180"
+    <div className={cn(baseClasses, "px-2")}>
+      {languages.map((lang, index) => (
+        <div key={lang} className="flex items-center gap-1">
+          <button
+            onClick={() => handleLanguageChange(lang)}
+            className={cn(
+              "uppercase text-sm font-medium transition-colors hover:opacity-70 cursor-pointer",
+              textColorClasses,
+              language === lang && "font-semibold"
+            )}
+          >
+            {lang}
+          </button>
+          {index < languages.length - 1 && (
+            <span className={cn("text-base", textColorClasses)}>/</span>
           )}
-        />
-      </button>
-
-      {isOpen && (
-        <>
-          <div
-            className="fixed inset-0 z-40"
-            onClick={() => setIsOpen(false)}
-          />
-
-          <div className={dropdownClasses}>
-            {Object.entries(languageLabels).map(([code, label]) => (
-              <button
-                key={code}
-                onClick={() => handleLanguageChange(code as Language)}
-                className={cn(
-                  "w-full text-left px-4 py-2 text-sm transition-colors text-regular hover:cursor-pointer hover:bg-green-1 hover:text-light",
-                  language === code && "bg-light font-medium"
-                )}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-        </>
-      )}
+        </div>
+      ))}
     </div>
   );
 }

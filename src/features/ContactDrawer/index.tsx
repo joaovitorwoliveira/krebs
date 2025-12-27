@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 
 import Button from "@/common/components/Button";
 import {
@@ -93,7 +91,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
       >
         {/* Header */}
         <div className="flex justify-between items-center p-6">
-          <h2 className="text-sm font-semibold">{t.contactDrawer.title}</h2>
+          <div></div>
 
           <Button
             text={t.contactDrawer.close}
@@ -107,40 +105,30 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
         <div className="flex-1 p-6 flex flex-col justify-between">
           <div className="flex gap-2 justify-between pt-6">
             <div className="flex flex-col gap-6 items-start text-regular">
-              <Link
-                href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-green-1"
-              >
-                {t.contactDrawer.instagram}
-              </Link>
+              <Button
+                text={t.contactDrawer.instagram}
+                onClick={() =>
+                  window.open(INSTAGRAM_URL, "_blank", "noopener,noreferrer")
+                }
+                variant="icon"
+                className="text-white"
+              />
+              <Button
+                text={t.contactDrawer.whatsapp}
+                onClick={() =>
+                  window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer")
+                }
+                variant="icon"
+                className="text-white"
+              />
 
-              <Link
-                href={LINKEDIN_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-green-1"
-              >
-                {t.contactDrawer.linkedin}
-              </Link>
-
-              <Link
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-green-1"
-              >
-                {t.contactDrawer.whatsapp}
-              </Link>
-            </div>
-            <div className={cn("h-44 w-40")}>
-              <Image
-                src={"/images/vertical_temporaria.jpg"}
-                alt={"floresta"}
-                width={200}
-                height={200}
-                className="w-full h-full object-cover "
+              <Button
+                text={t.contactDrawer.linkedin}
+                onClick={() =>
+                  window.open(LINKEDIN_URL, "_blank", "noopener,noreferrer")
+                }
+                variant="icon"
+                className="text-white"
               />
             </div>
           </div>

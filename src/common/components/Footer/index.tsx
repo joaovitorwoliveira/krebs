@@ -59,7 +59,7 @@ export default function Footer() {
       <Button
         variant="icon"
         text={link.text}
-        className="font-normal text-black py-0 px-0 rounded-none"
+        className="font-normal text-black py-0 px-0 rounded-none text-sm lg:text-base"
       />
     </Link>
   );
@@ -76,7 +76,7 @@ export default function Footer() {
         <div className="mx-auto pt-10">
           <div className="flex flex-col gap-10 justify-between md:flex-row">
             {/* Img + Nome */}
-            <div className="flex flex-col gap-2">
+            <div className="hidden flex-col gap-2  md:flex">
               <Image
                 src={"/images/vertical_temporaria.jpg"}
                 alt={"floresta"}
@@ -98,7 +98,7 @@ export default function Footer() {
             </div>
             {/* Navegacao */}
             <div className="flex flex-col gap-4">
-              <h4 className="text-black text-2xl font-bold">
+              <h4 className="text-black text-xl lg:text-2xl font-bold">
                 {t.footer.navigation}
               </h4>
               <nav className="space-y-2 flex flex-col">
@@ -109,7 +109,7 @@ export default function Footer() {
             </div>
             {/* Social */}
             <div className="flex flex-col gap-3">
-              <h4 className="text-black text-2xl font-bold">
+              <h4 className="text-black text-xl lg:text-2xl font-bold">
                 {t.footer.social}
               </h4>
               <div className="text-black text-sm space-y-2 flex flex-col">
@@ -121,7 +121,7 @@ export default function Footer() {
             {/* Endereco + Contato */}
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
-                <h4 className="text-black text-2xl font-bold">
+                <h4 className="text-black text-xl lg:text-2xl font-bold">
                   {t.footer.address}
                 </h4>
                 <address className="text-black text-sm leading-relaxed not-italic text-regular">
@@ -136,7 +136,7 @@ export default function Footer() {
                 </address>
               </div>
               <div className="flex flex-col gap-2">
-                <h4 className="text-black text-2xl font-bold">
+                <h4 className="text-black text-xl lg:text-2xl  font-bold">
                   {t.footer.contact}
                 </h4>
                 <div className="space-y-2">

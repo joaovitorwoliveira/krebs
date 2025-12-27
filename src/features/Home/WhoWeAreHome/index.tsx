@@ -59,7 +59,11 @@ export default function WhoWeAreHome() {
               </p>
             </div>
 
-            <Link href="/quem-somos" className={cn("w-fit mt-2", "lg:mt-4")}>
+            {/* Botão desktop - visível apenas em lg+ */}
+            <Link
+              href="/quem-somos"
+              className={cn("w-fit mt-2 hidden lg:block", "lg:mt-4")}
+            >
               <Button variant="icon" text={t.home.whoWeAre.cta}></Button>
             </Link>
           </div>
@@ -77,6 +81,11 @@ export default function WhoWeAreHome() {
             </div>
           </div>
         </div>
+
+        {/* Botão mobile - visível apenas até lg */}
+        <Link href="/quem-somos" className={cn("w-fit mt-2 block lg:hidden")}>
+          <Button variant="icon" text={t.home.whoWeAre.cta}></Button>
+        </Link>
       </div>
     </div>
   );

@@ -97,6 +97,18 @@ export const en = {
       ],
     },
 
+    servicesHome: {
+      title: "FROM PROJECT TO EXECUTION",
+      paragraph1:
+        "Our process unites creative vision and executive responsibility from conception: directors participate directly in each stage, ensuring that the project is born with purpose, beauty and truth.",
+      paragraph2:
+        "From a deep investigation that aligns essence and budget, we advance through preliminary studies to a precise executive project, which translates the vision into clear technical guidelines.",
+      paragraph3:
+        "This integrated methodology connects design, feasibility and market intelligence, ensuring that each aesthetic decision is strategic and that each space delivers well-being, belonging and real appreciation to the client.",
+      cta: "SERVICES",
+      imageAlt: "From Project to Execution - Krebs+ Landscape Architecture",
+    },
+
     services: {
       title: "Services",
       subtitle:
