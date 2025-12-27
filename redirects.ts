@@ -1,4 +1,4 @@
-export const redirects = [
+const baseRedirects = [
   {
     source: "/photo-albums",
     destination: "/",
@@ -215,3 +215,23 @@ export const redirects = [
     permanent: true,
   },
 ];
+
+export const redirects = baseRedirects.flatMap((redirect) => {
+  const results = [redirect];
+
+  if (/[áàâãéêíóôõúüçÁÀÂÃÉÊÍÓÔÕÚÜÇ]/.test(redirect.source)) {
+    const encodedSource = redirect.source
+      .split("/")
+      .map((part) => (part ? encodeURIComponent(part) : part))
+      .join("/");
+
+    if (encodedSource !== redirect.source) {
+      results.push({
+        ...redirect,
+        source: encodedSource,
+      });
+    }
+  }
+
+  return results;
+});
