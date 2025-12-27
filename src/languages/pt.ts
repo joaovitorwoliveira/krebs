@@ -109,6 +109,10 @@ export const pt = {
       imageAlt: "Do Projeto à Execução - Krebs+ Arquitetura Paisagística",
     },
 
+    projectsHome: {
+      title: "PROJETOS EM DESTAQUE",
+    },
+
     services: {
       title: "Serviços",
       subtitle:

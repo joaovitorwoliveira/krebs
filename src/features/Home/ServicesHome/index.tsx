@@ -15,8 +15,8 @@ export default function ServicesHome() {
     <div className="relative z-40 bg-white">
       <div className="flex flex-col gap-6 py-10 px-6 lg:px-10 lg:py-20 2xl:px-20">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full">
-          {/* Seção esquerda - Título e Texto */}
-          <div className="flex flex-col gap-6 lg:gap-8 lg:w-[60%] lg:pr-8">
+          {/* Seção direita - Título e Texto */}
+          <div className="flex flex-col gap-6 lg:gap-8 lg:w-[60%] lg:pl-8 lg:items-end lg:text-right order-1 lg:order-2">
             <h2
               className={cn(
                 "text-dark font-semibold leading-tight uppercase max-w-3xl",
@@ -32,7 +32,7 @@ export default function ServicesHome() {
                 className={cn(
                   "font-normal",
                   "text-sm md:text-base",
-                  "text-justify"
+                  "text-justify lg:text-right"
                 )}
               >
                 {t.home.servicesHome.paragraph1}
@@ -42,7 +42,7 @@ export default function ServicesHome() {
                 className={cn(
                   "font-normal",
                   "text-sm md:text-base",
-                  "text-justify"
+                  "text-justify lg:text-right"
                 )}
               >
                 {t.home.servicesHome.paragraph2}
@@ -52,7 +52,7 @@ export default function ServicesHome() {
                 className={cn(
                   "font-normal",
                   "text-sm md:text-base",
-                  "text-justify"
+                  "text-justify lg:text-right"
                 )}
               >
                 {t.home.servicesHome.paragraph3}
@@ -68,8 +68,8 @@ export default function ServicesHome() {
             </Link>
           </div>
 
-          {/* Seção direita - Imagem */}
-          <div className="lg:w-[35%] flex items-start">
+          {/* Seção esquerda - Imagem */}
+          <div className="lg:w-[35%] flex items-start order-2 lg:order-1">
             <div className="relative w-full h-[400px] lg:h-[500px] xl:h-[700px]">
               <Image
                 src="/images/services-home.jpg"
@@ -79,12 +79,15 @@ export default function ServicesHome() {
               />
             </div>
           </div>
-        </div>
 
-        {/* Botão mobile - visível apenas até lg */}
-        <Link href="/servicos" className={cn("w-fit mt-2 block lg:hidden")}>
-          <Button variant="icon" text={t.home.servicesHome.cta}></Button>
-        </Link>
+          {/* Botão mobile - visível apenas até lg */}
+          <Link
+            href="/servicos"
+            className={cn("w-fit mt-2 block lg:hidden order-3")}
+          >
+            <Button variant="icon" text={t.home.servicesHome.cta}></Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

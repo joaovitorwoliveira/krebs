@@ -20,13 +20,7 @@ const awardsData = [
     ano: "2021",
     projeto: "Surf Land",
     arquitetura: "GAD",
-    premiacao: "A` Design Award",
-  },
-  {
-    ano: "2020",
-    projeto: "?",
-    arquitetura: "?",
-    premiacao: "AsBEA-RS",
+    premiacao: "A' Design Award",
   },
   {
     ano: "2014-2015",

@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 
 import HeroSection from "./HeroSection";
 import type { HomePageProps } from "./HeroSection/types";
+import ProjectsHome from "./ProjectsHome";
 import ServicesHome from "./ServicesHome";
 import WhoWeAreHome from "./WhoWeAreHome";
 
@@ -36,6 +37,7 @@ export default function HomePage({ className }: HomePageProps) {
 
       <WhoWeAreHome />
       <ServicesHome />
+      <ProjectsHome />
     </>
   );
 }

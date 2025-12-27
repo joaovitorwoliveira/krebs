@@ -109,6 +109,10 @@ export const en = {
       imageAlt: "From Project to Execution - Krebs+ Landscape Architecture",
     },
 
+    projectsHome: {
+      title: "FEATURED PROJECTS",
+    },
+
     services: {
       title: "Services",
       subtitle:
