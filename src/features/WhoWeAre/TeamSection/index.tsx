@@ -164,7 +164,7 @@ export default function TeamSection() {
 
               {/* Member Info */}
               <div className="max-w-sm mx-auto lg:mx-0">
-                <h3 className="text-sm font-inter-base text-dark">
+                <h3 className="text-xs font-inter-base text-dark">
                   {selectedMember.role}
                 </h3>
                 <div className="">
@@ -172,8 +172,8 @@ export default function TeamSection() {
                     <p
                       key={index}
                       className={`${
-                        line === "+" ? "text-sm" : "text-sm"
-                      } text-dark`}
+                        line === "+" ? "text-xs" : "text-xs"
+                      } text-dark text-justify`}
                     >
                       {line}
                     </p>
