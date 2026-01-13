@@ -27,12 +27,11 @@ export default function ServicesHome() {
               {t.home.servicesHome.title}
             </h2>
 
-            <div className="flex flex-col gap-4 text-dark max-w-2xl">
+            <div className="flex flex-col gap-4 text-dark max-w-2xl ">
               <p
                 className={cn(
-                  "font-normal",
-                  "text-sm md:text-base",
-                  "text-justify lg:text-right"
+                  "font-normal text-justify",
+                  "text-sm md:text-base"
                 )}
               >
                 {t.home.servicesHome.paragraph1}
@@ -40,9 +39,8 @@ export default function ServicesHome() {
 
               <p
                 className={cn(
-                  "font-normal",
-                  "text-sm md:text-base",
-                  "text-justify lg:text-right"
+                  "font-normal text-justify",
+                  "text-sm md:text-base"
                 )}
               >
                 {t.home.servicesHome.paragraph2}
@@ -50,9 +48,8 @@ export default function ServicesHome() {
 
               <p
                 className={cn(
-                  "font-normal",
-                  "text-sm md:text-base",
-                  "text-justify lg:text-right"
+                  "font-normal text-justify",
+                  "text-sm md:text-base"
                 )}
               >
                 {t.home.servicesHome.paragraph3}
@@ -72,7 +69,7 @@ export default function ServicesHome() {
           <div className="lg:w-[35%] flex items-start order-2 lg:order-1">
             <div className="relative w-full h-[400px] lg:h-[500px] xl:h-[700px]">
               <Image
-                src="/images/services-home.jpg"
+                src="/images/obra-meninas.jpg"
                 alt={t.home.servicesHome.imageAlt}
                 fill
                 className="object-contain"
