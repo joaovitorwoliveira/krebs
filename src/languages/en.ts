@@ -241,6 +241,7 @@ export const en = {
         surf: "Surf",
         parque: "Park",
         sc: "SC",
+        universidade: "University",
       },
     },
     items: {
@@ -448,6 +449,16 @@ export const en = {
         date: "2023",
         place: "Garopaba, SC",
         photo: "Lucas Daneris",
+      },
+      unisinos: {
+        title: "Unisinos",
+        description: `
+          The Unisinos Space was conceived by our office as an open-air coexistence infrastructure, where architecture and landscape articulate to create a welcoming, accessible and continuous environment, designed to stimulate permanence, encounter and outdoor well-being with comfort and safety; the project organizes different use areas through a rectilinear landscape design, carefully integrated furniture, understanding the landscape as a mediating element between people, buildings and everyday time, capable of creating atmospheres that invite pause and coexistence; inspired by American university spaces, the Unisinos Space proposes itself as a hybrid territory open to the city, serving the university community and the general public in a qualified way, promoting the overlap of audiences as a design value and offering support for events, cultural activities and different forms of appropriation, reinforcing its role as a living space, of connection and collective experience.
+        `,
+        date: "2017",
+        place: "Porto Alegre, RS",
+        architecture: "AT Arquitetura",
+        photo: "Marcelo Donadussi",
       },
     },
   },

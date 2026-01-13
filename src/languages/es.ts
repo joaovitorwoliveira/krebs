@@ -106,7 +106,8 @@ export const es = {
       paragraph3:
         "Esta metodología integrada conecta diseño, viabilidad e inteligencia de mercado, asegurando que cada decisión estética sea estratégica y que cada espacio entregue bienestar, pertenencia y valorización real al cliente.",
       cta: "SERVICIOS",
-      imageAlt: "Del Proyecto a la Ejecución - Krebs+ Arquitectura Paisajística",
+      imageAlt:
+        "Del Proyecto a la Ejecución - Krebs+ Arquitectura Paisajística",
     },
 
     projectsHome: {
@@ -242,6 +243,7 @@ export const es = {
         surf: "Surf",
         parque: "Parque",
         sc: "SC",
+        universidade: "Universidad",
       },
     },
     items: {
@@ -448,6 +450,16 @@ export const es = {
         date: "2023",
         place: "Garopaba, SC",
         photo: "Lucas Daneris",
+      },
+      unisinos: {
+        title: "Unisinos",
+        description: `
+          El Espacio Unisinos fue concebido por nuestro estudio como una infraestructura de convivencia al aire libre, donde arquitectura y paisaje se articulan para crear un ambiente acogedor, accesible y continuo, pensado para estimular la permanencia, el encuentro y el bienestar al aire libre con comodidad y seguridad; el proyecto organiza diferentes áreas de uso mediante un diseño paisajístico rectilíneo, mobiliario cuidadosamente integrado, entendiendo el paisaje como elemento mediador entre personas, edificios y el tiempo cotidiano, capaz de crear atmósferas que invitan a la pausa y la convivencia; inspirado en espacios de universidades americanas, el Espacio Unisinos se propone como un territorio híbrido y abierto a la ciudad, atendiendo de forma calificada a la comunidad universitaria y al público en general, promoviendo la superposición de públicos como valor proyectual y ofreciendo soporte para eventos, actividades culturales y diferentes formas de apropiación, reforzando su papel como un espacio vivo, de conexión y experiencia colectiva.
+        `,
+        date: "2017",
+        place: "Porto Alegre, RS",
+        architecture: "AT Arquitetura",
+        photo: "Marcelo Donadussi",
       },
     },
   },

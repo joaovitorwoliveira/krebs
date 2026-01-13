@@ -241,6 +241,7 @@ export const pt = {
         surf: "Surf",
         parque: "Parque",
         sc: "SC",
+        universidade: "Universidade",
       },
     },
     items: {
@@ -443,6 +444,16 @@ export const pt = {
         date: "2023",
         place: "Garopaba, SC",
         photo: "Lucas Daneris",
+      },
+      unisinos: {
+        title: "Unisinos",
+        description: `
+          O Espaço Unisinos foi concebido pelo nosso escritório como uma infraestrutura de convivência a céu aberto, onde arquitetura e paisagem se articulam para criar um ambiente acolhedor, acessível e contínuo, pensado para estimular a permanência, o encontro e o bem-estar ao ar livre com conforto e segurança; o projeto organiza diferentes áreas de uso por meio de um desenho paisagístico retilíneo, mobiliário cuidadosamente integrado, entendendo a paisagem como elemento mediador entre pessoas, edifícios e o tempo cotidiano, capaz de criar atmosferas que convidam à pausa e à convivência; inspirado em espaços de universidades americanas, o Espaço Unisinos se propõe como um território híbrido e aberto à cidade, atendendo de forma qualificada a comunidade universitária e o público em geral, promovendo a sobreposição de públicos como valor projetual e oferecendo suporte para eventos, atividades culturais e diferentes formas de apropriação, reforçando seu papel como um espaço vivo, de conexão e experiência coletiva.
+        `,
+        date: "2017",
+        place: "Porto Alegre, RS",
+        architecture: "AT Arquitetura",
+        photo: "Marcelo Donadussi",
       },
     },
   },

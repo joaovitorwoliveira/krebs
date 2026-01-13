@@ -9,7 +9,7 @@ import { projects } from "@/features/Projects/projects";
 
 import { cn } from "@/lib/utils";
 
-const featuredProjects = ["jardim-flv", "jardim-svg", "shopping-iguatemi"];
+const featuredProjects = ["jardim-flv", "jardim-svg", "unisinos"];
 
 export default function ProjectsHome() {
   const { t } = useLanguage();

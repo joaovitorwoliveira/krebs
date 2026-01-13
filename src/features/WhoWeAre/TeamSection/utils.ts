@@ -172,6 +172,7 @@ export const teamMembers: TeamMember[] = [
     category: "equipe",
     role: "Profissional 3D",
     description: [
+      "+",
       "Miguel é um profissional de modelagem 3D e representação visual especializado no desenvolvimento de ambientes digitais alinhados à concepção e à tomada de decisões paisagísticas e arquitetônicas. Com background em ciência da computação e arquitetura, alia curiosidade e criatividade para traduzir ideias em representações claras, sustentáveis e alinhadas ao resultado final do projeto.",
     ],
     image: "/images/team/miguel.jpg",
