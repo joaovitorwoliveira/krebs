@@ -22,6 +22,7 @@ export const projects: Project[] = [
       Images.JARDIM_SVG_IMAGE_6,
       Images.JARDIM_SVG_IMAGE_7,
     ],
+    conclusionDate: "2023",
   },
   {
     slug: "jardim-atj",
@@ -48,6 +49,7 @@ export const projects: Project[] = [
       Images.JARDIM_ATJ_IMAGE_7,
       Images.JARDIM_ATJ_IMAGE_8,
     ],
+    conclusionDate: "2018",
   },
   {
     slug: "jardim-ltx",
@@ -73,6 +75,7 @@ export const projects: Project[] = [
       Images.JARDIM_LTX_IMAGE_10,
       Images.JARDIM_LTX_IMAGE_11,
     ],
+    conclusionDate: "2018",
   },
   {
     slug: "jardim-malu",
@@ -86,6 +89,7 @@ export const projects: Project[] = [
       Images.JARDIM_MALU_IMAGE_5,
       Images.JARDIM_MALU_IMAGE_6,
     ],
+    conclusionDate: "2020",
   },
   {
     slug: "colegio-farroupilha",
@@ -109,6 +113,7 @@ export const projects: Project[] = [
       Images.COLEGIO_FARROUPILHA_IMAGE_6,
       Images.COLEGIO_FARROUPILHA_IMAGE_7,
     ],
+    conclusionDate: "2025",
   },
   {
     slug: "varanda-fek",
@@ -127,6 +132,7 @@ export const projects: Project[] = [
       Images.VARANDA_FEK_IMAGE_3,
       Images.VARANDA_FEK_IMAGE_4,
     ],
+    conclusionDate: "2024",
   },
   {
     slug: "rampa",
@@ -141,6 +147,7 @@ export const projects: Project[] = [
       Images.RAMPA_IMAGE_6,
       Images.RAMPA_IMAGE_7,
     ],
+    conclusionDate: "2024",
   },
   {
     slug: "shopping-iguatemi",
@@ -161,6 +168,7 @@ export const projects: Project[] = [
       Images.SHOPPING_IGUATEMI_IMAGE_4,
       Images.SHOPPING_IGUATEMI_IMAGE_5,
     ],
+    conclusionDate: "2017",
   },
   {
     slug: "jardim-flv",
@@ -189,6 +197,7 @@ export const projects: Project[] = [
       Images.JARDIM_FLV_IMAGE_13,
       Images.JARDIM_FLV_IMAGE_14,
     ],
+    conclusionDate: "2020",
   },
   {
     slug: "rua-mista-legano",
@@ -216,6 +225,7 @@ export const projects: Project[] = [
       Images.RUA_MISTA_LEGANO_IMAGE_9,
       Images.RUA_MISTA_LEGANO_IMAGE_10,
     ],
+    conclusionDate: "2020",
   },
   {
     slug: "surfland",
@@ -237,6 +247,7 @@ export const projects: Project[] = [
       Images.SURFLAND_IMAGE_13,
       Images.SURFLAND_IMAGE_14,
     ],
+    conclusionDate: "2023",
   },
   {
     slug: "unisinos",
@@ -261,6 +272,7 @@ export const projects: Project[] = [
       Images.UNISINOS_IMAGE_16,
       Images.UNISINOS_IMAGE_17,
     ],
+    conclusionDate: "2017",
   },
   {
     slug: "edificio-paix",
@@ -275,6 +287,7 @@ export const projects: Project[] = [
       Images.EDIFICIO_PAIX_IMAGE_6,
       Images.EDIFICIO_PAIX_IMAGE_7,
     ],
+    conclusionDate: "2020",
   },
   {
     slug: "edificio-iguacu",
@@ -290,6 +303,7 @@ export const projects: Project[] = [
       Images.EDIFICIO_IGUACU_IMAGE_7,
       Images.EDIFICIO_IGUACU_IMAGE_8,
     ],
+    conclusionDate: "2020",
   },
   {
     slug: "jardim-lmp",
@@ -302,6 +316,7 @@ export const projects: Project[] = [
       Images.JARDIM_LMP_IMAGE_4,
       Images.JARDIM_LMP_IMAGE_5,
     ],
+    conclusionDate: "2023",
   },
   {
     slug: "jardim-ssg",
@@ -318,6 +333,7 @@ export const projects: Project[] = [
       Images.JARDIM_SSG_IMAGE_8,
       Images.JARDIM_SSG_IMAGE_9,
     ],
+    conclusionDate: "2021",
   },
   {
     slug: "jardim-adg",
@@ -332,6 +348,7 @@ export const projects: Project[] = [
       Images.JARDIM_ADG_IMAGE_6,
       Images.JARDIM_ADG_IMAGE_7,
     ],
+    conclusionDate: "2012",
   },
   {
     slug: "prado-bairro-cidade",
@@ -351,5 +368,6 @@ export const projects: Project[] = [
       Images.PRADO_BAIRRO_CIDADE_IMAGE_11,
       Images.PRADO_BAIRRO_CIDADE_IMAGE_12,
     ],
+    conclusionDate: "2016",
   },
 ];

@@ -41,4 +41,5 @@ export interface Project {
   coverPhoto: string;
   images: string[];
   tags: string[];
+  conclusionDate: string;
 }

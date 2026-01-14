@@ -1,14 +1,7 @@
 import {
-  JARDIM_FLV_IMAGE_9,
-  JARDIM_FLV_IMAGE_10,
-  JARDIM_FLV_IMAGE_12,
-  JARDIM_FLV_IMAGE_13,
-  JARDIM_FLV_IMAGE_14,
-  JARDIM_MALU_IMAGE_1,
-  JARDIM_MALU_IMAGE_2,
-  JARDIM_SVG_IMAGE_6,
-  RAMPA_IMAGE_5,
-  VARANDA_FEK_IMAGE_1,
+  EDIFICIO_PAIX_IMAGE_3,
+  PRADO_BAIRRO_CIDADE_IMAGE_1,
+  UNISINOS_IMAGE_1,
 } from "@/common/constants/db-images";
 
 export interface HeroImage {
@@ -23,48 +16,30 @@ export interface HeroImage {
 
 export const heroImages: HeroImage[] = [
   {
-    url: JARDIM_FLV_IMAGE_9,
-    projectSlug: "jardim-flv",
+    url: EDIFICIO_PAIX_IMAGE_3,
+    projectSlug: "edificio-paix",
     projectName: {
-      pt: "Jardim FLV",
-      en: "FLV Garden",
-      es: "Jardín FLV",
+      pt: "Edifício Paix",
+      en: "Paix Building",
+      es: "Edificio Paix",
     },
   },
   {
-    url: JARDIM_MALU_IMAGE_1,
-    projectSlug: "jardim-malu",
+    url: UNISINOS_IMAGE_1,
+    projectSlug: "unisinos",
     projectName: {
-      pt: "Jardim MALU",
-      en: "MALU Garden",
-      es: "Jardín MALU",
+      pt: "Unisinos",
+      en: "Unisinos",
+      es: "Unisinos",
     },
   },
   {
-    url: RAMPA_IMAGE_5,
-    projectSlug: "rampa",
+    url: PRADO_BAIRRO_CIDADE_IMAGE_1,
+    projectSlug: "prado-bairro-cidade",
     projectName: {
-      pt: "Rampa",
-      en: "Ramp",
-      es: "Rampa",
-    },
-  },
-  {
-    url: VARANDA_FEK_IMAGE_1,
-    projectSlug: "varanda-fek",
-    projectName: {
-      pt: "Varanda FEK",
-      en: "FEK Veranda",
-      es: "Varanda FEK",
-    },
-  },
-  {
-    url: JARDIM_SVG_IMAGE_6,
-    projectSlug: "jardim-svg",
-    projectName: {
-      pt: "Jardim SVG",
-      en: "SVG Garden",
-      es: "Jardín SVG",
+      pt: "Prado Bairro Cidade",
+      en: "Prado Bairro Cidade",
+      es: "Prado Bairro Cidade",
     },
   },
 ];

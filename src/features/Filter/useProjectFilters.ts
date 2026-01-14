@@ -19,7 +19,7 @@ export function useProjectFilters(): FilterHookReturn {
   }, []);
 
   const filteredProjects = useMemo(() => {
-    return projects.filter((project) => {
+    const filtered = projects.filter((project) => {
       const projectTranslation =
         t.projects.items[project.slug as keyof typeof t.projects.items];
 
@@ -37,6 +37,12 @@ export function useProjectFilters(): FilterHookReturn {
         selectedTags.some((tag) => project.tags.includes(tag));
 
       return matchesSearch && matchesTags;
+    });
+
+    return filtered.sort((a, b) => {
+      const dateA = parseInt(a.conclusionDate, 10);
+      const dateB = parseInt(b.conclusionDate, 10);
+      return dateB - dateA;
     });
   }, [projects, searchQuery, selectedTags, t.projects.items]);
 
