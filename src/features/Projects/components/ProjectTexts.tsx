@@ -1,7 +1,8 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
+import { useLanguage } from "@/context/LanguageProvider";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
@@ -14,8 +15,29 @@ export default function ProjectTexts({
   description,
   projectDetails,
 }: ProjectTextsProps) {
+  const { language } = useLanguage();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const isInView = useInView(ref, { once: false, margin: "-50px" });
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    if (isInView) {
+      setShouldAnimate(true);
+    } else {
+      setShouldAnimate(false);
+    }
+  }, [isInView]);
+
+  useEffect(() => {
+    if (isInView) {
+      setShouldAnimate(false);
+      const timer = setTimeout(() => {
+        setShouldAnimate(true);
+      }, 10);
+      return () => clearTimeout(timer);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [language]);
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -84,7 +106,7 @@ export default function ProjectTexts({
       ref={ref}
       variants={containerVariants}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      animate={shouldAnimate ? "visible" : "hidden"}
       className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"
     >
       <motion.div variants={itemVariants} className="md:col-span-2">
