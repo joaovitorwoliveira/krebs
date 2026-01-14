@@ -93,10 +93,9 @@ export default function ProjectRow({ row, rowIndex }: ProjectRowProps) {
       variants={rowVariants}
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-3 pt-10"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-3 pt-4"
     >
       {row.map((project, itemIndex) => {
-        const globalIndex = rowIndex * 3 + itemIndex;
         return (
           <motion.div key={project.slug} variants={itemVariants}>
             <Link
@@ -128,7 +127,7 @@ export default function ProjectRow({ row, rowIndex }: ProjectRowProps) {
                 />
               </div>
               <motion.div className="p-2" variants={itemVariants}>
-                <h3 className="text-dark text-sm font-inter-light text-center lowercase">
+                <h3 className="text-dark text-md font-inter-light lowercase opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
                   {t.projects.items[
                     project.slug as keyof typeof t.projects.items
                   ]?.title || project.slug}
