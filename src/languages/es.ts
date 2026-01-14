@@ -495,6 +495,16 @@ export const es = {
         architecture: "Projetebem",
         photo: "Lucas Daneris",
       },
+      "jardim-ssg": {
+        title: "Jardín SGG",
+        description: `
+          Ubicado en Garopaba, el jardín se construye como un espacio de acogida y permanencia, donde el paisajismo actúa como extensión natural de la arquitectura y del entorno. El proyecto explora la diversidad de texturas y volúmenes, combinando especies tropicales y vegetación adaptada al clima local para crear una atmósfera densa, fresca e invitadora. La presencia marcante de una trepadora intensamente florida introduce color, sombra y movimiento, reforzando el carácter afectivo del espacio y calificando las áreas de estar. En el área de la piscina, el jardín se abre y se disuelve en el paisaje circundante, estableciendo una transición suave entre el espacio construido y la naturaleza, en un conjunto que privilegia confort, sensorialidad y una relación directa con el ambiente natural de Garopaba.
+        `,
+        date: "2021",
+        place: "Garopaba, SC",
+        architecture: "Arte Arquitetura",
+        photo: "Roberta Borges",
+      },
     },
   },
 

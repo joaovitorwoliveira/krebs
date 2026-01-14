@@ -494,6 +494,16 @@ export const en = {
         architecture: "Projetebem",
         photo: "Lucas Daneris",
       },
+      "jardim-ssg": {
+        title: "SGG Garden",
+        description: `
+          Located in Garopaba, the garden is built as a welcoming and permanence space, where landscaping acts as a natural extension of architecture and surroundings. The project explores the diversity of textures and volumes, combining tropical species and vegetation adapted to the local climate to create a dense, fresh and inviting atmosphere. The striking presence of an intensely flowering vine introduces color, shade and movement, reinforcing the affective character of the space and qualifying the living areas. In the pool area, the garden opens up and dissolves into the surrounding landscape, establishing a smooth transition between the built space and nature, in a set that privileges comfort, sensoriality and a direct relationship with the natural environment of Garopaba.
+        `,
+        date: "2021",
+        place: "Garopaba, SC",
+        architecture: "Arte Arquitetura",
+        photo: "Roberta Borges",
+      },
     },
   },
 
