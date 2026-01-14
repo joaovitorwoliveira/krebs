@@ -242,6 +242,9 @@ export const en = {
         parque: "Park",
         sc: "SC",
         universidade: "University",
+        edificio: "Building",
+        uruguai: "Uruguay",
+        labarra: "La Barra",
       },
     },
     items: {
@@ -460,6 +463,27 @@ export const en = {
         architecture: "AT Arquitetura",
         photo: "Marcelo Donadussi",
       },
+      "edificio-paix": {
+        title: "PAIX Building",
+        description: `
+          Located in front of the sea, in La Barra, the PAIX building establishes a direct dialogue with the coastal landscape and its natural forces, especially the constant wind and the maritime condition of the place. The landscaping project starts from valuing these characteristics, adopting mostly native species, resistant to salinity and weather, which not only support the environment, but reveal their power through movement, textures and variations over time. The vegetation acts as a mediating element between architecture and territory, organizing paths and permanence areas without interrupting the visual relationship with the sea, respecting the topography and natural voids of the terrain. The result is a landscaping that builds atmosphere and experience, where nature, climate and architecture integrate in a discreet, sensory and deeply connected way to the place.
+        `,
+        date: "2020",
+        place: "La Barra, UY",
+        architecture: "Martin Gomez",
+        interior: "Estudio Obra Prima",
+        photo: "Lucas Daneris",
+      },
+      "edificio-iguacu": {
+        title: "Iguaçu Building",
+        description: `
+          Located in a consolidated area of Porto Alegre, the Iguaçu Building proposes a careful relationship between architecture, city and open spaces. The external spaces project starts from the creation of qualified permanence areas, capable of offering urban breathing, environmental comfort and a more sensitive daily experience for users. The landscaping organizes the paths, defines transitions between public and private space and introduces layers of vegetation that balance scale, shade and visual permeability. The choice of species prioritizes resistance, low maintenance and suitability to the local climate, composing a sober and timeless landscape that accompanies the architecture without excessive protagonism. More than support areas, the external spaces of the Iguaçu Building act as an extension of internal life, promoting well-being, pause and connection with nature in the midst of the urban fabric.
+        `,
+        date: "2020",
+        place: "Porto Alegre, RS",
+        architecture: "Smart - Arquitetura",
+        photo: "Roberta Gewehr",
+      },
     },
   },
 
@@ -467,6 +491,7 @@ export const en = {
     completionYear: "Completion year",
     location: "Location",
     architecture: "Architecture",
+    interior: "Interiors",
     photography: "Photography",
     imageAlt: "Image",
     thumbnail: "Thumbnail",

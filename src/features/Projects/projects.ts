@@ -262,4 +262,33 @@ export const projects: Project[] = [
       Images.UNISINOS_IMAGE_17,
     ],
   },
+  {
+    slug: "edificio-paix",
+    coverPhoto: Images.EDIFICIO_PAIX_IMAGE_3,
+    tags: ["edificio", "uruguai", "labarra"],
+    images: [
+      Images.EDIFICIO_PAIX_IMAGE_1,
+      Images.EDIFICIO_PAIX_IMAGE_2,
+      Images.EDIFICIO_PAIX_IMAGE_3,
+      Images.EDIFICIO_PAIX_IMAGE_4,
+      Images.EDIFICIO_PAIX_IMAGE_5,
+      Images.EDIFICIO_PAIX_IMAGE_6,
+      Images.EDIFICIO_PAIX_IMAGE_7,
+    ],
+  },
+  {
+    slug: "edificio-iguacu",
+    coverPhoto: Images.EDIFICIO_IGUACU_IMAGE_7,
+    tags: ["edificio", "portoalegre"],
+    images: [
+      Images.EDIFICIO_IGUACU_IMAGE_1,
+      Images.EDIFICIO_IGUACU_IMAGE_2,
+      Images.EDIFICIO_IGUACU_IMAGE_3,
+      Images.EDIFICIO_IGUACU_IMAGE_4,
+      Images.EDIFICIO_IGUACU_IMAGE_5,
+      Images.EDIFICIO_IGUACU_IMAGE_6,
+      Images.EDIFICIO_IGUACU_IMAGE_7,
+      Images.EDIFICIO_IGUACU_IMAGE_8,
+    ],
+  },
 ];

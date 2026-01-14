@@ -244,6 +244,9 @@ export const es = {
         parque: "Parque",
         sc: "SC",
         universidade: "Universidad",
+        edificio: "Edificio",
+        uruguai: "Uruguay",
+        labarra: "La Barra",
       },
     },
     items: {
@@ -461,6 +464,27 @@ export const es = {
         architecture: "AT Arquitetura",
         photo: "Marcelo Donadussi",
       },
+      "edificio-paix": {
+        title: "Edificio PAIX",
+        description: `
+          Implantado frente al mar, en La Barra, el edificio PAIX establece un diálogo directo con el paisaje costero y sus fuerzas naturales, especialmente el viento constante y la condición marítima del lugar. El proyecto de paisajismo parte de la valorización de estas características, adoptando mayoritariamente especies nativas, resistentes a la salinidad y a las intemperies, que no solo soportan el ambiente, sino que revelan su potencia a través del movimiento, las texturas y las variaciones a lo largo del tiempo. La vegetación actúa como elemento de mediación entre arquitectura y territorio, organizando recorridos y áreas de permanencia sin interrumpir la relación visual con el mar, respetando la topografía y los vacíos naturales del terreno. El resultado es un paisajismo que construye atmósfera y experiencia, donde naturaleza, clima y arquitectura se integran de forma discreta, sensorial y profundamente conectada al lugar.
+        `,
+        date: "2020",
+        place: "La Barra, UY",
+        architecture: "Martin Gomez",
+        interior: "Estudio Obra Prima",
+        photo: "Lucas Daneris",
+      },
+      "edificio-iguacu": {
+        title: "Edificio Iguaçu",
+        description: `
+          Ubicado en un área consolidada de Porto Alegre, el Edificio Iguaçu propone una relación cuidadosa entre arquitectura, ciudad y espacios abiertos. El proyecto de los espacios externos parte de la creación de áreas de permanencia calificadas, capaces de ofrecer respiro urbano, confort ambiental y una experiencia cotidiana más sensible para los usuarios. El paisajismo organiza los recorridos, define transiciones entre el espacio público y el privado e introduce capas de vegetación que equilibran escala, sombra y permeabilidad visual. La elección de las especies prioriza resistencia, bajo mantenimiento y adecuación al clima local, componiendo un paisaje sobrio y atemporal que acompaña la arquitectura sin protagonismo excesivo. Más que áreas de apoyo, los espacios externos del Edificio Iguaçu actúan como extensión de la vida interna, promoviendo bienestar, pausa y conexión con la naturaleza en medio del tejido urbano.
+        `,
+        date: "2020",
+        place: "Porto Alegre, RS",
+        architecture: "Smart - Arquitetura",
+        photo: "Roberta Gewehr",
+      },
     },
   },
 
@@ -468,6 +492,7 @@ export const es = {
     completionYear: "Año de finalización",
     location: "Ubicación",
     architecture: "Arquitectura",
+    interior: "Interiores",
     photography: "Fotografía",
     imageAlt: "Imagen",
     thumbnail: "Miniatura",

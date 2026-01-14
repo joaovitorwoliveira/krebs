@@ -39,6 +39,14 @@ export default function ProjectPage({ slug, className }: ProjectPageProps) {
           },
         ]
       : []),
+    ...(projectTranslation && "interior" in projectTranslation
+      ? [
+          {
+            label: t.projectDetails.interior,
+            value: projectTranslation.interior,
+          },
+        ]
+      : []),
     {
       label: t.projectDetails.photography,
       value: projectTranslation?.photo,

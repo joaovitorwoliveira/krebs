@@ -56,6 +56,7 @@ export const teamMembers: TeamMember[] = [
     description: [
       "+",
       "Eduardo é arquiteto paisagista e atua na operação e estratégia da empresa. Tem uma visão criativa e participa ativamente no processo inicial dos novos projetos através de suas estimativas, entendendo que transformar investimento em projeto não é só sobre números, exige sensibilidade, leitura de espaço e intenção. A partir da verdade direciona para que os projetos aconteçam dentro das condições reais de investimento de cada cliente. Sempre faz analogias sobre gastronomia para explicar melhor o seu trabalho. É um dos responsáveis por escolher os “ingredientes” certos para que se consiga “degustar” do resultado final, com previsibilidade e fidelidade com o que foi pensado.",
+      "+",
       "Arquiteto e Urbanista (UFPEL)",
     ],
     image: "/images/team/eduardo.jpg",

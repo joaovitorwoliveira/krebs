@@ -242,6 +242,9 @@ export const pt = {
         parque: "Parque",
         sc: "SC",
         universidade: "Universidade",
+        edificio: "Edifício",
+        uruguai: "Uruguai",
+        labarra: "La Barra",
       },
     },
     items: {
@@ -455,6 +458,27 @@ export const pt = {
         architecture: "AT Arquitetura",
         photo: "Marcelo Donadussi",
       },
+      "edificio-paix": {
+        title: "Edifício PAIX",
+        description: `
+          Implantado em frente ao mar, em La Barra, o edifício PAIX estabelece um diálogo direto com a paisagem costeira e suas forças naturais, especialmente o vento constante e a condição marítima do lugar. O projeto de paisagismo parte da valorização dessas características, adotando majoritariamente espécies nativas, resistentes à salinidade e às intempéries, que não apenas suportam o ambiente, mas revelam sua potência através do movimento, das texturas e das variações ao longo do tempo. A vegetação atua como elemento de mediação entre arquitetura e território, organizando percursos e áreas de permanência sem interromper a relação visual com o mar, respeitando a topografia e os vazios naturais do terreno. O resultado é um paisagismo que constrói atmosfera e experiência, onde natureza, clima e arquitetura se integram de forma discreta, sensorial e profundamente conectada ao lugar.
+        `,
+        date: "2020",
+        place: "La Barra, UY",
+        architecture: "Martin Gomez",
+        interior: "Estudio Obra Prima",
+        photo: "Lucas Daneris",
+      },
+      "edificio-iguacu": {
+        title: "Edifício Iguaçu",
+        description: `
+          Localizado em uma área consolidada de Porto Alegre, o Edifício Iguaçu propõe uma relação cuidadosa entre arquitetura, cidade e espaços abertos. O projeto dos espaços externos parte da criação de áreas de permanência qualificadas, capazes de oferecer respiro urbano, conforto ambiental e uma experiência cotidiana mais sensível aos usuários. O paisagismo organiza os percursos, define transições entre o espaço público e o privado e introduz camadas de vegetação que equilibram escala, sombra e permeabilidade visual. A escolha das espécies prioriza resistência, baixa manutenção e adequação ao clima local, compondo uma paisagem sóbria e atemporal, que acompanha a arquitetura sem protagonismo excessivo. Mais do que áreas de apoio, os espaços externos do Edifício Iguaçu atuam como extensão da vida interna, promovendo bem-estar, pausa e conexão com a natureza em meio ao tecido urbano.
+        `,
+        date: "2020",
+        place: "Porto Alegre, RS",
+        architecture: "Smart - Arquitetura",
+        photo: "Roberta Gewehr",
+      },
     },
   },
 
@@ -462,6 +486,7 @@ export const pt = {
     completionYear: "Ano de conclusão",
     location: "Local",
     architecture: "Arquitetura",
+    interior: "Interiores",
     photography: "Fotografia",
     imageAlt: "Imagem",
     thumbnail: "Miniatura",
