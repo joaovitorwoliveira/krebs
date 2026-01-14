@@ -505,6 +505,16 @@ export const es = {
         architecture: "Arte Arquitetura",
         photo: "Roberta Borges",
       },
+      "jardim-adg": {
+        title: "Jardín ADG",
+        description: `
+          Implantado en Praia da Barra, en Garopaba, el proyecto se organiza a partir de un amplio césped que se abre integralmente hacia el mar, valorizando el paisaje natural y la relación directa con el horizonte. El diseño privilegia la continuidad visual y la sensación de amplitud, permitiendo que la vista de la playa y del Morro do Sambaqui se imponga de forma serena y constante. La vegetación, trabajada en masas sutiles y texturas naturales, actúa como marco para el escenario, sin competir con él, reforzando la atmósfera de calma y contemplación. El paisajismo respira la esencia de Barrinha, traduciendo en espacio construido un lugar donde el tiempo se desacelera y el paisaje conduce la experiencia.
+        `,
+        date: "2012",
+        place: "Garopaba, SC",
+        architecture: "Estudio Obra Prima",
+        photo: "Roberta Borges",
+      },
     },
   },
 

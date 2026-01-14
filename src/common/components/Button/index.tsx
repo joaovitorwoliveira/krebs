@@ -39,7 +39,7 @@ export default function Button({
         </span>
         <Plus
           strokeWidth={2.5}
-          className="w-5 h-5 -translate-x-0.0 -translate-y-1 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-1.5"
+          className="w-4 h-4 -translate-x-0.0 -translate-y-1 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-1.5"
         />
       </button>
     );

@@ -9,7 +9,7 @@ import { projects } from "@/features/Projects/projects";
 
 import { cn } from "@/lib/utils";
 
-const featuredProjects = ["jardim-flv", "jardim-svg", "unisinos"];
+const featuredProjects = ["jardim-flv", "jardim-adg", "unisinos"];
 
 export default function ProjectsHome() {
   const { t } = useLanguage();
@@ -68,7 +68,7 @@ export default function ProjectsHome() {
                   </div>
                 </Link>
                 <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-dark text-base font-inter-semibold uppercase flex-1">
+                  <h3 className="text-dark text-sm font-inter-semibold uppercase flex-1">
                     {project.title}
                   </h3>
                   <Link
@@ -78,7 +78,7 @@ export default function ProjectsHome() {
                     <Button
                       variant="icon"
                       text={t.home.seeProject}
-                      className="text-sm md:text-base"
+                      className="text-sm"
                     />
                   </Link>
                 </div>

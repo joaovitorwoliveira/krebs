@@ -319,4 +319,18 @@ export const projects: Project[] = [
       Images.JARDIM_SSG_IMAGE_9,
     ],
   },
+  {
+    slug: "jardim-adg",
+    coverPhoto: Images.JARDIM_ADG_IMAGE_7,
+    tags: ["garopaba", "residencial", "praia"],
+    images: [
+      Images.JARDIM_ADG_IMAGE_1,
+      Images.JARDIM_ADG_IMAGE_2,
+      Images.JARDIM_ADG_IMAGE_3,
+      Images.JARDIM_ADG_IMAGE_4,
+      Images.JARDIM_ADG_IMAGE_5,
+      Images.JARDIM_ADG_IMAGE_6,
+      Images.JARDIM_ADG_IMAGE_7,
+    ],
+  },
 ];
