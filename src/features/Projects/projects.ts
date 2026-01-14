@@ -291,4 +291,16 @@ export const projects: Project[] = [
       Images.EDIFICIO_IGUACU_IMAGE_8,
     ],
   },
+  {
+    slug: "jardim-lmp",
+    coverPhoto: Images.JARDIM_LMP_IMAGE_3,
+    tags: ["uruguai", "residencial"],
+    images: [
+      Images.JARDIM_LMP_IMAGE_1,
+      Images.JARDIM_LMP_IMAGE_2,
+      Images.JARDIM_LMP_IMAGE_3,
+      Images.JARDIM_LMP_IMAGE_4,
+      Images.JARDIM_LMP_IMAGE_5,
+    ],
+  },
 ];

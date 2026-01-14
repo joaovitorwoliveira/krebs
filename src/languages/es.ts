@@ -485,6 +485,16 @@ export const es = {
         architecture: "Smart - Arquitetura",
         photo: "Roberta Gewehr",
       },
+      "jardim-lmp": {
+        title: "Jardín LMP",
+        description: `
+          Implantado en José Ignacio, el jardín se estructura a partir de una lectura sensible del lugar, valorizando el carácter naturalista, el encanto discreto y la rusticidad propia del paisaje local. El proyecto busca una relación despreocupada con la naturaleza, donde la vegetación se organiza de forma aparentemente espontánea, con predominancia de especies adaptadas al clima costero, al viento y a la salinidad. Gramíneas, masas arbustivas y áreas permeables crean capas de textura y movimiento, permitiendo que el jardín cambie a lo largo del tiempo y de las estaciones, reforzando una experiencia de uso simple, natural y profundamente conectada al espíritu de José Ignacio.
+        `,
+        date: "2023",
+        place: "José Ignacio, UY",
+        architecture: "Projetebem",
+        photo: "Lucas Daneris",
+      },
     },
   },
 
