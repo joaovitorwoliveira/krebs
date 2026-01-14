@@ -333,4 +333,23 @@ export const projects: Project[] = [
       Images.JARDIM_ADG_IMAGE_7,
     ],
   },
+  {
+    slug: "prado-bairro-cidade",
+    coverPhoto: Images.PRADO_BAIRRO_CIDADE_IMAGE_1,
+    tags: ["condominio", "gravatai", "urbanismo", "bairro"],
+    images: [
+      Images.PRADO_BAIRRO_CIDADE_IMAGE_1,
+      Images.PRADO_BAIRRO_CIDADE_IMAGE_2,
+      Images.PRADO_BAIRRO_CIDADE_IMAGE_3,
+      Images.PRADO_BAIRRO_CIDADE_IMAGE_4,
+      Images.PRADO_BAIRRO_CIDADE_IMAGE_5,
+      Images.PRADO_BAIRRO_CIDADE_IMAGE_6,
+      Images.PRADO_BAIRRO_CIDADE_IMAGE_7,
+      Images.PRADO_BAIRRO_CIDADE_IMAGE_8,
+      Images.PRADO_BAIRRO_CIDADE_IMAGE_9,
+      Images.PRADO_BAIRRO_CIDADE_IMAGE_10,
+      Images.PRADO_BAIRRO_CIDADE_IMAGE_11,
+      Images.PRADO_BAIRRO_CIDADE_IMAGE_12,
+    ],
+  },
 ];

@@ -209,6 +209,7 @@ export const en = {
         calçada: "Sidewalk",
         passeio: "Walkway",
         garopaba: "Garopaba",
+        gravatai: "Gravataí",
         maresia: "Sea breeze",
         privacidade: "Privacy",
         praiadosilveira: "Praia da Silveira",
@@ -513,6 +514,16 @@ export const en = {
         place: "Garopaba, SC",
         architecture: "Estudio Obra Prima",
         photo: "Roberta Borges",
+      },
+      "prado-bairro-cidade": {
+        title: "Prado Bairro Cidade",
+        description: `
+          The Prado Bairro Cidade project is born from an integrated vision of urban landscape, where all external spaces — from squares to daily paths — are thought of as part of a continuous and qualified system. On a large scale, landscaping assumes a structuring role, organizing areas of coexistence, leisure and circulation, and contributing to the identity of the neighborhood as a whole. The design of squares, tree planting, green areas and the careful choice of street and sidewalk paving materials were conceived in an articulated way, seeking durability, environmental comfort and aesthetic coherence. More than residual spaces, the external environments of Prado Bairro Cidade build a living, accessible and welcoming urban landscape, where public space is valued as a place of encounter, permanence and belonging.
+        `,
+        date: "2016",
+        place: "Gravataí, RS",
+        architecture: "Mario Quintana",
+        photo: "Lucas Daneris",
       },
     },
   },

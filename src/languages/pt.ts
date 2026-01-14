@@ -209,6 +209,7 @@ export const pt = {
         calçada: "Calçada",
         passeio: "Passeio",
         garopaba: "Garopaba",
+        gravatai: "Gravataí",
         maresia: "Maresia",
         privacidade: "Privacidade",
         praiadosilveira: "Praia da Silveira",
@@ -508,6 +509,16 @@ export const pt = {
         place: "Garopaba, SC",
         architecture: "Estudio Obra Prima",
         photo: "Roberta Borges",
+      },
+      "prado-bairro-cidade": {
+        title: "Prado Bairro Cidade",
+        description: `
+          O projeto do Prado Bairro Cidade nasce a partir de uma visão integrada de paisagem urbana, onde todos os espaços externos — das praças aos percursos cotidianos — são pensados como parte de um sistema contínuo e qualificado. Em uma escala ampla, o paisagismo assume papel estruturador, organizando áreas de convivência, lazer e circulação, e contribuindo para a identidade do bairro como um todo. O desenho das praças, a arborização, as áreas verdes e a escolha criteriosa dos materiais de calçamento de ruas e calçadas foram concebidos de forma articulada, buscando durabilidade, conforto ambiental e coerência estética. Mais do que espaços residuais, os ambientes externos do Prado Bairro Cidade constroem uma paisagem urbana viva, acessível e acolhedora, onde o espaço público é valorizado como lugar de encontro, permanência e pertencimento.
+        `,
+        date: "2016",
+        place: "Gravataí, RS",
+        architecture: "Mario Quintana",
+        photo: "Lucas Daneris",
       },
     },
   },
