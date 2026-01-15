@@ -607,6 +607,62 @@ export const pt = {
         "Venda de Plantas (via viveiro próprio)",
       ],
     },
+    partnersSection: {
+      creativePartnership: {
+        title: "PARCERIA CRIATIVA E FIDELIDADE TÉCNICA",
+        paragraph1:
+          "Para a arquitetura que busca transcender o comum, atuamos como parceiros colaborativos essenciais, dedicados a traduzir a visão arquitetônica em paisagens vivas que respeitam e amplificam o conceito original da obra.",
+        paragraph2:
+          "Nosso compromisso é com a fidelidade absoluta ao projeto e a qualidade da execução, assegurando que a emoção desenhada na prancheta não se perca no canteiro de obras. Esse compromisso é assegurado por um acompanhamento de execução que conta com o olhar experiente de André Krebs, somando mais de 40 anos de trajetória no paisagismo.",
+        paragraph3:
+          "Oferecemos um suporte técnico robusto que garante a integração perfeita entre o construído e o natural, permitindo que o arquiteto tenha a tranquilidade de ver sua criação materializada com a mesma excelência estética e sofisticação técnica que idealizou.",
+        subtitle: "ESCRITÓRIOS PARCEIROS",
+        partners: [
+          "OBRAPRIMA",
+          "STUDIO RONALDO REZENDE",
+          "AMBIdestro ARQUITETURA",
+          "bg arq",
+          "Lubianca arquitetos",
+          "eMe Que",
+          "graphitar arquitetura",
+          "Lidia Maciel",
+          "ZBL+ ARQUITETURA",
+          "MARCIA BARBIERI ARQUITETURA",
+          "BERNARDES ARQUITETURA",
+          "andrēpetracco ARQUITETURA",
+          "DDM ATELIE DE ARQUITETURA",
+          "RAFAEL GRANTHAM ARQUITETURA",
+          "PROJETEBEM",
+        ],
+      },
+      profitabilityFocus: {
+        title: "FOCO EM RENTABILIDADE E SEGURANÇA",
+        paragraph1:
+          "Para empreendimentos que exigem previsibilidade e alto desempenho comercial, transformamos o paisagismo em um ativo estratégico e mensurável, eliminando o risco de que a área externa se torne um passivo ou um foco de estouro orçamentário.",
+        paragraph2:
+          "Atuamos com uma visão de inteligência de mercado que alinha o potencial estético ao budget disponível e ao VGV do negócio, garantindo, através de estudos de viabilidade e consultoria estratégica, que a imagem de venda prometida ao cliente seja tecnicamente viável e financeiramente executável.",
+        paragraph3:
+          "Nossa metodologia oferece clareza absoluta sobre custos e processos de compra, assegurando que o paisagismo funcione como um poderoso motor de vendas e valorização do metro quadrado, com cronogramas cumpridos e riscos mitigados desde a concepção até a entrega.",
+        subtitle: "INCORPORADORAS PARCEIRAS",
+        partners: [
+          "melnick Urbanizadora",
+          "ARCADIA URBANISMO",
+          "WAGNERPAR URBANISMO",
+          "JOAL TEITELBAUM",
+          "Grupo Zaffari Desde 1935",
+          "KRYSTAL URBANISMO",
+          "ANDORN CONSTRUÇÕES E INCORPORAÇÕES",
+          "DALLASANTA Sempre um lugar IDEAL.",
+          "Aviva URBANISMO",
+          "ROQUE CHIES EMPREENDIMENTOS",
+          "COTIZA URBANISMO",
+          "ABFDEVELOPMENTS",
+          "PORTO5 EMPREENDIMENTOS",
+          "MAIOJAMA",
+          "Jatitude. INCORP.",
+        ],
+      },
+    },
   },
 
   office: {

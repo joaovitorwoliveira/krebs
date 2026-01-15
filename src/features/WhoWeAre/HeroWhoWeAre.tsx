@@ -148,7 +148,7 @@ export default function HeroWhoWeAre() {
           </div>
 
           {/* Vídeo abaixo do texto - Desktop: à direita */}
-          <div className="relative w-full aspect-video bg-black overflow-hidden group mt-10 lg:left-20 max-w-3xl">
+          <div className="relative w-full aspect-video bg-black overflow-hidden group mt-10 lg:left-20 2xl:left-32 max-w-3xl">
             <div ref={videoRef} className="absolute inset-0 w-full h-full" />
             {/* Botões customizados de play/pause */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

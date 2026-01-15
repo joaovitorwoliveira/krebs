@@ -1,3 +1,4 @@
+import PartnersSection from "./PartnersSection";
 import ServicesHero from "./ServicesHero";
 import Solutions from "./Solutions";
 
@@ -6,6 +7,7 @@ export default function ServicesHome() {
     <>
       <ServicesHero />
       <Solutions />
+      <PartnersSection />
     </>
   );
 }

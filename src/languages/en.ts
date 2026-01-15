@@ -611,6 +611,62 @@ export const en = {
         "Plant Sales (via own nursery)",
       ],
     },
+    partnersSection: {
+      creativePartnership: {
+        title: "CREATIVE PARTNERSHIP AND TECHNICAL FIDELITY",
+        paragraph1:
+          "For architecture that seeks to transcend the ordinary, we act as essential collaborative partners, dedicated to translating the architectural vision into living landscapes that respect and amplify the original concept of the work.",
+        paragraph2:
+          "Our commitment is to absolute fidelity to the project and execution quality, ensuring that the emotion drawn on the drawing board is not lost on the construction site. This commitment is ensured by execution supervision that counts on the experienced eye of André Krebs, adding more than 40 years of trajectory in landscaping.",
+        paragraph3:
+          "We offer robust technical support that guarantees perfect integration between the built and the natural, allowing the architect to have the peace of mind to see their creation materialized with the same aesthetic excellence and technical sophistication they envisioned.",
+        subtitle: "PARTNER OFFICES",
+        partners: [
+          "OBRAPRIMA",
+          "STUDIO RONALDO REZENDE",
+          "AMBIdestro ARCHITECTURE",
+          "bg arq",
+          "Lubianca architects",
+          "eMe Que",
+          "graphitar architecture",
+          "Lidia Maciel",
+          "ZBL+ ARCHITECTURE",
+          "MARCIA BARBIERI ARCHITECTURE",
+          "BERNARDES ARCHITECTURE",
+          "andrēpetracco ARCHITECTURE",
+          "DDM ATELIE DE ARQUITETURA",
+          "RAFAEL GRANTHAM ARCHITECTURE",
+          "PROJETEBEM",
+        ],
+      },
+      profitabilityFocus: {
+        title: "FOCUS ON PROFITABILITY AND SECURITY",
+        paragraph1:
+          "For ventures that require predictability and high commercial performance, we transform landscaping into a strategic and measurable asset, eliminating the risk that the external area becomes a liability or a focus of budget overrun.",
+        paragraph2:
+          "We operate with a market intelligence vision that aligns aesthetic potential with available budget and the business GDV, ensuring, through feasibility studies and strategic consulting, that the sales image promised to the client is technically viable and financially executable.",
+        paragraph3:
+          "Our methodology offers absolute clarity on costs and purchasing processes, ensuring that landscaping works as a powerful sales engine and square meter appreciation, with schedules met and risks mitigated from conception to delivery.",
+        subtitle: "PARTNER DEVELOPERS",
+        partners: [
+          "melnick Urbanizadora",
+          "ARCADIA URBANISMO",
+          "WAGNERPAR URBANISMO",
+          "JOAL TEITELBAUM",
+          "Grupo Zaffari Desde 1935",
+          "KRYSTAL URBANISMO",
+          "ANDORN CONSTRUÇÕES E INCORPORAÇÕES",
+          "DALLASANTA Sempre um lugar IDEAL.",
+          "Aviva URBANISMO",
+          "ROQUE CHIES EMPREENDIMENTOS",
+          "COTIZA URBANISMO",
+          "ABFDEVELOPMENTS",
+          "PORTO5 EMPREENDIMENTOS",
+          "MAIOJAMA",
+          "Jatitude. INCORP.",
+        ],
+      },
+    },
   },
 
   office: {

@@ -613,6 +613,62 @@ export const es = {
         "Venta de Plantas (vía vivero propio)",
       ],
     },
+    partnersSection: {
+      creativePartnership: {
+        title: "ASOCIACIÓN CREATIVA Y FIDELIDAD TÉCNICA",
+        paragraph1:
+          "Para la arquitectura que busca trascender lo común, actuamos como socios colaborativos esenciales, dedicados a traducir la visión arquitectónica en paisajes vivos que respetan y amplifican el concepto original de la obra.",
+        paragraph2:
+          "Nuestro compromiso es con la fidelidad absoluta al proyecto y la calidad de la ejecución, asegurando que la emoción dibujada en el tablero no se pierda en el sitio de construcción. Este compromiso está asegurado por una supervisión de ejecución que cuenta con la mirada experimentada de André Krebs, sumando más de 40 años de trayectoria en paisajismo.",
+        paragraph3:
+          "Ofrecemos un soporte técnico robusto que garantiza la integración perfecta entre lo construido y lo natural, permitiendo que el arquitecto tenga la tranquilidad de ver su creación materializada con la misma excelencia estética y sofisticación técnica que idealizó.",
+        subtitle: "ESTUDIOS SOCIOS",
+        partners: [
+          "OBRAPRIMA",
+          "STUDIO RONALDO REZENDE",
+          "AMBIdestro ARQUITETURA",
+          "bg arq",
+          "Lubianca arquitetos",
+          "eMe Que",
+          "graphitar arquitetura",
+          "Lidia Maciel",
+          "ZBL+ ARQUITETURA",
+          "MARCIA BARBIERI ARQUITETURA",
+          "BERNARDES ARQUITETURA",
+          "andrēpetracco ARQUITETURA",
+          "DDM ATELIE DE ARQUITETURA",
+          "RAFAEL GRANTHAM ARQUITETURA",
+          "PROJETEBEM",
+        ],
+      },
+      profitabilityFocus: {
+        title: "ENFOQUE EN RENTABILIDAD Y SEGURIDAD",
+        paragraph1:
+          "Para emprendimientos que exigen predictibilidad y alto desempeño comercial, transformamos el paisajismo en un activo estratégico y medible, eliminando el riesgo de que el área externa se convierta en un pasivo o un foco de sobrepaso presupuestario.",
+        paragraph2:
+          "Actuamos con una visión de inteligencia de mercado que alinea el potencial estético al presupuesto disponible y al VGV del negocio, garantizando, a través de estudios de viabilidad y consultoría estratégica, que la imagen de venta prometida al cliente sea técnicamente viable y financieramente ejecutable.",
+        paragraph3:
+          "Nuestra metodología ofrece claridad absoluta sobre costos y procesos de compra, asegurando que el paisajismo funcione como un poderoso motor de ventas y valorización del metro cuadrado, con cronogramas cumplidos y riesgos mitigados desde la concepción hasta la entrega.",
+        subtitle: "DESARROLLADORAS SOCIAS",
+        partners: [
+          "melnick Urbanizadora",
+          "ARCADIA URBANISMO",
+          "WAGNERPAR URBANISMO",
+          "JOAL TEITELBAUM",
+          "Grupo Zaffari Desde 1935",
+          "KRYSTAL URBANISMO",
+          "ANDORN CONSTRUÇÕES E INCORPORAÇÕES",
+          "DALLASANTA Sempre um lugar IDEAL.",
+          "Aviva URBANISMO",
+          "ROQUE CHIES EMPREENDIMENTOS",
+          "COTIZA URBANISMO",
+          "ABFDEVELOPMENTS",
+          "PORTO5 EMPREENDIMENTOS",
+          "MAIOJAMA",
+          "Jatitude. INCORP.",
+        ],
+      },
+    },
   },
 
   office: {
