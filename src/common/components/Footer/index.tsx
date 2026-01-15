@@ -27,8 +27,8 @@ export default function Footer() {
 
   const navigationLinks: LinkItem[] = [
     { href: "/", text: t.footer.navigationLinks.home },
-    { href: "/projetos", text: t.footer.navigationLinks.projects },
     { href: "/quem-somos", text: t.footer.navigationLinks.whoWeAre },
+    { href: "/projetos", text: t.footer.navigationLinks.projects },
     { href: "/servicos", text: t.footer.navigationLinks.services },
   ];
 

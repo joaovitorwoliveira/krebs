@@ -41,7 +41,7 @@ export default function TeamSection() {
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className="w-full px-4 py-16 lg:py-24"
+      className="w-full px-4 md:px-20 py-16 lg:py-24"
     >
       <div className="">
         {/* Title Above Everything */}

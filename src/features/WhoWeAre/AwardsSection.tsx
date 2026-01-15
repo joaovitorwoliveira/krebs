@@ -145,13 +145,13 @@ export default function AwardsSection() {
         </table>
       </div>
 
-      {/* Mobile Cards */}
-      <div className="md:hidden space-y-3">
+      {/* Mobile List */}
+      <div className="md:hidden">
         {awardsData.map((award, index) => (
           <motion.div
             key={index}
             variants={rowVariants}
-            className="bg-white border border-dark/20 p-4 space-y-2"
+            className="border-t border-[#999] py-3 space-y-1.5"
           >
             <div className="flex justify-between items-start">
               <span className="font-semibold text-dark text-sm">
@@ -165,14 +165,6 @@ export default function AwardsSection() {
               </span>
               <span className="text-dark text-xs text-right flex-1 ml-4">
                 {award.projeto}
-              </span>
-            </div>
-            <div className="flex justify-between items-start">
-              <span className="font-semibold text-dark text-sm">
-                {t.whoWeArePage.awardsSection.tableHeaders.architecture}
-              </span>
-              <span className="text-dark text-xs text-right flex-1 ml-4">
-                {award.arquitetura}
               </span>
             </div>
             <div className="flex justify-between items-start">
