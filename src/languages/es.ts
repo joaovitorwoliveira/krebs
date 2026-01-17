@@ -71,7 +71,8 @@ export const es = {
           text: "oficinas socias",
         },
       },
-      subtitle: "Algunos de los clientes y socios que confiaron en KREBS+:",
+      subtitle: "Algunos de nuestros clientes",
+      cta: "Contáctanos",
     },
 
     differentials: {

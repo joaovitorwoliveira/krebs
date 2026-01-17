@@ -5,6 +5,7 @@ import { useState } from "react";
 import Loading from "@/common/components/Loading";
 import { AnimatePresence } from "framer-motion";
 
+import ClientsHome from "./ClientsHome.tsx";
 import HeroSection from "./HeroSection";
 import type { HomePageProps } from "./HeroSection/types";
 import ProjectsHome from "./ProjectsHome";
@@ -38,6 +39,7 @@ export default function HomePage({ className }: HomePageProps) {
       <WhoWeAreHome />
       <ServicesHome />
       <ProjectsHome />
+      <ClientsHome />
     </>
   );
 }

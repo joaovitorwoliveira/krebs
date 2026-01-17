@@ -71,7 +71,8 @@ export const en = {
           text: "partner offices",
         },
       },
-      subtitle: "Some of the clients and partners who trusted KREBS+:",
+      subtitle: "Some of our clients",
+      cta: "Contact us",
     },
 
     differentials: {

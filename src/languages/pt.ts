@@ -71,7 +71,8 @@ export const pt = {
           text: "escritórios parceiros",
         },
       },
-      subtitle: "Alguns dos clientes e parceiros que confiaram na KREBS+:",
+      subtitle: "Alguns dos nossos clientes",
+      cta: "Entre em contato",
     },
 
     differentials: {
