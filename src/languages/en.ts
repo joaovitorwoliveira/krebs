@@ -768,6 +768,155 @@ export const en = {
     ],
   },
 
+  teamMembers: {
+    andre: {
+      role: "Founder and Executive Director",
+      description: [
+        "+",
+        "André Krebs is a founding partner of Krebs+ and works with a professional stance marked by the constant pursuit of excellence, innovation and conceptual rigor. With more than four decades of experience in landscape architecture, he leads the company together with his partners with a strategic vision, sensitive to design and deeply committed to original, intelligent and sustainable solutions, always oriented to connect people and nature. His work reflects solid, curious and updated technical leadership that values process, detail and quality as non-negotiable fundamentals of the final delivery.",
+        "+",
+        "Architecture (UFRJ)",
+        "Postgraduate in Gardening and Landscaping (Universidad Politecnica de Madrid)",
+      ],
+    },
+    victor: {
+      role: "Commercial Director",
+      description: [
+        "+",
+        "Victor is a landscape architect and works in the commercial, strategic and new business development front of Krebs+. His work connects market vision, project sensitivity and financial intelligence, creating structures that transform intention into viable, consistent and executable projects. He builds long-term relationships with developers, architects and strategic partners, working on the deep reading of demands, scope definition and proposal formatting that align concept, investment and construction reality from the beginning of the process. With a systemic and entrepreneurial vision, he actively participates in the creation of new products, business models and integrations between project, execution and supply, expanding the role of landscaping as an experience, strategic asset and value differentiator in developments. His work seeks coherence, predictability and impact — from concept to final delivery.",
+        "+",
+        "Architecture and Urbanism (UFPEL)",
+      ],
+    },
+    joao: {
+      role: "Creative Director",
+      description: [
+        "+",
+        "João is a landscape architect and understands the project as an exercise in deep reading of the place. His practice investigates the invisible relationships that shape each space, creating landscapes that not only accompany architecture, but build atmosphere. With a contemporary, sustainable and contemplative vision, he works landscaping as a sensitive structure of everyday experience, designed for living.",
+        "+",
+        "Architecture and Urbanism (UFPEL)",
+      ],
+    },
+    eduardo: {
+      role: "Operations and Strategy Director",
+      description: [
+        "+",
+        "Eduardo is a landscape architect and works in the operation and strategy of the company. He has a creative vision and actively participates in the initial process of new projects through his estimates, understanding that transforming investment into a project is not just about numbers, it requires sensitivity, space reading and intention. From the truth, he directs so that projects happen within the real investment conditions of each client. He always makes analogies about gastronomy to better explain his work. He is one of those responsible for choosing the right \"ingredients\" so that the final result can be \"tasted\", with predictability and fidelity to what was thought.",
+        "+",
+        "Architect and Urbanist (UFPEL)",
+      ],
+    },
+    daniel: {
+      role: "Construction and Garden Design Director",
+      description: [
+        "+",
+        "Daniel is a landscape architect, who brings a critical eye to vegetation compositions in the office's execution sector. He works on reviewing and adapting the viability of project species and their market availability, developing proposals and planning logistics and construction management. As an architect, he is interested in understanding how things work in a practical way to translate the project into reality, with his dual training in Biotechnology he also brings a different knowledge and perspective when planning the use of vegetation.",
+        "+",
+        "Architecture and Urbanism (UFPEL)",
+        "Biotechnologist (UFPEL)",
+      ],
+    },
+    "ana-leal": {
+      role: "Financial Coordinator",
+      description: [
+        "+",
+        "Ana Cândida graduated in Management Processes and has been working at the company for 18 years, actively contributing in various areas. With extensive experience and strategic vision, she assists the team, clients, partners and suppliers, promoting integration between processes and strengthening relationships to ensure efficiency and good results.",
+        "+",
+        "Management Processes (SENAC)",
+      ],
+    },
+    "ana-luiza": {
+      role: "Strategic Consultant",
+      description: [
+        "+",
+        "Ana Luiza is an architect and urban planner and works as a strategic consultant for the office, focusing on process structuring and developing solutions that increase the efficiency and organization of creative work.",
+        "+",
+        "Architecture and Urbanism (UFPEL)",
+      ],
+    },
+    amanda: {
+      role: "Commercial Trainee",
+      description: [
+        "+",
+        "Amanda is an architecture student and works in the commercial area of the office, serving clients, internal organization and budget management, always aligned with processes and demands of architecture projects. With attention to detail and focus on customer relationships, she understands the importance of each communication between client, architecture and technical team, ensuring a clear, efficient and well-aligned project process from conception to delivery.",
+        "+",
+        "Undergraduate in Architecture and Urbanism (UFPEL)",
+      ],
+    },
+    beatriz: {
+      role: "Landscape Architect",
+      description: [
+        "+",
+        "For Beatriz, landscape architecture is art, a way of creating spaces that dialogue with those who observe them and, at the same time, serve everyday life. Each project is unique, designed to cause sensations, with a technical and sensitive look that values permanence, sustainability and authenticity.",
+        "+",
+        "Architecture and Urbanism (UFPEL)",
+      ],
+    },
+    brunna: {
+      role: "Landscape Architect",
+      description: [
+        "+",
+        "Landscape architect, Brunna likes to go beyond the obvious. Creative and strategic, she designs landscapes with identity and deeply connected to perception, experience and meaning creation from the interaction between body and space",
+        "+",
+        "Architecture and Urbanism (UFPEL)",
+        "Master's student in Architecture and Urbanism (PROGRAU/UFPel)",
+      ],
+    },
+    lucas: {
+      role: "Landscape Architect",
+      description: [
+        "+",
+        "Architect, urban planner and landscape architect, Lucas develops his work from the careful investigation of the relationship between form, function and human experience in space. His practice seeks to translate needs into well-resolved, comfortable and meaningful solutions. For him, each project is an opportunity to transform intentions into environments that welcome, inspire and qualify the life of those who make them vibrant.",
+        "+",
+        "Architecture and Urbanism (UFPEL)",
+      ],
+    },
+    marina: {
+      role: "Landscape Architect",
+      description: [
+        "+",
+        "Marina understands the project as a path from idea to space, interested in perceiving the extraordinary from the common. In her work, she believes that concept structures thought, technique sustains imagination and landscaping transforms routine into experience.",
+        "+",
+        "Architect and Urbanist (UFPEL)",
+      ],
+    },
+    miguel: {
+      role: "3D Professional",
+      description: [
+        "+",
+        "Miguel is a 3D modeling and visual representation professional specialized in developing digital environments aligned with the conception and decision-making of landscape and architectural projects. With a background in computer science and architecture, he combines curiosity and creativity to translate ideas into clear, sustainable representations aligned with the final project result.",
+      ],
+    },
+    raisha: {
+      role: "Landscape Architect",
+      description: [
+        "+",
+        "Raischa Holz is an architect focused on user experience, sustainability and richness of details, combining a strategic and functional vision with the design process. Her interest in urban microclimate guides landscapes that understand landscaping as an active agent in transforming the environment and the quality of life of those who inhabit it.",
+        "+",
+        "Architecture and Urbanism (UFPEL)",
+      ],
+    },
+    rafael: {
+      role: "BIM Manager",
+      description: [
+        "+",
+        "Rafael is a landscape architect and BIM Manager, working on the integration between technology and project. His work transforms technical complexity into clearer and more intelligent solutions over time, accelerating processes and transforming the way architecture is thought and produced.",
+        "+",
+        "Architecture and Urbanism (UFPEL)",
+      ],
+    },
+    rodrigo: {
+      role: "Garden Designer",
+      description: [
+        "+",
+        "Rodrigo is a landscape architect responsible for the garden design sector, where he works from the initial project conception to the curation of species in nurseries and final execution. He is recognized for his concern with the use of native species and attention to market novelties, always seeking to develop a garden with design and sustainability.",
+        "+",
+        "Architecture and Urbanism (UFPEL)",
+        "Master in Landscaping (IPOG)",
+      ],
+    },
+  },
+
   footer: {
     navigation: "NAVIGATION",
     social: "SOCIAL",

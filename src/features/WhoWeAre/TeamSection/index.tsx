@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 
+import { useLanguage } from "@/context/LanguageProvider";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
@@ -10,6 +11,7 @@ import { motion } from "@/lib/motion";
 import { TeamMember, teamMembers } from "./utils";
 
 export default function TeamSection() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [selectedMember, setSelectedMember] = useState<TeamMember>(
@@ -160,15 +162,24 @@ export default function TeamSection() {
                   sizes="(max-width: 768px) 100vw, 300px"
                 />
                 <div className="absolute inset-0"></div>
+                <span className="absolute top-0 left-0 text-[20px] text-black font-bold leading-none">
+                  +
+                </span>
               </div>
 
               {/* Member Info */}
               <div className="max-w-sm mx-auto lg:mx-0">
                 <h3 className="text-xs font-inter-base text-dark">
-                  {selectedMember.role}
+                  {
+                    t.teamMembers[
+                      selectedMember.id as keyof typeof t.teamMembers
+                    ]?.role
+                  }
                 </h3>
                 <div className="">
-                  {selectedMember.description.map((line, index) => (
+                  {t.teamMembers[
+                    selectedMember.id as keyof typeof t.teamMembers
+                  ]?.description.map((line, index) => (
                     <p
                       key={index}
                       className={`${

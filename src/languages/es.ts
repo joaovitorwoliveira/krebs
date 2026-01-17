@@ -770,6 +770,155 @@ export const es = {
     ],
   },
 
+  teamMembers: {
+    andre: {
+      role: "Fundador y Director Ejecutivo",
+      description: [
+        "+",
+        "André Krebs es socio fundador de Krebs+ y actúa con una postura profesional marcada por la búsqueda constante de excelencia, innovación y rigor conceptual. Con más de cuatro décadas de experiencia en arquitectura paisajística, conduce la empresa junto con sus socios con una mirada estratégica, sensible al diseño y profundamente comprometido con soluciones originales, inteligentes y sostenibles, siempre orientadas a conectar personas y naturaleza. Su actuación refleja un liderazgo técnico sólido, curioso y actualizado, que valora el proceso, el detalle y la calidad como fundamentos innegociables de la entrega final.",
+        "+",
+        "Arquitectura (UFRJ)",
+        "Posgrado en Jardinería y Paisajismo (Universidad Politecnica de Madrid)",
+      ],
+    },
+    victor: {
+      role: "Director Comercial",
+      description: [
+        "+",
+        "Victor es arquitecto paisajista y actúa en el frente comercial, estratégico y de desarrollo de nuevos negocios de Krebs+. Su trabajo conecta visión de mercado, sensibilidad proyectual e inteligencia financiera, creando estructuras que transforman intención en proyectos viables, consistentes y ejecutables. Construye relaciones de largo plazo con desarrolladoras, arquitectos y socios estratégicos, actuando en la lectura profunda de las demandas, en la definición de alcances y en el formato de propuestas que alinean concepto, inversión y realidad constructiva desde el inicio del proceso. Con una visión sistémica y emprendedora, participa activamente en la creación de nuevos productos, modelos de actuación e integraciones entre proyecto, ejecución y suministro, ampliando el papel del paisajismo como experiencia, activo estratégico y diferencial de valor en los emprendimientos. Su actuación busca coherencia, predictibilidad e impacto — del concepto a la entrega final.",
+        "+",
+        "Arquitectura y Urbanismo (UFPEL)",
+      ],
+    },
+    joao: {
+      role: "Director Creativo",
+      description: [
+        "+",
+        "João es arquitecto paisajista y entiende el proyecto como un ejercicio de lectura profunda del lugar. Su práctica investiga las relaciones invisibles que moldean cada espacio, creando paisajes que no solo acompañan la arquitectura, sino que construyen atmósfera. Con una visión contemporánea, sostenible y contemplativa, trabaja el paisajismo como estructura sensible de la experiencia cotidiana, pensada para habitar.",
+        "+",
+        "Arquitectura y Urbanismo (UFPEL)",
+      ],
+    },
+    eduardo: {
+      role: "Director de Operaciones y Estrategia",
+      description: [
+        "+",
+        "Eduardo es arquitecto paisajista y actúa en la operación y estrategia de la empresa. Tiene una visión creativa y participa activamente en el proceso inicial de los nuevos proyectos a través de sus estimaciones, entendiendo que transformar inversión en proyecto no es solo sobre números, exige sensibilidad, lectura de espacio e intención. A partir de la verdad dirige para que los proyectos sucedan dentro de las condiciones reales de inversión de cada cliente. Siempre hace analogías sobre gastronomía para explicar mejor su trabajo. Es uno de los responsables por elegir los \"ingredientes\" correctos para que se consiga \"degustar\" del resultado final, con predictibilidad y fidelidad con lo que fue pensado.",
+        "+",
+        "Arquitecto y Urbanista (UFPEL)",
+      ],
+    },
+    daniel: {
+      role: "Director de Obras y Garden Design",
+      description: [
+        "+",
+        "Daniel es arquitecto paisagista, que trae una mirada criteriosa para composiciones de vegetación en el sector de ejecuciones de la oficina. Actúa en la revisión y adecuación de viabilidad de las especies de los proyectos y su disponibilidad de mercado, elaborando propuestas y realizando la planificación de la logística y gestión de obras. Como arquitecto se interesa por entender el funcionamiento de las cosas de forma práctica para traducir el proyecto en realidad, con su doble formación en Biotecnología trae también un conocimiento y mirada diferenciada al planificar el uso de las vegetaciones.",
+        "+",
+        "Arquitectura y Urbanismo (UFPEL)",
+        "Biotecnólogo (UFPEL)",
+      ],
+    },
+    "ana-leal": {
+      role: "Coordinadora Financiera",
+      description: [
+        "+",
+        "Ana Cândida es formada en Procesos Gerenciales y actúa en la empresa hace 18 años, contribuyendo activamente en diversas áreas. Con amplia experiencia y visión estratégica, auxilia al equipo, clientes, socios y proveedores, promoviendo la integración entre procesos y fortaleciendo relaciones para garantizar eficiencia y buenos resultados.",
+        "+",
+        "Procesos Gerenciales (SENAC)",
+      ],
+    },
+    "ana-luiza": {
+      role: "Consultora Estratégica",
+      description: [
+        "+",
+        "Ana Luiza es arquitecta y urbanista y actúa como consultora estratégica de la oficina, con foco en la estructuración de procesos y en el desarrollo de soluciones que amplían la eficiencia y la organización del trabajo creativo.",
+        "+",
+        "Arquitectura y Urbanismo (UFPEL)",
+      ],
+    },
+    amanda: {
+      role: "Trainee Comercial",
+      description: [
+        "+",
+        "Amanda es estudiante de arquitectura y actúa en el área comercial de la oficina, realizando la atención a los clientes, la organización interna y la gestión de presupuestos, siempre alineada a los procesos y a las demandas de los proyectos de arquitectura. Con atención a los detalles y foco en el relacionamiento con los clientes, comprende la importancia de cada comunicación entre cliente, arquitectura y equipo técnico, garantizando un proceso proyectual claro, eficiente y bien alineado desde la concepción hasta la entrega.",
+        "+",
+        "Graduanda en Arquitectura y Urbanismo (UFPEL)",
+      ],
+    },
+    beatriz: {
+      role: "Arquitecta Paisajista",
+      description: [
+        "+",
+        "Para Beatriz, la arquitectura paisajística es arte, una forma de crear espacios que dialogan con quien los observa y, al mismo tiempo, atienden al cotidiano. Cada proyecto es único, pensado para causar sensaciones, con una mirada técnica y sensible que valora la permanencia, la sostenibilidad y la autenticidad.",
+        "+",
+        "Arquitectura y Urbanismo (UFPEL)",
+      ],
+    },
+    brunna: {
+      role: "Arquitecta Paisajista",
+      description: [
+        "+",
+        "Arquitecta paisajista, Brunna le gusta salir de lo obvio. Creativa y estratégica, proyecta paisajes con identidad y profundamente conectados a la percepción, experiencia y creación de sentido a partir de la interacción entre cuerpo y espacio",
+        "+",
+        "Arquitectura y Urbanismo (UFPEL)",
+        "Maestranda en Arquitectura y Urbanismo (PROGRAU/UFPel)",
+      ],
+    },
+    lucas: {
+      role: "Arquitecto Paisajista",
+      description: [
+        "+",
+        "Arquitecto, urbanista y paisajista, Lucas desarrolla su trabajo a partir de la investigación cuidadosa de la relación entre forma, función y la experiencia humana en el espacio. Su práctica busca traducir necesidades en soluciones bien resueltas, cómodas y cargadas de significado. Para él, cada proyecto es una oportunidad de transformar intenciones en ambientes que acogen, inspiran y califican la vida de quien los torna vibrantes.",
+        "+",
+        "Arquitectura y Urbanismo (UFPEL)",
+      ],
+    },
+    marina: {
+      role: "Arquitecta Paisajista",
+      description: [
+        "+",
+        "Marina comprende el proyecto como un recorrido de la idea al espacio, interesada en percibir lo extraordinario a partir de lo común. En su actuación, cree que el concepto estructura el pensamiento, la técnica sustenta la imaginación y el paisajismo transforma la rutina en experiencia.",
+        "+",
+        "Arquitecta y Urbanista (UFPEL)",
+      ],
+    },
+    miguel: {
+      role: "Profesional 3D",
+      description: [
+        "+",
+        "Miguel es un profesional de modelado 3D y representación visual especializado en el desarrollo de ambientes digitales alineados a la concepción y a la toma de decisiones paisajísticas y arquitectónicas. Con background en ciencia de la computación y arquitectura, alia curiosidad y creatividad para traducir ideas en representaciones claras, sostenibles y alineadas al resultado final del proyecto.",
+      ],
+    },
+    raisha: {
+      role: "Arquitecta Paisajista",
+      description: [
+        "+",
+        "Raischa Holz es arquitecta con foco en la experiencia del usuario, en la sostenibilidad y en la riqueza de los detalles, aliando una mirada estratégica y funcional al proceso de proyecto. Su interés por el microclima urbano orienta paisajes que entienden el paisajismo como agente activo en la transformación del ambiente y en la calidad de vida de quien lo habita.",
+        "+",
+        "Arquitectura y Urbanismo (UFPEL)",
+      ],
+    },
+    rafael: {
+      role: "BIM Manager",
+      description: [
+        "+",
+        "Rafael es arquitecto paisajista y BIM Manager, actuando en la integración entre tecnología y proyecto. Su trabajo transforma la complejidad técnica en soluciones más claras e inteligentes a lo largo del tiempo, acelerando procesos y transformando la forma como la arquitectura es pensada y producida.",
+        "+",
+        "Arquitectura y Urbanismo (UFPEL)",
+      ],
+    },
+    rodrigo: {
+      role: "Garden Designer",
+      description: [
+        "+",
+        "Rodrigo es arquitecto paisajista responsable por el sector de garden design, donde actúa desde la concepción inicial de proyecto hasta la curaduría de especies en viveros y la ejecución final. Es reconocido por la preocupación con el uso de especies nativas y atención a las novedades del mercado, siempre en busca de elaborar un jardín con diseño y sostenibilidad.",
+        "+",
+        "Arquitectura y Urbanismo (UFPEL)",
+        "Master en Paisajismo (IPOG)",
+      ],
+    },
+  },
+
   footer: {
     navigation: "NAVEGACIÓN",
     social: "SOCIAL",
