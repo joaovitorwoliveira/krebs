@@ -8,7 +8,6 @@ import { useLanguage } from "@/context/LanguageProvider";
 
 import { cn } from "@/lib/utils";
 
-// Lista de clientes baseada na imagem fornecida
 const clients = [
   { name: "Iguatemi", logo: "/images/partners/iguatemi.png" },
   { name: "Vivo", logo: "/images/partners/vivo.png" },
