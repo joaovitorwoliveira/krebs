@@ -162,9 +162,6 @@ export default function TeamSection() {
                   sizes="(max-width: 768px) 100vw, 300px"
                 />
                 <div className="absolute inset-0"></div>
-                <span className="absolute top-0 left-0 text-[20px] text-black font-bold leading-none">
-                  +
-                </span>
               </div>
 
               {/* Member Info */}

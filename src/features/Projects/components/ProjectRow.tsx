@@ -127,7 +127,7 @@ export default function ProjectRow({ row, rowIndex }: ProjectRowProps) {
                 />
               </div>
               <motion.div className="p-2" variants={itemVariants}>
-                <h3 className="text-dark text-md font-inter-light lowercase opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-dark text-md font-inter-light lowercase opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-dark after:transition-all after:duration-300 group-hover:after:w-full">
                   {t.projects.items[
                     project.slug as keyof typeof t.projects.items
                   ]?.title || project.slug}
