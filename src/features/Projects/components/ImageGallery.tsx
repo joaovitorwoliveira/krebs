@@ -29,6 +29,7 @@ export default function ImageGallery({
   useEffect(() => {
     if (!isMounted) return;
 
+    // Anima imediatamente se o componente já estiver visível na tela
     if (ref.current && !hasAnimated) {
       const rect = (ref.current as HTMLElement).getBoundingClientRect();
       const isVisible = rect.top < window.innerHeight + 50;
@@ -41,6 +42,7 @@ export default function ImageGallery({
   useEffect(() => {
     if (!isMounted) return;
 
+    // Anima quando entra na viewport pela primeira vez
     if (isInView && !hasAnimated) {
       setHasAnimated(true);
     }

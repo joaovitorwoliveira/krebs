@@ -17,24 +17,39 @@ export default function ProjectTexts({
 }: ProjectTextsProps) {
   const { language } = useLanguage();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-50px" });
-  const [shouldAnimate, setShouldAnimate] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   useEffect(() => {
-    if (isInView) {
-      setShouldAnimate(true);
-    } else {
-      setShouldAnimate(false);
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
+    if (ref.current && !hasAnimated) {
+      const rect = (ref.current as HTMLElement).getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight + 50;
+      if (isVisible) {
+        setHasAnimated(true);
+      }
     }
-  }, [isInView]);
+  }, [hasAnimated, isMounted]);
 
   useEffect(() => {
-    if (isInView) {
-      setShouldAnimate(false);
-      const timer = setTimeout(() => {
-        setShouldAnimate(true);
-      }, 10);
-      return () => clearTimeout(timer);
+    if (!isMounted) return;
+
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [isInView, hasAnimated, isMounted]);
+
+  // Quando o idioma muda, mantém visível se já animou antes
+  useEffect(() => {
+    if (hasAnimated && isMounted) {
+      // Força o estado para visible quando o idioma muda, se já animou
+      setHasAnimated(true);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language]);
@@ -106,7 +121,7 @@ export default function ProjectTexts({
       ref={ref}
       variants={containerVariants}
       initial="hidden"
-      animate={shouldAnimate ? "visible" : "hidden"}
+      animate={hasAnimated ? "visible" : "hidden"}
       className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"
     >
       <motion.div variants={itemVariants} className="md:col-span-2">

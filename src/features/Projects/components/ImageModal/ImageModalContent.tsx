@@ -54,6 +54,7 @@ export default function ImageModalContent({
           alt={`${projectTitle} - Imagem ${selectedImageIndex + 1}`}
           fill
           className="object-contain"
+          quality={40}
         />
       </motion.div>
     </motion.div>

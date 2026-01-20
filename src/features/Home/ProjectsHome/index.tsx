@@ -64,6 +64,7 @@ export default function ProjectsHome() {
                       alt={project.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-101"
+                      quality={40}
                     />
                   </div>
                 </Link>
