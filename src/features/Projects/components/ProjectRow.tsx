@@ -115,9 +115,6 @@ export default function ProjectRow({ row, rowIndex }: ProjectRowProps) {
                   className="object-cover transition-transform duration-500 group-hover:scale-101"
                   priority={rowIndex === 0 && itemIndex < 3}
                   loading={rowIndex === 0 && itemIndex < 3 ? "eager" : "lazy"}
-                  quality={40}
-                  placeholder="blur"
-                  blurDataURL={BLUR_PLACEHOLDER}
                 />
                 <motion.div
                   className="absolute inset-0 bg-black pointer-events-none"
