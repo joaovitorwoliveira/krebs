@@ -1,5 +1,6 @@
 import {
-  EDIFICIO_PAIX_IMAGE_3,
+  JARDIM_ATJ_IMAGE_8,
+  JARDIM_FLV_IMAGE_9,
   PRADO_BAIRRO_CIDADE_IMAGE_1,
   UNISINOS_IMAGE_1,
 } from "@/common/constants/db-images";
@@ -16,12 +17,12 @@ export interface HeroImage {
 
 export const heroImages: HeroImage[] = [
   {
-    url: EDIFICIO_PAIX_IMAGE_3,
-    projectSlug: "edificio-paix",
+    url: JARDIM_FLV_IMAGE_9,
+    projectSlug: "jardim-flv",
     projectName: {
-      pt: "Edifício Paix",
-      en: "Paix Building",
-      es: "Edificio Paix",
+      pt: "Jardim FLV",
+      en: "FLV Garden",
+      es: "Jardim FLV",
     },
   },
   {
@@ -33,6 +34,16 @@ export const heroImages: HeroImage[] = [
       es: "Unisinos",
     },
   },
+  {
+    url: JARDIM_ATJ_IMAGE_8,
+    projectSlug: "jardim-atj",
+    projectName: {
+      pt: "Jardim ATJ",
+      en: "ATJ Garden",
+      es: "Jardim ATJ",
+    },
+  },
+
   {
     url: PRADO_BAIRRO_CIDADE_IMAGE_1,
     projectSlug: "prado-bairro-cidade",

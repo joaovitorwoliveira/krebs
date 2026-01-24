@@ -4,7 +4,7 @@ import { Project } from "./types";
 export const projects: Project[] = [
   {
     slug: "jardim-svg",
-    coverPhoto: Images.JARDIM_SVG_IMAGE_5,
+    coverPhoto: Images.JARDIM_SVG_IMAGE_3,
     tags: [
       "residencial",
       "praia",
@@ -79,7 +79,7 @@ export const projects: Project[] = [
   },
   {
     slug: "jardim-malu",
-    coverPhoto: Images.JARDIM_MALU_IMAGE_2,
+    coverPhoto: Images.JARDIM_MALU_IMAGE_1,
     tags: ["residencial", "jardim", "internacional"],
     images: [
       Images.JARDIM_MALU_IMAGE_1,
@@ -93,7 +93,7 @@ export const projects: Project[] = [
   },
   {
     slug: "colegio-farroupilha",
-    coverPhoto: Images.COLEGIO_FARROUPILHA_IMAGE_1,
+    coverPhoto: Images.COLEGIO_FARROUPILHA_IMAGE_4,
     tags: [
       "institucional",
       "colégio",
@@ -136,7 +136,7 @@ export const projects: Project[] = [
   },
   {
     slug: "rampa",
-    coverPhoto: Images.RAMPA_IMAGE_3,
+    coverPhoto: Images.RAMPA_IMAGE_4,
     tags: ["institucional", "pelotas", "público", "escada", "rampa", "capim"],
     images: [
       Images.RAMPA_IMAGE_1,
@@ -172,7 +172,7 @@ export const projects: Project[] = [
   },
   {
     slug: "jardim-flv",
-    coverPhoto: Images.JARDIM_FLV_IMAGE_13,
+    coverPhoto: Images.JARDIM_FLV_IMAGE_9,
     tags: [
       "riodejaneiro",
       "cristo",
@@ -201,7 +201,7 @@ export const projects: Project[] = [
   },
   {
     slug: "rua-mista-legano",
-    coverPhoto: Images.RUA_MISTA_LEGANO_IMAGE_1,
+    coverPhoto: Images.RUA_MISTA_LEGANO_IMAGE_2,
     tags: [
       "institucional",
       "ruamista",
@@ -229,7 +229,7 @@ export const projects: Project[] = [
   },
   {
     slug: "surfland",
-    coverPhoto: Images.SURFLAND_IMAGE_2,
+    coverPhoto: Images.SURFLAND_IMAGE_4,
     tags: ["praia", "resort", "surf", "parque", "garopaba", "sc"],
     images: [
       Images.SURFLAND_IMAGE_1,
@@ -307,7 +307,7 @@ export const projects: Project[] = [
   },
   {
     slug: "jardim-lmp",
-    coverPhoto: Images.JARDIM_LMP_IMAGE_3,
+    coverPhoto: Images.JARDIM_LMP_IMAGE_5,
     tags: ["uruguai", "residencial"],
     images: [
       Images.JARDIM_LMP_IMAGE_1,
