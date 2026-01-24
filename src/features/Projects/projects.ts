@@ -5,14 +5,7 @@ export const projects: Project[] = [
   {
     slug: "jardim-svg",
     coverPhoto: Images.JARDIM_SVG_IMAGE_3,
-    tags: [
-      "residencial",
-      "praia",
-      "garopaba",
-      "maresia",
-      "privacidade",
-      "piscina",
-    ],
+    tags: ["residencial", "praia", "garopaba", "piscina"],
     images: [
       Images.JARDIM_SVG_IMAGE_1,
       Images.JARDIM_SVG_IMAGE_2,
@@ -27,18 +20,7 @@ export const projects: Project[] = [
   {
     slug: "jardim-atj",
     coverPhoto: Images.JARDIM_ATJ_IMAGE_8,
-    tags: [
-      "residencial",
-      "praia",
-      "garopaba",
-      "praiadosilveira",
-      "maresia",
-      "orgânico",
-      "piscina",
-      "visual",
-      "morro",
-      "natureza",
-    ],
+    tags: ["residencial", "praia", "garopaba", "piscina", "natureza"],
     images: [
       Images.JARDIM_ATJ_IMAGE_1,
       Images.JARDIM_ATJ_IMAGE_2,
@@ -54,14 +36,7 @@ export const projects: Project[] = [
   {
     slug: "jardim-ltx",
     coverPhoto: Images.JARDIM_LTX_IMAGE_8,
-    tags: [
-      "residencial",
-      "piscina",
-      "xangrila",
-      "retilinio",
-      "fonte",
-      "folhosas",
-    ],
+    tags: ["residencial", "piscina", "xangrila"],
     images: [
       Images.JARDIM_LTX_IMAGE_1,
       Images.JARDIM_LTX_IMAGE_2,
@@ -94,16 +69,7 @@ export const projects: Project[] = [
   {
     slug: "colegio-farroupilha",
     coverPhoto: Images.COLEGIO_FARROUPILHA_IMAGE_4,
-    tags: [
-      "institucional",
-      "colégio",
-      "urbanismo",
-      "portoalegre",
-      "orgânico",
-      "público",
-      "calçada",
-      "passeio",
-    ],
+    tags: ["institucional", "colégio", "urbanismo", "portoalegre"],
     images: [
       Images.COLEGIO_FARROUPILHA_IMAGE_1,
       Images.COLEGIO_FARROUPILHA_IMAGE_2,
@@ -118,14 +84,7 @@ export const projects: Project[] = [
   {
     slug: "varanda-fek",
     coverPhoto: Images.VARANDA_FEK_IMAGE_1,
-    tags: [
-      "varanda",
-      "portoalegre",
-      "orgânico",
-      "marmore",
-      "vasos",
-      "mobiliario",
-    ],
+    tags: ["varanda", "portoalegre"],
     images: [
       Images.VARANDA_FEK_IMAGE_1,
       Images.VARANDA_FEK_IMAGE_2,
@@ -137,7 +96,7 @@ export const projects: Project[] = [
   {
     slug: "rampa",
     coverPhoto: Images.RAMPA_IMAGE_4,
-    tags: ["institucional", "pelotas", "público", "escada", "rampa", "capim"],
+    tags: ["institucional", "pelotas", "público"],
     images: [
       Images.RAMPA_IMAGE_1,
       Images.RAMPA_IMAGE_2,
@@ -152,15 +111,7 @@ export const projects: Project[] = [
   {
     slug: "shopping-iguatemi",
     coverPhoto: Images.SHOPPING_IGUATEMI_IMAGE_4,
-    tags: [
-      "shopping",
-      "institucional",
-      "iguatemi",
-      "portoalegre",
-      "vasos",
-      "mobiliario",
-      "público",
-    ],
+    tags: ["shopping", "institucional", "portoalegre"],
     images: [
       Images.SHOPPING_IGUATEMI_IMAGE_1,
       Images.SHOPPING_IGUATEMI_IMAGE_2,
@@ -173,14 +124,7 @@ export const projects: Project[] = [
   {
     slug: "jardim-flv",
     coverPhoto: Images.JARDIM_FLV_IMAGE_9,
-    tags: [
-      "riodejaneiro",
-      "cristo",
-      "tropical",
-      "folhosas",
-      "bernardes",
-      "residencial",
-    ],
+    tags: ["riodejaneiro", "tropical", "residencial"],
     images: [
       Images.JARDIM_FLV_IMAGE_1,
       Images.JARDIM_FLV_IMAGE_2,
@@ -202,17 +146,7 @@ export const projects: Project[] = [
   {
     slug: "rua-mista-legano",
     coverPhoto: Images.RUA_MISTA_LEGANO_IMAGE_2,
-    tags: [
-      "institucional",
-      "ruamista",
-      "passeio",
-      "público",
-      "urbanismo",
-      "novasantarita",
-      "mobiliario",
-      "basalto",
-      "condominio",
-    ],
+    tags: ["institucional", "público", "urbanismo", "novasantarita"],
     images: [
       Images.RUA_MISTA_LEGANO_IMAGE_1,
       Images.RUA_MISTA_LEGANO_IMAGE_2,
@@ -230,7 +164,7 @@ export const projects: Project[] = [
   {
     slug: "surfland",
     coverPhoto: Images.SURFLAND_IMAGE_4,
-    tags: ["praia", "resort", "surf", "parque", "garopaba", "sc"],
+    tags: ["resort", "surf", "parque", "garopaba"],
     images: [
       Images.SURFLAND_IMAGE_1,
       Images.SURFLAND_IMAGE_2,
