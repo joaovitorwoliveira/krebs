@@ -46,14 +46,14 @@ export default function ProjectsHome() {
           className={cn(
             "grid grid-cols-1 gap-6 w-full pt-4 max-w-[1400px]",
             "md:grid-cols-3 md:mx-auto",
-            "lg:gap-12",
+            "lg:gap-",
             "2xl:pt-16"
           )}
         >
           {featuredProjectsData.map((project) => {
             const imageCover = project.coverPhoto;
             return (
-              <div key={project.slug} className="flex flex-col gap-4">
+              <div key={project.slug} className="flex flex-col gap-2">
                 <Link
                   href={`/projetos/${project.slug}`}
                   className="relative group cursor-pointer block"
