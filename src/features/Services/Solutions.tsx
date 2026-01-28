@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import { useLanguage } from "@/context/LanguageProvider";
 import { useInView, Variants } from "framer-motion";
@@ -11,6 +11,7 @@ export default function Solutions() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { t } = useLanguage();
+  const [hoveredService, setHoveredService] = useState<number>(0);
 
   const sectionVariants: Variants = {
     hidden: {
@@ -44,6 +45,7 @@ export default function Solutions() {
   };
 
   const services = t.servicesPage.solutions.services;
+  const serviceDescriptions = t.servicesPage.solutions.descriptions;
 
   return (
     <motion.section
@@ -89,11 +91,37 @@ export default function Solutions() {
                 >
                   —
                 </span>
-                <span className="leading-relaxed">{service}</span>
+                <button
+                  onMouseEnter={() => setHoveredService(index)}
+                  className={`text-left leading-relaxed transition-all duration-300 cursor-pointer ${
+                    hoveredService === index
+                      ? "font-bold text-dark"
+                      : "font-normal text-dark/60"
+                  }`}
+                >
+                  {service}
+                </button>
               </li>
             ))}
           </ul>
         </motion.div>
+
+        {/* Coluna extra direita - Descrição dinâmica (sempre presente mas só mostra conteúdo no hover) */}
+
+        <div className="hidden lg:flex w-full lg:w-2/5 flex-col py-2 h-[450px]">
+          {serviceDescriptions && serviceDescriptions[hoveredService] && (
+            <motion.div
+              key={hoveredService}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className="text-[12px] font-inter text-dark text-justify leading-relaxed whitespace-pre-wrap"
+            >
+              {serviceDescriptions[hoveredService]}
+            </motion.div>
+          )}
+        </div>
       </div>
     </motion.section>
   );

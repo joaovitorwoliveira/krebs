@@ -579,6 +579,75 @@ export const en = {
         "Complete Garden Execution",
         "Plant Sales (via own nursery)",
       ],
+      descriptions: [
+        `A strategic first step for those who need clarity before deciding.
+
+Consulting helps understand the potential of the land, align expectations and avoid expensive or misaligned decisions early on. It's ideal for those still structuring the project, evaluating possibilities or needing technical guidance before moving forward.`,
+        `The Landscape Feasibility Study is a strategic product for those who need to understand the potential of outdoor areas based on available budget.
+
+It transforms intentions into numbers, scenarios and real possibilities, before full project development. At Krebs+, this study crosses market knowledge, implementation costs, use typologies and initial conceptual development, creating a clear panorama of what is possible to do in outdoor areas, and at what level, within the client's budget.
+The focus is on guiding decisions:
+
+how much to invest, where to concentrate resources, which solutions generate more impact and which paths make sense technically, aesthetically and financially. 
+
+The result is a strategic direction for the entrepreneur, reducing risks and avoiding projects misaligned with reality.
+
+Unlike consulting, here we deliver data, estimates and concrete directions, which serve as a basis for the Master Plan, for the project and for executive decisions.
+`,
+        `The Master Plan defines the general concept of the project and guides the development as a
+whole.
+
+More than a landscaping stage, it functions as a strategic direction, capable of
+revealing the potential of the place and guiding decisions from the start through a well-developed
+implementation.
+
+At this moment, we organize flows, uses, atmospheres and language, building a
+clear and integrated vision of the whole before technical detailing. The Master Plan connects
+landscape, architecture and urbanism, aligning experience, identity and viability.
+
+It is the basis for safe decisions, for consistent project evolution and for avoiding
+disconnected paths throughout development. An instrument of reading, synthesis
+and direction that transforms intention into structure.
+`,
+        `The project is the heart of our work.
+
+It is where financial viability, market knowledge, client desires, well-being and place identity meet and take shape.
+
+At Krebs+, project development goes far beyond design. It is born from studies, investigations and research conducted by partners, who analyze the terrain, context, use, budget and client expectations to build coherent, executable and timeless solutions.
+
+The process goes through clear stages: project investigation, preliminary study, preliminary design and executive project. Where each decision is matured technically, aesthetically and financially. The result is a complete landscape architecture and exterior project, with precise definitions of species, materials, constructive solutions and implementation guidelines.
+
+Designed to flow naturally into construction, the project reduces improvisation, avoids incompatibilities and ensures the concept is preserved until execution.
+`,
+        `Images developed as commercial tools to communicate projects with clarity and impact.
+
+They help the end client understand the value of the proposal and strengthen real estate launches, institutional presentations and marketing materials.
+
+They are strategic resources for sales, project approval and development positioning, translating concepts into images that facilitate decision-making.`,
+        `Construction supervision begins together with the project, not just in execution.
+
+From the initial stages, landscaping is already developed considering financial viability, logistics and implementation form. This allows that, when construction begins, decisions are mature and aligned with field reality.
+
+During execution, we act with continuous technical support, ensuring the project is faithfully implemented. We monitor construction decisions, guide teams we ourselves help select and adjust details when necessary, always preserving the concept, budget and final quality.
+
+This process avoids improvisation, cost deviations and last-minute solutions that compromise the result. Supervision efficiently connects project and execution, transforming design into reality with control and precision.`,
+        `Complete Garden Execution is the stage where the project becomes reality, with method, control and technical responsibility.
+
+The execution is not an isolated service: it is born integrated with the project, financial
+viability and strategic decisions made from the start.
+
+We assume total responsibility for garden implementation, managing planning, logistics, plant supply, labor, schedule and quality control. Each stage is conducted based on decisions already matured in the project, avoiding improvisation, cost deviations and quality losses in the field.
+
+We work with oriented teams and suppliers selected according to the project profile, ensuring that what was thought conceptually, technically and financially is faithfully executed. The result is a ready-delivered garden, coherent with the project, with the defined budget and with high finishing standards.`,
+        `Plant sales at Krebs+ goes beyond traditional supply.
+
+We use an internal intelligence platform, developed from our market experience, that crosses technical, regional and financial information to indicate the most suitable species for each project.
+
+This platform gathers data such as regional availability, acquisition costs, logistics, species size, climate adaptation and impact on the implemented garden value. With this, we can choose plants that make aesthetic, technical and economic sense for each situation.
+
+The result is more efficient, viable landscaping coherent with the project, without cost
+surprises or inadequate choices.`,
+      ],
     },
     partnersSection: {
       creativePartnership: {

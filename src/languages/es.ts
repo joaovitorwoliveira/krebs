@@ -581,6 +581,75 @@ export const es = {
         "Ejecución Completa de Jardín",
         "Venta de Plantas (vía vivero propio)",
       ],
+      descriptions: [
+        `Un primer paso estratégico para quienes necesitan claridad antes de decidir.
+
+La consultoría ayuda a entender el potencial del terreno, alinear expectativas y evitar decisiones costosas o desalineadas desde el inicio. Es ideal para quienes aún están estructurando el proyecto, evaluando posibilidades o necesitan orientación técnica antes de avanzar.`,
+        `El Estudio de Viabilidad Paisajística es un producto estratégico para quienes necesitan entender el potencial de las áreas externas a partir del presupuesto disponible.
+
+Transforma intenciones en números, escenarios y posibilidades reales, antes del desarrollo completo del proyecto. En Krebs+, este estudio cruza conocimiento de mercado, costos de implantación, tipologías de uso y desarrollo conceptual inicial, creando un panorama claro de lo que es posible hacer en las áreas externas, y en qué nivel, dentro del presupuesto del cliente.
+El foco está en orientar decisiones:
+
+cuánto invertir, dónde concentrar recursos, qué soluciones generan más impacto y qué caminos tienen sentido técnica, estética y financieramente. 
+
+El resultado es una dirección estratégica para el emprendedor, reduciendo riesgos y evitando proyectos desalineados de la realidad.
+
+Diferente de la consultoría, aquí entregamos datos, estimativas y direcciones concretas, que sirven de base para el Master Plan, para el proyecto y para decisiones ejecutivas.
+`,
+        `El Master Plan define el concepto general del proyecto y orienta el emprendimiento como un
+todo.
+
+Más que una etapa de paisajismo, funciona como una dirección estratégica, capaz de
+revelar el potencial del lugar y guiar decisiones desde el inicio a través de una implantación
+bien trabajada.
+
+En este momento, organizamos flujos, usos, atmósferas y lenguaje, construyendo una
+visión clara e integrada del conjunto antes del detallado técnico. El Master Plan conecta
+paisaje, arquitectura y urbanismo, alineando experiencia, identidad y viabilidad.
+
+Es la base para decisiones seguras, para la evolución consistente del proyecto y para evitar
+caminos desconectados a lo largo del desarrollo. Un instrumento de lectura, síntesis
+y direccionamiento que transforma intención en estructura.
+`,
+        `El proyecto es el corazón de nuestro trabajo.
+
+Es donde viabilidad financiera, conocimiento de mercado, deseos del cliente, bienestar e identidad del lugar se encuentran y toman forma.
+
+En Krebs+, el desarrollo del proyecto va mucho más allá del diseño. Nace de estudios, investigaciones y pesquisas conducidas por los socios, que analizan el terreno, el contexto, el uso, el presupuesto y las expectativas del cliente para construir soluciones coherentes, ejecutables y atemporales.
+
+El proceso pasa por etapas claras: investigación proyectual, estudio preliminar, anteproyecto y proyecto ejecutivo. Donde cada decisión es madurada técnica, estética y financieramente. El resultado es un proyecto completo de arquitectura paisajística y de exteriores, con definiciones precisas de especies, materiales, soluciones constructivas y directrices de implantación.
+
+Pensado para fluir naturalmente hacia la obra, el proyecto reduce improvisaciones, evita incompatibilidades y garantiza que el concepto sea preservado hasta la ejecución.
+`,
+        `Imágenes desarrolladas como herramientas comerciales para comunicar proyectos con claridad e impacto.
+
+Ayudan al cliente final a entender el valor de la propuesta y fortalecen lanzamientos inmobiliarios, presentaciones institucionales y materiales de marketing.
+
+Son recursos estratégicos para ventas, aprobación de proyectos y posicionamiento de emprendimientos, traduciendo conceptos en imágenes que facilitan la toma de decisión.`,
+        `La supervisión de obra comienza junto con el proyecto, no solo en la ejecución.
+
+Desde las etapas iniciales, el paisajismo ya es desarrollado considerando viabilidad financiera, logística y forma de implantación. Esto permite que, cuando la obra inicia, las decisiones estén maduras y alineadas con la realidad del campo.
+
+Durante la ejecución, actuamos con soporte técnico continuo, garantizando que el proyecto sea fielmente implantado. Acompañamos decisiones en obra, orientamos los equipos que nosotros mismos ayudamos a seleccionar y ajustamos detalles cuando es necesario, siempre preservando el concepto, el presupuesto y la calidad final.
+
+Este proceso evita improvisaciones, desvíos de costo y soluciones de última hora que comprometen el resultado. La supervisión conecta proyecto y ejecución de forma eficiente, transformando el diseño en realidad con control y precisión.`,
+        `La Ejecución Completa de Jardín es la etapa en que el proyecto se transforma en realidad, con método, control y responsabilidad técnica.
+
+La ejecución no es un servicio aislado: nace integrada al proyecto, a la viabilidad
+financiera y a las decisiones estratégicas tomadas desde el inicio.
+
+Asumimos la responsabilidad total por la implantación del jardín, gestionando planificación, logística, suministro de plantas, mano de obra, cronograma y control de calidad. Cada etapa es conducida con base en decisiones ya maduradas en proyecto, evitando improvisaciones, desvíos de costo y pérdidas de calidad en campo.
+
+Trabajamos con equipos orientados y proveedores seleccionados de acuerdo con el perfil del proyecto, garantizando que lo que fue pensado conceptual, técnica y financieramente sea fielmente ejecutado. El resultado es un jardín entregado listo, coherente con el proyecto, con el presupuesto definido y con alto estándar de acabado.`,
+        `La venta de plantas en Krebs+ va más allá del suministro tradicional.
+
+Utilizamos una plataforma interna de inteligencia, desarrollada a partir de nuestra experiencia de mercado, que cruza informaciones técnicas, regionales y financieras para indicar las especies más adecuadas para cada proyecto.
+
+Esta plataforma reúne datos como disponibilidad regional, costos de adquisición, logística, porte de las especies, adaptación al clima e impacto en el valor implantado del jardín. Con esto, conseguimos elegir plantas que tienen sentido estético, técnico y económico para cada situación.
+
+El resultado es un paisajismo más eficiente, viable y coherente con el proyecto, sin sorpresas
+de costo o elecciones inadecuadas.`,
+      ],
     },
     partnersSection: {
       creativePartnership: {

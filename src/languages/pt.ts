@@ -567,6 +567,75 @@ export const pt = {
         "Execução Completa de Jardim",
         "Venda de Plantas (via viveiro próprio)",
       ],
+      descriptions: [
+        `Um primeiro passo estratégico para quem precisa clareza antes de decidir.
+
+A consultoria ajuda a entender o potencial do terreno, alinhar expectativas e evitar decisões caras ou desalinhadas logo no início. É ideal para quem ainda está estruturando o projeto,avaliando possibilidades ou precisa de direcionamento técnico antes de avançar.`,
+        `O Estudo de Viabilidade Paisagística é um produto estratégico para quem precisa entender o potencial das áreas externas a partir da verba disponível.
+
+Ele transforma intenções em números, cenários e possibilidades reais, antes do desenvolvimento completo do projeto. Na Krebs+, esse estudo cruza conhecimento de mercado, custos de implantação, tipologias de uso e desenvolvimento conceitual inicial, criando um panorama claro do que é possível fazer nas áreas externas, e em que nível, dentro do orçamento do cliente.
+O foco está em orientar decisões:
+
+quanto investir, onde concentrar recursos, quais soluções geram mais impacto e quais caminhos fazem sentido técnica, estética e financeiramente. 
+
+O resultado é um norte estratégico para o empreendedor, reduzindo riscos e evitando projetos desalinhados da realidade.
+
+Diferente da consultoria, aqui entregamos dados, estimativas e direções concretas, que servem de base para o Master Plan, para o projeto e para decisões executivas.
+`,
+        `O Master Plan define o conceito geral do projeto e orienta o empreendimento como um
+todo.
+
+Mais do que uma etapa de paisagismo, ele funciona como um norte estratégico, capaz de
+revelar o potencial do lugar e guiar decisões desde o início através de uma implantação
+bem trabalhada.
+
+Nesse momento, organizamos fluxos, usos, atmosferas e linguagem, construindo uma
+visão clara e integrada do conjunto antes do detalhamento técnico. O Master Plan conecta
+paisagem, arquitetura e urbanismo, alinhando experiência, identidade e viabilidade.
+
+É a base para decisões seguras, para a evolução consistente do projeto e para evitar
+caminhos desconectados ao longo do desenvolvimento. Um instrumento de leitura, síntese
+e direcionamento que transforma intenção em estrutura.
+`,
+        `O projeto é o coração do nosso trabalho.
+
+É nele que viabilidade financeira, conhecimento de mercado, desejos do cliente, bem-estar e identidade do lugar se encontram e ganham forma.
+
+Na Krebs+, o desenvolvimento do projeto vai muito além do desenho. Ele nasce de estudos, investigações e pesquisas conduzidas pelos sócios, que analisam o terreno, o contexto, o uso, o orçamento e as expectativas do cliente para construir soluções coerentes, executáveis e atemporais.
+
+O processo passa por etapas claras: investigação projetual, estudo preliminar, anteprojeto e projeto executivo. Onde cada decisão é amadurecida técnica, estética e financeiramente. O resultado é um projeto completo de arquitetura paisagística e de exteriores, com definições precisas de espécies, materiais, soluções construtivas e diretrizes de implantação.
+
+Pensado para fluir naturalmente para a obra, o projeto reduz improvisos, evita incompatibilidades e garante que o conceito seja preservado até a execução.
+`,
+        `Imagens desenvolvidas como ferramentas comerciais para comunicar projetos com clareza e impacto.
+
+Elas ajudam o cliente final a entender o valor da proposta e fortalecem lançamentos imobiliários, apresentações institucionais e materiais de marketing.
+
+São recursos estratégicos para vendas, aprovação de projetos e posicionamento de empreendimentos, traduzindo conceitos em imagens que facilitam a tomada de decisão.`,
+        `O acompanhamento da obra começa junto com o projeto, não apenas na execução.
+
+Desde as etapas iniciais, o paisagismo já é desenvolvido considerando viabilidade financeira, logística e forma de implantação. Isso permite que, quando a obra inicia, as decisões estejam maduras e alinhadas com a realidade do campo.
+
+Durante a execução, atuamos com suporte técnico contínuo, garantindo que o projeto seja fielmente implantado. Acompanhamos decisões em obra, orientamos as equipes que nós mesmos ajudamos a selecionar e ajustamos detalhes quando necessário, sempre preservando o conceito, o orçamento e a qualidade final.
+
+Esse processo evita improvisos, desvios de custo e soluções de última hora que comprometem o resultado. O acompanhamento conecta projeto e execução de forma eficiente, transformando o desenho em realidade com controle e precisão.`,
+        `A Execução Completa de Jardim é a etapa em que o projeto se transforma em realidade, com método, controle e responsabilidade técnica.
+
+A execução não é um serviço isolado: ela nasce integrada ao projeto, à viabilidade
+financeira e às decisões estratégicas tomadas desde o início.
+
+Assumimos a responsabilidade total pela implantação do jardim, gerenciando planejamento, logística, fornecimento de plantas, mão de obra, cronograma e controle de qualidade. Cada etapa é conduzida com base em decisões já amadurecidas em projeto, evitando improvisos, desvios de custo e perdas de qualidade em campo.
+
+Trabalhamos com equipes orientadas e fornecedores selecionados de acordo com o perfil do projeto, garantindo que o que foi pensado conceitual, técnica e financeiramente seja fielmente executado. O resultado é um jardim entregue pronto, coerente com o projeto, com o orçamento definido e com alto padrão de acabamento.`,
+        `A venda de plantas na Krebs+ vai além do fornecimento tradicional.
+
+Utilizamos uma plataforma interna de inteligência, desenvolvida a partir da nossa experiência de mercado, que cruza informações técnicas, regionais e financeiras para indicar as espécies mais adequadas para cada projeto.
+
+Essa plataforma reúne dados como disponibilidade regional, custos de aquisição, logística, porte das espécies, adaptação ao clima e impacto no valor implantado do jardim. Com isso, conseguimos escolher plantas que fazem sentido estético, técnico e econômico para cada situação.
+
+O resultado é um paisagismo mais eficiente, viável e coerente com o projeto, sem surpresas
+de custo ou escolhas inadequadas.`,
+      ],
     },
     partnersSection: {
       creativePartnership: {
