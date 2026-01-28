@@ -9,21 +9,26 @@ import { useLanguage } from "@/context/LanguageProvider";
 import { cn } from "@/lib/utils";
 
 const clients = [
-  { name: "Iguatemi", logo: "/images/partners/iguatemi.png" },
-  { name: "Vivo", logo: "/images/partners/vivo.png" },
-  { name: "Unisinos", logo: "/images/partners/unisinos.png" },
+  { name: "Iguatemi", logo: "/images/clients/iguatemi.png", size: 3 },
+  { name: "Vivo", logo: "/images/clients/vivo.png", size: 1 },
+  { name: "Unisinos", logo: "/images/clients/unisinos.png", size: 2 },
   {
     name: "Hospital Moinhos de Vento",
-    logo: "/images/partners/moinhos-de-vento.png",
+    logo: "/images/clients/moinhos.png",
+    size: 1,
   },
-  { name: "Dadobier", logo: "/images/partners/dadobier.png" },
-  { name: "Gerdau", logo: "/images/partners/gerdau.png" },
-  { name: "Laghetto", logo: "/images/partners/laghetto.png" },
-  { name: "Vinicola Aurora", logo: "/images/partners/aurora.png" },
-  { name: "Yara", logo: "/images/partners/yara.png" },
-  { name: "CPFL Energia", logo: "/images/partners/cpfl.png" },
-  { name: "Zaffari", logo: "/images/partners/zaffari.png" },
-  { name: "Aviva", logo: "/images/partners/aviva.png" },
+  { name: "Dadobier", logo: "/images/clients/dadobier.png", size: 2 },
+  { name: "Gerdau", logo: "/images/clients/gerdau.png", size: 2 },
+  { name: "Surfland", logo: "/images/clients/surfland.png", size: 2 },
+  { name: "Laghetto", logo: "/images/clients/laghetto.png", size: 2 },
+  { name: "Yara", logo: "/images/clients/yara.png", size: 3 },
+  {
+    name: "Colégio Farroupilha",
+    logo: "/images/clients/colegio-farroupilha.jpg",
+    size: 3,
+  },
+  { name: "Vila Ventura", logo: "/images/clients/vila-ventura.webp", size: 1 },
+  { name: "CPFL Energia", logo: "/images/clients/cpfl.png", size: 3 },
 ];
 
 export default function ClientsHome() {
@@ -60,7 +65,14 @@ export default function ClientsHome() {
                   key={client.name}
                   className="flex items-center justify-center p-2 grayscale hover:grayscale-0 transition-all duration-300"
                 >
-                  <div className="relative w-full h-10 md:h-12 lg:h-14">
+                  <div
+                    className={cn(
+                      "relative w-full",
+                      client.size === 1 && "h-10 md:h-12 lg:h-14",
+                      client.size === 2 && "h-14 md:h-16 lg:h-20",
+                      client.size === 3 && "h-18 md:h-20 lg:h-24"
+                    )}
+                  >
                     <Image
                       src={client.logo}
                       alt={client.name}

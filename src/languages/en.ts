@@ -974,7 +974,7 @@ surprises or inadequate choices.`,
       linkedin: "LinkedIn",
     },
     addressText:
-      "João Jacob Bainy Street, 835 - Room 604\nTres Vendas\nPelotas - RS\n\n24 de Outubro Street, 1440 - Room 1006 - Auxiliadora\nPorto Alegre - RS",
+      "24 de Outubro Street, 1440 - Room 1006 - Auxiliadora\nPorto Alegre - RS\n\nJoão Jacob Bainy Street, 835 - Room 604\nTres Vendas\nPelotas - RS",
     contactInfo: ["(53)30274303", "comercial@krebsmais.com"],
   },
 

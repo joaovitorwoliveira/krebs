@@ -976,7 +976,7 @@ de costo o elecciones inadecuadas.`,
       linkedin: "LinkedIn",
     },
     addressText:
-      "Calle João Jacob Bainy, 835 - Sala 604\nTres Vendas\nPelotas - RS\n\nCalle 24 de Outubro, 1440 - Sala 1006 - Auxiliadora\nPorto Alegre - RS",
+      "Calle 24 de Outubro, 1440 - Sala 1006 - Auxiliadora\nPorto Alegre - RS\n\nCalle João Jacob Bainy, 835 - Sala 604\nTres Vendas\nPelotas - RS",
     contactInfo: ["(53)30274303", "comercial@krebsmais.com"],
   },
 

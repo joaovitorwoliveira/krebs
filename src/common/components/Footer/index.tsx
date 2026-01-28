@@ -73,7 +73,7 @@ export default function Footer() {
   return (
     <>
       <footer className="relative z-10 bg-light py-0 px-6 md:px-10 md:py-10">
-        <div className="mx-auto pt-10">
+        <div className="mx-auto pt-6">
           <div className="flex flex-col gap-10 justify-between md:flex-row">
             {/* Img + Nome */}
             <div className="hidden flex-col gap-2 md:flex">
@@ -83,18 +83,17 @@ export default function Footer() {
                 width={250}
                 height={300}
               /> */}
-              <div className="flex flex-row gap-2 w-[250px] md:w-full">
-                <div className="h-1 w-full bg-brown-1"></div>
-                <div className="h-1 w-full bg-brown-2"></div>
-                <div className="h-1 w-full bg-green-1"></div>
-              </div>
-
               <Image
                 src={"/images/logo_full_textura_verde.png"}
                 alt={"Krebs +"}
                 width={100}
                 height={100}
               />
+              <div className="flex flex-row gap-2 w-[250px] md:w-full">
+                <div className="h-1 w-full bg-brown-1"></div>
+                <div className="h-1 w-full bg-brown-2"></div>
+                <div className="h-1 w-full bg-green-1"></div>
+              </div>
             </div>
             {/* <div className="hidden md:block"></div> */}
             {/* Navegacao */}
