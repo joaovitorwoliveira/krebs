@@ -77,25 +77,26 @@ export default function Footer() {
           <div className="flex flex-col gap-10 justify-between md:flex-row">
             {/* Img + Nome */}
             <div className="hidden flex-col gap-2 md:flex">
-              <Image
+              {/* <Image
                 src={"/images/vertical_temporaria.jpg"}
                 alt={"floresta"}
                 width={250}
                 height={300}
-              />
+              /> */}
               <div className="flex flex-row gap-2 w-[250px] md:w-full">
-                <div className="h-2 w-full bg-brown-1"></div>
-                <div className="h-2 w-full bg-brown-2"></div>
-                <div className="h-2 w-full bg-green-1"></div>
+                <div className="h-1 w-full bg-brown-1"></div>
+                <div className="h-1 w-full bg-brown-2"></div>
+                <div className="h-1 w-full bg-green-1"></div>
               </div>
 
               <Image
                 src={"/images/logo_full_textura_verde.png"}
                 alt={"Krebs +"}
-                width={70}
-                height={70}
+                width={100}
+                height={100}
               />
             </div>
+            {/* <div className="hidden md:block"></div> */}
             {/* Navegacao */}
             <div className="flex flex-col gap-4">
               <h4 className="text-black text-xl lg:text-2xl font-bold">

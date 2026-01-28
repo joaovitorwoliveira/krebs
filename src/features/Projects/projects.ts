@@ -19,7 +19,7 @@ export const projects: Project[] = [
   },
   {
     slug: "jardim-atj",
-    coverPhoto: Images.JARDIM_ATJ_IMAGE_8,
+    coverPhoto: Images.JARDIM_ATJ_IMAGE_6,
     tags: ["residencial", "praia", "garopaba", "piscina", "natureza"],
     images: [
       Images.JARDIM_ATJ_IMAGE_1,
@@ -35,7 +35,7 @@ export const projects: Project[] = [
   },
   {
     slug: "jardim-ltx",
-    coverPhoto: Images.JARDIM_LTX_IMAGE_8,
+    coverPhoto: Images.JARDIM_LTX_IMAGE_2,
     tags: ["residencial", "piscina", "xangrila"],
     images: [
       Images.JARDIM_LTX_IMAGE_1,
@@ -110,7 +110,7 @@ export const projects: Project[] = [
   },
   {
     slug: "shopping-iguatemi",
-    coverPhoto: Images.SHOPPING_IGUATEMI_IMAGE_4,
+    coverPhoto: Images.SHOPPING_IGUATEMI_IMAGE_3,
     tags: ["shopping", "institucional", "portoalegre"],
     images: [
       Images.SHOPPING_IGUATEMI_IMAGE_1,
@@ -141,7 +141,7 @@ export const projects: Project[] = [
       Images.JARDIM_FLV_IMAGE_13,
       Images.JARDIM_FLV_IMAGE_14,
     ],
-    conclusionDate: "2020",
+    conclusionDate: "2023",
   },
   {
     slug: "rua-mista-legano",
@@ -225,7 +225,7 @@ export const projects: Project[] = [
   },
   {
     slug: "edificio-iguacu",
-    coverPhoto: Images.EDIFICIO_IGUACU_IMAGE_7,
+    coverPhoto: Images.EDIFICIO_IGUACU_IMAGE_4,
     tags: ["edificio", "portoalegre"],
     images: [
       Images.EDIFICIO_IGUACU_IMAGE_1,
@@ -286,7 +286,7 @@ export const projects: Project[] = [
   },
   {
     slug: "prado-bairro-cidade",
-    coverPhoto: Images.PRADO_BAIRRO_CIDADE_IMAGE_1,
+    coverPhoto: Images.PRADO_BAIRRO_CIDADE_IMAGE_3,
     tags: ["condominio", "gravatai", "urbanismo", "bairro"],
     images: [
       Images.PRADO_BAIRRO_CIDADE_IMAGE_1,

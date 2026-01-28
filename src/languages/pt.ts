@@ -330,7 +330,6 @@ export const pt = {
           Em Porto Alegre, o projeto parte da premissa de criar um espaço externo que una funcionalidade e sofisticação. 
           O braseiro em pedra natural, de linhas curvilíneas e proteção em vidro, é o elemento central da composição. 
           Posicionado sobre um leito de vegetação, cria a sensação de peça flutuante, trazendo elegância e identidade ao ambiente.
-
           O paisagismo foi desenhado para envolver o braseiro e acompanhar o perímetro da varanda, utilizando espécies tropicais de 
           baixa manutenção que garantem textura, volume e permanência estética ao longo do ano. O mobiliário, de linhas puras 
           e materiais resistentes, mantém a unidade visual e dialoga com o concreto aparente e o piso neutro. 
@@ -378,28 +377,22 @@ export const pt = {
       "jardim-flv": {
         title: "Jardim FLV",
         description: `
-          Em Nova Santa Rita, o acesso ao condomínio foi concebido sob os princípios do novo urbanismo, priorizando a experiência do pedestre e a convivência urbana.
-
-          A rua foi projetada em nível único, eliminando desníveis entre passeio e leito carroçável e criando um espaço contínuo, acessível e convidativo. O revestimento em basalto natural confere unidade visual e resistência, dialogando com a materialidade local e reforçando o caráter durável do conjunto.
-
-          As árvores organizam a paisagem e desenham zonas de sombra fresca, suavizando a escala da via e criando ritmo e conforto térmico ao longo do percurso. O projeto incorpora mobiliários urbanos em linhas contemporâneas, que oferecem pontos de permanência e apoio aos pedestres, além de balizadores discretos que delimitam áreas de circulação com segurança e sutileza.
-
-          Mais que um acesso, o espaço foi pensado como um ambiente de convivência e passagem qualificada, onde infraestrutura, natureza e desenho urbano se unem para promover um cotidiano mais humano, convidativo e sustentável.
+          No Rio de Janeiro, o jardim tropical que envolve a residência cria um refúgio verde em meio à paisagem urbana, emoldurando a vista para o Cristo Redentor.
+          O paisagismo foi concebido para abraçar o espaço aberto, dissolvendo os limites entre o interior e o exterior. A composição privilegia o verde em abundância e a variação de texturas, explorando diferentes tons e formas de folhagens para criar profundidade e movimento.
+          Espécies tropicais foram dispostas em camadas, com bordaduras densas e massas vegetais que garantem privacidade e, ao mesmo tempo, fluidez visual. O jardim acompanha o desenho arquitetônico com suavidade, articulando-se à piscina e ao terraço em um diálogo contínuo entre sombra, luz e materialidade.
+          O resultado é uma atmosfera de refúgio natural e contemporâneo, um cenário de contemplação e descanso, onde o verde se torna o protagonista.
         `,
-        date: "2020",
-        place: "Nova Santa Rita, RS",
-        architecture: "Aviva Urbanismo",
+        date: "2023",
+        place: "Rio de Janeiro, RJ",
+        architecture: "Bernardes Arquitetura",
         photo: "Lucas Daneris",
       },
       "rua-mista-legano": {
         title: "Rua Mista Legano",
         description: `
           Em Nova Santa Rita, o acesso ao condomínio foi concebido sob os princípios do novo urbanismo, priorizando a experiência do pedestre e a convivência urbana.
-
           A rua foi projetada em nível único, eliminando desníveis entre passeio e leito carroçável e criando um espaço contínuo, acessível e convidativo. O revestimento em basalto natural confere unidade visual e resistência, dialogando com a materialidade local e reforçando o caráter durável do conjunto.
-
           As árvores organizam a paisagem e desenham zonas de sombra fresca, suavizando a escala da via e criando ritmo e conforto térmico ao longo do percurso. O projeto incorpora mobiliários urbanos em linhas contemporâneas, que oferecem pontos de permanência e apoio aos pedestres, além de balizadores discretos que delimitam áreas de circulação com segurança e sutileza.
-
           Mais que um acesso, o espaço foi pensado como um ambiente de convivência e passagem qualificada, onde infraestrutura, natureza e desenho urbano se unem para promover um cotidiano mais humano, convidativo e sustentável.
         `,
         date: "2020",
@@ -900,7 +893,7 @@ export const pt = {
       linkedin: "LinkedIn",
     },
     addressText:
-      "Rua João Jacob Bainy, 835 - sala 604\nTres Vendas\nPelotas - RS",
+      "Rua João Jacob Bainy, 835 - Sala 604\nTres Vendas\nPelotas - RS\n\nR. 24 de Outubro, 1440 - Sala 1006 - Auxiliadora\nPorto Alegre - RS",
     contactInfo: ["(53)30274303", "comercial@krebsmais.com"],
   },
 

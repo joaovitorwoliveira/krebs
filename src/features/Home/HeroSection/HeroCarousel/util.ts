@@ -1,7 +1,11 @@
 import {
+  EDIFICIO_PAIX_IMAGE_3,
+  JARDIM_ATJ_IMAGE_6,
   JARDIM_ATJ_IMAGE_8,
   JARDIM_FLV_IMAGE_9,
   PRADO_BAIRRO_CIDADE_IMAGE_1,
+  PRADO_BAIRRO_CIDADE_IMAGE_3,
+  SURFLAND_IMAGE_4,
   UNISINOS_IMAGE_1,
 } from "@/common/constants/db-images";
 
@@ -35,7 +39,7 @@ export const heroImages: HeroImage[] = [
     },
   },
   {
-    url: JARDIM_ATJ_IMAGE_8,
+    url: JARDIM_ATJ_IMAGE_6,
     projectSlug: "jardim-atj",
     projectName: {
       pt: "Jardim ATJ",
@@ -43,14 +47,31 @@ export const heroImages: HeroImage[] = [
       es: "Jardim ATJ",
     },
   },
-
   {
-    url: PRADO_BAIRRO_CIDADE_IMAGE_1,
+    url: PRADO_BAIRRO_CIDADE_IMAGE_3,
     projectSlug: "prado-bairro-cidade",
     projectName: {
       pt: "Prado Bairro Cidade",
       en: "Prado Bairro Cidade",
       es: "Prado Bairro Cidade",
+    },
+  },
+  {
+    url: SURFLAND_IMAGE_4,
+    projectSlug: "surfland",
+    projectName: {
+      pt: "Surfland",
+      en: "Surfland",
+      es: "Surfland",
+    },
+  },
+  {
+    url: EDIFICIO_PAIX_IMAGE_3,
+    projectSlug: "edificio-paix",
+    projectName: {
+      pt: "Edifício Paix",
+      en: "Paix Building",
+      es: "Edifício Paix",
     },
   },
 ];

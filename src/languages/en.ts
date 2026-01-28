@@ -383,17 +383,17 @@ export const en = {
       "jardim-flv": {
         title: "FLV Garden",
         description: `
-          In Nova Santa Rita, the condominium access was conceived under the principles of new urbanism, prioritizing the pedestrian experience and urban coexistence.
+          In Rio de Janeiro, the tropical garden surrounding the residence creates a green refuge amid the urban landscape, framing the view of Christ the Redeemer.
 
-          The street was designed at a single level, eliminating level differences between the sidewalk and the roadway and creating a continuous, accessible and inviting space. The natural basalt coating provides visual unity and resistance, dialoguing with local materiality and reinforcing the durable character of the ensemble.
+          The landscaping was conceived to embrace the open space, dissolving the boundaries between inside and outside. The composition favors abundant greenery and textural variation, exploring different tones and leaf shapes to create depth and movement.
 
-          The trees organize the landscape and draw zones of fresh shade, softening the scale of the street and creating rhythm and thermal comfort along the path. The project incorporates urban furniture in contemporary lines, which offer points of permanence and support for pedestrians, in addition to discrete markers that delimit circulation areas with safety and subtlety.
+          Tropical species were arranged in layers, with dense borders and plant masses that ensure privacy while maintaining visual fluidity. The garden gently follows the architectural design, connecting to the pool and terrace in a continuous dialogue between shade, light and materiality.
 
-          More than an access, the space was thought of as an environment of coexistence and qualified passage, where infrastructure, nature and urban design come together to promote a more human, inviting and sustainable daily life.
+          The result is an atmosphere of natural and contemporary refuge, a setting for contemplation and rest, where greenery becomes the main protagonist.
         `,
-        date: "2020",
-        place: "Nova Santa Rita, RS",
-        architecture: "Aviva Urbanismo",
+        date: "2023",
+        place: "Rio de Janeiro, RJ",
+        architecture: "Bernardes Arquitetura",
         photo: "Lucas Daneris",
       },
       "rua-mista-legano": {
@@ -770,7 +770,7 @@ export const en = {
       role: "Operations and Strategy Director",
       description: [
         "+",
-        "Eduardo is a landscape architect and works in the operation and strategy of the company. He has a creative vision and actively participates in the initial process of new projects through his estimates, understanding that transforming investment into a project is not just about numbers, it requires sensitivity, space reading and intention. From the truth, he directs so that projects happen within the real investment conditions of each client. He always makes analogies about gastronomy to better explain his work. He is one of those responsible for choosing the right \"ingredients\" so that the final result can be \"tasted\", with predictability and fidelity to what was thought.",
+        'Eduardo is a landscape architect and works in the operation and strategy of the company. He has a creative vision and actively participates in the initial process of new projects through his estimates, understanding that transforming investment into a project is not just about numbers, it requires sensitivity, space reading and intention. From the truth, he directs so that projects happen within the real investment conditions of each client. He always makes analogies about gastronomy to better explain his work. He is one of those responsible for choosing the right "ingredients" so that the final result can be "tasted", with predictability and fidelity to what was thought.',
         "+",
         "Architect and Urbanist (UFPEL)",
       ],
@@ -905,7 +905,7 @@ export const en = {
       linkedin: "LinkedIn",
     },
     addressText:
-      "João Jacob Bainy Street, 835 - room 604\nTres Vendas\nPelotas - RS",
+      "João Jacob Bainy Street, 835 - Room 604\nTres Vendas\nPelotas - RS\n\n24 de Outubro Street, 1440 - Room 1006 - Auxiliadora\nPorto Alegre - RS",
     contactInfo: ["(53)30274303", "comercial@krebsmais.com"],
   },
 

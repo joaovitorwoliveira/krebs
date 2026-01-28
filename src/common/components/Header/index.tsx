@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -21,8 +21,22 @@ export default function Header() {
   const { isContactDrawerOpen, openContactDrawer, closeContactDrawer } =
     useContactDrawer();
   const pathname = usePathname();
-  const isHomePage = pathname === "/";
   const { t } = useLanguage();
+
+  const [isHomePage, setIsHomePage] = useState(() => {
+    if (pathname !== null && pathname !== undefined) {
+      return pathname === "/";
+    }
+
+    return false;
+  });
+
+  useEffect(() => {
+    const currentPath =
+      pathname ??
+      (typeof window !== "undefined" ? window.location.pathname : "/");
+    setIsHomePage(currentPath === "/");
+  }, [pathname]);
 
   const navigationLinks = [
     { href: "/quem-somos", label: t.header.whoWeAre },

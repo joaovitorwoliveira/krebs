@@ -384,17 +384,17 @@ export const es = {
       "jardim-flv": {
         title: "Jardín FLV",
         description: `
-          En Nova Santa Rita, el acceso al condominio fue concebido bajo los principios del nuevo urbanismo, priorizando la experiencia del peatón y la convivencia urbana.
+          En Río de Janeiro, el jardín tropical que envuelve la residencia crea un refugio verde en medio del paisaje urbano, enmarcando la vista hacia el Cristo Redentor.
 
-          La calle fue proyectada en nivel único, eliminando desniveles entre paseo y lecho carrozable y creando un espacio continuo, accesible e invitador. El revestimiento en basalto natural confiere unidad visual y resistencia, dialogando con la materialidad local y reforzando el carácter duradero del conjunto.
+          El paisajismo fue concebido para abrazar el espacio abierto, disolviendo los límites entre interior y exterior. La composición privilegia el verde en abundancia y la variación de texturas, explorando diferentes tonos y formas de follajes para crear profundidad y movimiento.
 
-          Los árboles organizan el paisaje y dibujan zonas de sombra fresca, suavizando la escala de la vía y creando ritmo y confort térmico a lo largo del recorrido. El proyecto incorpora mobiliarios urbanos en líneas contemporáneas, que ofrecen puntos de permanencia y apoyo a los peatones, además de balizadores discretos que delimitan áreas de circulación con seguridad y sutileza.
+          Especies tropicales fueron dispuestas en capas, con bordes densos y masas vegetales que garantizan privacidad y, al mismo tiempo, fluidez visual. El jardín acompaña el diseño arquitectónico con suavidad, articulándose con la piscina y la terraza en un diálogo continuo entre sombra, luz y materialidad.
 
-          Más que un acceso, el espacio fue pensado como un ambiente de convivencia y pasaje calificado, donde infraestructura, naturaleza y diseño urbano se unen para promover un cotidiano más humano, invitador y sostenible.
+          El resultado es una atmósfera de refugio natural y contemporáneo, un escenario de contemplación y descanso, donde el verde se convierte en protagonista.
         `,
-        date: "2020",
-        place: "Nova Santa Rita, RS",
-        architecture: "Aviva Urbanismo",
+        date: "2023",
+        place: "Río de Janeiro, RJ",
+        architecture: "Bernardes Arquitetura",
         photo: "Lucas Daneris",
       },
       "rua-mista-legano": {
@@ -772,7 +772,7 @@ export const es = {
       role: "Director de Operaciones y Estrategia",
       description: [
         "+",
-        "Eduardo es arquitecto paisajista y actúa en la operación y estrategia de la empresa. Tiene una visión creativa y participa activamente en el proceso inicial de los nuevos proyectos a través de sus estimaciones, entendiendo que transformar inversión en proyecto no es solo sobre números, exige sensibilidad, lectura de espacio e intención. A partir de la verdad dirige para que los proyectos sucedan dentro de las condiciones reales de inversión de cada cliente. Siempre hace analogías sobre gastronomía para explicar mejor su trabajo. Es uno de los responsables por elegir los \"ingredientes\" correctos para que se consiga \"degustar\" del resultado final, con predictibilidad y fidelidad con lo que fue pensado.",
+        'Eduardo es arquitecto paisajista y actúa en la operación y estrategia de la empresa. Tiene una visión creativa y participa activamente en el proceso inicial de los nuevos proyectos a través de sus estimaciones, entendiendo que transformar inversión en proyecto no es solo sobre números, exige sensibilidad, lectura de espacio e intención. A partir de la verdad dirige para que los proyectos sucedan dentro de las condiciones reales de inversión de cada cliente. Siempre hace analogías sobre gastronomía para explicar mejor su trabajo. Es uno de los responsables por elegir los "ingredientes" correctos para que se consiga "degustar" del resultado final, con predictibilidad y fidelidad con lo que fue pensado.',
         "+",
         "Arquitecto y Urbanista (UFPEL)",
       ],
@@ -907,7 +907,7 @@ export const es = {
       linkedin: "LinkedIn",
     },
     addressText:
-      "Calle João Jacob Bainy, 835 - sala 604\nTres Vendas\nPelotas - RS",
+      "Calle João Jacob Bainy, 835 - Sala 604\nTres Vendas\nPelotas - RS\n\nCalle 24 de Outubro, 1440 - Sala 1006 - Auxiliadora\nPorto Alegre - RS",
     contactInfo: ["(53)30274303", "comercial@krebsmais.com"],
   },
 
