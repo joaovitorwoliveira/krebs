@@ -28,6 +28,7 @@ export default function ThumbnailButton({
         alt={`${projectTitle} - ${t.projectDetails.thumbnail} ${index + 1}`}
         fill
         className="object-cover"
+        quality={40}
       />
     </button>
   );
