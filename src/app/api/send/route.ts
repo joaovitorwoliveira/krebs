@@ -35,7 +35,9 @@ export async function POST(request: Request) {
 
     const { data, error } = await resend.emails.send({
       from: "Website <onboarding@resend.dev>",
-      to: ["contato@krebsmais.com"],
+      //TODO: Mudar para o email de contato, quando criar a conta no resend.
+      // to: ["contato@krebsmais.com"],
+      to: ["joaopedrowo@gmail.com"],
       subject: `Nova mensagem de ${name} - Website`,
       html: await render(EmailTemplate({ name, email, message })),
     });

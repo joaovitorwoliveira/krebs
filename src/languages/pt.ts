@@ -574,28 +574,21 @@ A consultoria ajuda a entender o potencial do terreno, alinhar expectativas e ev
         `O Estudo de Viabilidade Paisagística é um produto estratégico para quem precisa entender o potencial das áreas externas a partir da verba disponível.
 
 Ele transforma intenções em números, cenários e possibilidades reais, antes do desenvolvimento completo do projeto. Na Krebs+, esse estudo cruza conhecimento de mercado, custos de implantação, tipologias de uso e desenvolvimento conceitual inicial, criando um panorama claro do que é possível fazer nas áreas externas, e em que nível, dentro do orçamento do cliente.
-O foco está em orientar decisões:
 
+O foco está em orientar decisões:
 quanto investir, onde concentrar recursos, quais soluções geram mais impacto e quais caminhos fazem sentido técnica, estética e financeiramente. 
 
 O resultado é um norte estratégico para o empreendedor, reduzindo riscos e evitando projetos desalinhados da realidade.
 
 Diferente da consultoria, aqui entregamos dados, estimativas e direções concretas, que servem de base para o Master Plan, para o projeto e para decisões executivas.
 `,
-        `O Master Plan define o conceito geral do projeto e orienta o empreendimento como um
-todo.
+        `O Master Plan define o conceito geral do projeto e orienta o empreendimento como um todo.
 
-Mais do que uma etapa de paisagismo, ele funciona como um norte estratégico, capaz de
-revelar o potencial do lugar e guiar decisões desde o início através de uma implantação
-bem trabalhada.
+Mais do que uma etapa de paisagismo, ele funciona como um norte estratégico, capaz de revelar o potencial do lugar e guiar decisões desde o início através de uma implantação bem trabalhada.
 
-Nesse momento, organizamos fluxos, usos, atmosferas e linguagem, construindo uma
-visão clara e integrada do conjunto antes do detalhamento técnico. O Master Plan conecta
-paisagem, arquitetura e urbanismo, alinhando experiência, identidade e viabilidade.
+Nesse momento, organizamos fluxos, usos, atmosferas e linguagem, construindo uma  visão clara e integrada do conjunto antes do detalhamento técnico. O Master Plan conecta paisagem, arquitetura e urbanismo, alinhando experiência, identidade e viabilidade.
 
-É a base para decisões seguras, para a evolução consistente do projeto e para evitar
-caminhos desconectados ao longo do desenvolvimento. Um instrumento de leitura, síntese
-e direcionamento que transforma intenção em estrutura.
+É a base para decisões seguras, para a evolução consistente do projeto e para evitar caminhos desconectados ao longo do desenvolvimento. Um instrumento de leitura, síntese e direcionamento que transforma intenção em estrutura.
 `,
         `O projeto é o coração do nosso trabalho.
 
@@ -621,8 +614,7 @@ Durante a execução, atuamos com suporte técnico contínuo, garantindo que o p
 Esse processo evita improvisos, desvios de custo e soluções de última hora que comprometem o resultado. O acompanhamento conecta projeto e execução de forma eficiente, transformando o desenho em realidade com controle e precisão.`,
         `A Execução Completa de Jardim é a etapa em que o projeto se transforma em realidade, com método, controle e responsabilidade técnica.
 
-A execução não é um serviço isolado: ela nasce integrada ao projeto, à viabilidade
-financeira e às decisões estratégicas tomadas desde o início.
+A execução não é um serviço isolado: ela nasce integrada ao projeto, à viabilidade financeira e às decisões estratégicas tomadas desde o início.
 
 Assumimos a responsabilidade total pela implantação do jardim, gerenciando planejamento, logística, fornecimento de plantas, mão de obra, cronograma e controle de qualidade. Cada etapa é conduzida com base em decisões já amadurecidas em projeto, evitando improvisos, desvios de custo e perdas de qualidade em campo.
 
@@ -633,8 +625,7 @@ Utilizamos uma plataforma interna de inteligência, desenvolvida a partir da nos
 
 Essa plataforma reúne dados como disponibilidade regional, custos de aquisição, logística, porte das espécies, adaptação ao clima e impacto no valor implantado do jardim. Com isso, conseguimos escolher plantas que fazem sentido estético, técnico e econômico para cada situação.
 
-O resultado é um paisagismo mais eficiente, viável e coerente com o projeto, sem surpresas
-de custo ou escolhas inadequadas.`,
+O resultado é um paisagismo mais eficiente, viável e coerente com o projeto, sem surpresas de custo ou escolhas inadequadas.`,
       ],
     },
     partnersSection: {

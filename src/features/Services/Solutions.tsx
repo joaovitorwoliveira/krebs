@@ -53,7 +53,7 @@ export default function Solutions() {
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className="py-10 px-6 md:px-20 lg:py-40 xl:px-40 2xl:px-80 bg-white"
+      className="py-10 px-6 md:px-20 lg:py-40 xl:px-40 2xl:px-80 "
     >
       <div className="flex flex-col gap-8 lg:gap-12 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-center items-center">

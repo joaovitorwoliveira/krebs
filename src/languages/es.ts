@@ -588,28 +588,21 @@ La consultoría ayuda a entender el potencial del terreno, alinear expectativas 
         `El Estudio de Viabilidad Paisajística es un producto estratégico para quienes necesitan entender el potencial de las áreas externas a partir del presupuesto disponible.
 
 Transforma intenciones en números, escenarios y posibilidades reales, antes del desarrollo completo del proyecto. En Krebs+, este estudio cruza conocimiento de mercado, costos de implantación, tipologías de uso y desarrollo conceptual inicial, creando un panorama claro de lo que es posible hacer en las áreas externas, y en qué nivel, dentro del presupuesto del cliente.
-El foco está en orientar decisiones:
 
-cuánto invertir, dónde concentrar recursos, qué soluciones generan más impacto y qué caminos tienen sentido técnica, estética y financieramente. 
+El foco está en orientar decisiones:
+cuánto invertir, dónde concentrar recursos, qué soluciones generan más impacto y qué caminos tienen sentido técnica, estética y financieramente.
 
 El resultado es una dirección estratégica para el emprendedor, reduciendo riesgos y evitando proyectos desalineados de la realidad.
 
 Diferente de la consultoría, aquí entregamos datos, estimativas y direcciones concretas, que sirven de base para el Master Plan, para el proyecto y para decisiones ejecutivas.
 `,
-        `El Master Plan define el concepto general del proyecto y orienta el emprendimiento como un
-todo.
+        `El Master Plan define el concepto general del proyecto y orienta el emprendimiento como un todo.
 
-Más que una etapa de paisajismo, funciona como una dirección estratégica, capaz de
-revelar el potencial del lugar y guiar decisiones desde el inicio a través de una implantación
-bien trabajada.
+Más que una etapa de paisajismo, funciona como una dirección estratégica, capaz de revelar el potencial del lugar y guiar decisiones desde el inicio a través de una implantación bien trabajada.
 
-En este momento, organizamos flujos, usos, atmósferas y lenguaje, construyendo una
-visión clara e integrada del conjunto antes del detallado técnico. El Master Plan conecta
-paisaje, arquitectura y urbanismo, alineando experiencia, identidad y viabilidad.
+En este momento, organizamos flujos, usos, atmósferas y lenguaje, construyendo una visión clara e integrada del conjunto antes del detallado técnico. El Master Plan conecta paisaje, arquitectura y urbanismo, alineando experiencia, identidad y viabilidad.
 
-Es la base para decisiones seguras, para la evolución consistente del proyecto y para evitar
-caminos desconectados a lo largo del desarrollo. Un instrumento de lectura, síntesis
-y direccionamiento que transforma intención en estructura.
+Es la base para decisiones seguras, para la evolución consistente del proyecto y para evitar caminos desconectados a lo largo del desarrollo. Un instrumento de lectura, síntesis y direccionamiento que transforma intención en estructura.
 `,
         `El proyecto es el corazón de nuestro trabajo.
 
@@ -635,8 +628,7 @@ Durante la ejecución, actuamos con soporte técnico continuo, garantizando que 
 Este proceso evita improvisaciones, desvíos de costo y soluciones de última hora que comprometen el resultado. La supervisión conecta proyecto y ejecución de forma eficiente, transformando el diseño en realidad con control y precisión.`,
         `La Ejecución Completa de Jardín es la etapa en que el proyecto se transforma en realidad, con método, control y responsabilidad técnica.
 
-La ejecución no es un servicio aislado: nace integrada al proyecto, a la viabilidad
-financiera y a las decisiones estratégicas tomadas desde el inicio.
+La ejecución no es un servicio aislado: nace integrada al proyecto, a la viabilidad financiera y a las decisiones estratégicas tomadas desde el inicio.
 
 Asumimos la responsabilidad total por la implantación del jardín, gestionando planificación, logística, suministro de plantas, mano de obra, cronograma y control de calidad. Cada etapa es conducida con base en decisiones ya maduradas en proyecto, evitando improvisaciones, desvíos de costo y pérdidas de calidad en campo.
 
@@ -647,8 +639,7 @@ Utilizamos una plataforma interna de inteligencia, desarrollada a partir de nues
 
 Esta plataforma reúne datos como disponibilidad regional, costos de adquisición, logística, porte de las especies, adaptación al clima e impacto en el valor implantado del jardín. Con esto, conseguimos elegir plantas que tienen sentido estético, técnico y económico para cada situación.
 
-El resultado es un paisajismo más eficiente, viable y coherente con el proyecto, sin sorpresas
-de costo o elecciones inadecuadas.`,
+El resultado es un paisajismo más eficiente, viable y coherente con el proyecto, sin sorpresas de costo o elecciones inadecuadas.`,
       ],
     },
     partnersSection: {

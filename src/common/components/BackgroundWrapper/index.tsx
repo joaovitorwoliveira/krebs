@@ -10,10 +10,11 @@ export default function BackgroundWrapper({
   return (
     <div className="min-h-screen relative">
       <div
-        className="fixed inset-0 opacity-2 -z-10 bg-cover bg-center bg-no-repeat"
+        className="fixed inset-0 opacity-3 -z-10 bg-center bg-no-repeat bg-scroll
+          bg-[length:220%_auto]
+          md:bg-cover md:bg-fixed"
         style={{
           backgroundImage: "url('/images/curvas.svg')",
-          backgroundAttachment: "fixed",
         }}
       />
       <div className="relative z-10 px-2 lg:px-10 mx-auto">{children}</div>

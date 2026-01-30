@@ -54,7 +54,7 @@ export default function PartnersSection() {
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className="py-10 px-6 md:px-20 lg:py-40 xl:px-40 2xl:px-80 bg-white"
+      className="py-10 px-6 md:px-20 lg:py-40 xl:px-40 2xl:px-80"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-[auto_1fr_auto_auto] gap-y-6 gap-x-0 lg:gap-x-16 xl:gap-x-24 2xl:gap-x-32 lg:gap-y-6 max-w-7xl mx-auto">
         {/* Coluna Esquerda - Escritórios Parceiros */}
@@ -126,7 +126,7 @@ export default function PartnersSection() {
             alt="incorporadoras"
             width={1000}
             height={1000}
-            className="object-contain"
+            className="object-contain lg:pt-4"
           />
         </motion.div>
       </div>

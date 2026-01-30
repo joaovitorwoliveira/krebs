@@ -586,28 +586,21 @@ Consulting helps understand the potential of the land, align expectations and av
         `The Landscape Feasibility Study is a strategic product for those who need to understand the potential of outdoor areas based on available budget.
 
 It transforms intentions into numbers, scenarios and real possibilities, before full project development. At Krebs+, this study crosses market knowledge, implementation costs, use typologies and initial conceptual development, creating a clear panorama of what is possible to do in outdoor areas, and at what level, within the client's budget.
-The focus is on guiding decisions:
 
-how much to invest, where to concentrate resources, which solutions generate more impact and which paths make sense technically, aesthetically and financially. 
+The focus is on guiding decisions:
+how much to invest, where to concentrate resources, which solutions generate more impact and which paths make sense technically, aesthetically and financially.
 
 The result is a strategic direction for the entrepreneur, reducing risks and avoiding projects misaligned with reality.
 
 Unlike consulting, here we deliver data, estimates and concrete directions, which serve as a basis for the Master Plan, for the project and for executive decisions.
 `,
-        `The Master Plan defines the general concept of the project and guides the development as a
-whole.
+        `The Master Plan defines the general concept of the project and guides the development as a whole.
 
-More than a landscaping stage, it functions as a strategic direction, capable of
-revealing the potential of the place and guiding decisions from the start through a well-developed
-implementation.
+More than a landscaping stage, it functions as a strategic direction, capable of revealing the potential of the place and guiding decisions from the start through a well-developed implementation.
 
-At this moment, we organize flows, uses, atmospheres and language, building a
-clear and integrated vision of the whole before technical detailing. The Master Plan connects
-landscape, architecture and urbanism, aligning experience, identity and viability.
+At this moment, we organize flows, uses, atmospheres and language, building a clear and integrated vision of the whole before technical detailing. The Master Plan connects landscape, architecture and urbanism, aligning experience, identity and viability.
 
-It is the basis for safe decisions, for consistent project evolution and for avoiding
-disconnected paths throughout development. An instrument of reading, synthesis
-and direction that transforms intention into structure.
+It is the basis for safe decisions, for consistent project evolution and for avoiding disconnected paths throughout development. An instrument of reading, synthesis and direction that transforms intention into structure.
 `,
         `The project is the heart of our work.
 
@@ -633,8 +626,7 @@ During execution, we act with continuous technical support, ensuring the project
 This process avoids improvisation, cost deviations and last-minute solutions that compromise the result. Supervision efficiently connects project and execution, transforming design into reality with control and precision.`,
         `Complete Garden Execution is the stage where the project becomes reality, with method, control and technical responsibility.
 
-The execution is not an isolated service: it is born integrated with the project, financial
-viability and strategic decisions made from the start.
+The execution is not an isolated service: it is born integrated with the project, financial viability and strategic decisions made from the start.
 
 We assume total responsibility for garden implementation, managing planning, logistics, plant supply, labor, schedule and quality control. Each stage is conducted based on decisions already matured in the project, avoiding improvisation, cost deviations and quality losses in the field.
 
@@ -645,8 +637,7 @@ We use an internal intelligence platform, developed from our market experience, 
 
 This platform gathers data such as regional availability, acquisition costs, logistics, species size, climate adaptation and impact on the implemented garden value. With this, we can choose plants that make aesthetic, technical and economic sense for each situation.
 
-The result is more efficient, viable landscaping coherent with the project, without cost
-surprises or inadequate choices.`,
+The result is more efficient, viable landscaping coherent with the project, without cost surprises or inadequate choices.`,
       ],
     },
     partnersSection: {
