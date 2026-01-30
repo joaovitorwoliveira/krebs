@@ -50,7 +50,7 @@ export default function HeroWhoWeAre() {
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className="py-10 px-6 md:px-20 lg:py-40 xl:px-30"
+      className="py-10 px-6 md:px-10 lg:py-20 xl:px-30"
     >
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-8 items-start">
         {/* Imagem à esquerda */}

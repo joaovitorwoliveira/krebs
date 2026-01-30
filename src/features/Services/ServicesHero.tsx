@@ -52,11 +52,11 @@ export default function ServicesHero() {
       animate={isInView ? "visible" : "hidden"}
       className="py-10 px-6 md:px-20 lg:py-20 xl:px-40"
     >
-      <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-40 items-end">
+      <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-10 xl:gap-20 2xl:gap-40 items-end">
         {/* Imagem à direita - Desktop */}
         <motion.div
           variants={itemVariants}
-          className="w-full lg:w-[50%] flex-shrink-0"
+          className="w-full lg:w-[50%] flex-shrink-0 lg:pb-100 xl:pb-60 2xl:pb-20"
         >
           <div className="relative w-full aspect-video bg-black overflow-hidden">
             <Image
@@ -71,7 +71,7 @@ export default function ServicesHero() {
 
         <motion.div
           variants={itemVariants}
-          className="w-full lg:w-1/2 flex flex-col gap-6 lg:pt-20 2xl:pt-40 lg:pb-20 xl:pb-40 2xl:pb-60"
+          className="w-full lg:w-1/2 flex flex-col gap-6 xl:pb-10 2xl:pb-20"
         >
           <div className="flex flex-col gap-4 text-sm md:text-base font-inter text-dark">
             <p className="text-justify">

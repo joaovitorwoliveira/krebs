@@ -102,7 +102,7 @@ export default function Solutions() {
                     className={`text-left leading-relaxed transition-all duration-300 cursor-pointer ${
                       hoveredService === index
                         ? "font-bold text-dark"
-                        : "font-normal text-dark/60"
+                        : "font-normal text-gray-400"
                     }`}
                   >
                     {service}
