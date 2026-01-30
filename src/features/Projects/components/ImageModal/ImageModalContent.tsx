@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useCallback } from "react";
 import Image from "next/image";
 
 import Spinner from "@/common/components/Loading/Spinner";
@@ -20,11 +20,13 @@ export default function ImageModalContent({
   onTouchMove,
   onTouchEnd,
 }: ImageModalContentProps) {
-  const [isImageLoading, setIsImageLoading] = useState(true);
+  const [loadedIndices, setLoadedIndices] = useState<Set<number>>(new Set());
 
-  useEffect(() => {
-    setIsImageLoading(true);
-  }, [selectedImageIndex]);
+  const handleImageLoad = useCallback((index: number) => {
+    setLoadedIndices((prev) => new Set(prev).add(index));
+  }, []);
+
+  const isCurrentImageLoaded = loadedIndices.has(selectedImageIndex);
 
   return (
     <motion.div
@@ -51,7 +53,6 @@ export default function ImageModalContent({
       )}
 
       <motion.div
-        key={selectedImageIndex}
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -20 }}
@@ -59,19 +60,27 @@ export default function ImageModalContent({
         className="relative w-full h-full flex items-center justify-center"
         onClick={(e) => e.stopPropagation()}
       >
-        {isImageLoading && (
+        {!isCurrentImageLoaded && (
           <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/40">
             <Spinner />
           </div>
         )}
-        <Image
-          src={images[selectedImageIndex]}
-          alt={`${projectTitle} - Imagem ${selectedImageIndex + 1}`}
-          fill
-          className="object-contain"
-          quality={70}
-          onLoad={() => setIsImageLoading(false)}
-        />
+        {images.map((src, index) => (
+          <Image
+            key={index}
+            src={src}
+            alt={`${projectTitle} - Imagem ${index + 1}`}
+            fill
+            className="object-contain transition-opacity duration-200"
+            quality={70}
+            style={{
+              zIndex: index === selectedImageIndex ? 1 : 0,
+              opacity: index === selectedImageIndex ? 1 : 0,
+              pointerEvents: index === selectedImageIndex ? "auto" : "none",
+            }}
+            onLoad={() => handleImageLoad(index)}
+          />
+        ))}
       </motion.div>
     </motion.div>
   );

@@ -123,7 +123,7 @@ export const projects: Project[] = [
   },
   {
     slug: "jardim-flv",
-    coverPhoto: Images.JARDIM_FLV_IMAGE_9,
+    coverPhoto: Images.JARDIM_FLV_IMAGE_8,
     tags: ["riodejaneiro", "tropical", "residencial"],
     images: [
       Images.JARDIM_FLV_IMAGE_1,

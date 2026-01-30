@@ -1,9 +1,7 @@
 import {
   EDIFICIO_PAIX_IMAGE_3,
   JARDIM_ATJ_IMAGE_6,
-  JARDIM_ATJ_IMAGE_8,
-  JARDIM_FLV_IMAGE_9,
-  PRADO_BAIRRO_CIDADE_IMAGE_1,
+  JARDIM_FLV_IMAGE_8,
   PRADO_BAIRRO_CIDADE_IMAGE_3,
   SURFLAND_IMAGE_4,
   UNISINOS_IMAGE_1,
@@ -21,7 +19,7 @@ export interface HeroImage {
 
 export const heroImages: HeroImage[] = [
   {
-    url: JARDIM_FLV_IMAGE_9,
+    url: JARDIM_FLV_IMAGE_8,
     projectSlug: "jardim-flv",
     projectName: {
       pt: "Jardim FLV",
