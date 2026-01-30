@@ -3,7 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { INSTAGRAM_URL, LINKEDIN_URL } from "@/common/constants/social";
+import {
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+  YOUTUBE_URL,
+} from "@/common/constants/social";
 import { useContactDrawer } from "@/context/ContactDrawerProvider";
 import { useLanguage } from "@/context/LanguageProvider";
 import ContactDrawer from "@/features/ContactDrawer";
@@ -41,6 +45,11 @@ export default function Footer() {
     {
       href: LINKEDIN_URL,
       text: t.footer.socialLinks.linkedin,
+      external: true,
+    },
+    {
+      href: YOUTUBE_URL,
+      text: "YouTube",
       external: true,
     },
   ];

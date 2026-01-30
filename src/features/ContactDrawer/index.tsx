@@ -7,6 +7,7 @@ import {
   INSTAGRAM_URL,
   LINKEDIN_URL,
   WHATSAPP_URL,
+  YOUTUBE_URL,
 } from "@/common/constants/social";
 import { useLanguage } from "@/context/LanguageProvider";
 import { toast } from "sonner";
@@ -126,6 +127,14 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 text={t.contactDrawer.linkedin}
                 onClick={() =>
                   window.open(LINKEDIN_URL, "_blank", "noopener,noreferrer")
+                }
+                variant="icon"
+                className="text-white"
+              />
+              <Button
+                text="YouTube"
+                onClick={() =>
+                  window.open(YOUTUBE_URL, "_blank", "noopener,noreferrer")
                 }
                 variant="icon"
                 className="text-white"

@@ -50,7 +50,7 @@ export default function ServicesHero() {
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className="py-10 px-6 md:px-20 lg:py-30 xl:px-40"
+      className="py-10 px-6 md:px-20 lg:py-20 xl:px-40"
     >
       <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-40 items-end">
         {/* Imagem à direita - Desktop */}
@@ -85,8 +85,6 @@ export default function ServicesHero() {
             </p>
           </div>
         </motion.div>
-
-        {/* Texto à esquerda - Desktop */}
       </div>
     </motion.section>
   );
