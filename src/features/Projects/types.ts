@@ -20,11 +20,9 @@ export interface ProjectTextsProps {
 }
 
 export interface ThumbnailButtonProps {
-  image: string;
   index: number;
   isSelected: boolean;
   onClick: () => void;
-  projectTitle: string;
 }
 
 export interface ProjectsPageProps {

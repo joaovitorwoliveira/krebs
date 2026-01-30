@@ -1,5 +1,9 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
+import Spinner from "@/common/components/Loading/Spinner";
 import { motion } from "@/lib/motion";
 
 import NavigationButton from "../NavigationButton";
@@ -16,6 +20,12 @@ export default function ImageModalContent({
   onTouchMove,
   onTouchEnd,
 }: ImageModalContentProps) {
+  const [isImageLoading, setIsImageLoading] = useState(true);
+
+  useEffect(() => {
+    setIsImageLoading(true);
+  }, [selectedImageIndex]);
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -49,12 +59,18 @@ export default function ImageModalContent({
         className="relative w-full h-full flex items-center justify-center"
         onClick={(e) => e.stopPropagation()}
       >
+        {isImageLoading && (
+          <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/40">
+            <Spinner />
+          </div>
+        )}
         <Image
           src={images[selectedImageIndex]}
           alt={`${projectTitle} - Imagem ${selectedImageIndex + 1}`}
           fill
           className="object-contain"
-          quality={40}
+          quality={70}
+          onLoad={() => setIsImageLoading(false)}
         />
       </motion.div>
     </motion.div>

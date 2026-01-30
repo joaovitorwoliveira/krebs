@@ -142,7 +142,7 @@ export default function ImageGallery({
                     className="object-cover"
                     priority={index < 3}
                     loading={index < 3 ? "eager" : "lazy"}
-                    quality={25}
+                    quality={40}
                   />
                   <motion.div
                     className="absolute inset-0 bg-black"

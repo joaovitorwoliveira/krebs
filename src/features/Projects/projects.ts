@@ -139,7 +139,6 @@ export const projects: Project[] = [
       Images.JARDIM_FLV_IMAGE_11,
       Images.JARDIM_FLV_IMAGE_12,
       Images.JARDIM_FLV_IMAGE_13,
-      Images.JARDIM_FLV_IMAGE_14,
     ],
     conclusionDate: "2023",
   },

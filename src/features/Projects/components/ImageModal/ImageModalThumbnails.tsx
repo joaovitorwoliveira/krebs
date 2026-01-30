@@ -7,7 +7,6 @@ export default function ImageModalThumbnails({
   images,
   selectedImageIndex,
   onSelectImage,
-  projectTitle,
 }: ImageModalThumbnailsProps) {
   return (
     <motion.div
@@ -22,14 +21,12 @@ export default function ImageModalThumbnails({
       className="p-2"
     >
       <div className="flex gap-1 justify-center overflow-x-auto max-w-full scrollbar-hide">
-        {images.map((image, index) => (
+        {images.map((_, index) => (
           <ThumbnailButton
             key={index}
-            image={image}
             index={index}
             isSelected={index === selectedImageIndex}
             onClick={() => onSelectImage(index)}
-            projectTitle={projectTitle}
           />
         ))}
       </div>

@@ -1,37 +1,22 @@
-import Image from "next/image";
-
-import { useLanguage } from "@/context/LanguageProvider";
-
 import { ThumbnailButtonProps } from "../types";
 
 export default function ThumbnailButton({
-  image,
   index,
   isSelected,
   onClick,
-  projectTitle,
 }: ThumbnailButtonProps) {
-  const { t } = useLanguage();
-
   return (
     <button
+      type="button"
       onClick={onClick}
-      className={`relative flex-shrink-0 w-10 h-10 overflow-hidden rounded-sm transition-all duration-200 
-                 border-2 ${
-                   isSelected
-                     ? "border-white opacity-100"
-                     : "border-transparent opacity-60 hover:opacity-80"
-                 }`}
+      aria-label={`Foto ${index + 1}`}
+      className={`relative flex flex-shrink-0 w-10 h-10 items-center justify-center rounded-sm text-sm font-medium transition-all duration-200 border ${
+        isSelected
+          ? "border-white bg-white/10 text-white"
+          : "border-white/30 text-white/60 hover:border-white/50 hover:text-white/80"
+      }`}
     >
-      <Image
-        src={image}
-        alt={`${projectTitle} - ${t.projectDetails.thumbnail} ${index + 1}`}
-        width={80}
-        height={40}
-        // fill
-        className="object-cover w-full h-full"
-        quality={40}
-      />
+      {index + 1}
     </button>
   );
 }

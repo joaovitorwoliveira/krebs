@@ -111,7 +111,6 @@ export default function ProjectRow({ row, rowIndex }: ProjectRowProps) {
                     ]?.title || project.slug
                   }
                   fill
-                  quality={70}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-101"
                   priority={rowIndex === 0 && itemIndex < 3}
