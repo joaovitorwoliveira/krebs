@@ -73,6 +73,7 @@ export default function ServicesHome() {
                 alt={t.home.servicesHome.imageAlt}
                 fill
                 className="object-contain"
+                quality={40}
               />
             </div>
           </div>

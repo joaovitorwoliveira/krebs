@@ -129,7 +129,7 @@ export default function HeroCarousel({ onImagesLoaded }: HeroCarouselProps) {
                     className="object-cover object-center"
                     priority={index === 0}
                     sizes="100vw"
-                    quality={80}
+                    quality={75}
                     unoptimized={isMobile}
                     onLoad={handleImageLoad}
                   />

@@ -26,8 +26,10 @@ export default function ThumbnailButton({
       <Image
         src={image}
         alt={`${projectTitle} - ${t.projectDetails.thumbnail} ${index + 1}`}
-        fill
-        className="object-cover"
+        width={80}
+        height={40}
+        // fill
+        className="object-cover w-full h-full"
         quality={40}
       />
     </button>

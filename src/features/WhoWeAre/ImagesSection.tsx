@@ -62,6 +62,7 @@ export default function ImagesSection() {
               alt="Escritório Krebs+"
               fill
               className="object-cover"
+              quality={40}
             />
           </div>
         </motion.div>
@@ -77,6 +78,7 @@ export default function ImagesSection() {
               alt="Planta verde"
               fill
               className="object-cover"
+              quality={40}
             />
           </div>
         </motion.div>

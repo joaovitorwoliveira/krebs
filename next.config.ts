@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
     ],
     minimumCacheTTL: 60 * 60 * 24 * 30,
     formats: ["image/avif", "image/webp"],
-    qualities: [40, 75, 80],
+    qualities: [25, 40, 70, 75, 80],
   },
   async redirects() {
     return redirects;
