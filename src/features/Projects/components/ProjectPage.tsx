@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 
 import type { ProjectPageProps } from "../types";
 import ImageGallery from "./ImageGallery";
+import ProjectBreadcrumb from "./ProjectBreadcrumb";
 import ProjectTexts from "./ProjectTexts";
 
 export default function ProjectPage({ slug, className }: ProjectPageProps) {
@@ -56,6 +57,7 @@ export default function ProjectPage({ slug, className }: ProjectPageProps) {
   return (
     <div className={cn("min-h-screen", className)}>
       <div className="max-w-8xl mx-auto px-6 md:px-10 pt-10">
+        <ProjectBreadcrumb projectTitle={projectTranslation?.title ?? ""} />
         <ProjectTexts
           title={projectTranslation?.title}
           description={projectTranslation?.description}

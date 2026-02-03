@@ -9,7 +9,7 @@ import { useLanguage } from "@/context/LanguageProvider";
 import { cn } from "@/lib/utils";
 
 const clients = [
-  { name: "Iguatemi", logo: "/images/clients/iguatemi.png", size: 3 },
+  { name: "Iguatemi", logo: "/images/clients/iguatemi.png", size: 4 },
   { name: "Vivo", logo: "/images/clients/vivo.png", size: 1 },
   { name: "Unisinos", logo: "/images/clients/unisinos.png", size: 2 },
   {
@@ -19,13 +19,13 @@ const clients = [
   },
   { name: "Dadobier", logo: "/images/clients/dadobier.png", size: 2 },
   { name: "Gerdau", logo: "/images/clients/gerdau.png", size: 2 },
-  { name: "Surfland", logo: "/images/clients/surfland.png", size: 2 },
+  { name: "Surfland", logo: "/images/clients/surfland.png", size: 4 },
   { name: "Laghetto", logo: "/images/clients/laghetto.png", size: 2 },
-  { name: "Yara", logo: "/images/clients/yara.png", size: 3 },
+  { name: "Yara", logo: "/images/clients/yara.png", size: 2 },
   {
     name: "Colégio Farroupilha",
     logo: "/images/clients/colegio-farroupilha.jpg",
-    size: 3,
+    size: 4,
   },
   { name: "Vila Ventura", logo: "/images/clients/vila-ventura.webp", size: 1 },
   { name: "CPFL Energia", logo: "/images/clients/cpfl.png", size: 3 },
@@ -70,7 +70,8 @@ export default function ClientsHome() {
                       "relative w-full",
                       client.size === 1 && "h-10 md:h-12 lg:h-14",
                       client.size === 2 && "h-14 md:h-16 lg:h-20",
-                      client.size === 3 && "h-18 md:h-20 lg:h-24"
+                      client.size === 3 && "h-18 md:h-20 lg:h-24",
+                      client.size === 4 && "h-22 md:h-24 lg:h-28"
                     )}
                   >
                     <Image

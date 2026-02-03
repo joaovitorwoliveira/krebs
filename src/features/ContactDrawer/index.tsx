@@ -103,8 +103,8 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
         </div>
 
         {/* Content */}
-        <div className="flex-1 p-6 flex flex-col justify-between">
-          <div className="flex gap-2 justify-between pt-6">
+        <div className="flex-1 p-6 pt-2 flex flex-col justify-between overflow-y-auto">
+          <div className="flex gap-2 justify-between pt-2">
             <div className="flex flex-col gap-6 items-start text-regular">
               <Button
                 text={t.contactDrawer.instagram}
@@ -143,18 +143,21 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
           </div>
 
           {/* Contact Form */}
-          <div className="flex flex-col gap-10 py-10">
+          <div className="flex flex-col gap-6 pt-6 pb-6">
             <h3 className="text-lg font-bold">
               {t.contactDrawer.projectTitle}
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-4 text-regular">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-4 text-regular flex flex-col"
+            >
               <input
                 type="text"
                 name="name"
                 placeholder={t.contactDrawer.namePlaceholder}
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full bg-transparent border-b border-gray-500 text-white placeholder-white pb-2 focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-transparent border-b border-gray-500 text-white placeholder-white/60 pb-2 focus:outline-none focus:border-white transition-colors"
                 required
               />
               <input
@@ -163,7 +166,7 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 placeholder={t.contactDrawer.emailPlaceholder}
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full bg-transparent border-b border-gray-500 text-white placeholder-white pb-2 focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-transparent border-b border-gray-500 text-white placeholder-white/60 pb-2 focus:outline-none focus:border-white transition-colors"
                 required
               />
               <textarea
@@ -171,8 +174,8 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
                 placeholder={t.contactDrawer.messagePlaceholder}
                 value={formData.message}
                 onChange={handleInputChange}
-                rows={2}
-                className="w-full bg-transparent border-b border-gray-500 text-white placeholder-white pb-2 focus:outline-none focus:border-white transition-colors resize-none"
+                rows={6}
+                className="w-full min-h-[140px] bg-transparent border-b border-gray-500 text-white placeholder-white/60 pb-2 pt-2 focus:outline-none focus:border-white transition-colors resize-y"
                 required
               />
               <Button

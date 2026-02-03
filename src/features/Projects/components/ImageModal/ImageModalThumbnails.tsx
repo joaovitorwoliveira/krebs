@@ -20,7 +20,7 @@ export default function ImageModalThumbnails({
       }}
       className="p-2"
     >
-      <div className="flex gap-1 justify-center overflow-x-auto max-w-full scrollbar-hide">
+      <div className="flex flex-wrap gap-1 justify-center max-w-full">
         {images.map((_, index) => (
           <ThumbnailButton
             key={index}
