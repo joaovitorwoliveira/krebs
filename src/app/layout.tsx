@@ -7,6 +7,7 @@ import BackToTopButton from "@/common/components/BackToTopButton";
 import CopyrightTooltip from "@/common/components/CopyrightTooltip";
 import Footer from "@/common/components/Footer";
 import Header from "@/common/components/Header";
+import SmoothScroll from "@/common/components/SmoothScroll";
 import { Toaster } from "@/common/components/Sonner";
 import { ContactDrawerProvider } from "@/context/ContactDrawerProvider";
 import { LanguageProvider } from "@/context/LanguageProvider";
@@ -32,6 +33,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/k-plus-icon-gray.png",
   },
+  openGraph: {
+    images: "/images/k-plus-icon-gray.png",
+  },
 };
 
 export default function RootLayout({
@@ -40,27 +44,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" className="scroll-smooth">
+    <html lang="pt-br">
       <body
         className={`${encodeSans.variable} ${inter.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-x-hidden`}
       >
-        <div className="texture-overlay"></div>
-        <LanguageProvider>
-          <ContactDrawerProvider>
-            <Header />
-            <MotionProvider>{children}</MotionProvider>
-            <Footer />
-            <BackToTopButton />
-            {/* <CopyrightTooltip /> */}
-            <Toaster
-              position="top-center"
-              richColors
-              closeButton
-              expand
-              visibleToasts={5}
-            />
-          </ContactDrawerProvider>
-        </LanguageProvider>
+        <SmoothScroll>
+          <div className="texture-overlay"></div>
+          <LanguageProvider>
+            <ContactDrawerProvider>
+              <Header />
+              <MotionProvider>{children}</MotionProvider>
+              <Footer />
+              <BackToTopButton />
+              <Toaster
+                position="top-center"
+                richColors
+                closeButton
+                expand
+                visibleToasts={5}
+              />
+            </ContactDrawerProvider>
+          </LanguageProvider>
+        </SmoothScroll>
       </body>
     </html>
   );
