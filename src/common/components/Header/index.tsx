@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -22,6 +22,8 @@ export default function Header() {
     useContactDrawer();
   const pathname = usePathname();
   const { t } = useLanguage();
+  const headerRef = useRef<HTMLElement>(null);
+  const [showFloatingContact, setShowFloatingContact] = useState(false);
 
   const [isHomePage, setIsHomePage] = useState(() => {
     if (pathname !== null && pathname !== undefined) {
@@ -37,6 +39,17 @@ export default function Header() {
       (typeof window !== "undefined" ? window.location.pathname : "/");
     setIsHomePage(currentPath === "/");
   }, [pathname]);
+
+  const handleScroll = useCallback(() => {
+    if (!headerRef.current) return;
+    const headerBottom = headerRef.current.getBoundingClientRect().bottom;
+    setShowFloatingContact(headerBottom <= 0);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   const navigationLinks = [
     { href: "/quem-somos", label: t.header.whoWeAre },
@@ -55,6 +68,7 @@ export default function Header() {
   return (
     <>
       <header
+        ref={headerRef}
         className={cn(
           "h-20 flex items-center relative z-40 bg-transparent lg:h-28",
           isHomePage ? "bg-gradient-to-b from-black/45 to-black/0" : undefined
@@ -122,6 +136,22 @@ export default function Header() {
           </div>
         </div>
       </header>
+
+      {/* Floating Contact Button */}
+      <div
+        className={cn(
+          "fixed top-4 right-6 lg:right-10 z-50 transition-all duration-300",
+          showFloatingContact
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-full opacity-0 pointer-events-none"
+        )}
+      >
+        <Button
+          text={t.header.contact}
+          onClick={openContactDrawer}
+          className="text-sm md:text-base shadow-lg"
+        />
+      </div>
 
       <MobileMenu
         isOpen={isMobileMenuOpen}

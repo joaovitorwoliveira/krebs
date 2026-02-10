@@ -1,7 +1,9 @@
 "use client";
 
+import { useEffect } from "react";
 import { notFound } from "next/navigation";
 
+import { useLenis } from "@/common/components/SmoothScroll";
 import { useLanguage } from "@/context/LanguageProvider";
 import { projects } from "@/features/Projects/projects";
 
@@ -15,6 +17,12 @@ import RelatedProjects from "./RelatedProjects";
 
 export default function ProjectPage({ slug, className }: ProjectPageProps) {
   const { t } = useLanguage();
+  const lenis = useLenis();
+
+  useEffect(() => {
+    lenis?.scrollTo(0, { duration: 1.2 });
+  }, [slug, lenis]);
+
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
