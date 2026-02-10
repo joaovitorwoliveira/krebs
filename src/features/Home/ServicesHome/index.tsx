@@ -67,12 +67,12 @@ export default function ServicesHome() {
 
           {/* Seção esquerda - Imagem */}
           <div className="lg:w-[50%] flex items-start order-2 lg:order-1">
-            <div className="relative w-full h-[400px] lg:h-[500px] xl:h-[900px] ">
+            <div className="relative w-full h-[260px] sm:h-[400px] md:h-[500px] lg:h-[700px]">
               <Image
                 src="/images/andre-obra.jpg"
                 alt={t.home.servicesHome.imageAlt}
                 fill
-                className="object-contain object-top"
+                className="object-contain lg:object-top"
               />
             </div>
           </div>
