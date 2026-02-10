@@ -14,7 +14,7 @@ export default function ServicesHome() {
   return (
     <div className="relative z-40 bg-white">
       <div className="flex flex-col gap-6 py-10 px-6 lg:px-10 lg:py-20 2xl:px-20">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full  2xl:pt-40">
           {/* Seção direita - Título e Texto */}
           <div className="flex flex-col gap-6 lg:gap-8 lg:w-[60%] lg:pl-8 lg:items-end lg:text-right order-1 lg:order-2">
             <h2
@@ -27,7 +27,7 @@ export default function ServicesHome() {
               {t.home.servicesHome.title}
             </h2>
 
-            <div className="flex flex-col gap-4 text-dark max-w-2xl ">
+            <div className="flex flex-col gap-4 text-dark max-w-lg ">
               <p
                 className={cn(
                   "font-normal text-justify",
@@ -66,13 +66,13 @@ export default function ServicesHome() {
           </div>
 
           {/* Seção esquerda - Imagem */}
-          <div className="lg:w-[35%] flex items-start order-2 lg:order-1">
-            <div className="relative w-full h-[400px] lg:h-[500px] xl:h-[700px]">
+          <div className="lg:w-[50%] flex items-start order-2 lg:order-1">
+            <div className="relative w-full h-[400px] lg:h-[500px] xl:h-[900px] ">
               <Image
-                src="/images/obra-meninas.jpg"
+                src="/images/andre-obra.jpg"
                 alt={t.home.servicesHome.imageAlt}
                 fill
-                className="object-contain"
+                className="object-contain object-top"
                 quality={40}
               />
             </div>

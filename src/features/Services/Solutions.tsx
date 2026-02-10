@@ -6,6 +6,7 @@ import { useLanguage } from "@/context/LanguageProvider";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
+import SolutionsMobile from "./SolutionsMobile";
 
 export default function Solutions() {
   const ref = useRef(null);
@@ -56,7 +57,18 @@ export default function Solutions() {
       className="py-10 px-6 md:px-20 lg:py-40 xl:px-40 2xl:px-80 "
     >
       <div className="flex flex-col gap-8 lg:gap-12 max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-center items-center">
+        {/* Layout Mobile */}
+        <SolutionsMobile
+          title={t.servicesPage.solutions.title}
+          paragraph1={t.servicesPage.solutions.paragraph1}
+          paragraph2={t.servicesPage.solutions.paragraph2}
+          services={services}
+          serviceDescriptions={serviceDescriptions}
+          itemVariants={itemVariants}
+        />
+
+        {/* Layout Desktop */}
+        <div className="hidden lg:flex flex-row gap-12 justify-center items-center">
           {/* Coluna esquerda - Título e parágrafos */}
           <motion.div
             variants={itemVariants}
@@ -65,7 +77,7 @@ export default function Solutions() {
             <h2 className="font-inter-bold text-dark uppercase">
               {t.servicesPage.solutions.title}
             </h2>
-            <div className="flex flex-col gap-4 text-sm md:text-base font-inter text-dark">
+            <div className="flex flex-col gap-4 text-base font-inter text-dark">
               <p className="text-justify">
                 {t.servicesPage.solutions.paragraph1}
               </p>
@@ -76,7 +88,7 @@ export default function Solutions() {
           </motion.div>
 
           {/* Linha vertical separadora */}
-          <div className="hidden lg:flex flex-col items-center self-stretch">
+          <div className="flex flex-col items-center self-stretch">
             <div className="w-1 h-1 rounded-full bg-dark" />
             <div className="w-px bg-dark flex-1" />
             <div className="w-1 h-1 rounded-full bg-dark" />
@@ -87,15 +99,9 @@ export default function Solutions() {
             variants={itemVariants}
             className="w-full lg:w-2/5 flex flex-col py-2"
           >
-            <ul className="flex flex-col gap-5 md:gap-6 text-sm md:text-base font-inter text-dark">
+            <ul className="flex flex-col gap-6 text-base font-inter text-dark">
               {services.map((service, index) => (
                 <li key={index} className="flex items-start gap-2">
-                  <span
-                    aria-hidden
-                    className="select-none text-dark/60 lg:hidden"
-                  >
-                    —
-                  </span>
                   <button
                     onMouseEnter={() => setHoveredService(index)}
                     onClick={() => setHoveredService(index)}
@@ -113,7 +119,7 @@ export default function Solutions() {
           </motion.div>
 
           {/* Coluna extra direita - Descrição dinâmica (desktop) */}
-          <div className="hidden lg:flex w-full lg:w-2/5 flex-col py-2 h-[450px]">
+          <div className="flex w-full lg:w-2/5 flex-col py-2 h-[450px]">
             {serviceDescriptions && serviceDescriptions[hoveredService] && (
               <motion.div
                 key={hoveredService}
@@ -128,25 +134,6 @@ export default function Solutions() {
             )}
           </div>
         </div>
-
-        {/* Descrição dinâmica (mobile) - aparece abaixo de tudo */}
-        <motion.div
-          variants={itemVariants}
-          className="flex lg:hidden w-full flex-col py-2 min-h-[200px]"
-        >
-          {serviceDescriptions && serviceDescriptions[hoveredService] && (
-            <motion.div
-              key={hoveredService}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-              className="text-sm font-inter text-dark text-justify leading-relaxed whitespace-pre-wrap"
-            >
-              {serviceDescriptions[hoveredService]}
-            </motion.div>
-          )}
-        </motion.div>
       </div>
     </motion.section>
   );

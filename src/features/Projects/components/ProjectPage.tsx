@@ -11,6 +11,7 @@ import type { ProjectPageProps } from "../types";
 import ImageGallery from "./ImageGallery";
 import ProjectBreadcrumb from "./ProjectBreadcrumb";
 import ProjectTexts from "./ProjectTexts";
+import RelatedProjects from "./RelatedProjects";
 
 export default function ProjectPage({ slug, className }: ProjectPageProps) {
   const { t } = useLanguage();
@@ -69,6 +70,8 @@ export default function ProjectPage({ slug, className }: ProjectPageProps) {
         images={project.images}
         projectTitle={projectTranslation?.title}
       />
+
+      <RelatedProjects currentProjectSlug={slug} allProjects={projects} />
     </div>
   );
 }

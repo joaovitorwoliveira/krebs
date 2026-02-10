@@ -513,6 +513,10 @@ export const es = {
     closeModal: "Cerrar (Esc)",
   },
 
+  relatedProjects: {
+    title: "PROYECTOS RELACIONADOS",
+  },
+
   whoWeArePage: {
     mapSection: {
       title: "NÚMEROS",
@@ -908,7 +912,7 @@ El resultado es un paisajismo más eficiente, viable y coherente con el proyecto
         "+",
         "Rodrigo es arquitecto paisajista responsable por el sector de garden design, donde actúa desde la concepción inicial de proyecto hasta la curaduría de especies en viveros y la ejecución final. Es reconocido por la preocupación con el uso de especies nativas y atención a las novedades del mercado, siempre en busca de elaborar un jardín con diseño y sostenibilidad.",
         "+",
-        "Arquitectura y Urbanismo (UFPEL)",
+        "Arquitectura y Urbanismo (UCPEL)",
         "Master en Paisajismo (IPOG)",
       ],
     },
@@ -934,7 +938,7 @@ El resultado es un paisajismo más eficiente, viable y coherente con el proyecto
     },
     addressText:
       "Calle 24 de Outubro, 1440 - Sala 1006 - Auxiliadora\nPorto Alegre - RS\n\nCalle João Jacob Bainy, 835 - Sala 604\nTres Vendas\nPelotas - RS",
-    contactInfo: ["(53)30274303", "comercial@krebsmais.com"],
+    contactInfo: ["53 30274303", "comercial@krebsmais.com"],
   },
 
   language: {

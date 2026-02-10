@@ -512,6 +512,10 @@ export const en = {
     closeModal: "Close (Esc)",
   },
 
+  relatedProjects: {
+    title: "RELATED PROJECTS",
+  },
+
   whoWeArePage: {
     mapSection: {
       title: "NUMBERS",
@@ -906,7 +910,7 @@ The result is more efficient, viable landscaping coherent with the project, with
         "+",
         "Rodrigo is a landscape architect responsible for the garden design sector, where he works from the initial project conception to the curation of species in nurseries and final execution. He is recognized for his concern with the use of native species and attention to market novelties, always seeking to develop a garden with design and sustainability.",
         "+",
-        "Architecture and Urbanism (UFPEL)",
+        "Architecture and Urbanism (UCPEL)",
         "Master in Landscaping (IPOG)",
       ],
     },
@@ -932,7 +936,7 @@ The result is more efficient, viable landscaping coherent with the project, with
     },
     addressText:
       "24 de Outubro Street, 1440 - Room 1006 - Auxiliadora\nPorto Alegre - RS\n\nJoão Jacob Bainy Street, 835 - Room 604\nTres Vendas\nPelotas - RS",
-    contactInfo: ["(53)30274303", "comercial@krebsmais.com"],
+    contactInfo: ["53 30274303", "comercial@krebsmais.com"],
   },
 
   language: {

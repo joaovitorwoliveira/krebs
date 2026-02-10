@@ -86,7 +86,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "raisha",
-    name: "Raisha Holz",
+    name: "Raischa Holz",
     category: "equipe",
     image: "/images/team/raisha.jpg",
   },
