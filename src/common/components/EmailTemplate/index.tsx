@@ -17,7 +17,7 @@ export function EmailTemplate({ name, email, message }: EmailTemplateProps) {
       }}
     >
       <h1 style={{ color: "#333", fontSize: "24px", marginBottom: "20px" }}>
-        TESTE KREBS: Nova mensagem do portfólio
+        Mensagem de contato do website
       </h1>
 
       <div
