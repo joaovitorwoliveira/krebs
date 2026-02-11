@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
+import { useLenis } from "@/common/components/SmoothScroll";
 import { useContactDrawer } from "@/context/ContactDrawerProvider";
 import { useLanguage } from "@/context/LanguageProvider";
 
@@ -19,6 +20,7 @@ export default function BackToTopButton({
 }: BackToTopButtonProps) {
   const { t } = useLanguage();
   const { isContactDrawerOpen } = useContactDrawer();
+  const lenis = useLenis();
   const [isVisible, setIsVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
@@ -38,10 +40,7 @@ export default function BackToTopButton({
   }, [showAfter, isContactDrawerOpen]);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    lenis?.scrollTo(0, { duration: 1.8 });
   };
 
   return (

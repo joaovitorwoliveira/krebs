@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { useLenis } from "@/common/components/SmoothScroll";
 import {
   INSTAGRAM_URL,
   LINKEDIN_URL,
@@ -28,6 +29,11 @@ export default function Footer() {
   const { isContactDrawerOpen, openContactDrawer, closeContactDrawer } =
     useContactDrawer();
   const { t } = useLanguage();
+  const lenis = useLenis();
+
+  const handleScrollToTop = () => {
+    lenis?.scrollTo(0, { duration: 1.8 });
+  };
 
   const navigationLinks: LinkItem[] = [
     { href: "/", text: t.footer.navigationLinks.home },
@@ -59,11 +65,16 @@ export default function Footer() {
     { text: t.footer.contactInfo[1] },
   ];
 
-  const renderLinkWithButton = (link: LinkItem, key: string) => (
+  const renderLinkWithButton = (
+    link: LinkItem,
+    key: string,
+    scrollToTop?: boolean
+  ) => (
     <Link
       key={key}
       href={link.href}
       {...(link.external && { target: "_blank", rel: "noopener noreferrer" })}
+      {...(scrollToTop && { onClick: handleScrollToTop })}
     >
       <Button
         variant="icon"
@@ -112,7 +123,7 @@ export default function Footer() {
               </h4>
               <nav className="space-y-2 flex flex-col">
                 {navigationLinks.map((link, index) =>
-                  renderLinkWithButton(link, `nav-${index}`)
+                  renderLinkWithButton(link, `nav-${index}`, true)
                 )}
               </nav>
             </div>

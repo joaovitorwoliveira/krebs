@@ -13,7 +13,7 @@ const awardsData = [
   {
     ano: "2025",
     projeto: "Costero Condomínio Clube",
-    arquitetura: "Rafael Grantan",
+    arquitetura: "Rafael Grantham",
     premiacao: "Master Imobiliário",
   },
   {
