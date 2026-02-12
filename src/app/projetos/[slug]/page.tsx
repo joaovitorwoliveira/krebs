@@ -65,7 +65,7 @@ export async function generateMetadata({
   const description = `Projeto ${projectTitle} - ${projectType} ${location ? `em ${location}` : ""} realizado pelo escritório Krebs +. Arquitetura paisagística com ${project.tags.slice(0, 3).join(", ")}.`;
 
   return {
-    title: `${projectTitle} | Projeto de Paisagismo`,
+    title: `${projectTitle} | Krebs + Paisagismo`,
     description: description,
     keywords: [
       ...project.tags,
