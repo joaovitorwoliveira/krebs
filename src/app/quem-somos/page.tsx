@@ -7,7 +7,7 @@ const siteUrl = "https://krebsmais.com.br";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Quem Somos | Krebs + Paisagismo",
+    title: "Quem Somos",
     description:
       "Conheça o Krebs +, escritório de arquitetura paisagística com vasta experiência em projetos residenciais, institucionais e de urbanismo. Nossa equipe transforma espaços em paisagens memoráveis.",
     keywords: [

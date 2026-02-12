@@ -12,6 +12,7 @@ import { Toaster } from "@/common/components/Sonner";
 import { ContactDrawerProvider } from "@/context/ContactDrawerProvider";
 import { LanguageProvider } from "@/context/LanguageProvider";
 import MotionProvider from "@/context/MotionProvider";
+import { generateOrganizationSchema } from "@/utils/seo/schemas";
 
 const encodeSans = Encode_Sans({
   variable: "--font-encode-sans",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: "Krebs + | Arquitetura Paisagística",
-    template: "%s | Krebs +",
+    template: "%s | Krebs + Paisagismo",
   },
   description:
     "Escritório de paisagismo Krebs + - Criamos paisagens, criamos emoções. Projetos de arquitetura paisagística em Porto Alegre, Rio Grande do Sul e todo Brasil.",
@@ -97,21 +98,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Krebs +",
-    alternateName: "Krebs Mais",
-    url: siteUrl,
-    logo: `${siteUrl}/images/logo_full_textura.png`,
-    description:
-      "Escritório de arquitetura paisagística especializado em projetos residenciais, institucionais e de urbanismo.",
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "BR",
-      addressRegion: "RS",
-    },
-  };
+  const organizationSchema = generateOrganizationSchema();
 
   return (
     <html lang="pt-br">

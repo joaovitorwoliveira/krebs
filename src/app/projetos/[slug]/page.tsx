@@ -34,6 +34,48 @@ function formatProjectTitle(slug: string): string {
     .replace(/Flv/g, "FLV");
 }
 
+const locationTagLabels: Record<string, string> = {
+  garopaba: "Garopaba",
+  portoalegre: "Porto Alegre",
+  riodejaneiro: "Rio de Janeiro",
+  pelotas: "Pelotas",
+  uruguai: "Uruguai",
+  gravatai: "Gravataí",
+  novasantarita: "Nova Santa Rita",
+  xangrila: "Xangri-lá",
+  labarra: "La Barra",
+};
+
+const locationTagKeys = new Set(Object.keys(locationTagLabels));
+
+const tagLabels: Record<string, string> = {
+  residencial: "Residencial",
+  institucional: "Institucional",
+  praia: "Praia",
+  piscina: "Piscina",
+  natureza: "Natureza",
+  jardim: "Jardim",
+  internacional: "Internacional",
+  "colégio": "Colégio",
+  urbanismo: "Urbanismo",
+  varanda: "Varanda",
+  publico: "Público",
+  shopping: "Shopping",
+  tropical: "Tropical",
+  edificio: "Edifício",
+  condominio: "Condomínio",
+  bairro: "Bairro",
+  resort: "Resort",
+  surf: "Surf",
+  parque: "Parque",
+  universidade: "Universidade",
+};
+
+function formatTag(tag: string): string {
+  const lower = tag.toLowerCase();
+  return locationTagLabels[lower] || tagLabels[lower] || tag;
+}
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -47,25 +89,22 @@ export async function generateMetadata({
   }
 
   const projectTitle = formatProjectTitle(slug);
-  const projectType = project.tags[0] || "paisagismo";
-  const location = project.tags.find((tag) =>
-    [
-      "garopaba",
-      "portoalegre",
-      "riodejaneiro",
-      "pelotas",
-      "uruguai",
-      "gravatai",
-      "novasantarita",
-      "xangrila",
-      "labarra",
-    ].includes(tag.toLowerCase())
-  );
 
-  const description = `Projeto ${projectTitle} - ${projectType} ${location ? `em ${location}` : ""} realizado pelo escritório Krebs +. Arquitetura paisagística com ${project.tags.slice(0, 3).join(", ")}.`;
+  const typeTags = project.tags.filter(
+    (tag) => !locationTagKeys.has(tag.toLowerCase())
+  );
+  const projectType = formatTag(typeTags[0] || "paisagismo");
+
+  const locationTag = project.tags.find((tag) =>
+    locationTagKeys.has(tag.toLowerCase())
+  );
+  const locationLabel = locationTag ? locationTagLabels[locationTag.toLowerCase()] : null;
+
+  const formattedTags = project.tags.slice(0, 3).map(formatTag).join(", ");
+  const description = `Projeto ${projectTitle} - ${projectType}${locationLabel ? ` em ${locationLabel}` : ""} realizado pelo escritório Krebs +. Arquitetura paisagística com ${formattedTags}.`;
 
   return {
-    title: `${projectTitle} | Krebs + Paisagismo`,
+    title: projectTitle,
     description: description,
     keywords: [
       ...project.tags,

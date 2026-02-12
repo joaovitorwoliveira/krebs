@@ -3,9 +3,6 @@ import type { NextConfig } from "next";
 import { redirects } from "./redirects";
 
 const nextConfig: NextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     remotePatterns: [
       {

@@ -6,7 +6,7 @@ const siteUrl = "https://krebsmais.com.br";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Projetos | Krebs + Paisagismo",
+    title: "Projetos",
     description:
       "Conheça nosso portfólio de projetos de paisagismo: jardins residenciais, espaços institucionais, projetos de urbanismo em Porto Alegre, Garopaba, Rio de Janeiro e outras localidades.",
     keywords: [
