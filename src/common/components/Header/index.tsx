@@ -85,7 +85,7 @@ export default function Header() {
                         ? "/images/logo_full_textura.png"
                         : "/images/logo_full_textura_verde.png"
                     }
-                    alt={"KREBS+"}
+                    alt={"Krebs + Arquitetura Paisagística e Paisagismo"}
                     width={140}
                     height={140}
                     className="object-cover"

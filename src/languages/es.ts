@@ -193,7 +193,6 @@ export const es = {
         piscina: "Piscina",
         internacional: "Internacional",
         institucional: "Institucional",
-        público: "Público",
         publico: "Público",
         varanda: "Balcón",
         colégio: "Colegio",

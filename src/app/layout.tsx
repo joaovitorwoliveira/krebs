@@ -26,15 +26,69 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteUrl = "https://krebsmais.com.br";
+
 export const metadata: Metadata = {
-  title: "Krebs +",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Krebs + | Arquitetura Paisagística",
+    template: "%s | Krebs +",
+  },
   description:
-    "Escritório de paisagismo Krebs + - Criamos paisagens, criamos emoções.",
+    "Escritório de paisagismo Krebs + - Criamos paisagens, criamos emoções. Projetos de arquitetura paisagística em Porto Alegre, Rio Grande do Sul e todo Brasil.",
+  keywords: [
+    "paisagismo",
+    "arquitetura paisagística",
+    "jardins",
+    "paisagismo porto alegre",
+    "projeto paisagismo",
+    "krebs mais",
+    "paisagismo residencial",
+    "paisagismo institucional",
+  ],
+  authors: [{ name: "Krebs +" }],
+  creator: "Krebs +",
+  publisher: "Krebs +",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: "/images/k-plus-icon-gray.png",
   },
   openGraph: {
-    images: "/images/k-plus-icon-gray.png",
+    type: "website",
+    locale: "pt_BR",
+    url: siteUrl,
+    siteName: "Krebs +",
+    title: "Krebs + | Arquitetura Paisagística",
+    description:
+      "Escritório de paisagismo Krebs + - Criamos paisagens, criamos emoções. Projetos de arquitetura paisagística em Porto Alegre e todo Brasil.",
+    images: [
+      {
+        url: "/images/logo_full_textura.png",
+        width: 1200,
+        height: 630,
+        alt: "Krebs + Arquitetura Paisagística",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Krebs + | Arquitetura Paisagística",
+    description:
+      "Escritório de paisagismo Krebs + - Criamos paisagens, criamos emoções.",
+    images: ["/images/logo_full_textura.png"],
+  },
+  alternates: {
+    canonical: siteUrl,
   },
 };
 
@@ -43,8 +97,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Krebs +",
+    alternateName: "Krebs Mais",
+    url: siteUrl,
+    logo: `${siteUrl}/images/logo_full_textura.png`,
+    description:
+      "Escritório de arquitetura paisagística especializado em projetos residenciais, institucionais e de urbanismo.",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "BR",
+      addressRegion: "RS",
+    },
+  };
+
   return (
     <html lang="pt-br">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+      </head>
       <body
         className={`${encodeSans.variable} ${inter.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-x-hidden`}
       >

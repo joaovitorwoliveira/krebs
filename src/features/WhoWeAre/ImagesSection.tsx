@@ -59,7 +59,7 @@ export default function ImagesSection() {
           <div className="relative w-full aspect-[5/3]">
             <Image
               src="/images/escritorio-pb.jpg"
-              alt="Escritório Krebs+"
+              alt="Escritório de arquitetura paisagística Krebs +"
               fill
               className="object-cover"
               quality={40}
@@ -75,7 +75,7 @@ export default function ImagesSection() {
           <div className="relative w-full aspect-[3/5] max-w-sm">
             <Image
               src="/images/planta-verde.jpg"
-              alt="Planta verde"
+              alt="Detalhe de vegetação - Projetos de paisagismo Krebs +"
               fill
               className="object-cover"
               quality={40}

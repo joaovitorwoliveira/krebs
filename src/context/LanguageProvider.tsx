@@ -39,12 +39,13 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const t = languages[language];
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider
+      value={{ language, setLanguage, t: t as TranslationKeys }}
+    >
       {children}
     </LanguageContext.Provider>
   );
 }
-
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (context === undefined) {
