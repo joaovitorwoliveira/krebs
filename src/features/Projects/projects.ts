@@ -96,7 +96,7 @@ export const projects: Project[] = [
   {
     slug: "rampa",
     coverPhoto: Images.RAMPA_IMAGE_4,
-    tags: ["institucional", "pelotas", "público"],
+    tags: ["institucional", "pelotas", "publico"],
     images: [
       Images.RAMPA_IMAGE_1,
       Images.RAMPA_IMAGE_2,
@@ -145,7 +145,7 @@ export const projects: Project[] = [
   {
     slug: "rua-mista-legano",
     coverPhoto: Images.RUA_MISTA_LEGANO_IMAGE_2,
-    tags: ["institucional", "público", "urbanismo", "novasantarita"],
+    tags: ["institucional", "publico", "urbanismo", "novasantarita"],
     images: [
       Images.RUA_MISTA_LEGANO_IMAGE_1,
       Images.RUA_MISTA_LEGANO_IMAGE_2,

@@ -61,7 +61,7 @@ export default function ServicesHero() {
           <div className="relative w-full aspect-video bg-black overflow-hidden">
             <Image
               src="/images/services-hero.jpg"
-              alt="Serviços"
+              alt="Serviços de arquitetura paisagística e paisagismo Krebs +"
               fill
               className="object-cover"
               priority

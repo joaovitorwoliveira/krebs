@@ -110,7 +110,7 @@ export default function PartnersSection() {
         >
           <Image
             src="/images/partners/offices/offices-grid.svg"
-            alt="escritorios"
+            alt="Escritórios parceiros de arquitetura - Krebs + Paisagismo"
             width={1000}
             height={1000}
             className="object-contain"
@@ -123,7 +123,7 @@ export default function PartnersSection() {
         >
           <Image
             src="/images/partners/estate-developers/developers-grid.svg"
-            alt="incorporadoras"
+            alt="Incorporadoras parceiras - Projetos de paisagismo"
             width={1000}
             height={1000}
             className="object-contain lg:pt-4"

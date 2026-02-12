@@ -68,16 +68,18 @@ export default function ProjectsHome() {
                   </div>
                 </Link>
                 <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-dark text-sm font-inter-semibold uppercase flex-1">
-                    {project.title}
-                  </h3>
+                  <Link href={`/projetos/${project.slug}`} className="flex-1">
+                    <h3 className="text-dark text-sm font-inter-semibold uppercase hover:opacity-70 transition-opacity">
+                      {project.title}
+                    </h3>
+                  </Link>
                   <Link
                     href={`/projetos/${project.slug}`}
                     className="flex-shrink-0"
                   >
                     <Button
                       variant="icon"
-                      text={t.home.seeProject}
+                      text={`${t.home.seeProject}`}
                       className="text-sm"
                     />
                   </Link>
