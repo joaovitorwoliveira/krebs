@@ -2,8 +2,8 @@ import {
   EDIFICIO_PAIX_IMAGE_3,
   JARDIM_ATJ_IMAGE_6,
   JARDIM_FLV_IMAGE_8,
-  PRADO_BAIRRO_CIDADE_IMAGE_3,
   SURFLAND_IMAGE_4,
+  THE_GARDEN_IMAGE_4,
   UNISINOS_IMAGE_1,
 } from "@/common/constants/db-images";
 
@@ -46,12 +46,12 @@ export const heroImages: HeroImage[] = [
     },
   },
   {
-    url: PRADO_BAIRRO_CIDADE_IMAGE_3,
-    projectSlug: "prado-bairro-cidade",
+    url: THE_GARDEN_IMAGE_4,
+    projectSlug: "the-garden",
     projectName: {
-      pt: "Prado Bairro Cidade",
-      en: "Prado Bairro Cidade",
-      es: "Prado Bairro Cidade",
+      pt: "The Garden",
+      en: "The Garden",
+      es: "The Garden",
     },
   },
   {

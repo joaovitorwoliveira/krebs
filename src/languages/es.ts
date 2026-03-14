@@ -494,6 +494,18 @@ export const es = {
         architecture: "Mario Quintana",
         photo: "Lucas Daneris",
       },
+      "the-garden": {
+        title: "The Garden",
+        description: `
+          En The Garden Ecosistema Urbano, en Canoas, el paisajismo fue concebido como una infraestructura espacial capaz de estructurar la experiencia cotidiana del barrio. En el proyecto que desarrollamos, las vías internas dejan de ser simples elementos de circulación para asumir un carácter paisajístico, organizando el territorio mediante macizos vegetales, recorridos arbolados y plazas que califican la escala urbana del emprendimiento. La vegetación actúa como elemento de continuidad entre la calle y el espacio de permanencia, construyendo un paisaje que acerca la lógica del parque al tejido residencial y refuerza la idea de un verdadero ecosistema urbano.
+          Además del sistema de vías y plazas, el proyecto también estructura áreas programáticas orientadas a la convivencia y el ocio, incluyendo espacios para mascotas, gimnasio al aire libre y una serie de ambientes de permanencia distribuidos a lo largo del loteo. En el club central, la intervención paisajística organiza los diferentes usos —piscinas, playground y canchas deportivas— mediante una composición que articula superficies permeables, zonas de estar y estructura vegetal, creando secuencias de espacios que estimulan el uso activo y colectivo del paisaje. Más que un complemento estético, el paisajismo actúa como elemento organizador del espacio abierto y como mediador entre arquitectura, infraestructura y naturaleza.
+        `,
+        date: "2026",
+        place: "Canoas, RS",
+        architecture: "Studio Ronaldo Rezende",
+        photo: "Lucas Daneris",
+        services: "Estudio de viabilidad, Consultoría, Proyecto Paisajístico y Ejecución de Jardín",
+      },
     },
   },
 
@@ -502,6 +514,7 @@ export const es = {
     location: "Ubicación",
     architecture: "Arquitectura",
     interior: "Interiores",
+    services: "Servicios",
     photography: "Fotografía",
     imageAlt: "Imagen",
     thumbnail: "Miniatura",

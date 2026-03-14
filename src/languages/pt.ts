@@ -482,6 +482,18 @@ export const pt = {
         architecture: "Mario Quintana",
         photo: "Lucas Daneris",
       },
+      "the-garden": {
+        title: "The Garden",
+        description: `
+          No The Garden Ecossistema Urbano, em Canoas, o paisagismo foi concebido como uma infraestrutura espacial capaz de estruturar a experiência cotidiana do bairro. No projeto que desenvolvemos, as vias internas deixam de ser apenas elementos de circulação para assumir caráter paisagístico, organizando o território por meio de maciços vegetais, percursos arborizados e praças que qualificam a escala urbana do empreendimento. A vegetação atua como elemento de continuidade entre rua e espaço de permanência, construindo uma paisagem que aproxima a lógica do parque à do tecido residencial e reforça a ideia de um verdadeiro ecossistema urbano.
+          Além do sistema de vias e praças, o projeto também estrutura áreas programáticas voltadas ao convívio e ao lazer, incluindo espaços pet, academia ao ar livre e uma série de ambientes de permanência distribuídos ao longo do loteamento. No clube central, a intervenção paisagística organiza os diferentes usos — piscinas, playground e quadras esportivas — por meio de uma composição que articula superfícies permeáveis, áreas de estar e estrutura vegetal, criando sequências de espaços que estimulam o uso ativo e coletivo da paisagem. Mais do que um complemento estético, o paisagismo atua como elemento organizador do espaço aberto e como mediador entre arquitetura, infraestrutura e natureza.
+        `,
+        date: "2026",
+        place: "Canoas, RS",
+        architecture: "Studio Ronaldo Rezende",
+        photo: "Lucas Daneris",
+        services: "Estudo de viabilidade, Consultoria, Projeto Paisagístico e Execução de Jardim",
+      },
     },
   },
   projectDetails: {
@@ -489,6 +501,7 @@ export const pt = {
     location: "Local",
     architecture: "Arquitetura",
     interior: "Interiores",
+    services: "Serviços",
     photography: "Fotografia",
     imageAlt: "Imagem",
     thumbnail: "Miniatura",

@@ -57,6 +57,14 @@ export default function ProjectPage({ slug, className }: ProjectPageProps) {
           },
         ]
       : []),
+    ...(projectTranslation && "services" in projectTranslation
+      ? [
+          {
+            label: t.projectDetails.services,
+            value: projectTranslation.services,
+          },
+        ]
+      : []),
     {
       label: t.projectDetails.photography,
       value: projectTranslation?.photo,

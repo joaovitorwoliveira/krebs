@@ -494,6 +494,18 @@ export const en = {
         architecture: "Mario Quintana",
         photo: "Lucas Daneris",
       },
+      "the-garden": {
+        title: "The Garden",
+        description: `
+          In The Garden Urban Ecosystem, in Canoas, the landscaping was conceived as a spatial infrastructure capable of structuring the neighborhood's everyday experience. In the project we developed, the internal roads cease to be mere circulation elements, taking on a landscape character that organizes the territory through plant masses, tree-lined paths and squares that qualify the urban scale of the development. Vegetation acts as an element of continuity between street and gathering space, building a landscape that brings the logic of the park closer to the residential fabric and reinforces the idea of a true urban ecosystem.
+          Beyond the road and square system, the project also structures programmatic areas aimed at socializing and leisure, including pet spaces, an outdoor gym and a series of gathering environments distributed throughout the neighborhood. In the central club, the landscape intervention organizes the different uses — pools, playground and sports courts — through a composition that articulates permeable surfaces, seating areas and plant structure, creating sequences of spaces that encourage active and collective use of the landscape. More than an aesthetic complement, the landscaping acts as an organizing element of the open space and as a mediator between architecture, infrastructure and nature.
+        `,
+        date: "2026",
+        place: "Canoas, RS",
+        architecture: "Studio Ronaldo Rezende",
+        photo: "Lucas Daneris",
+        services: "Feasibility Study, Consultancy, Landscape Design and Garden Execution",
+      },
     },
   },
 
@@ -502,6 +514,7 @@ export const en = {
     location: "Location",
     architecture: "Architecture",
     interior: "Interiors",
+    services: "Services",
     photography: "Photography",
     imageAlt: "Image",
     thumbnail: "Thumbnail",
