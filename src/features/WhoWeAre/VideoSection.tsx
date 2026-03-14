@@ -63,7 +63,7 @@ export default function VideoSection() {
   }, []);
 
   return (
-    <section className="px-6 md:px-20 xl:px-30 pb-10 lg:pb-40 2xl:px-60">
+    <section className="py-20 px-6 md:px-20 xl:px-30 pb-10 lg:pb-40 2xl:px-60 xl:py-40">
       <div className="relative w-full aspect-video bg-black overflow-hidden group">
         <video
           ref={videoRef}

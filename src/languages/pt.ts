@@ -830,15 +830,6 @@ O resultado é um paisagismo mais eficiente, viável e coerente com o projeto, s
         "Graduanda em Arquitetura e Urbanismo(UFPEL)",
       ],
     },
-    beatriz: {
-      role: "Arquiteta Paisagista",
-      description: [
-        "+",
-        "Para Beatriz, a arquitetura paisagística é arte, uma forma de criar espaços que dialogam com quem os observa e, ao mesmo tempo, atendem ao cotidiano. Cada projeto é único, pensado para causar sensações, com um olhar técnico e sensível que valoriza a permanência, a sustentabilidade e a autenticidade.",
-        "+",
-        "Arquitetura e Urbanismo (UFPEL)",
-      ],
-    },
     brunna: {
       role: "Arquiteta Paisagista",
       description: [
@@ -847,15 +838,6 @@ O resultado é um paisagismo mais eficiente, viável e coerente com o projeto, s
         "+",
         "Arquitetura e Urbanismo (UFPEL)",
         "Mestranda em Arquitetura e Urbanismo (PROGRAU/UFPel)",
-      ],
-    },
-    lucas: {
-      role: "Arquiteto Paisagista",
-      description: [
-        "+",
-        "Arquiteto, urbanista e paisagista, Lucas desenvolve seu trabalho a partir da investigação cuidadosa da relação entre forma, função e a experiência humana no espaço. Sua prática busca traduzir necessidades em soluções bem resolvidas, confortáveis e carregadas de significado. Para ele, cada projeto é uma oportunidade de transformar intenções em ambientes que acolhem, inspiram e qualificam a vida de quem os torna vibrantes.",
-        "+",
-        "Arquitetura e Urbanismo (UFPEL)",
       ],
     },
     marina: {

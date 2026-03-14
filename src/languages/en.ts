@@ -842,15 +842,6 @@ The result is more efficient, viable landscaping coherent with the project, with
         "Undergraduate in Architecture and Urbanism (UFPEL)",
       ],
     },
-    beatriz: {
-      role: "Landscape Architect",
-      description: [
-        "+",
-        "For Beatriz, landscape architecture is art, a way of creating spaces that dialogue with those who observe them and, at the same time, serve everyday life. Each project is unique, designed to cause sensations, with a technical and sensitive look that values permanence, sustainability and authenticity.",
-        "+",
-        "Architecture and Urbanism (UFPEL)",
-      ],
-    },
     brunna: {
       role: "Landscape Architect",
       description: [
@@ -859,15 +850,6 @@ The result is more efficient, viable landscaping coherent with the project, with
         "+",
         "Architecture and Urbanism (UFPEL)",
         "Master's student in Architecture and Urbanism (PROGRAU/UFPel)",
-      ],
-    },
-    lucas: {
-      role: "Landscape Architect",
-      description: [
-        "+",
-        "Architect, urban planner and landscape architect, Lucas develops his work from the careful investigation of the relationship between form, function and human experience in space. His practice seeks to translate needs into well-resolved, comfortable and meaningful solutions. For him, each project is an opportunity to transform intentions into environments that welcome, inspire and qualify the life of those who make them vibrant.",
-        "+",
-        "Architecture and Urbanism (UFPEL)",
       ],
     },
     marina: {

@@ -55,22 +55,10 @@ export const teamMembers: TeamMember[] = [
     image: "/images/team/amanda.jpg",
   },
   {
-    id: "beatriz",
-    name: "Beatriz Moraes",
-    category: "equipe",
-    image: "/images/team/beatriz.jpg",
-  },
-  {
     id: "brunna",
     name: "Brunna Oliveira",
     category: "equipe",
     image: "/images/team/brunna.jpg",
-  },
-  {
-    id: "lucas",
-    name: "Lucas Isoldi",
-    category: "equipe",
-    image: "/images/team/lucas.jpg",
   },
   {
     id: "marina",
