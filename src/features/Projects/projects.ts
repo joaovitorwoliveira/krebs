@@ -305,7 +305,7 @@ export const projects: Project[] = [
   },
   {
     slug: "the-garden",
-    coverPhoto: Images.THE_GARDEN_IMAGE_32,
+    coverPhoto: Images.THE_GARDEN_IMAGE_28,
     tags: ["condominio", "urbanismo"],
     images: [
       Images.THE_GARDEN_IMAGE_1,
@@ -338,10 +338,6 @@ export const projects: Project[] = [
       Images.THE_GARDEN_IMAGE_28,
       Images.THE_GARDEN_IMAGE_29,
       Images.THE_GARDEN_IMAGE_30,
-      Images.THE_GARDEN_IMAGE_31,
-      Images.THE_GARDEN_IMAGE_32,
-      Images.THE_GARDEN_IMAGE_33,
-      Images.THE_GARDEN_IMAGE_34,
     ],
     conclusionDate: "2026",
   },

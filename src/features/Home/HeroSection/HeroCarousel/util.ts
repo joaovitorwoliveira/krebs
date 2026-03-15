@@ -3,7 +3,7 @@ import {
   JARDIM_ATJ_IMAGE_6,
   JARDIM_FLV_IMAGE_8,
   SURFLAND_IMAGE_4,
-  THE_GARDEN_IMAGE_32,
+  THE_GARDEN_IMAGE_28,
   UNISINOS_IMAGE_1,
 } from "@/common/constants/db-images";
 
@@ -46,7 +46,7 @@ export const heroImages: HeroImage[] = [
     },
   },
   {
-    url: THE_GARDEN_IMAGE_32,
+    url: THE_GARDEN_IMAGE_28,
     projectSlug: "the-garden",
     projectName: {
       pt: "The Garden",
