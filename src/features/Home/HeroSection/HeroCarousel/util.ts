@@ -28,6 +28,15 @@ export const heroImages: HeroImage[] = [
     },
   },
   {
+    url: THE_GARDEN_IMAGE_28,
+    projectSlug: "the-garden",
+    projectName: {
+      pt: "The Garden",
+      en: "The Garden",
+      es: "The Garden",
+    },
+  },
+  {
     url: UNISINOS_IMAGE_1,
     projectSlug: "unisinos",
     projectName: {
@@ -43,15 +52,6 @@ export const heroImages: HeroImage[] = [
       pt: "Jardim ATJ",
       en: "ATJ Garden",
       es: "Jardim ATJ",
-    },
-  },
-  {
-    url: THE_GARDEN_IMAGE_28,
-    projectSlug: "the-garden",
-    projectName: {
-      pt: "The Garden",
-      en: "The Garden",
-      es: "The Garden",
     },
   },
   {
