@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 
 import { useLenis } from "@/common/components/SmoothScroll";
 import { useLanguage } from "@/context/LanguageProvider";
-import { projects } from "@/features/Projects/projects";
+import { projects } from "@/features/Projects/get-projects";
 
 import { cn } from "@/lib/utils";
 
