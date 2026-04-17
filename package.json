@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "fetch-images": "npx tsx --env-file=.env scripts/fetch-images.ts",
+    "fetch-images": "[ -f .env ] && npx tsx --env-file=.env scripts/fetch-images.ts || npx tsx scripts/fetch-images.ts",
     "prebuild": "npm run fetch-images",
     "build": "next build",
     "start": "next start",
