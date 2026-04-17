@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import { ProjectPage } from "@/features/Projects";
-import { projects } from "@/features/Projects/projects";
+import { projects } from "@/features/Projects/get-projects";
 import {
   generateBreadcrumbSchema,
   generateProjectSchema,

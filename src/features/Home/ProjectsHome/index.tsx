@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import Button from "@/common/components/Button";
 import { useLanguage } from "@/context/LanguageProvider";
-import { projects } from "@/features/Projects/projects";
+import { projects } from "@/features/Projects/get-projects";
 
 import { cn } from "@/lib/utils";
 

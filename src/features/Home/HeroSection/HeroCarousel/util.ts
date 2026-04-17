@@ -1,11 +1,7 @@
-import {
-  EDIFICIO_PAIX_IMAGE_3,
-  JARDIM_ATJ_IMAGE_6,
-  JARDIM_FLV_IMAGE_8,
-  SURFLAND_IMAGE_4,
-  THE_GARDEN_IMAGE_28,
-  UNISINOS_IMAGE_1,
-} from "@/common/constants/db-images";
+import imageCache from "@/common/data/image-cache.json";
+
+type ImageCacheEntry = { number: number; url: string };
+const cache = imageCache as Record<string, ImageCacheEntry[]>;
 
 export interface HeroImage {
   url: string;
@@ -17,55 +13,41 @@ export interface HeroImage {
   };
 }
 
-export const heroImages: HeroImage[] = [
+interface HeroConfig {
+  projectSlug: string;
+  imageIndex: number;
+  projectName: { pt: string; en: string; es: string };
+}
+
+const heroConfig: HeroConfig[] = [
   {
-    url: JARDIM_FLV_IMAGE_8,
     projectSlug: "jardim-flv",
-    projectName: {
-      pt: "Jardim FLV",
-      en: "FLV Garden",
-      es: "Jardim FLV",
-    },
+    imageIndex: 8,
+    projectName: { pt: "Jardim FLV", en: "FLV Garden", es: "Jardim FLV" },
   },
   {
-    url: THE_GARDEN_IMAGE_28,
     projectSlug: "the-garden",
-    projectName: {
-      pt: "The Garden",
-      en: "The Garden",
-      es: "The Garden",
-    },
+    imageIndex: 28,
+    projectName: { pt: "The Garden", en: "The Garden", es: "The Garden" },
   },
   {
-    url: UNISINOS_IMAGE_1,
     projectSlug: "unisinos",
-    projectName: {
-      pt: "Unisinos",
-      en: "Unisinos",
-      es: "Unisinos",
-    },
+    imageIndex: 1,
+    projectName: { pt: "Unisinos", en: "Unisinos", es: "Unisinos" },
   },
   {
-    url: JARDIM_ATJ_IMAGE_6,
     projectSlug: "jardim-atj",
-    projectName: {
-      pt: "Jardim ATJ",
-      en: "ATJ Garden",
-      es: "Jardim ATJ",
-    },
+    imageIndex: 6,
+    projectName: { pt: "Jardim ATJ", en: "ATJ Garden", es: "Jardim ATJ" },
   },
   {
-    url: SURFLAND_IMAGE_4,
     projectSlug: "surfland",
-    projectName: {
-      pt: "Surfland",
-      en: "Surfland",
-      es: "Surfland",
-    },
+    imageIndex: 4,
+    projectName: { pt: "Surfland", en: "Surfland", es: "Surfland" },
   },
   {
-    url: EDIFICIO_PAIX_IMAGE_3,
     projectSlug: "edificio-paix",
+    imageIndex: 3,
     projectName: {
       pt: "Edifício Paix",
       en: "Paix Building",
@@ -73,6 +55,18 @@ export const heroImages: HeroImage[] = [
     },
   },
 ];
+
+function resolveHeroImage(config: HeroConfig): string {
+  const images = cache[config.projectSlug] || [];
+  const match = images.find((img) => img.number === config.imageIndex);
+  return match?.url || images[0]?.url || "";
+}
+
+export const heroImages: HeroImage[] = heroConfig.map((config) => ({
+  url: resolveHeroImage(config),
+  projectSlug: config.projectSlug,
+  projectName: config.projectName,
+}));
 
 export { heroImages as images };
 

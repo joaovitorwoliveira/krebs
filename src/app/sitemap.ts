@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-import { projects } from "../features/Projects/projects";
+import { projects } from "../features/Projects/get-projects";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://krebsmais.com.br";
 

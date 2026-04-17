@@ -3,7 +3,7 @@
 import { useCallback, useMemo, useRef, useState } from "react";
 
 import { useLanguage } from "@/context/LanguageProvider";
-import { projects } from "@/features/Projects/projects";
+import { projects } from "@/features/Projects/get-projects";
 
 import { FilterHookReturn } from "./types";
 
