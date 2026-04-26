@@ -37,6 +37,12 @@ export const teamMembers: TeamMember[] = [
     image: "/images/team/daniel.jpg",
   },
   {
+    id: "brunna",
+    name: "Brunna Oliveira",
+    category: "associados",
+    image: "/images/team/brunna.jpg",
+  },
+  {
     id: "ana-leal",
     name: "Ana Leal",
     category: "equipe",
@@ -53,12 +59,6 @@ export const teamMembers: TeamMember[] = [
     name: "Amanda Nogueira",
     category: "equipe",
     image: "/images/team/amanda.jpg",
-  },
-  {
-    id: "brunna",
-    name: "Brunna Oliveira",
-    category: "equipe",
-    image: "/images/team/brunna.jpg",
   },
   {
     id: "marina",

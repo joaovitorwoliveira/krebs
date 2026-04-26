@@ -506,6 +506,55 @@ export const es = {
         photo: "Lucas Daneris",
         services: "Estudio de viabilidad, Consultoría, Proyecto Paisajístico y Ejecución de Jardín",
       },
+      "praca-eng-guilherme": {
+        title: "Plaza Eng. Guilherme Gaudenzi",
+        description: `
+          La recualificación de la Plaza Engenheiro Guilherme Gaudenzi parte del reconocimiento de su condición original como espacio predominantemente de transición, marcado por la ausencia de estructura clara, baja legibilidad y limitada sensación de seguridad. El proyecto se apoya en la principal cualidad existente —la masa arbórea consolidada, compuesta por ejemplares de gran porte— para estructurar el diseño y orientar la organización espacial de la plaza. A partir de esto, canteros de geometría circular se implantan como estrategia de ordenamiento, creando una lectura orgánica y continua del espacio, al tiempo que definen áreas de permanencia y califican la experiencia del usuario sin romper con la naturalidad del conjunto.
+          Insertada en un contexto urbano de carácter mixto y funcionando como punto de conexión, la plaza tiene su sistema de circulación rediseñado a partir de los flujos existentes, priorizando la fluidez y la eficiencia de los desplazamientos. Los recorridos respetan los trayectos consolidados por el uso, evitando interferencias innecesarias y promoviendo una transición intuitiva entre los diferentes puntos del entorno. La calificación del espacio se da también mediante la introducción de mobiliario urbano esencial —como bancos, iluminación y papeleras— distribuido de forma a estimular la permanencia y ampliar la sensación de seguridad, además de la incorporación de un espacio pet que responde directamente a las demandas contemporáneas del entorno.
+          Más que una intervención puntual, el proyecto transforma la plaza en una infraestructura de uso cotidiano, más legible, accesible e invitadora, capaz de equilibrar flujo y permanencia y de activar el paisaje urbano incluso para aquellos que la atraviesan apenas de paso.
+        `,
+        date: "2026",
+        place: "Porto Alegre, RS",
+        photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico",
+      },
+      "jardim-gsc": {
+        title: "Jardín GSC",
+        description: `
+          El Jardín GS, en Cuiabá, fue concebido a partir de un programa ya definido: playa artificial de alto estándar, especies centenarias preseleccionadas, jardines internos y rooftop. El punto de partida no era una tela en blanco, y el trabajo consistió en dar coherencia al conjunto.
+          La implantación organiza diferentes programas en torno al lago ornamental, cuya lámina de agua fue trabajada en colaboración con Ecosys Lagos Ornamentais e Aquarismo para aproximar el resultado a la lógica de un ambiente acuático natural. La playa de arena blanca define la transición entre el lago y las áreas de permanencia, con bordes en piedra que eliminan cualquier límite artificial entre los dos planos.
+          La relación entre interior y exterior es directa: el lago avanza hasta la fachada vidriada de la residencia, y el jardín interior —cubierto por claraboya, con espejo de agua y vegetación de gran porte— extiende esa continuidad hacia el interior de la edificación.
+          La vegetación existente, compuesta por especies de alto valor y porte significativo, fue incorporada a la composición como elemento estructurante del proyecto, determinando recorridos, áreas de sombra y encuadres visuales. El clima del centro-oeste fue factor determinante en las decisiones de implantación y de confort ambiental.
+        `,
+        date: "2023",
+        place: "Cuiabá, MT",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
+      },
+      "praca-jose-luiz-fernandes-cogo": {
+        title: "Plaza José Luiz Fernandes Cogo",
+        description: `
+          La recualificación de la Plaza José Luiz Fernandes Cogo parte de una lectura atenta del paisaje existente, reconociendo en la vegetación consolidada el principal elemento estructurador del espacio. El proyecto adopta como premisa la inserción de circulaciones a partir de los vacíos entre los árboles, permitiendo que el propio lugar oriente los recorridos y organice la ocupación. Esta estrategia garantiza la preservación integral de los ejemplares arbóreos y establece una implantación que se ajusta de forma natural a la topografía y a la densidad vegetal, resultando en una plaza de carácter orgánico, donde caminos, áreas de permanencia y usos se integran de manera continua.
+          A partir de esta base, el proyecto introduce una diversidad de programas orientados al uso cotidiano y a la activación del espacio público. Áreas de estar con mesas y bancos permiten el uso para comidas y encuentros informales, mientras que una pequeña gradería crea apoyo para la permanencia y la observación. Equipamientos como mesas de ping-pong, gimnasio al aire libre y canchas de vóley playa estimulan la práctica de actividades físicas, ampliando el espectro de usuarios e incentivando la apropiación activa de la plaza. Complementariamente, el proyecto incorpora playground y un espacio lúdico construido con elementos naturales, como troncos de madera, promoviendo experiencias sensoriales y formas de jugar más libres, aún poco exploradas en el contexto local.
+          La infraestructura se refuerza con la implantación de bicicleteros, iluminación y mobiliario urbano, garantizando soporte funcional y mayor seguridad al uso a lo largo del día. Ubicada frente al conjunto residencial Jardins —también desarrollado por el estudio— la plaza establece una relación directa con el entorno inmediato, funcionando como extensión del tejido urbano y como elemento de conexión entre vivienda y espacio público.
+          Más que una cualificación puntual, el proyecto consolida un nuevo polo de atracción para el barrio, transformando un área anteriormente subutilizada en un espacio activo, diverso e integrado al paisaje, donde vegetación, programa y diseño urbano se articulan para promover permanencia, convivencia y vitalidad urbana.
+        `,
+        date: "2026",
+        place: "Porto Alegre, RS",
+        photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico",
+      },
+      "jardim-mgx": {
+        title: "Jardín MGX",
+        description: `
+          El Jardín MGX, en Xangri-lá, fue concebido para una residencia implantada a orillas de un lago, en un contexto donde el viento es condicionante permanente y la relación con el agua define la orientación del conjunto.
+          En el acceso, el recorrido en placas de piedra natural intercaladas con césped conduce la mirada hacia la entrada, mientras macizos densos de vegetación tropical demarcan los límites laterales con fuerza y presencia. La composición prioriza especies resistentes al régimen de vientos de la costa gaúcha, con variación de textura entre follajes de diferentes portes y estructuras. El jazmín-mango en la fachada funciona como elemento puntual de color y estacionalidad, anclando la transición entre el jardín de acceso y el volumen construido.
+          En el área de la piscina, el deck en madera y la cubierta tensionada organizan el programa de ocio y definen la relación con el espejo de agua. La vegetación retrocede hacia bordes y encuadres, sin competir con la apertura visual hacia el lago. Por la noche, la iluminación directa sobre los macizos refuerza la lectura volumétrica del jardín y dialoga con el reflejo de la edificación en el agua.
+        `,
+        date: "2024",
+        place: "Xangri-la, RS",
+        photo: "Gabriel Konrath",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
+      },
     },
   },
 

@@ -506,6 +506,55 @@ export const en = {
         photo: "Lucas Daneris",
         services: "Feasibility Study, Consultancy, Landscape Design and Garden Execution",
       },
+      "praca-eng-guilherme": {
+        title: "Eng. Guilherme Gaudenzi Square",
+        description: `
+          The requalification of Praça Engenheiro Guilherme Gaudenzi starts from the recognition of its original condition as a predominantly transitional space, marked by the absence of a clear structure, low legibility and a limited sense of safety. The project relies on the main existing quality — the consolidated tree mass, composed of large-scale specimens — to structure the design and guide the spatial organization of the square. From this, circular-geometry planters are implemented as an ordering strategy, creating an organic and continuous reading of the space, while at the same time defining areas of permanence and qualifying the user experience without breaking with the natural character of the ensemble.
+          Situated in a mixed urban context and functioning as a connection point, the square has its circulation system redesigned based on existing flows, prioritizing the fluidity and efficiency of movement. The paths respect the routes consolidated through use, avoiding unnecessary interference and promoting an intuitive transition between the different points of the surroundings. The qualification of the space also comes through the introduction of essential urban furniture — such as benches, lighting and bins — distributed in a way that encourages permanence and amplifies the sense of safety, as well as the incorporation of a pet area that directly responds to the contemporary demands of the surroundings.
+          More than a one-off intervention, the project transforms the square into an everyday-use infrastructure — more legible, accessible and inviting — capable of balancing flow and permanence and activating the urban landscape even for those who merely pass through.
+        `,
+        date: "2026",
+        place: "Porto Alegre, RS",
+        photo: "Lucas Daneris",
+        services: "Landscape Design",
+      },
+      "jardim-gsc": {
+        title: "GSC Garden",
+        description: `
+          The GSC Garden in Cuiabá was conceived from an already defined program: a high-standard artificial beach, pre-selected century-old species, indoor gardens and a rooftop. The starting point was not a blank canvas, and the work consisted of giving coherence to the whole.
+          The layout organizes different programs around the ornamental lake, whose water surface was developed in collaboration with Ecosys Lagos Ornamentais e Aquarismo to bring the result closer to the logic of a natural aquatic environment. The white sand beach defines the transition between the lake and the gathering areas, with stone edges that eliminate any artificial boundary between the two planes.
+          The relationship between interior and exterior is direct: the lake extends to the glazed facade of the residence, and the indoor garden — covered by a skylight, with a reflecting pool and large-scale vegetation — extends this continuity into the building.
+          The existing vegetation, composed of high-value species with significant stature, was incorporated into the composition as a structuring element of the project, determining paths, shaded areas and visual framings. The midwest climate was a determining factor in the implantation and environmental comfort decisions.
+        `,
+        date: "2023",
+        place: "Cuiabá, MT",
+        services: "Landscape Design and Garden Execution",
+      },
+      "praca-jose-luiz-fernandes-cogo": {
+        title: "José Luiz Fernandes Cogo Square",
+        description: `
+          The requalification of Praça José Luiz Fernandes Cogo starts from a careful reading of the existing landscape, recognizing the consolidated vegetation as the main structuring element of the space. The project adopts as its premise the insertion of circulation paths through the gaps between the trees, allowing the place itself to guide the routes and organize the occupation. This strategy ensures the full preservation of the existing trees and establishes an implementation that naturally adjusts to the topography and plant density, resulting in a square of organic character, where paths, gathering areas and uses integrate continuously.
+          From this base, the project introduces a diversity of programs aimed at everyday use and the activation of public space. Seating areas with tables and benches allow use for meals and informal gatherings, while a small bleacher creates support for permanence and observation. Equipment such as ping-pong tables, an outdoor gym and beach volleyball courts encourage physical activity, broadening the spectrum of users and fostering active appropriation of the square. Complementarily, the project incorporates a playground and a play space built with natural elements such as wooden logs, promoting sensory experiences and freer forms of play that are still underexplored in the local context.
+          The infrastructure is reinforced with the installation of bike racks, lighting and urban furniture, providing functional support and greater safety throughout the day. Located in front of the Jardins residential complex — also developed by the office — the square establishes a direct relationship with its immediate surroundings, functioning as an extension of the urban fabric and as a connecting element between housing and public space.
+          More than a one-off improvement, the project consolidates a new hub of attraction for the neighborhood, transforming a previously underused area into an active, diverse space integrated into the landscape, where vegetation, program and urban design come together to promote permanence, community life and urban vitality.
+        `,
+        date: "2026",
+        place: "Porto Alegre, RS",
+        photo: "Lucas Daneris",
+        services: "Landscape Design",
+      },
+      "jardim-mgx": {
+        title: "MGX Garden",
+        description: `
+          The MGX Garden in Xangri-lá was designed for a residence built on the edge of a lake, in a context where wind is a permanent constraint and the relationship with the water defines the orientation of the whole.
+          At the entrance, the path in natural stone slabs interspersed with grass guides the eye toward the entry, while dense masses of tropical vegetation mark the lateral boundaries with strength and presence. The composition prioritizes species resistant to the wind conditions of the gaucho coastline, with textural variation between foliage of different sizes and structures. The mango jasmine on the facade acts as a focal element of color and seasonality, anchoring the transition between the entrance garden and the built volume.
+          In the pool area, the timber deck and the tensioned canopy organize the leisure program and define the relationship with the reflecting water. The vegetation steps back to edges and framings, without competing with the visual opening toward the lake. At night, direct lighting over the plant masses reinforces the volumetric reading of the garden and converses with the reflection of the building in the water.
+        `,
+        date: "2024",
+        place: "Xangri-la, RS",
+        photo: "Gabriel Konrath",
+        services: "Landscape Design and Garden Execution",
+      },
     },
   },
 
