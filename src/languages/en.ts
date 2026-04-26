@@ -240,6 +240,7 @@ export const en = {
         place: "Praia da Barra - Garopaba, SC",
         architecture: "Marcia Barbieri - Arte Arquitetura",
         photo: "Lucas Daneris",
+        services: "Landscape Design and Garden Execution",
       },
       "jardim-atj": {
         title: "ATJ Garden",
@@ -258,6 +259,7 @@ export const en = {
         date: "2018",
         place: "Praia da Silvera - Garopaba, SC",
         photo: "Lucas Daneris",
+        services: "Landscape Design and Garden Execution",
       },
       "jardim-ltx": {
         title: "LTX Garden",
@@ -277,6 +279,7 @@ export const en = {
         date: "2018",
         place: "Xangri-la, RS",
         photo: "Lucas Daneris",
+        services: "Landscape Design and Garden Execution",
       },
       "jardim-malu": {
         title: "MALU Garden",
@@ -302,46 +305,51 @@ export const en = {
       "colegio-farroupilha": {
         title: "Farroupilha School",
         description: `
-          In the heart of the Três Figueiras neighborhood, in Porto Alegre, the first 
-          stage of the Farroupilha School landscaping reveals a new urban gesture. More 
-          than an aesthetic intervention, the project proposes a sensitive reconfiguration 
-          of the relationship between school, city and community. What was once just a 
-          facade becomes a space for coexistence and permanence. The sidewalks expand 
-          their function and transform into living environments, where benches, vegetation, 
-          shadows and furniture compose a welcoming ambiance — an invitation to pause, 
-          encounter and observation. The organic lines of the layout and the careful 
-          choice of species reveal an authorial landscaping that softens the rhythm of 
-          the city and welcomes those who pass by. In a capital marked by contrasts and 
-          scarcity of quality public areas, opening to the surroundings is an act of 
-          generosity. Each decision — from the fluid design to the integrated furniture — 
-          reflects a commitment to urban kindness, transforming everyday life with 
-          subtlety and intention. It is a place designed for everyone, where the project 
-          finds its meaning in shared experience.
+          In the heart of the Três Figueiras neighborhood, in Porto Alegre, the first
+          stage of the Farroupilha School landscaping reveals a new urban gesture. More
+          than an aesthetic intervention, the project proposes a sensitive reconfiguration
+          of the relationship between school, city and community. What was once just a
+          facade becomes a space for coexistence and permanence.
+
+          The sidewalks expand their function and transform into living environments,
+          where benches, vegetation, shadows and furniture compose a welcoming ambiance —
+          an invitation to pause, encounter and observation. The organic lines of the layout
+          and the careful choice of species reveal an authorial landscaping that softens the
+          rhythm of the city and welcomes those who pass by.
+
+          In a capital marked by contrasts and scarcity of quality public areas, opening to
+          the surroundings is an act of generosity. Each decision — from the fluid design to
+          the integrated furniture — reflects a commitment to urban kindness, transforming
+          everyday life with subtlety and intention. It is a place designed for everyone,
+          where the project finds its meaning in shared experience.
         `,
         date: "2025",
         place: "Porto Alegre, RS",
         architecture: "ZeBL+",
         photo: "Lucas Daneris",
+        services: "Landscape Design and Garden Execution",
       },
       "varanda-fek": {
         title: "FEK Terrace",
         description: `
-          In Porto Alegre, the project starts from the premise of creating an external 
-          space that unites functionality and sophistication. The natural stone fire pit, 
-          with curvilinear lines and glass protection, is the central element of the 
-          composition. Positioned over a bed of vegetation, it creates the sensation of 
-          a floating piece, bringing elegance and identity to the environment. The 
-          landscaping was designed to surround the fire pit and follow the perimeter of 
-          the terrace, using low-maintenance tropical species that guarantee texture, 
-          volume and aesthetic permanence throughout the year. The furniture, with pure 
-          lines and resistant materials, maintains visual unity and dialogues with the 
-          exposed concrete and neutral floor. The result is a cohesive, comfortable and 
+          In Porto Alegre, the project starts from the premise of creating an external
+          space that unites functionality and sophistication. The natural stone fire pit,
+          with curvilinear lines and glass protection, is the central element of the
+          composition. Positioned over a bed of vegetation, it creates the sensation of
+          a floating piece, bringing elegance and identity to the environment.
+
+          The landscaping was designed to surround the fire pit and follow the perimeter of
+          the terrace, using low-maintenance tropical species that guarantee texture,
+          volume and aesthetic permanence throughout the year. The furniture, with pure
+          lines and resistant materials, maintains visual unity and dialogues with the
+          exposed concrete and neutral floor. The result is a cohesive, comfortable and
           visually balanced space, designed for contemplation and conviviality.
         `,
         date: "2024",
         place: "Porto Alegre, RS",
         architecture: "Ambidestro",
         photo: "Lucas Daneris",
+        services: "Landscape Design and Garden Execution",
       },
       rampa: {
         title: "Ramp",
@@ -362,23 +370,27 @@ export const en = {
         date: "2024",
         place: "Pelotas, RS",
         photo: "Lucas Daneris",
+        services: "Landscape Design",
       },
       "shopping-iguatemi": {
         title: "Iguatemi Shopping",
         description: `
-          In Porto Alegre, the intervention at the Iguatemi Shopping access sought to 
-          qualify the urban experience and integrate landscaping with existing architecture. 
-          Linear planters with incorporated benches house sibipiruna specimens, a large 
-          species with delicate flowering that provides shade and visual identity to the 
-          space. Complementing the composition, vases with flowering species bring color 
-          and vitality to the path. The urban treatment included bicycle racks, lighting 
-          and support furniture, ensuring comfort, functionality and encouraging the use 
-          of space by different audiences. The result is a more inviting access, with 
+          In Porto Alegre, the intervention at the Iguatemi Shopping access sought to
+          qualify the urban experience and integrate landscaping with existing architecture.
+          Linear planters with incorporated benches house sibipiruna specimens, a large
+          species with delicate flowering that provides shade and visual identity to the
+          space.
+
+          Complementing the composition, vases with flowering species bring color
+          and vitality to the path. The urban treatment included bicycle racks, lighting
+          and support furniture, ensuring comfort, functionality and encouraging the use
+          of space by different audiences. The result is a more inviting access, with
           balance between aesthetics, use and durability.
         `,
         date: "2017",
         place: "Porto Alegre, RS",
         photo: "Vanessa Bohn",
+        services: "Landscape Design and Garden Execution",
       },
       "jardim-flv": {
         title: "FLV Garden",
@@ -395,6 +407,7 @@ export const en = {
         place: "Rio de Janeiro, RJ",
         architecture: "Bernardes Arquitetura",
         photo: "Lucas Daneris",
+        services: "Landscape Design and Garden Execution",
       },
       "rua-mista-legano": {
         title: "Legano Mixed Street",
@@ -411,6 +424,7 @@ export const en = {
         place: "Nova Santa Rita, RS",
         architecture: "Aviva Urbanismo",
         photo: "Lucas Daneris",
+        services: "Landscape Design and Garden Execution",
       },
       surfland: {
         title: "Surfland",
@@ -422,6 +436,7 @@ export const en = {
         date: "2023",
         place: "Garopaba, SC",
         photo: "Lucas Daneris",
+        services: "Master Plan and Landscape Design",
       },
       unisinos: {
         title: "Unisinos",
@@ -432,6 +447,7 @@ export const en = {
         place: "Porto Alegre, RS",
         architecture: "AT Arquitetura",
         photo: "Marcelo Donadussi",
+        services: "Landscape Design and Garden Execution",
       },
       "edificio-paix": {
         title: "PAIX Building",
@@ -443,6 +459,7 @@ export const en = {
         architecture: "Martin Gomez",
         interior: "Estudio Obra Prima",
         photo: "Lucas Daneris",
+        services: "Landscape Design",
       },
       "edificio-iguacu": {
         title: "Iguaçu Building",
@@ -453,6 +470,7 @@ export const en = {
         place: "Porto Alegre, RS",
         architecture: "Smart - Arquitetura",
         photo: "Roberta Gewehr",
+        services: "Landscape Design and Garden Execution",
       },
       "jardim-lmp": {
         title: "LMP Garden",
@@ -463,6 +481,7 @@ export const en = {
         place: "José Ignacio, UY",
         architecture: "Projetebem",
         photo: "Lucas Daneris",
+        services: "Landscape Design and Garden Execution",
       },
       "jardim-ssg": {
         title: "SGG Garden",
@@ -473,6 +492,7 @@ export const en = {
         place: "Garopaba, SC",
         architecture: "Arte Arquitetura",
         photo: "Roberta Borges",
+        services: "Landscape Design and Garden Execution",
       },
       "jardim-adg": {
         title: "ADG Garden",
@@ -483,6 +503,7 @@ export const en = {
         place: "Garopaba, SC",
         architecture: "Estudio Obra Prima",
         photo: "Roberta Borges",
+        services: "Landscape Design and Garden Execution",
       },
       "prado-bairro-cidade": {
         title: "Prado Bairro Cidade",
@@ -493,11 +514,13 @@ export const en = {
         place: "Gravataí, RS",
         architecture: "Mario Quintana",
         photo: "Lucas Daneris",
+        services: "Landscape Design and Garden Execution",
       },
       "the-garden": {
         title: "The Garden",
         description: `
           In The Garden Urban Ecosystem, in Canoas, the landscaping was conceived as a spatial infrastructure capable of structuring the neighborhood's everyday experience. In the project we developed, the internal roads cease to be mere circulation elements, taking on a landscape character that organizes the territory through plant masses, tree-lined paths and squares that qualify the urban scale of the development. Vegetation acts as an element of continuity between street and gathering space, building a landscape that brings the logic of the park closer to the residential fabric and reinforces the idea of a true urban ecosystem.
+
           Beyond the road and square system, the project also structures programmatic areas aimed at socializing and leisure, including pet spaces, an outdoor gym and a series of gathering environments distributed throughout the neighborhood. In the central club, the landscape intervention organizes the different uses — pools, playground and sports courts — through a composition that articulates permeable surfaces, seating areas and plant structure, creating sequences of spaces that encourage active and collective use of the landscape. More than an aesthetic complement, the landscaping acts as an organizing element of the open space and as a mediator between architecture, infrastructure and nature.
         `,
         date: "2026",
@@ -505,6 +528,65 @@ export const en = {
         architecture: "Studio Ronaldo Rezende",
         photo: "Lucas Daneris",
         services: "Feasibility Study, Consultancy, Landscape Design and Garden Execution",
+      },
+      "praca-eng-guilherme": {
+        title: "Eng. Guilherme Gaudenzi Square",
+        description: `
+          The requalification of Praça Engenheiro Guilherme Gaudenzi starts from the recognition of its original condition as a predominantly transitional space, marked by the absence of a clear structure, low legibility and a limited sense of safety. The project relies on the main existing quality — the consolidated tree mass, composed of large-scale specimens — to structure the design and guide the spatial organization of the square. From this, circular-geometry planters are implemented as an ordering strategy, creating an organic and continuous reading of the space, while at the same time defining areas of permanence and qualifying the user experience without breaking with the natural character of the ensemble.
+
+          Situated in a mixed urban context and functioning as a connection point, the square has its circulation system redesigned based on existing flows, prioritizing the fluidity and efficiency of movement. The paths respect the routes consolidated through use, avoiding unnecessary interference and promoting an intuitive transition between the different points of the surroundings. The qualification of the space also comes through the introduction of essential urban furniture — such as benches, lighting and bins — distributed in a way that encourages permanence and amplifies the sense of safety, as well as the incorporation of a pet area that directly responds to the contemporary demands of the surroundings.
+
+          More than a one-off intervention, the project transforms the square into an everyday-use infrastructure — more legible, accessible and inviting — capable of balancing flow and permanence and activating the urban landscape even for those who merely pass through.
+        `,
+        date: "2026",
+        place: "Porto Alegre, RS",
+        photo: "Lucas Daneris",
+        services: "Landscape Design",
+      },
+      "jardim-gsc": {
+        title: "GSC Garden",
+        description: `
+          The GSC Garden in Cuiabá was conceived from an already defined program: a high-standard artificial beach, pre-selected century-old species, indoor gardens and a rooftop. The starting point was not a blank canvas, and the work consisted of giving coherence to the whole.
+
+          The layout organizes different programs around the ornamental lake, whose water surface was developed in collaboration with Ecosys Lagos Ornamentais e Aquarismo to bring the result closer to the logic of a natural aquatic environment. The white sand beach defines the transition between the lake and the gathering areas, with stone edges that eliminate any artificial boundary between the two planes.
+
+          The relationship between interior and exterior is direct: the lake extends to the glazed facade of the residence, and the indoor garden — covered by a skylight, with a reflecting pool and large-scale vegetation — extends this continuity into the building.
+
+          The existing vegetation, composed of high-value species with significant stature, was incorporated into the composition as a structuring element of the project, determining paths, shaded areas and visual framings. The midwest climate was a determining factor in the implantation and environmental comfort decisions.
+        `,
+        date: "2023",
+        place: "Cuiabá, MT",
+        services: "Landscape Design and Garden Execution",
+      },
+      "praca-jose-luiz-fernandes-cogo": {
+        title: "José Luiz Fernandes Cogo Square",
+        description: `
+          The requalification of Praça José Luiz Fernandes Cogo starts from a careful reading of the existing landscape, recognizing the consolidated vegetation as the main structuring element of the space. The project adopts as its premise the insertion of circulation paths through the gaps between the trees, allowing the place itself to guide the routes and organize the occupation. This strategy ensures the full preservation of the existing trees and establishes an implementation that naturally adjusts to the topography and plant density, resulting in a square of organic character, where paths, gathering areas and uses integrate continuously.
+
+          From this base, the project introduces a diversity of programs aimed at everyday use and the activation of public space. Seating areas with tables and benches allow use for meals and informal gatherings, while a small bleacher creates support for permanence and observation. Equipment such as ping-pong tables, an outdoor gym and beach volleyball courts encourage physical activity, broadening the spectrum of users and fostering active appropriation of the square. Complementarily, the project incorporates a playground and a play space built with natural elements such as wooden logs, promoting sensory experiences and freer forms of play that are still underexplored in the local context.
+
+          The infrastructure is reinforced with the installation of bike racks, lighting and urban furniture, providing functional support and greater safety throughout the day. Located in front of the Jardins residential complex — also developed by the office — the square establishes a direct relationship with its immediate surroundings, functioning as an extension of the urban fabric and as a connecting element between housing and public space.
+
+          More than a one-off improvement, the project consolidates a new hub of attraction for the neighborhood, transforming a previously underused area into an active, diverse space integrated into the landscape, where vegetation, program and urban design come together to promote permanence, community life and urban vitality.
+        `,
+        date: "2026",
+        place: "Porto Alegre, RS",
+        photo: "Lucas Daneris",
+        services: "Landscape Design",
+      },
+      "jardim-mgx": {
+        title: "MGX Garden",
+        description: `
+          The MGX Garden in Xangri-lá was designed for a residence built on the edge of a lake, in a context where wind is a permanent constraint and the relationship with the water defines the orientation of the whole.
+
+          At the entrance, the path in natural stone slabs interspersed with grass guides the eye toward the entry, while dense masses of tropical vegetation mark the lateral boundaries with strength and presence. The composition prioritizes species resistant to the wind conditions of the gaucho coastline, with textural variation between foliage of different sizes and structures. The mango jasmine on the facade acts as a focal element of color and seasonality, anchoring the transition between the entrance garden and the built volume.
+
+          In the pool area, the timber deck and the tensioned canopy organize the leisure program and define the relationship with the reflecting water. The vegetation steps back to edges and framings, without competing with the visual opening toward the lake. At night, direct lighting over the plant masses reinforces the volumetric reading of the garden and converses with the reflection of the building in the water.
+        `,
+        date: "2024",
+        place: "Xangri-la, RS",
+        photo: "Gabriel Konrath",
+        services: "Landscape Design and Garden Execution",
       },
     },
   },
@@ -907,6 +989,25 @@ The result is more efficient, viable landscaping coherent with the project, with
         "+",
         "Architecture and Urbanism (UCPEL)",
         "Master in Landscaping (IPOG)",
+      ],
+    },
+    "natalia-kaul": {
+      role: "Trainee",
+      description: [
+        "+",
+        "Natália is interested in the relationships built between people, space and nature. In landscaping, she finds the possibility of transforming how places are experienced, understanding the project as a construction of atmospheres, paths and permanences that awaken different experiences in space.\n\nShe approaches each environment with an attentive eye for how it can be experienced and appropriated, recognizing that small design decisions can generate new dynamics and forms of use. With a technical background in building construction, she also maintains proximity to the constructive dimension of the project, seeking to balance sensitivity and viability in the materialization of ideas.",
+        "+",
+        "Architecture and Urbanism (UFPEL)",
+      ],
+    },
+    "taina-gauterio": {
+      role: "Trainee",
+      description: [
+        "+",
+        "She believes that creativity is central to the design process, resulting from the relationship between observation of the world and individual experiences. Each project is born from the encounter between repertoire, sensitivity and identity, generating singular and contextualized solutions.\nShe defends that quality lies in the integration between aesthetics and functionality, understanding architecture as a living expression, balancing form and use.",
+        "+",
+        "Architect and Urbanist (UFPEL)",
+        "Master's student in Architecture and Urbanism (UFPEL)",
       ],
     },
   },

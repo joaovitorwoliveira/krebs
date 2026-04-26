@@ -240,6 +240,7 @@ export const es = {
         place: "Praia da Barra - Garopaba, SC",
         architecture: "Marcia Barbieri - Arte Arquitetura",
         photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       "jardim-atj": {
         title: "Jardín ATJ",
@@ -258,6 +259,7 @@ export const es = {
         date: "2018",
         place: "Praia da Silvera - Garopaba, SC",
         photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       "jardim-ltx": {
         title: "Jardín LTX",
@@ -277,6 +279,7 @@ export const es = {
         date: "2018",
         place: "Xangri-la, RS",
         photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       "jardim-malu": {
         title: "Jardín MALU",
@@ -302,46 +305,51 @@ export const es = {
       "colegio-farroupilha": {
         title: "Colegio Farroupilha",
         description: `
-          En el corazón del barrio Três Figueiras, en Porto Alegre, la primera etapa 
-          del paisajismo del Colegio Farroupilha revela un nuevo gesto urbano. Más que 
-          una intervención estética, el proyecto propone una reconfiguración sensible 
-          de la relación entre escuela, ciudad y comunidad. Lo que antes era solo fachada 
-          se convierte en espacio de convivencia y permanencia. Las aceras expanden su 
-          función y se transforman en ambientes de estar, donde bancos, vegetaciones, 
-          sombras y mobiliarios componen un ambiente acogedor — una invitación a la pausa, 
-          al encuentro y a la observación. Las líneas orgánicas del trazado y la elección 
-          criteriosa de las especies revelan un paisajismo autoral que suaviza el ritmo 
-          de la ciudad y acoge a quien pasa por allí. En una capital marcada por contrastes 
-          y escasez de áreas públicas de calidad, abrirse al entorno es un acto de generosidad. 
-          Cada decisión — del diseño fluido al mobiliario integrado — refleja un compromiso 
-          con la gentileza urbana, transformando lo cotidiano con sutileza e intención. 
-          Es un lugar pensado para todos, donde el proyecto encuentra su sentido en la 
-          experiencia compartida.
+          En el corazón del barrio Três Figueiras, en Porto Alegre, la primera etapa
+          del paisajismo del Colegio Farroupilha revela un nuevo gesto urbano. Más que
+          una intervención estética, el proyecto propone una reconfiguración sensible
+          de la relación entre escuela, ciudad y comunidad. Lo que antes era solo fachada
+          se convierte en espacio de convivencia y permanencia.
+
+          Las aceras expanden su función y se transforman en ambientes de estar, donde
+          bancos, vegetaciones, sombras y mobiliarios componen un ambiente acogedor — una
+          invitación a la pausa, al encuentro y a la observación. Las líneas orgánicas del
+          trazado y la elección criteriosa de las especies revelan un paisajismo autoral
+          que suaviza el ritmo de la ciudad y acoge a quien pasa por allí.
+
+          En una capital marcada por contrastes y escasez de áreas públicas de calidad,
+          abrirse al entorno es un acto de generosidad. Cada decisión — del diseño fluido
+          al mobiliario integrado — refleja un compromiso con la gentileza urbana,
+          transformando lo cotidiano con sutileza e intención. Es un lugar pensado para
+          todos, donde el proyecto encuentra su sentido en la experiencia compartida.
         `,
         date: "2025",
         place: "Porto Alegre, RS",
         architecture: "ZeBL+",
         photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       "varanda-fek": {
         title: "Terraza FEK",
         description: `
-          En Porto Alegre, el proyecto parte de la premisa de crear un espacio externo 
-          que una funcionalidad y sofisticación. El brasero en piedra natural, de líneas 
-          curvilíneas y protección en vidrio, es el elemento central de la composición. 
-          Posicionado sobre un lecho de vegetación, crea la sensación de pieza flotante, 
-          aportando elegancia e identidad al ambiente. El paisajismo fue diseñado para 
-          envolver el brasero y acompañar el perímetro de la terraza, utilizando especies 
-          tropicales de bajo mantenimiento que garantizan textura, volumen y permanencia 
-          estética a lo largo del año. El mobiliario, de líneas puras y materiales resistentes, 
-          mantiene la unidad visual y dialoga con el concreto aparente y el piso neutro. 
-          El resultado es un espacio cohesivo, cómodo y visualmente equilibrado, pensado 
-          para contemplación y convivencia.
+          En Porto Alegre, el proyecto parte de la premisa de crear un espacio externo
+          que una funcionalidad y sofisticación. El brasero en piedra natural, de líneas
+          curvilíneas y protección en vidrio, es el elemento central de la composición.
+          Posicionado sobre un lecho de vegetación, crea la sensación de pieza flotante,
+          aportando elegancia e identidad al ambiente.
+
+          El paisajismo fue diseñado para envolver el brasero y acompañar el perímetro de
+          la terraza, utilizando especies tropicales de bajo mantenimiento que garantizan
+          textura, volumen y permanencia estética a lo largo del año. El mobiliario, de
+          líneas puras y materiales resistentes, mantiene la unidad visual y dialoga con
+          el concreto aparente y el piso neutro. El resultado es un espacio cohesivo,
+          cómodo y visualmente equilibrado, pensado para contemplación y convivencia.
         `,
         date: "2024",
         place: "Porto Alegre, RS",
         architecture: "Ambidestro",
         photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       rampa: {
         title: "Rampa",
@@ -362,23 +370,27 @@ export const es = {
         date: "2024",
         place: "Pelotas, RS",
         photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico",
       },
       "shopping-iguatemi": {
         title: "Shopping Iguatemi",
         description: `
-          En Porto Alegre, la intervención en el acceso del Shopping Iguatemi buscó 
-          calificar la experiencia urbana e integrar el paisajismo con la arquitectura 
-          existente. Jardineras lineales con bancos incorporados albergan ejemplares de 
-          sibipiruna, especie de gran porte y floración delicada que proporciona sombra 
-          e identidad visual al espacio. Complementando la composición, macetas con especies 
-          floríferas aportan color y vitalidad al recorrido. El tratamiento urbanístico 
-          incluyó bicicleteros, iluminación y mobiliario de apoyo, garantizando comodidad, 
-          funcionalidad e incentivo al uso del espacio por diferentes públicos. El resultado 
-          es un acceso más invitante, con equilibrio entre estética, uso y durabilidad.
+          En Porto Alegre, la intervención en el acceso del Shopping Iguatemi buscó
+          calificar la experiencia urbana e integrar el paisajismo con la arquitectura
+          existente. Jardineras lineales con bancos incorporados albergan ejemplares de
+          sibipiruna, especie de gran porte y floración delicada que proporciona sombra
+          e identidad visual al espacio.
+
+          Complementando la composición, macetas con especies floríferas aportan color
+          y vitalidad al recorrido. El tratamiento urbanístico incluyó bicicleteros,
+          iluminación y mobiliario de apoyo, garantizando comodidad, funcionalidad e
+          incentivo al uso del espacio por diferentes públicos. El resultado es un acceso
+          más invitante, con equilibrio entre estética, uso y durabilidad.
         `,
         date: "2017",
         place: "Porto Alegre, RS",
         photo: "Vanessa Bohn",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       "jardim-flv": {
         title: "Jardín FLV",
@@ -395,6 +407,7 @@ export const es = {
         place: "Río de Janeiro, RJ",
         architecture: "Bernardes Arquitetura",
         photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       "rua-mista-legano": {
         title: "Calle Mixta Legano",
@@ -411,6 +424,7 @@ export const es = {
         place: "Nova Santa Rita, RS",
         architecture: "Aviva Urbanismo",
         photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       surfland: {
         title: "Surfland",
@@ -422,6 +436,7 @@ export const es = {
         date: "2023",
         place: "Garopaba, SC",
         photo: "Lucas Daneris",
+        services: "Master Plan y Proyecto Paisajístico",
       },
       unisinos: {
         title: "Unisinos",
@@ -432,6 +447,7 @@ export const es = {
         place: "Porto Alegre, RS",
         architecture: "AT Arquitetura",
         photo: "Marcelo Donadussi",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       "edificio-paix": {
         title: "Edificio PAIX",
@@ -443,6 +459,7 @@ export const es = {
         architecture: "Martin Gomez",
         interior: "Estudio Obra Prima",
         photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico",
       },
       "edificio-iguacu": {
         title: "Edificio Iguaçu",
@@ -453,6 +470,7 @@ export const es = {
         place: "Porto Alegre, RS",
         architecture: "Smart - Arquitetura",
         photo: "Roberta Gewehr",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       "jardim-lmp": {
         title: "Jardín LMP",
@@ -463,6 +481,7 @@ export const es = {
         place: "José Ignacio, UY",
         architecture: "Projetebem",
         photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       "jardim-ssg": {
         title: "Jardín SGG",
@@ -473,6 +492,7 @@ export const es = {
         place: "Garopaba, SC",
         architecture: "Arte Arquitetura",
         photo: "Roberta Borges",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       "jardim-adg": {
         title: "Jardín ADG",
@@ -483,6 +503,7 @@ export const es = {
         place: "Garopaba, SC",
         architecture: "Estudio Obra Prima",
         photo: "Roberta Borges",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       "prado-bairro-cidade": {
         title: "Prado Bairro Cidade",
@@ -493,11 +514,13 @@ export const es = {
         place: "Gravataí, RS",
         architecture: "Mario Quintana",
         photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
       "the-garden": {
         title: "The Garden",
         description: `
           En The Garden Ecosistema Urbano, en Canoas, el paisajismo fue concebido como una infraestructura espacial capaz de estructurar la experiencia cotidiana del barrio. En el proyecto que desarrollamos, las vías internas dejan de ser simples elementos de circulación para asumir un carácter paisajístico, organizando el territorio mediante macizos vegetales, recorridos arbolados y plazas que califican la escala urbana del emprendimiento. La vegetación actúa como elemento de continuidad entre la calle y el espacio de permanencia, construyendo un paisaje que acerca la lógica del parque al tejido residencial y refuerza la idea de un verdadero ecosistema urbano.
+
           Además del sistema de vías y plazas, el proyecto también estructura áreas programáticas orientadas a la convivencia y el ocio, incluyendo espacios para mascotas, gimnasio al aire libre y una serie de ambientes de permanencia distribuidos a lo largo del loteo. En el club central, la intervención paisajística organiza los diferentes usos —piscinas, playground y canchas deportivas— mediante una composición que articula superficies permeables, zonas de estar y estructura vegetal, creando secuencias de espacios que estimulan el uso activo y colectivo del paisaje. Más que un complemento estético, el paisajismo actúa como elemento organizador del espacio abierto y como mediador entre arquitectura, infraestructura y naturaleza.
         `,
         date: "2026",
@@ -505,6 +528,65 @@ export const es = {
         architecture: "Studio Ronaldo Rezende",
         photo: "Lucas Daneris",
         services: "Estudio de viabilidad, Consultoría, Proyecto Paisajístico y Ejecución de Jardín",
+      },
+      "praca-eng-guilherme": {
+        title: "Plaza Eng. Guilherme Gaudenzi",
+        description: `
+          La recualificación de la Plaza Engenheiro Guilherme Gaudenzi parte del reconocimiento de su condición original como espacio predominantemente de transición, marcado por la ausencia de estructura clara, baja legibilidad y limitada sensación de seguridad. El proyecto se apoya en la principal cualidad existente —la masa arbórea consolidada, compuesta por ejemplares de gran porte— para estructurar el diseño y orientar la organización espacial de la plaza. A partir de esto, canteros de geometría circular se implantan como estrategia de ordenamiento, creando una lectura orgánica y continua del espacio, al tiempo que definen áreas de permanencia y califican la experiencia del usuario sin romper con la naturalidad del conjunto.
+
+          Insertada en un contexto urbano de carácter mixto y funcionando como punto de conexión, la plaza tiene su sistema de circulación rediseñado a partir de los flujos existentes, priorizando la fluidez y la eficiencia de los desplazamientos. Los recorridos respetan los trayectos consolidados por el uso, evitando interferencias innecesarias y promoviendo una transición intuitiva entre los diferentes puntos del entorno. La calificación del espacio se da también mediante la introducción de mobiliario urbano esencial —como bancos, iluminación y papeleras— distribuido de forma a estimular la permanencia y ampliar la sensación de seguridad, además de la incorporación de un espacio pet que responde directamente a las demandas contemporáneas del entorno.
+
+          Más que una intervención puntual, el proyecto transforma la plaza en una infraestructura de uso cotidiano, más legible, accesible e invitadora, capaz de equilibrar flujo y permanencia y de activar el paisaje urbano incluso para aquellos que la atraviesan apenas de paso.
+        `,
+        date: "2026",
+        place: "Porto Alegre, RS",
+        photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico",
+      },
+      "jardim-gsc": {
+        title: "Jardín GSC",
+        description: `
+          El Jardín GS, en Cuiabá, fue concebido a partir de un programa ya definido: playa artificial de alto estándar, especies centenarias preseleccionadas, jardines internos y rooftop. El punto de partida no era una tela en blanco, y el trabajo consistió en dar coherencia al conjunto.
+
+          La implantación organiza diferentes programas en torno al lago ornamental, cuya lámina de agua fue trabajada en colaboración con Ecosys Lagos Ornamentais e Aquarismo para aproximar el resultado a la lógica de un ambiente acuático natural. La playa de arena blanca define la transición entre el lago y las áreas de permanencia, con bordes en piedra que eliminan cualquier límite artificial entre los dos planos.
+
+          La relación entre interior y exterior es directa: el lago avanza hasta la fachada vidriada de la residencia, y el jardín interior —cubierto por claraboya, con espejo de agua y vegetación de gran porte— extiende esa continuidad hacia el interior de la edificación.
+
+          La vegetación existente, compuesta por especies de alto valor y porte significativo, fue incorporada a la composición como elemento estructurante del proyecto, determinando recorridos, áreas de sombra y encuadres visuales. El clima del centro-oeste fue factor determinante en las decisiones de implantación y de confort ambiental.
+        `,
+        date: "2023",
+        place: "Cuiabá, MT",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
+      },
+      "praca-jose-luiz-fernandes-cogo": {
+        title: "Plaza José Luiz Fernandes Cogo",
+        description: `
+          La recualificación de la Plaza José Luiz Fernandes Cogo parte de una lectura atenta del paisaje existente, reconociendo en la vegetación consolidada el principal elemento estructurador del espacio. El proyecto adopta como premisa la inserción de circulaciones a partir de los vacíos entre los árboles, permitiendo que el propio lugar oriente los recorridos y organice la ocupación. Esta estrategia garantiza la preservación integral de los ejemplares arbóreos y establece una implantación que se ajusta de forma natural a la topografía y a la densidad vegetal, resultando en una plaza de carácter orgánico, donde caminos, áreas de permanencia y usos se integran de manera continua.
+
+          A partir de esta base, el proyecto introduce una diversidad de programas orientados al uso cotidiano y a la activación del espacio público. Áreas de estar con mesas y bancos permiten el uso para comidas y encuentros informales, mientras que una pequeña gradería crea apoyo para la permanencia y la observación. Equipamientos como mesas de ping-pong, gimnasio al aire libre y canchas de vóley playa estimulan la práctica de actividades físicas, ampliando el espectro de usuarios e incentivando la apropiación activa de la plaza. Complementariamente, el proyecto incorpora playground y un espacio lúdico construido con elementos naturales, como troncos de madera, promoviendo experiencias sensoriales y formas de jugar más libres, aún poco exploradas en el contexto local.
+
+          La infraestructura se refuerza con la implantación de bicicleteros, iluminación y mobiliario urbano, garantizando soporte funcional y mayor seguridad al uso a lo largo del día. Ubicada frente al conjunto residencial Jardins —también desarrollado por el estudio— la plaza establece una relación directa con el entorno inmediato, funcionando como extensión del tejido urbano y como elemento de conexión entre vivienda y espacio público.
+
+          Más que una cualificación puntual, el proyecto consolida un nuevo polo de atracción para el barrio, transformando un área anteriormente subutilizada en un espacio activo, diverso e integrado al paisaje, donde vegetación, programa y diseño urbano se articulan para promover permanencia, convivencia y vitalidad urbana.
+        `,
+        date: "2026",
+        place: "Porto Alegre, RS",
+        photo: "Lucas Daneris",
+        services: "Proyecto Paisajístico",
+      },
+      "jardim-mgx": {
+        title: "Jardín MGX",
+        description: `
+          El Jardín MGX, en Xangri-lá, fue concebido para una residencia implantada a orillas de un lago, en un contexto donde el viento es condicionante permanente y la relación con el agua define la orientación del conjunto.
+
+          En el acceso, el recorrido en placas de piedra natural intercaladas con césped conduce la mirada hacia la entrada, mientras macizos densos de vegetación tropical demarcan los límites laterales con fuerza y presencia. La composición prioriza especies resistentes al régimen de vientos de la costa gaúcha, con variación de textura entre follajes de diferentes portes y estructuras. El jazmín-mango en la fachada funciona como elemento puntual de color y estacionalidad, anclando la transición entre el jardín de acceso y el volumen construido.
+
+          En el área de la piscina, el deck en madera y la cubierta tensionada organizan el programa de ocio y definen la relación con el espejo de agua. La vegetación retrocede hacia bordes y encuadres, sin competir con la apertura visual hacia el lago. Por la noche, la iluminación directa sobre los macizos refuerza la lectura volumétrica del jardín y dialoga con el reflejo de la edificación en el agua.
+        `,
+        date: "2024",
+        place: "Xangri-la, RS",
+        photo: "Gabriel Konrath",
+        services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
     },
   },
@@ -908,6 +990,25 @@ El resultado es un paisajismo más eficiente, viable y coherente con el proyecto
         "+",
         "Arquitectura y Urbanismo (UCPEL)",
         "Master en Paisajismo (IPOG)",
+      ],
+    },
+    "natalia-kaul": {
+      role: "Trainee",
+      description: [
+        "+",
+        "Natália se interesa por las relaciones que se construyen entre las personas, el espacio y la naturaleza. En el paisajismo, encuentra la posibilidad de transformar la forma en que los lugares son vividos, entendiendo el proyecto como una construcción de atmósferas, recorridos y permanencias que despiertan diferentes experiencias en el espacio.\n\nParte de una mirada atenta hacia cómo cada ambiente puede ser experimentado y apropiado, reconociendo que pequeñas decisiones de diseño pueden generar nuevas dinámicas y formas de uso. Con base técnica en edificaciones, también mantiene proximidad con la dimensión constructiva del proyecto, buscando equilibrar sensibilidad y viabilidad en la materialización de las ideas.",
+        "+",
+        "Arquitectura y Urbanismo (UFPEL)",
+      ],
+    },
+    "taina-gauterio": {
+      role: "Trainee",
+      description: [
+        "+",
+        "Cree que la creatividad es central en el proceso proyectual, resultante de la relación entre la observación del mundo y las vivencias individuales. Cada proyecto nace del encuentro entre repertorio, sensibilidad e identidad, generando soluciones singulares y contextualizadas.\nDefiende que la calidad está en la integración entre estética y funcionalidad, entendiendo la arquitectura como una expresión viva, equilibrando forma y uso.",
+        "+",
+        "Arquitecta y Urbanista (UFPEL)",
+        "Maestranda en Arquitectura y Urbanismo (UFPEL)",
       ],
     },
   },

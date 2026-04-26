@@ -120,4 +120,28 @@ export const projectMetadata: ProjectMetadata[] = [
     tags: ["condominio", "urbanismo"],
     conclusionDate: "2026",
   },
+  {
+    slug: "praca-eng-guilherme",
+    coverPhotoIndex: 3,
+    tags: ["praca", "urbanismos", "portoalegre"],
+    conclusionDate: "2024",
+  },
+  {
+    slug: "jardim-gsc",
+    coverPhotoIndex: 4,
+    tags: ["residencial", "cuiaba", "lago"],
+    conclusionDate: "2023",
+  },
+  {
+    slug: "praca-jose-luiz-fernandes-cogo",
+    coverPhotoIndex: 2,
+    tags: ["praca", "urbanismos", "portoalegre"],
+    conclusionDate: "2026",
+  },
+  {
+    slug: "jardim-mgx",
+    coverPhotoIndex: 7,
+    tags: ["residencial", "xangrila"],
+    conclusionDate: "2024",
+  },
 ];

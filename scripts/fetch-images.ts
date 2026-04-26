@@ -1,6 +1,7 @@
-import { UTApi } from "uploadthing/server";
 import * as fs from "fs";
 import * as path from "path";
+
+import { UTApi } from "uploadthing/server";
 
 const IMAGE_DB_URL = "https://8vncue4ikz.ufs.sh/f/";
 
@@ -83,6 +84,7 @@ async function fetchImages() {
 
   console.log(`\nImage cache written to ${outputPath}`);
   console.log(`Projects found: ${Object.keys(cache).length}`);
+
   for (const [slug, images] of Object.entries(cache)) {
     console.log(`  ${slug}: ${images.length} images`);
   }

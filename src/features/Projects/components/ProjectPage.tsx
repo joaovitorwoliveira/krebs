@@ -65,10 +65,14 @@ export default function ProjectPage({ slug, className }: ProjectPageProps) {
           },
         ]
       : []),
-    {
-      label: t.projectDetails.photography,
-      value: projectTranslation?.photo,
-    },
+    ...(projectTranslation && "photo" in projectTranslation
+      ? [
+          {
+            label: t.projectDetails.photography,
+            value: projectTranslation.photo,
+          },
+        ]
+      : []),
   ].filter((detail) => detail.value);
 
   return (
