@@ -10,8 +10,8 @@ import {
 
 import { cn } from "@/lib/utils";
 
-import type { Project, ProjectsPageProps } from "../types";
-import ProjectRow from "./ProjectRow";
+import type { ProjectsPageProps } from "../types";
+import ProjectGrid from "./ProjectGrid";
 
 export default function ProjectsPage({ className }: ProjectsPageProps) {
   const { t } = useLanguage();
@@ -19,7 +19,6 @@ export default function ProjectsPage({ className }: ProjectsPageProps) {
     searchQuery,
     selectedTags,
     filteredProjects,
-    projectRows,
     availableTags,
     handleSearchChange,
     handleTagToggle,
@@ -44,16 +43,7 @@ export default function ProjectsPage({ className }: ProjectsPageProps) {
           {filteredProjects.length === 0 ? (
             <NoResults message={t.projects.filters.noResults} />
           ) : (
-            projectRows.map((row, rowIndex) => {
-              const rowKey = row.map((p: Project) => p.slug).join("-");
-              return (
-                <ProjectRow
-                  key={`${rowKey}-${rowIndex}`}
-                  row={row}
-                  rowIndex={rowIndex}
-                />
-              );
-            })
+            <ProjectGrid projects={filteredProjects} />
           )}
         </div>
       </div>

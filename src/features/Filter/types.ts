@@ -36,7 +36,6 @@ export interface FilterHookReturn {
   searchQuery: string;
   selectedTags: string[];
   filteredProjects: any[];
-  projectRows: any[];
   availableTags: string[];
   hasActiveFilters: boolean;
   handleSearchChange: (value: string) => void;

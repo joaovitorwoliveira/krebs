@@ -124,7 +124,7 @@ export const projectMetadata: ProjectMetadata[] = [
     slug: "praca-eng-guilherme",
     coverPhotoIndex: 3,
     tags: ["praca", "urbanismos", "portoalegre"],
-    conclusionDate: "2024",
+    conclusionDate: "2026",
   },
   {
     slug: "jardim-gsc",

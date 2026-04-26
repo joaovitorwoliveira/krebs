@@ -42,19 +42,10 @@ export function useProjectFilters(): FilterHookReturn {
     return filtered.sort((a, b) => {
       const dateA = parseInt(a.conclusionDate, 10);
       const dateB = parseInt(b.conclusionDate, 10);
-      return dateB - dateA;
+      if (dateA !== dateB) return dateB - dateA;
+      return a.slug.localeCompare(b.slug);
     });
   }, [projects, searchQuery, selectedTags, t.projects.items]);
-
-  const projectRows = useMemo(() => {
-    const rows = [];
-    const itemsPerRow = 3;
-
-    for (let i = 0; i < filteredProjects.length; i += itemsPerRow) {
-      rows.push(filteredProjects.slice(i, i + itemsPerRow));
-    }
-    return rows;
-  }, [filteredProjects]);
 
   const handleSearchChange = useCallback((value: string) => {
     setSearchQuery(value);
@@ -81,7 +72,6 @@ export function useProjectFilters(): FilterHookReturn {
     searchQuery,
     selectedTags,
     filteredProjects,
-    projectRows,
     availableTags,
     hasActiveFilters,
     handleSearchChange,
