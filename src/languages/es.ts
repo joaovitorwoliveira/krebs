@@ -992,6 +992,25 @@ El resultado es un paisajismo más eficiente, viable y coherente con el proyecto
         "Master en Paisajismo (IPOG)",
       ],
     },
+    "natalia-kaul": {
+      role: "Trainee",
+      description: [
+        "+",
+        "Natália se interesa por las relaciones que se construyen entre las personas, el espacio y la naturaleza. En el paisajismo, encuentra la posibilidad de transformar la forma en que los lugares son vividos, entendiendo el proyecto como una construcción de atmósferas, recorridos y permanencias que despiertan diferentes experiencias en el espacio.\n\nParte de una mirada atenta hacia cómo cada ambiente puede ser experimentado y apropiado, reconociendo que pequeñas decisiones de diseño pueden generar nuevas dinámicas y formas de uso. Con base técnica en edificaciones, también mantiene proximidad con la dimensión constructiva del proyecto, buscando equilibrar sensibilidad y viabilidad en la materialización de las ideas.",
+        "+",
+        "Arquitectura y Urbanismo (UFPEL)",
+      ],
+    },
+    "taina-gauterio": {
+      role: "Trainee",
+      description: [
+        "+",
+        "Cree que la creatividad es central en el proceso proyectual, resultante de la relación entre la observación del mundo y las vivencias individuales. Cada proyecto nace del encuentro entre repertorio, sensibilidad e identidad, generando soluciones singulares y contextualizadas.\nDefiende que la calidad está en la integración entre estética y funcionalidad, entendiendo la arquitectura como una expresión viva, equilibrando forma y uso.",
+        "+",
+        "Arquitecta y Urbanista (UFPEL)",
+        "Maestranda en Arquitectura y Urbanismo (UFPEL)",
+      ],
+    },
   },
 
   footer: {

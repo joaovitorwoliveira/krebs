@@ -991,6 +991,25 @@ The result is more efficient, viable landscaping coherent with the project, with
         "Master in Landscaping (IPOG)",
       ],
     },
+    "natalia-kaul": {
+      role: "Trainee",
+      description: [
+        "+",
+        "Natália is interested in the relationships built between people, space and nature. In landscaping, she finds the possibility of transforming how places are experienced, understanding the project as a construction of atmospheres, paths and permanences that awaken different experiences in space.\n\nShe approaches each environment with an attentive eye for how it can be experienced and appropriated, recognizing that small design decisions can generate new dynamics and forms of use. With a technical background in building construction, she also maintains proximity to the constructive dimension of the project, seeking to balance sensitivity and viability in the materialization of ideas.",
+        "+",
+        "Architecture and Urbanism (UFPEL)",
+      ],
+    },
+    "taina-gauterio": {
+      role: "Trainee",
+      description: [
+        "+",
+        "She believes that creativity is central to the design process, resulting from the relationship between observation of the world and individual experiences. Each project is born from the encounter between repertoire, sensitivity and identity, generating singular and contextualized solutions.\nShe defends that quality lies in the integration between aesthetics and functionality, understanding architecture as a living expression, balancing form and use.",
+        "+",
+        "Architect and Urbanist (UFPEL)",
+        "Master's student in Architecture and Urbanism (UFPEL)",
+      ],
+    },
   },
 
   footer: {

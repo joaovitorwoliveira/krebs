@@ -90,4 +90,16 @@ export const teamMembers: TeamMember[] = [
     category: "equipe",
     image: "/images/team/rodrigo.jpg",
   },
+  {
+    id: "natalia-kaul",
+    name: "Natália Kaul",
+    category: "equipe",
+    image: "/images/team/natalia-kaul.png",
+  },
+  {
+    id: "taina-gauterio",
+    name: "Tainá Gauterio",
+    category: "equipe",
+    image: "/images/team/taina-gauterio.png",
+  },
 ];
