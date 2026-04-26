@@ -225,21 +225,24 @@ export const pt = {
           veraneio recebeu um projeto de paisagismo que atua de forma integrada à
           arquitetura e ao entorno natural. A composição valoriza espécies nativas e
           adaptadas ao clima litorâneo, organizadas em maciços densos, com variações
-          de textura, altura e tonalidade ao longo dos percursos. Na fachada, o
-          paisagismo desempenha papel funcional e estético: suaviza os volumes
-          construídos, cria transições com o terreno e contribui para a privacidade
+          de textura, altura e tonalidade ao longo dos percursos.
+
+          Na fachada, o paisagismo desempenha papel funcional e estético: suaviza os
+          volumes construídos, cria transições com o terreno e contribui para a privacidade
           dos ambientes internos. Na área da piscina, a vegetação envolve o espaço
           com sutileza, oferecendo proteção visual, sombra e sensação de abrigo —
-          sem perder a permeabilidade da paisagem. A linguagem adotada prioriza
-          linhas orgânicas, baixa manutenção e uma relação fluida entre interior e
-          exterior, reforçando o caráter acolhedor e contemporâneo da casa. Mais do
-          que um jardim decorativo, trata-se de um sistema vivo, que acompanha o
-          tempo da casa e amplia sua experiência de uso ao longo das estações.
+          sem perder a permeabilidade da paisagem.
+
+          A linguagem adotada prioriza linhas orgânicas, baixa manutenção e uma relação
+          fluida entre interior e exterior, reforçando o caráter acolhedor e contemporâneo
+          da casa. Mais do que um jardim decorativo, trata-se de um sistema vivo, que
+          acompanha o tempo da casa e amplia sua experiência de uso ao longo das estações.
         `,
         date: "2023",
         place: "Praia da Barra - Garopaba, SC",
         architecture: "Marcia Barbieri - Arte Arquitetura",
         photo: "Lucas Daneris",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       "jardim-atj": {
         title: "Jardim ATJ",
@@ -258,6 +261,7 @@ export const pt = {
         date: "2018",
         place: "Praia da Silvera - Garopaba, SC",
         photo: "Lucas Daneris",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       "jardim-ltx": {
         title: "Jardim LTX",
@@ -277,6 +281,7 @@ export const pt = {
         date: "2018",
         place: "Xangri-la, RS",
         photo: "Lucas Daneris",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       "jardim-malu": {
         title: "Jardim MALU",
@@ -307,38 +312,47 @@ export const pt = {
           paisagismo do Colégio Farroupilha revela um novo gesto urbano. Mais do que
           uma intervenção estética, o projeto propõe uma reconfiguração sensível da
           relação entre escola, cidade e comunidade. O que antes era apenas fachada
-          torna-se espaço de convivência e permanência. As calçadas expandem sua
-          função e se transformam em ambientes de estar, onde bancos, vegetações,
-          sombras e mobiliários compõem uma ambiência acolhedora — um convite à
-          pausa, ao encontro e à observação. As linhas orgânicas do traçado e a
-          escolha criteriosa das espécies revelam um paisagismo autoral que suaviza
-          o ritmo da cidade e acolhe quem por ali passa. Em uma capital marcada por
-          contrastes e escassez de áreas públicas de qualidade, abrir-se ao entorno
-          é um ato de generosidade. Cada decisão — do desenho fluido ao mobiliário
-          integrado — reflete um compromisso com a gentileza urbana, transformando o
-          cotidiano com sutileza e intenção. É um lugar pensado para todos, onde o
-          projeto encontra seu sentido na experiência compartilhada.
+          torna-se espaço de convivência e permanência.
+
+          As calçadas expandem sua função e se transformam em ambientes de estar, onde
+          bancos, vegetações, sombras e mobiliários compõem uma ambiência acolhedora —
+          um convite à pausa, ao encontro e à observação. As linhas orgânicas do traçado
+          e a escolha criteriosa das espécies revelam um paisagismo autoral que suaviza
+          o ritmo da cidade e acolhe quem por ali passa.
+
+          Em uma capital marcada por contrastes e escassez de áreas públicas de qualidade,
+          abrir-se ao entorno é um ato de generosidade. Cada decisão — do desenho fluido
+          ao mobiliário integrado — reflete um compromisso com a gentileza urbana,
+          transformando o cotidiano com sutileza e intenção. É um lugar pensado para todos,
+          onde o projeto encontra seu sentido na experiência compartilhada.
         `,
         date: "2025",
         place: "Porto Alegre, RS",
         architecture: "ZeBL+",
         photo: "Lucas Daneris",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       "varanda-fek": {
         title: "Varanda FEK",
         description: `
-          Em Porto Alegre, o projeto parte da premissa de criar um espaço externo que una funcionalidade e sofisticação. 
-          O braseiro em pedra natural, de linhas curvilíneas e proteção em vidro, é o elemento central da composição. 
-          Posicionado sobre um leito de vegetação, cria a sensação de peça flutuante, trazendo elegância e identidade ao ambiente.
-          O paisagismo foi desenhado para envolver o braseiro e acompanhar o perímetro da varanda, utilizando espécies tropicais de 
-          baixa manutenção que garantem textura, volume e permanência estética ao longo do ano. O mobiliário, de linhas puras 
-          e materiais resistentes, mantém a unidade visual e dialoga com o concreto aparente e o piso neutro. 
-          O resultado é um espaço coeso, confortável e visualmente equilibrado, pensado para contemplação e convivência.
+          Em Porto Alegre, o projeto parte da premissa de criar um espaço externo que una
+          funcionalidade e sofisticação. O braseiro em pedra natural, de linhas curvilíneas
+          e proteção em vidro, é o elemento central da composição. Posicionado sobre um leito
+          de vegetação, cria a sensação de peça flutuante, trazendo elegância e identidade ao
+          ambiente.
+
+          O paisagismo foi desenhado para envolver o braseiro e acompanhar o perímetro da
+          varanda, utilizando espécies tropicais de baixa manutenção que garantem textura,
+          volume e permanência estética ao longo do ano. O mobiliário, de linhas puras
+          e materiais resistentes, mantém a unidade visual e dialoga com o concreto aparente
+          e o piso neutro. O resultado é um espaço coeso, confortável e visualmente
+          equilibrado, pensado para contemplação e convivência.
         `,
         date: "2024",
         place: "Porto Alegre, RS",
         architecture: "Ambidestro",
         photo: "Lucas Daneris",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       rampa: {
         title: "Rampa",
@@ -356,23 +370,25 @@ export const pt = {
         date: "2024",
         place: "Pelotas, RS",
         photo: "Lucas Daneris",
+        services: "Projeto Paisagístico",
       },
       "shopping-iguatemi": {
         title: "Shopping Iguatemi",
         description: `
-          Em Porto Alegre, a intervenção no acesso do Shopping Iguatemi buscou qualificar 
-          a experiência urbana e integrar o paisagismo à arquitetura existente. 
-          Floreiras lineares com bancos incorporados abrigam exemplares de sibipiruna, 
+          Em Porto Alegre, a intervenção no acesso do Shopping Iguatemi buscou qualificar
+          a experiência urbana e integrar o paisagismo à arquitetura existente.
+          Floreiras lineares com bancos incorporados abrigam exemplares de sibipiruna,
           espécie de grande porte e floração delicada, que proporciona sombra e identidade visual ao espaço.
 
-          Complementando a composição, vasos com espécies floríferas trazem cor e vitalidade ao percurso. 
-          O tratamento urbanístico incluiu bicicletários, iluminação e mobiliário de apoio, garantindo 
-          conforto, funcionalidade e incentivo ao uso do espaço por diferentes públicos. O resultado é um 
+          Complementando a composição, vasos com espécies floríferas trazem cor e vitalidade ao percurso.
+          O tratamento urbanístico incluiu bicicletários, iluminação e mobiliário de apoio, garantindo
+          conforto, funcionalidade e incentivo ao uso do espaço por diferentes públicos. O resultado é um
           acesso mais convidativo, com equilíbrio entre estética, uso e durabilidade.
         `,
         date: "2017",
         place: "Porto Alegre, RS",
         photo: "Vanessa Bohn",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       "jardim-flv": {
         title: "Jardim FLV",
@@ -386,6 +402,7 @@ export const pt = {
         place: "Rio de Janeiro, RJ",
         architecture: "Bernardes Arquitetura",
         photo: "Lucas Daneris",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       "rua-mista-legano": {
         title: "Rua Mista Legano",
@@ -399,6 +416,7 @@ export const pt = {
         place: "Nova Santa Rita, RS",
         architecture: "Aviva Urbanismo",
         photo: "Lucas Daneris",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       surfland: {
         title: "Surfland",
@@ -410,6 +428,7 @@ export const pt = {
         date: "2023",
         place: "Garopaba, SC",
         photo: "Lucas Daneris",
+        services: "Master Plan e Projeto Paisagístico",
       },
       unisinos: {
         title: "Unisinos",
@@ -420,6 +439,7 @@ export const pt = {
         place: "Porto Alegre, RS",
         architecture: "AT Arquitetura",
         photo: "Marcelo Donadussi",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       "edificio-paix": {
         title: "Edifício PAIX",
@@ -431,6 +451,7 @@ export const pt = {
         architecture: "Martin Gomez",
         interior: "Estudio Obra Prima",
         photo: "Lucas Daneris",
+        services: "Projeto Paisagístico",
       },
       "edificio-iguacu": {
         title: "Edifício Iguaçu",
@@ -441,6 +462,7 @@ export const pt = {
         place: "Porto Alegre, RS",
         architecture: "Smart - Arquitetura",
         photo: "Roberta Gewehr",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       "jardim-lmp": {
         title: "Jardim LMP",
@@ -451,6 +473,7 @@ export const pt = {
         place: "José Ignacio, UY",
         architecture: "Projetebem",
         photo: "Lucas Daneris",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       "jardim-ssg": {
         title: "Jardim SGG",
@@ -461,6 +484,7 @@ export const pt = {
         place: "Garopaba, SC",
         architecture: "Arte Arquitetura",
         photo: "Roberta Borges",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       "jardim-adg": {
         title: "Jardim ADG",
@@ -471,6 +495,7 @@ export const pt = {
         place: "Garopaba, SC",
         architecture: "Estudio Obra Prima",
         photo: "Roberta Borges",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       "prado-bairro-cidade": {
         title: "Prado Bairro Cidade",
@@ -481,6 +506,7 @@ export const pt = {
         place: "Gravataí, RS",
         architecture: "Mario Quintana",
         photo: "Lucas Daneris",
+        services: "Projeto Paisagístico e Execução de Jardim",
       },
       "the-garden": {
         title: "The Garden",
