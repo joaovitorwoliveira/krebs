@@ -54,6 +54,7 @@ export default function Header() {
   const navigationLinks = [
     { href: "/quem-somos", label: t.header.whoWeAre },
     { href: "/projetos", label: t.header.projects },
+    { href: "/blog", label: t.header.blog },
     { href: "/servicos", label: t.header.services },
   ];
 

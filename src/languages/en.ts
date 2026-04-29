@@ -3,9 +3,20 @@ export const en = {
     projects: "PROJECTS",
     whoWeAre: "WHO WE ARE",
     services: "SERVICES",
+    blog: "BLOG",
     contact: "CONTACT",
     menu: "MENU",
     close: "CLOSE",
+  },
+
+  blog: {
+    pageTitle: "Blog",
+    pageSubtitle:
+      "Reflections, projects and behind-the-scenes from the studio on landscape architecture.",
+    readMore: "Read more",
+    backToList: "Back to blog",
+    notFound: "Post not found",
+    empty: "New publications coming soon.",
   },
 
   contactDrawer: {

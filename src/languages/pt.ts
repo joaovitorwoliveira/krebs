@@ -3,9 +3,20 @@ export const pt = {
     projects: "PROJETOS",
     whoWeAre: "QUEM SOMOS",
     services: "SERVIÇOS",
+    blog: "BLOG",
     contact: "CONTATO",
     menu: "MENU",
     close: "FECHAR",
+  },
+
+  blog: {
+    pageTitle: "Blog",
+    pageSubtitle:
+      "Reflexões, projetos e bastidores do estúdio sobre arquitetura paisagística.",
+    readMore: "Ler mais",
+    backToList: "Voltar para o blog",
+    notFound: "Post não encontrado",
+    empty: "Em breve novas publicações.",
   },
 
   contactDrawer: {
