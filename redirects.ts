@@ -45,11 +45,6 @@ const baseRedirects = [
     permanent: true,
   },
   {
-    source: "/blog",
-    destination: "/",
-    permanent: true,
-  },
-  {
     source: "/cópia-condomínios-e-bairros-planejados",
     destination: "/",
     permanent: true,

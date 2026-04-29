@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
         hostname: "8vncue4ikz.ufs.sh",
         pathname: "/f/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.ctfassets.net",
+      },
     ],
     minimumCacheTTL: 60 * 60 * 24 * 30,
     formats: ["image/avif", "image/webp"],
