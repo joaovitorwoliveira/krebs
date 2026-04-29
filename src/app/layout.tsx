@@ -13,6 +13,7 @@ import { ContactDrawerProvider } from "@/context/ContactDrawerProvider";
 import { LanguageProvider } from "@/context/LanguageProvider";
 import MotionProvider from "@/context/MotionProvider";
 import { generateOrganizationSchema } from "@/utils/seo/schemas";
+import { Analytics } from "@vercel/analytics/next";
 
 const encodeSans = Encode_Sans({
   variable: "--font-encode-sans",
@@ -113,6 +114,7 @@ export default function RootLayout({
       <body
         className={`${encodeSans.variable} ${inter.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-x-hidden`}
       >
+        <Analytics />
         <SmoothScroll>
           <div className="texture-overlay"></div>
           <LanguageProvider>
