@@ -10,9 +10,11 @@ export const en = {
   },
 
   blog: {
+    eyebrow: "Studio journal",
+    entriesLabel: "entries",
     pageTitle: "Blog",
     pageSubtitle:
-      "Reflections, projects and behind-the-scenes from the studio on landscape architecture.",
+      "Field notes, readings and design processes — a way of thinking landscape out loud.",
     readMore: "Read more",
     backToList: "Back to blog",
     notFound: "Post not found",
@@ -24,6 +26,7 @@ export const en = {
     shareOnLinkedIn: "Share on LinkedIn",
     copyLink: "Copy link",
     linkCopied: "Link copied",
+    recentPostsTitle: "Recent Posts",
   },
 
   contactDrawer: {

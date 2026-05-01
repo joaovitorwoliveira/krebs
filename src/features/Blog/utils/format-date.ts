@@ -12,7 +12,7 @@ export function formatBlogDate(iso: string, language: Language = "pt"): string {
 
   return new Intl.DateTimeFormat(localeMap[language], {
     day: "2-digit",
-    month: "short",
-    year: "numeric",
+    month: "2-digit",
+    year: "2-digit",
   }).format(date);
 }

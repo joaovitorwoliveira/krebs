@@ -16,14 +16,20 @@ import BlogBreadcrumb from "./BlogBreadcrumb";
 import BlogPostFAQSection from "./BlogPostFAQ";
 import BlogPostShare from "./BlogPostShare";
 import BlogPostTOC from "./BlogPostTOC";
+import BlogRecentPosts from "./BlogRecentPosts";
 import RichTextRenderer from "./RichTextRenderer";
 
 interface BlogPostPageProps {
   post: BlogPost;
+  recentPosts?: BlogPost[];
   className?: string;
 }
 
-export default function BlogPostPage({ post, className }: BlogPostPageProps) {
+export default function BlogPostPage({
+  post,
+  recentPosts,
+  className,
+}: BlogPostPageProps) {
   const { t, language } = useLanguage();
 
   const headings = useMemo(
@@ -42,9 +48,9 @@ export default function BlogPostPage({ post, className }: BlogPostPageProps) {
         <div className="max-w-8xl mx-auto px-6 xl:px-10 pt-10 md:pt-16">
           <BlogBreadcrumb postTitle={post.title} />
         </div>
-        <div className="max-w-3xl mx-auto px-6 md:px-8">
+        <div className="max-w-[600px] mx-auto px-6 md:px-8 xl:max-w-3xl">
           <header className="mt-4 md:mt-8 pb-8 md:pb-12">
-            <div className="flex items-center gap-3 text-xs font-inter-light uppercase tracking-wide text-dark/50">
+            <div className="flex items-center gap-3 text-xs font-inter-light uppercase tracking-[0.18em] text-dark/50">
               <span>{formatBlogDate(post.publishedAt, language)}</span>
               <span aria-hidden>·</span>
               <span>
@@ -60,13 +66,13 @@ export default function BlogPostPage({ post, className }: BlogPostPageProps) {
               {post.title}
             </h1>
             {post.resume && (
-              <p className="mt-10 text-dark/70 font-inter-light text-base leading-relaxed">
+              <p className="mt-10 text-dark/70 font-inter-light text-base md:text-lg leading-relaxed">
                 {post.resume}
               </p>
             )}
           </header>
 
-          <figure className="relative w-full aspect-[3/2] my-10 overflow-hidden">
+          <figure className="relative w-full aspect-[3/2] mt-12 mb-10 overflow-hidden">
             <Image
               src={post.coverImage.url}
               alt={post.coverImage.alt}
@@ -95,6 +101,9 @@ export default function BlogPostPage({ post, className }: BlogPostPageProps) {
                 items={post.frequentQuestions}
                 title={t.blog.faqTitle}
               />
+            )}
+            {recentPosts && recentPosts.length > 0 && (
+              <BlogRecentPosts posts={recentPosts} />
             )}
             <div data-toc-boundary aria-hidden />
           </div>

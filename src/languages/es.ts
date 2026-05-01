@@ -10,9 +10,11 @@ export const es = {
   },
 
   blog: {
+    eyebrow: "Diario del estudio",
+    entriesLabel: "registros",
     pageTitle: "Blog",
     pageSubtitle:
-      "Reflexiones, proyectos y entre bastidores del estudio sobre arquitectura paisajística.",
+      "Notas de campo, lecturas y procesos de proyecto — una forma de pensar el paisaje en voz alta.",
     readMore: "Leer más",
     backToList: "Volver al blog",
     notFound: "Publicación no encontrada",
@@ -24,6 +26,7 @@ export const es = {
     shareOnLinkedIn: "Compartir en LinkedIn",
     copyLink: "Copiar enlace",
     linkCopied: "Enlace copiado",
+    recentPostsTitle: "Publicaciones Recientes",
   },
 
   contactDrawer: {
