@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useLenis } from "@/common/components/SmoothScroll";
 import { useContactDrawer } from "@/context/ContactDrawerProvider";
@@ -48,10 +48,10 @@ export default function BackToTopButton({
       {isVisible && (
         <motion.button
           className={cn(
-            "fixed bottom-16 right-6 z-50 cursor-pointer",
+            "fixed bottom-12 right-6 z-50 cursor-pointer",
             "flex items-center justify-center",
             "w-12 h-12 rounded-full",
-            "bg-dark/80 backdrop-blur-sm",
+            "bg-dark/60 backdrop-blur-sm",
             "text-white hover:bg-dark",
             "transition-colors duration-300",
             "focus:outline-none focus:ring-2 focus:ring-white/20",
@@ -70,7 +70,7 @@ export default function BackToTopButton({
           title={t?.backToTop?.label || "Voltar ao topo"}
         >
           <svg
-            className="w-5 h-5"
+            className="w-4 h-4"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

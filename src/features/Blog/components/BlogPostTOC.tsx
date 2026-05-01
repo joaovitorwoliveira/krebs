@@ -16,7 +16,42 @@ interface BlogPostTOCProps {
 export default function BlogPostTOC({ items, label }: BlogPostTOCProps) {
   const lenis = useLenis();
   const [activeId, setActiveId] = useState<string | null>(items[0]?.id ?? null);
+  const [pinnedBottom, setPinnedBottom] = useState<number | null>(null);
+  const navRef = useRef<HTMLElement>(null);
   const lenisRef = useRef(lenis);
+
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+
+    let raf = 0;
+    const handle = () => {
+      const boundary = document.querySelector<HTMLElement>(
+        "[data-toc-boundary]"
+      );
+      if (!boundary) return;
+      const navHeight = nav.offsetHeight;
+      const stickyTopPx = window.innerHeight * 0.32;
+      const boundaryBottom = boundary.getBoundingClientRect().bottom;
+      const naturalBottom = stickyTopPx + navHeight;
+      if (boundaryBottom < naturalBottom) {
+        setPinnedBottom(window.innerHeight - boundaryBottom);
+      } else {
+        setPinnedBottom(null);
+      }
+    };
+
+    const tick = () => {
+      handle();
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    window.addEventListener("resize", handle);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", handle);
+    };
+  }, []);
 
   useEffect(() => {
     lenisRef.current = lenis;
@@ -63,8 +98,14 @@ export default function BlogPostTOC({ items, label }: BlogPostTOCProps) {
 
   return (
     <nav
+      ref={navRef}
       aria-label={label}
-      className="hidden lg:flex flex-col fixed left-20 top-[23.5%] z-30 overflow-y-auto w-[14rem] max-h-[70vh] max-w-30 xl:max-w-60 2xl:max-w-80"
+      className="hidden lg:flex flex-col fixed left-16 xl:left-20 z-30 overflow-y-auto w-[14rem] max-h-[70vh] max-w-34 xl:max-w-46 2xl:max-w-80"
+      style={
+        pinnedBottom !== null
+          ? { bottom: `${pinnedBottom}px`, top: "auto" }
+          : { top: "32%" }
+      }
     >
       <span className="text-[10px] uppercase tracking-[0.2em] font-inter-light text-dark/80 mb-3">
         {label}

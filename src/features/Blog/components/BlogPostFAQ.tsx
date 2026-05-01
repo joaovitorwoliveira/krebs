@@ -25,7 +25,7 @@ export default function BlogPostFAQSection({
                 htmlFor={id}
                 className="cursor-pointer flex items-center justify-between text-left py-5 select-none"
               >
-                <span className="text-base md:text-lg font-inter-semibold font-normal text-dark group-has-[:checked]:font-bold group-has-[:checked]:text-dark transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+                <span className="text-base md:text-lg font-inter-semibold font-normal text-dark/80 group-has-[:checked]:font-bold group-has-[:checked]:text-dark transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
                   {item.question}
                 </span>
 

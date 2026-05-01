@@ -20,6 +20,10 @@ export const pt = {
     faqTitle: "Perguntas Frequentes",
     readingTime: "min de leitura",
     tableOfContents: "Neste artigo",
+    shareOnX: "Compartilhar no X",
+    shareOnLinkedIn: "Compartilhar no LinkedIn",
+    copyLink: "Copiar link",
+    linkCopied: "Link copiado",
   },
 
   contactDrawer: {

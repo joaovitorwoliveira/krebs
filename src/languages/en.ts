@@ -20,6 +20,10 @@ export const en = {
     faqTitle: "Frequently Asked Questions",
     readingTime: "min read",
     tableOfContents: "On this article",
+    shareOnX: "Share on X",
+    shareOnLinkedIn: "Share on LinkedIn",
+    copyLink: "Copy link",
+    linkCopied: "Link copied",
   },
 
   contactDrawer: {
