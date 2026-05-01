@@ -18,7 +18,7 @@
   --blue-dark: #212c42; /* Azul escuro */
   --gray-blue: #788990; /* Cinza azulado */
 
-  --white: #fefcf9;
+  --soft-white: ##fcfcfc;
 }
 
 @theme inline {
@@ -35,7 +35,7 @@
   --color-light: var(--light);
   --color-dark: var(--dark);
   --color-paper: var(--paper);
-  --color-white: var(--white);
+  --color-soft-white: var(--soft-white);
 
   --color-brown-1: var(--brown-1);
   --color-brown-2: var(--brown-2);

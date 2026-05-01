@@ -10,7 +10,7 @@ export default function BlogPostFAQSection({
   title,
 }: BlogPostFAQSectionProps) {
   return (
-    <section className="mt-12 md:mt-16">
+    <section className="mt-12 md:mt-16 lg:mt-20 border-t border-dark/40 pt-10 md:pt-16">
       <h2 className="font-encode-bold text-dark text-2xl md:text-3xl mb-4">
         {title}
       </h2>
@@ -25,7 +25,7 @@ export default function BlogPostFAQSection({
                 htmlFor={id}
                 className="cursor-pointer flex items-center justify-between text-left py-5 select-none"
               >
-                <span className="text-base md:text-lg font-inter-bold font-normal text-dark/80 group-has-[:checked]:font-bold group-has-[:checked]:text-dark transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+                <span className="text-base md:text-lg font-inter-semibold font-normal text-dark group-has-[:checked]:font-bold group-has-[:checked]:text-dark transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
                   {item.question}
                 </span>
 
@@ -46,7 +46,7 @@ export default function BlogPostFAQSection({
               <div className="grid grid-rows-[0fr] opacity-0 group-has-[:checked]:grid-rows-[1fr] group-has-[:checked]:opacity-100 transition-[grid-template-rows,opacity] duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
                 <div className="overflow-hidden">
                   <div className="pb-5 pt-1">
-                    <p className="font-inter text-base text-dark/70 leading-[1.7] whitespace-pre-wrap">
+                    <p className="font-inter text-base text-dark/90 leading-[1.7] whitespace-pre-wrap">
                       {item.answer}
                     </p>
                   </div>

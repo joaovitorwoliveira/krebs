@@ -18,6 +18,8 @@ export const en = {
     notFound: "Post not found",
     empty: "New publications coming soon.",
     faqTitle: "Frequently Asked Questions",
+    readingTime: "min read",
+    tableOfContents: "On this article",
   },
 
   contactDrawer: {

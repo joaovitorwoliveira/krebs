@@ -1,7 +1,7 @@
 "use client";
 
+import { useMemo } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import BackgroundWrapper from "@/common/components/BackgroundWrapper";
 import { useLanguage } from "@/context/LanguageProvider";
@@ -9,8 +9,12 @@ import { useLanguage } from "@/context/LanguageProvider";
 import { cn } from "@/lib/utils";
 
 import type { BlogPost } from "../types";
+import { calculateReadTime } from "../utils/calculate-read-time";
+import { extractHeadings } from "../utils/extract-headings";
 import { formatBlogDate } from "../utils/format-date";
+import BlogBreadcrumb from "./BlogBreadcrumb";
 import BlogPostFAQSection from "./BlogPostFAQ";
+import BlogPostTOC from "./BlogPostTOC";
 import RichTextRenderer from "./RichTextRenderer";
 
 interface BlogPostPageProps {
@@ -21,26 +25,41 @@ interface BlogPostPageProps {
 export default function BlogPostPage({ post, className }: BlogPostPageProps) {
   const { t, language } = useLanguage();
 
+  const headings = useMemo(
+    () => (post.content ? extractHeadings(post.content) : []),
+    [post.content]
+  );
+  const headingIds = useMemo(() => headings.map((h) => h.id), [headings]);
+  const showToc = headings.length >= 2;
+
   return (
     <BackgroundWrapper>
       <article className={cn("min-h-screen", className)}>
-        <div className="max-w-3xl mx-auto px-6 md:px-8 pt-10 md:pt-16">
-          <Link
-            href="/blog"
-            className="text-xs uppercase tracking-wide font-inter-light text-dark/60 hover:text-dark transition-colors"
-          >
-            ← {t.blog.backToList}
-          </Link>
-
-          <header className="mt-10 md:mt-16 pb-8 md:pb-12">
-            <span className="text-xs font-inter-light uppercase tracking-wide text-dark/50">
-              {formatBlogDate(post.publishedAt, language)}
-            </span>
-            <h1 className="font-encode-bold text-dark text-3xl md:text-5xl mt-3 leading-tight">
+        {showToc && (
+          <BlogPostTOC items={headings} label={t.blog.tableOfContents} />
+        )}
+        <div className="max-w-8xl mx-auto px-6 md:px-10 pt-10 md:pt-16">
+          <BlogBreadcrumb postTitle={post.title} />
+        </div>
+        <div className="max-w-3xl mx-auto px-6 md:px-8">
+          <header className="mt-4 md:mt-8 pb-8 md:pb-12">
+            <div className="flex items-center gap-3 text-xs font-inter-light uppercase tracking-wide text-dark/50">
+              <span>{formatBlogDate(post.publishedAt, language)}</span>
+              <span aria-hidden>·</span>
+              <span>
+                {calculateReadTime(
+                  post.content,
+                  post.frequentQuestions,
+                  post.resume
+                )}{" "}
+                {t.blog.readingTime}
+              </span>
+            </div>
+            <h1 className="font-encode text-dark text-3xl md:text-5xl mt-4 leading-tight">
               {post.title}
             </h1>
             {post.resume && (
-              <p className="mt-4 text-dark/70 font-inter-light text-base md:text-lg leading-relaxed">
+              <p className="mt-6 text-dark/70 font-inter-light text-base leading-relaxed">
                 {post.resume}
               </p>
             )}
@@ -57,13 +76,18 @@ export default function BlogPostPage({ post, className }: BlogPostPageProps) {
             />
           </figure>
           {post.caption && (
-            <figcaption className="text-xs italic text-dark/60 mt-2 text-center">
+            <figcaption className="text-xs italic text-dark/60 mb-10 text-center">
               {post.caption}
             </figcaption>
           )}
 
           <div className="pb-16 md:pb-24">
-            {post.content && <RichTextRenderer content={post.content} />}
+            {post.content && (
+              <RichTextRenderer
+                content={post.content}
+                headingIds={headingIds}
+              />
+            )}
             {post.frequentQuestions && post.frequentQuestions.length > 0 && (
               <BlogPostFAQSection
                 items={post.frequentQuestions}

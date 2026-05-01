@@ -93,7 +93,7 @@ export default function TagFilter({
                 : t.projects.filters.filterByTags
             }
             onClick={() => setIsOpen(true)}
-            className="px-4 py-2 text-xs font-medium text-black bg-white border-black"
+            className="text-xs font-medium text-black bg-white border-black py-2"
           />
         </div>
       </div>

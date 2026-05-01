@@ -18,6 +18,8 @@ export const pt = {
     notFound: "Post não encontrado",
     empty: "Em breve novas publicações.",
     faqTitle: "Perguntas Frequentes",
+    readingTime: "min de leitura",
+    tableOfContents: "Neste artigo",
   },
 
   contactDrawer: {
