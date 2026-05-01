@@ -14,6 +14,7 @@ import { extractHeadings } from "../utils/extract-headings";
 import { formatBlogDate } from "../utils/format-date";
 import BlogBreadcrumb from "./BlogBreadcrumb";
 import BlogPostFAQSection from "./BlogPostFAQ";
+import BlogPostShare from "./BlogPostShare";
 import BlogPostTOC from "./BlogPostTOC";
 import RichTextRenderer from "./RichTextRenderer";
 
@@ -38,7 +39,7 @@ export default function BlogPostPage({ post, className }: BlogPostPageProps) {
         {showToc && (
           <BlogPostTOC items={headings} label={t.blog.tableOfContents} />
         )}
-        <div className="max-w-8xl mx-auto px-6 md:px-10 pt-10 md:pt-16">
+        <div className="max-w-8xl mx-auto px-6 xl:px-10 pt-10 md:pt-16">
           <BlogBreadcrumb postTitle={post.title} />
         </div>
         <div className="max-w-3xl mx-auto px-6 md:px-8">
@@ -59,13 +60,13 @@ export default function BlogPostPage({ post, className }: BlogPostPageProps) {
               {post.title}
             </h1>
             {post.resume && (
-              <p className="mt-6 text-dark/70 font-inter-light text-base leading-relaxed">
+              <p className="mt-10 text-dark/70 font-inter-light text-base leading-relaxed">
                 {post.resume}
               </p>
             )}
           </header>
 
-          <figure className="relative w-full aspect-[3/2] my-10 md:my-14 overflow-hidden">
+          <figure className="relative w-full aspect-[3/2] my-10 overflow-hidden">
             <Image
               src={post.coverImage.url}
               alt={post.coverImage.alt}
@@ -88,12 +89,14 @@ export default function BlogPostPage({ post, className }: BlogPostPageProps) {
                 headingIds={headingIds}
               />
             )}
+            <BlogPostShare title={post.title} />
             {post.frequentQuestions && post.frequentQuestions.length > 0 && (
               <BlogPostFAQSection
                 items={post.frequentQuestions}
                 title={t.blog.faqTitle}
               />
             )}
+            <div data-toc-boundary aria-hidden />
           </div>
         </div>
       </article>
