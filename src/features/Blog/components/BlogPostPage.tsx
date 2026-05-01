@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 
 import type { BlogPost } from "../types";
 import { formatBlogDate } from "../utils/format-date";
+import BlogPostFAQSection from "./BlogPostFAQ";
 import RichTextRenderer from "./RichTextRenderer";
 
 interface BlogPostPageProps {
@@ -63,7 +64,12 @@ export default function BlogPostPage({ post, className }: BlogPostPageProps) {
 
           <div className="pb-16 md:pb-24">
             {post.content && <RichTextRenderer content={post.content} />}
-            <hr className="border-dark/10 my-12" />
+            {post.frequentQuestions && post.frequentQuestions.length > 0 && (
+              <BlogPostFAQSection
+                items={post.frequentQuestions}
+                title={t.blog.faqTitle}
+              />
+            )}
           </div>
         </div>
       </article>

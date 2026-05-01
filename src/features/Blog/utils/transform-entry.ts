@@ -1,6 +1,10 @@
-import type { BlogPostEntry, ContentfulAsset } from "@/lib/contentful";
+import type {
+  BlogPostEntry,
+  ContentfulAsset,
+  FrequentQuestionEntry,
+} from "@/lib/contentful";
 
-import type { BlogPost, BlogPostCoverImage } from "../types";
+import type { BlogPost, BlogPostCoverImage, BlogPostFAQ } from "../types";
 import { slugify } from "./slugify";
 
 function resolveAsset(asset: ContentfulAsset | undefined, alt: string): BlogPostCoverImage | null {
@@ -25,6 +29,15 @@ export function transformBlogPostEntry(entry: BlogPostEntry): BlogPost | null {
   const coverImage = resolveAsset(fields.coverImage as ContentfulAsset, fields.title);
   if (!coverImage) return null;
 
+  const rawFaq = (fields.frequentQuestions ?? []) as unknown as FrequentQuestionEntry[];
+  const frequentQuestions = rawFaq
+    .map((faqEntry): BlogPostFAQ | null => {
+      const f = faqEntry?.fields;
+      if (!f?.question || !f.answer) return null;
+      return { id: faqEntry.sys.id, question: f.question, answer: f.answer };
+    })
+    .filter((x): x is BlogPostFAQ => x !== null);
+
   return {
     id: entry.sys.id,
     slug: slugify(fields.title),
@@ -35,6 +48,7 @@ export function transformBlogPostEntry(entry: BlogPostEntry): BlogPost | null {
     content: fields.content,
     coverImage,
     publishedAt: entry.sys.createdAt,
+    frequentQuestions: frequentQuestions.length > 0 ? frequentQuestions : undefined,
   };
 }
 
