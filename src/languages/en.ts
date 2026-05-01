@@ -17,6 +17,7 @@ export const en = {
     backToList: "Back to blog",
     notFound: "Post not found",
     empty: "New publications coming soon.",
+    faqTitle: "Frequently Asked Questions",
   },
 
   contactDrawer: {

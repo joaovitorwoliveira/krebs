@@ -4,6 +4,7 @@
 :root {
   /* Paleta de cores principal */
   --light: #f3efeb; /* Tom claro/off-white */
+  --paper: #f5f1ec; /* Tom de papel */
   --dark: #080807; /* Tom escuro/preto */
   --green-1: #6a7c6d; /* Verde mais claro */
   --green-2: #58695c; /* Verde claro-médio */
@@ -17,7 +18,7 @@
   --blue-dark: #212c42; /* Azul escuro */
   --gray-blue: #788990; /* Cinza azulado */
 
-  --white: #ffffff;
+  --white: #fefcf9;
 }
 
 @theme inline {
@@ -33,6 +34,8 @@
   --color-green-5: var(--green-5);
   --color-light: var(--light);
   --color-dark: var(--dark);
+  --color-paper: var(--paper);
+  --color-white: var(--white);
 
   --color-brown-1: var(--brown-1);
   --color-brown-2: var(--brown-2);
@@ -167,7 +170,6 @@ label,
 .swiper-pagination {
   bottom: 24px !important;
 }
-
 
 .animate-spin-slow {
   animation: spin-slow 3s linear infinite;

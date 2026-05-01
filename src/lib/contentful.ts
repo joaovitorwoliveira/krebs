@@ -1,6 +1,19 @@
 import { createClient, type Entry, type EntrySkeletonType } from "contentful";
 import type { Document } from "@contentful/rich-text-types";
 
+export interface FrequentQuestionFields {
+  name?: string;
+  question: string;
+  answer: string;
+}
+
+export type FrequentQuestionSkeleton = EntrySkeletonType<
+  FrequentQuestionFields,
+  "frequentQuestions"
+>;
+
+export type FrequentQuestionEntry = Entry<FrequentQuestionSkeleton, undefined, string>;
+
 export interface BlogPostFields {
   name: string;
   title: string;
@@ -9,6 +22,7 @@ export interface BlogPostFields {
   caption?: string;
   content?: Document;
   coverImage: ContentfulAsset;
+  frequentQuestions?: FrequentQuestionEntry[];
 }
 
 export type BlogPostSkeleton = EntrySkeletonType<BlogPostFields, "blogPost">;

@@ -7,6 +7,12 @@ export interface BlogPostCoverImage {
   alt: string;
 }
 
+export interface BlogPostFAQ {
+  id: string;
+  question: string;
+  answer: string;
+}
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -17,4 +23,5 @@ export interface BlogPost {
   content?: Document;
   coverImage: BlogPostCoverImage;
   publishedAt: string;
+  frequentQuestions?: BlogPostFAQ[];
 }
