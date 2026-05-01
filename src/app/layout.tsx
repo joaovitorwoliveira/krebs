@@ -112,7 +112,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${encodeSans.variable} ${inter.variable} ${encodeSans.className} antialiased bg-white text-dark select-none overflow-x-hidden`}
+        className={`${encodeSans.variable} ${inter.variable} ${encodeSans.className} antialiased bg-soft-white text-dark select-none overflow-x-hidden`}
       >
         <Analytics />
         <SmoothScroll>

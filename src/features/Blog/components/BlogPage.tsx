@@ -22,11 +22,11 @@ export default function BlogPage({ posts, className }: BlogPageProps) {
       <div className={cn("min-h-screen", className)}>
         <div className="max-w-5xl mx-auto px-6 md:px-10">
           <header className="pt-12 pb-16 md:pt-20 md:pb-24 text-center max-w-2xl mx-auto">
-            <h1 className="font-encode-bold text-dark text-3xl md:text-5xl">
+            <h1 className="font-encode-semibold text-dark text-3xl md:text-4xl">
               {t.blog.pageTitle}
             </h1>
             {t.blog.pageSubtitle && (
-              <p className="mt-4 text-dark/70 font-inter-light text-base md:text-lg">
+              <p className="mt-4 text-dark/70 font-inter-light text-base">
                 {t.blog.pageSubtitle}
               </p>
             )}

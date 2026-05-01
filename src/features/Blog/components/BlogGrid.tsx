@@ -4,12 +4,14 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import Button from "@/common/components/Button";
 import { useLanguage } from "@/context/LanguageProvider";
 import { useInView, Variants } from "framer-motion";
 
 import { motion } from "@/lib/motion";
 
 import type { BlogPost } from "../types";
+import { calculateReadTime } from "../utils/calculate-read-time";
 import { formatBlogDate } from "../utils/format-date";
 
 interface BlogGridProps {
@@ -83,13 +85,13 @@ export default function BlogGrid({ posts }: BlogGridProps) {
             href={`/blog/${post.slug}`}
             className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-center group cursor-pointer"
           >
-            <div className="md:col-span-5 aspect-[3/4] relative overflow-hidden">
+            <div className="md:col-span-5 aspect-[4/4] relative overflow-hidden">
               <Image
                 src={post.coverImage.url}
                 alt={post.coverImage.alt}
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.01]"
                 priority={index < 2}
                 loading={index < 2 ? "eager" : "lazy"}
               />
@@ -101,20 +103,31 @@ export default function BlogGrid({ posts }: BlogGridProps) {
               />
             </div>
             <div className="md:col-span-7 flex flex-col">
-              <span className="text-xs font-inter-light uppercase tracking-wide text-dark/50">
-                {formatBlogDate(post.publishedAt, language)}
-              </span>
-              <h3 className="font-encode-semibold text-2xl md:text-4xl text-dark mt-2 leading-tight">
+              <div className="flex items-center gap-3 text-xs font-inter-light uppercase tracking-wide text-dark/50">
+                <span>{formatBlogDate(post.publishedAt, language)}</span>
+                <span aria-hidden>·</span>
+                <span>
+                  {calculateReadTime(
+                    post.content,
+                    post.frequentQuestions,
+                    post.resume
+                  )}{" "}
+                  {t.blog.readingTime}
+                </span>
+              </div>
+              <h3 className="font-encode-semibold text-2xl md:text-3xl text-dark mt-2 leading-tight">
                 {post.title}
               </h3>
               {post.resume && (
-                <p className="font-inter-light text-base md:text-lg text-dark/70 mt-4 line-clamp-3 max-w-prose">
+                <p className="font-inter-light text-base text-dark/70 mt-4 line-clamp-3 max-w-prose">
                   {post.resume}
                 </p>
               )}
-              <span className="text-sm font-inter uppercase tracking-wide mt-6 text-dark relative inline-block w-fit after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-dark after:transition-all after:duration-300 group-hover:after:w-full">
-                {t.blog.readMore} →
-              </span>
+              <Button
+                variant="icon"
+                text={t.blog.readMore}
+                className="mt-6 text-sm"
+              />
             </div>
           </Link>
         </motion.article>

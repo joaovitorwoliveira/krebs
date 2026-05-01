@@ -18,6 +18,8 @@ export const en = {
     notFound: "Post not found",
     empty: "New publications coming soon.",
     faqTitle: "Frequently Asked Questions",
+    readingTime: "min read",
+    tableOfContents: "On this article",
   },
 
   contactDrawer: {
@@ -539,7 +541,8 @@ export const en = {
         place: "Canoas, RS",
         architecture: "Studio Ronaldo Rezende",
         photo: "Lucas Daneris",
-        services: "Feasibility Study, Consultancy, Landscape Design and Garden Execution",
+        services:
+          "Feasibility Study, Consultancy, Landscape Design and Garden Execution",
       },
       "praca-eng-guilherme": {
         title: "Eng. Guilherme Gaudenzi Square",
