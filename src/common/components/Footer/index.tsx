@@ -39,6 +39,7 @@ export default function Footer() {
     { href: "/", text: t.footer.navigationLinks.home },
     { href: "/quem-somos", text: t.footer.navigationLinks.whoWeAre },
     { href: "/projetos", text: t.footer.navigationLinks.projects },
+    { href: "/blog", text: "blog" },
     { href: "/servicos", text: t.footer.navigationLinks.services },
   ];
 

@@ -10,9 +10,11 @@ export const pt = {
   },
 
   blog: {
+    eyebrow: "Diário do estúdio",
+    entriesLabel: "registros",
     pageTitle: "Blog",
     pageSubtitle:
-      "Reflexões, projetos e bastidores do estúdio sobre arquitetura paisagística.",
+      "Notas de campo, leituras e processos de projeto — uma forma de pensar a paisagem em voz alta.",
     readMore: "Ler mais",
     backToList: "Voltar para o blog",
     notFound: "Post não encontrado",
@@ -24,6 +26,7 @@ export const pt = {
     shareOnLinkedIn: "Compartilhar no LinkedIn",
     copyLink: "Copiar link",
     linkCopied: "Link copiado",
+    recentPostsTitle: "Postagens Recentes",
   },
 
   contactDrawer: {

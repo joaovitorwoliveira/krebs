@@ -100,7 +100,7 @@ export default function BlogPostTOC({ items, label }: BlogPostTOCProps) {
     <nav
       ref={navRef}
       aria-label={label}
-      className="hidden lg:flex flex-col fixed left-16 xl:left-20 z-30 overflow-y-auto w-[14rem] max-h-[70vh] max-w-34 xl:max-w-46 2xl:max-w-80"
+      className="hidden lg:flex flex-col fixed left-16 xl:left-20 z-30 overflow-y-auto w-[14rem] max-h-[70vh] max-w-30 xl:max-w-46 2xl:max-w-80"
       style={
         pinnedBottom !== null
           ? { bottom: `${pinnedBottom}px`, top: "auto" }

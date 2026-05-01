@@ -75,6 +75,8 @@ export default async function BlogPost({ params }: PageProps) {
     notFound();
   }
 
+  const recentPosts = posts.filter((p) => p.slug !== slug).slice(0, 3);
+
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: siteUrl },
     { name: "Blog", url: `${siteUrl}/blog` },
@@ -93,7 +95,7 @@ export default async function BlogPost({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <BlogPostPage post={post} />
+      <BlogPostPage post={post} recentPosts={recentPosts} />
     </>
   );
 }
