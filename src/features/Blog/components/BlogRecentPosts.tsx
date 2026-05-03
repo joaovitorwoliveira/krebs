@@ -69,7 +69,7 @@ export default function BlogRecentPosts({ posts }: BlogRecentPostsProps) {
       variants={containerVariants}
       initial="hidden"
       animate={hasAnimated ? "visible" : "hidden"}
-      className="mt-16 md:mt-24 pt-12 md:pt-16 border-t border-dark/10"
+      className="mt-16 md:mt-24 pt-12 md:pt-16"
     >
       <h2 className="font-encode text-dark text-2xl md:text-3xl mb-10 leading-tight">
         {t.blog.recentPostsTitle}

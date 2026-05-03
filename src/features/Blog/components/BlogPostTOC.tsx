@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { useLenis } from "@/common/components/SmoothScroll";
+import { ChevronDown } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -17,7 +18,9 @@ export default function BlogPostTOC({ items, label }: BlogPostTOCProps) {
   const lenis = useLenis();
   const [activeId, setActiveId] = useState<string | null>(items[0]?.id ?? null);
   const [pinnedBottom, setPinnedBottom] = useState<number | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
+  const mobileRef = useRef<HTMLDivElement>(null);
   const lenisRef = useRef(lenis);
 
   useEffect(() => {
@@ -85,9 +88,28 @@ export default function BlogPostTOC({ items, label }: BlogPostTOCProps) {
     return () => observer.disconnect();
   }, [items]);
 
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const onClickOutside = (e: MouseEvent) => {
+      if (mobileRef.current && !mobileRef.current.contains(e.target as Node)) {
+        setMobileOpen(false);
+      }
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("mousedown", onClickOutside);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("mousedown", onClickOutside);
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [mobileOpen]);
+
   const handleClick = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
+    setMobileOpen(false);
     const lenisInstance = lenisRef.current;
     if (lenisInstance) {
       lenisInstance.scrollTo(el, { offset: -96 });
@@ -96,41 +118,102 @@ export default function BlogPostTOC({ items, label }: BlogPostTOCProps) {
     }
   };
 
+  const activeItem = items.find((i) => i.id === activeId) ?? items[0];
+
   return (
-    <nav
-      ref={navRef}
-      aria-label={label}
-      className="hidden lg:flex flex-col fixed left-16 xl:left-20 z-30 overflow-y-auto w-[14rem] max-h-[70vh] max-w-30 xl:max-w-46 2xl:max-w-80"
-      style={
-        pinnedBottom !== null
-          ? { bottom: `${pinnedBottom}px`, top: "auto" }
-          : { top: "32%" }
-      }
-    >
-      <span className="text-[10px] uppercase tracking-[0.2em] font-inter-light text-dark/80 mb-3">
-        {label}
-      </span>
-      <ul className="flex flex-col gap-2 border-l border-dark/15">
-        {items.map((item) => {
-          const isActive = item.id === activeId;
-          return (
-            <li key={item.id}>
-              <button
-                type="button"
-                onClick={() => handleClick(item.id)}
-                className={cn(
-                  "block text-left text-xs leading-snug font-inter-light pl-3 -ml-px border-l-2 transition-colors duration-200 cursor-pointer",
-                  isActive
-                    ? "border-dark text-dark"
-                    : "border-transparent text-dark/50 hover:text-dark/80"
-                )}
-              >
-                {item.text}
-              </button>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
+    <>
+      <div
+        ref={mobileRef}
+        className="lg:hidden sticky top-0 z-30 bg-light/90 backdrop-blur border-b border-dark/10 mt-10"
+      >
+        <button
+          type="button"
+          aria-expanded={mobileOpen}
+          aria-controls="blog-toc-mobile-list"
+          onClick={() => setMobileOpen((v) => !v)}
+          className="w-full flex items-center justify-between gap-3 px-6 md:px-8 py-3 text-left cursor-pointer"
+        >
+          <span className="flex flex-col min-w-0">
+            <span className="text-[10px] uppercase tracking-[0.2em] font-inter-light text-dark/60">
+              {label}
+            </span>
+            <span className="text-sm font-inter-light text-dark truncate">
+              {activeItem?.text}
+            </span>
+          </span>
+          <ChevronDown
+            className={cn(
+              "size-4 text-dark/70 shrink-0 transition-transform duration-200",
+              mobileOpen && "rotate-180"
+            )}
+          />
+        </button>
+        <div
+          id="blog-toc-mobile-list"
+          className={cn(
+            "overflow-hidden transition-[max-height] duration-300 ease-out",
+            mobileOpen ? "max-h-[60vh]" : "max-h-0"
+          )}
+        >
+          <ul className="flex flex-col px-6 md:px-8 pb-3 max-h-[60vh] overflow-y-auto">
+            {items.map((item) => {
+              const isActive = item.id === activeId;
+              return (
+                <li key={item.id}>
+                  <button
+                    type="button"
+                    onClick={() => handleClick(item.id)}
+                    className={cn(
+                      "w-full text-left text-sm leading-snug font-inter-light py-2 border-l-2 pl-3 transition-colors duration-200 cursor-pointer",
+                      isActive
+                        ? "border-dark text-dark"
+                        : "border-transparent text-dark/60 hover:text-dark/80"
+                    )}
+                  >
+                    {item.text}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+
+      <nav
+        ref={navRef}
+        aria-label={label}
+        className="hidden lg:flex flex-col fixed left-16 xl:left-20 z-30 overflow-y-auto w-[14rem] max-h-[70vh] max-w-30 xl:max-w-46 2xl:max-w-80"
+        style={
+          pinnedBottom !== null
+            ? { bottom: `${pinnedBottom}px`, top: "auto" }
+            : { top: "32%" }
+        }
+      >
+        <span className="text-[10px] uppercase tracking-[0.2em] font-inter-light text-dark/80 mb-3">
+          {label}
+        </span>
+        <ul className="flex flex-col gap-2 border-l border-dark/15">
+          {items.map((item) => {
+            const isActive = item.id === activeId;
+            return (
+              <li key={item.id}>
+                <button
+                  type="button"
+                  onClick={() => handleClick(item.id)}
+                  className={cn(
+                    "block text-left text-xs leading-snug font-inter-light pl-3 -ml-px border-l-2 transition-colors duration-200 cursor-pointer",
+                    isActive
+                      ? "border-dark text-dark"
+                      : "border-transparent text-dark/50 hover:text-dark/80"
+                  )}
+                >
+                  {item.text}
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    </>
   );
 }
