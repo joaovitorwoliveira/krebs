@@ -36,34 +36,57 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Post não encontrado" };
   }
 
+  const ogImageUrl = buildOgImageUrl(post.coverImage.url);
+  const pageUrl = `${siteUrl}/blog/${slug}`;
+  const ogTitle = `${post.title} | Krebs + Paisagismo`;
+
   return {
     title: post.title,
     description: post.metaDescription,
     openGraph: {
-      title: `${post.title} | Krebs + Paisagismo`,
+      title: ogTitle,
       description: post.metaDescription,
-      url: `${siteUrl}/blog/${slug}`,
+      url: pageUrl,
+      siteName: "Krebs +",
+      locale: "pt_BR",
       type: "article",
       publishedTime: post.publishedAt,
       images: [
         {
-          url: post.coverImage.url,
-          width: post.coverImage.width,
-          height: post.coverImage.height,
+          url: ogImageUrl,
+          secureUrl: ogImageUrl,
+          width: 1200,
+          height: 630,
           alt: post.coverImage.alt,
+          type: "image/jpeg",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} | Krebs + Paisagismo`,
+      title: ogTitle,
       description: post.metaDescription,
-      images: [post.coverImage.url],
+      images: [ogImageUrl],
     },
     alternates: {
-      canonical: `${siteUrl}/blog/${slug}`,
+      canonical: pageUrl,
     },
   };
+}
+
+function buildOgImageUrl(rawUrl: string): string {
+  const absolute = rawUrl.startsWith("//") ? `https:${rawUrl}` : rawUrl;
+  if (!absolute.includes("ctfassets.net")) return absolute;
+  const [base] = absolute.split("?");
+  const params = new URLSearchParams({
+    w: "1200",
+    h: "630",
+    fit: "fill",
+    f: "center",
+    fm: "jpg",
+    q: "85",
+  });
+  return `${base}?${params.toString()}`;
 }
 
 export default async function BlogPost({ params }: PageProps) {
