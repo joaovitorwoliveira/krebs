@@ -527,7 +527,8 @@ export const en = {
         place: "Canoas, RS",
         architecture: "Studio Ronaldo Rezende",
         photo: "Lucas Daneris",
-        services: "Feasibility Study, Consultancy, Landscape Design and Garden Execution",
+        services:
+          "Feasibility Study, Consultancy, Landscape Design and Garden Execution",
       },
       "praca-eng-guilherme": {
         title: "Eng. Guilherme Gaudenzi Square",
@@ -586,6 +587,7 @@ export const en = {
         date: "2024",
         place: "Xangri-la, RS",
         photo: "Gabriel Konrath",
+        architecture: "Ambidestro",
         services: "Landscape Design and Garden Execution",
       },
     },

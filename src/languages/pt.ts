@@ -580,6 +580,7 @@ export const pt = {
         date: "2024",
         place: "Xangri-la, RS",
         photo: "Gabriel Konrath",
+        architecture: "Ambidestro",
         services: "Projeto Paisagístico e Execução de Jardim",
       },
     },
