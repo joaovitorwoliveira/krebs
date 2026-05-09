@@ -85,7 +85,7 @@ export default function BlogGrid({ posts }: BlogGridProps) {
             href={`/blog/${post.slug}`}
             className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-center group cursor-pointer"
           >
-            <div className="md:col-span-5 aspect-[4/4] relative overflow-hidden">
+            <div className="md:col-span-5 aspect-[3/2] relative overflow-hidden">
               <Image
                 src={post.coverImage.url}
                 alt={post.coverImage.alt}

@@ -110,11 +110,15 @@ export default function BlogPostTOC({ items, label }: BlogPostTOCProps) {
     const el = document.getElementById(id);
     if (!el) return;
     setMobileOpen(false);
+    const isMobile = window.innerWidth < 1024;
+    const mobileBarHeight = mobileRef.current?.offsetHeight ?? 0;
+    const offset = isMobile ? -(mobileBarHeight + 24) : -96;
     const lenisInstance = lenisRef.current;
     if (lenisInstance) {
-      lenisInstance.scrollTo(el, { offset: -96 });
+      lenisInstance.scrollTo(el, { offset });
     } else {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      const top = el.getBoundingClientRect().top + window.scrollY + offset;
+      window.scrollTo({ top, behavior: "smooth" });
     }
   };
 

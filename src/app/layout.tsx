@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { Encode_Sans, Inter } from "next/font/google";
 
 import BackToTopButton from "@/common/components/BackToTopButton";
-import CopyrightTooltip from "@/common/components/CopyrightTooltip";
 import Footer from "@/common/components/Footer";
 import Header from "@/common/components/Header";
 import SmoothScroll from "@/common/components/SmoothScroll";
