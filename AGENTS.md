@@ -65,11 +65,13 @@ src/
 │   │   └── ProjectsHome/       # 3 projetos em destaque na home (hardcoded no componente)
 │   ├── Blog/                   # Domínio do blog (consome Contentful)
 │   │   ├── components/         # BlogPage, BlogGrid, BlogPostPage, BlogBreadcrumb, RichTextRenderer
+│   │   ├── hooks/
+│   │   │   └── use-localized-blog-post.ts # Resolve campos PT/EN/ES do BlogPost via LanguageProvider
 │   │   ├── utils/
-│   │   │   ├── transform-entry.ts # Converte BlogPostEntry (Contentful) → BlogPost
-│   │   │   ├── slugify.ts         # Gera slug a partir do título
+│   │   │   ├── transform-entry.ts # Converte BlogPostEntry (Contentful) → BlogPost (popula `translations`)
+│   │   │   ├── slugify.ts         # Gera slug a partir do título PT
 │   │   │   └── format-date.ts
-│   │   ├── types.ts            # Interface BlogPost { id, slug, title, resume, metaDescription, content, coverImage, publishedAt }
+│   │   ├── types.ts            # Interface BlogPost { ..., translations?: { en?, es? } } + BlogPostFAQ com `translations`
 │   │   └── index.ts            # Reexporta BlogPage, BlogPostPage, type BlogPost
 │   ├── Filter/                 # Filtros da página de projetos
 │   ├── Services/
@@ -164,6 +166,16 @@ Contentful (Delivery API) → src/lib/contentful.ts → transform-entry.ts → B
 | `caption`          | Short text     | Legenda opcional                                                         |
 | `content`          | Rich Text      | Renderizado por `RichTextRenderer`                                       |
 | `coverImage`       | Asset (imagem) | Servido pelo CDN `images.ctfassets.net` (registrado em `next.config.ts`) |
+| `*_en` / `*_es`    | Mesmos tipos   | Versões traduzidas opcionais de `title`, `resume`, `meta_description`, `caption`, `content`. Vazio = fallback PT. |
+
+### Content type `frequentQuestions` (campos)
+
+| Campo                       | Tipo       | Obs                                |
+| --------------------------- | ---------- | ---------------------------------- |
+| `question`                  | Short text | Pergunta (PT)                      |
+| `answer`                    | Long text  | Resposta (PT)                      |
+| `question_en` / `question_es` | Short text | Tradução opcional da pergunta      |
+| `answer_en` / `answer_es`   | Long text  | Tradução opcional da resposta      |
 
 ### Pontos importantes
 
@@ -171,7 +183,9 @@ Contentful (Delivery API) → src/lib/contentful.ts → transform-entry.ts → B
 - **Render estático**: ambas rotas usam `export const dynamic = "force-static"`; `/blog/[slug]` faz `generateStaticParams()` a partir de todos entries — exige rebuild para novos posts.
 - **Sitemap**: `src/app/sitemap.ts` busca posts via `getAllBlogPostEntries()`, adiciona URL por post.
 - **SEO**: `/blog/[slug]` injeta JSON-LD `BlogPosting` + `BreadcrumbList` (helpers em `src/utils/seo/schemas.ts`).
-- **i18n**: chaves em `t.blog.*` (`pageTitle`, `pageSubtitle`, `readMore`, `backToList`, `notFound`, `empty`). Conteúdo dos posts **não** traduzido — vem direto do Contentful (PT).
+- **i18n da UI**: chaves em `t.blog.*` (`pageTitle`, `pageSubtitle`, `readMore`, `backToList`, `notFound`, `empty`).
+- **i18n do conteúdo**: posts e FAQs traduzidos via campos sufixados `_en`/`_es` no Contentful. `transform-entry.ts` popula `BlogPost.translations` (com prune de empty). Componentes client (`BlogPage`, `BlogPostPage`) chamam `useLocalizedBlogPost` / `useLocalizedBlogPosts` (em `src/features/Blog/hooks/`) que resolvem campo-a-campo com fallback PT. Slug fica em PT (não muda por idioma). Sem refetch ao trocar idioma — todos os 3 idiomas pré-carregados no build.
+- **SEO**: `generateMetadata` e JSON-LD seguem em PT independente do idioma da UI (decisão de produto: SEO só PT).
 - **Header**: link "BLOG" em `t.header.blog`.
 
 ### Comportamento sem credenciais

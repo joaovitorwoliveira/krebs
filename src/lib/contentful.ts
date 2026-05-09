@@ -5,6 +5,10 @@ export interface FrequentQuestionFields {
   name?: string;
   question: string;
   answer: string;
+  question_en?: string;
+  question_es?: string;
+  answer_en?: string;
+  answer_es?: string;
 }
 
 export type FrequentQuestionSkeleton = EntrySkeletonType<
@@ -23,6 +27,16 @@ export interface BlogPostFields {
   content?: Document;
   coverImage: ContentfulAsset;
   frequentQuestions?: FrequentQuestionEntry[];
+  title_en?: string;
+  title_es?: string;
+  resume_en?: string;
+  resume_es?: string;
+  meta_description_en?: string;
+  meta_description_es?: string;
+  caption_en?: string;
+  caption_es?: string;
+  content_en?: Document;
+  content_es?: Document;
 }
 
 export type BlogPostSkeleton = EntrySkeletonType<BlogPostFields, "blogPost">;

@@ -7,6 +7,7 @@ import { NoResults } from "@/features/Filter";
 import { motion } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
+import { useLocalizedBlogPosts } from "../hooks/use-localized-blog-post";
 import type { BlogPost } from "../types";
 import BlogGrid from "./BlogGrid";
 
@@ -17,7 +18,8 @@ interface BlogPageProps {
 
 export default function BlogPage({ posts, className }: BlogPageProps) {
   const { t } = useLanguage();
-  const count = posts.length.toString().padStart(2, "0");
+  const localizedPosts = useLocalizedBlogPosts(posts);
+  const count = localizedPosts.length.toString().padStart(2, "0");
 
   return (
     <BackgroundWrapper>
@@ -51,10 +53,10 @@ export default function BlogPage({ posts, className }: BlogPageProps) {
           </motion.header>
 
           <div className="border-t border-dark/10 pt-12 md:pt-16">
-            {posts.length === 0 ? (
+            {localizedPosts.length === 0 ? (
               <NoResults message={t.blog.empty} />
             ) : (
-              <BlogGrid posts={posts} />
+              <BlogGrid posts={localizedPosts} />
             )}
           </div>
         </div>

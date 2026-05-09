@@ -8,6 +8,10 @@ import { useLanguage } from "@/context/LanguageProvider";
 
 import { cn } from "@/lib/utils";
 
+import {
+  useLocalizedBlogPost,
+  useLocalizedBlogPosts,
+} from "../hooks/use-localized-blog-post";
 import type { BlogPost } from "../types";
 import { calculateReadTime } from "../utils/calculate-read-time";
 import { extractHeadings } from "../utils/extract-headings";
@@ -25,6 +29,8 @@ interface BlogPostPageProps {
   className?: string;
 }
 
+const EMPTY_RECENT_POSTS: BlogPost[] = [];
+
 export default function BlogPostPage({
   post,
   recentPosts,
@@ -32,9 +38,14 @@ export default function BlogPostPage({
 }: BlogPostPageProps) {
   const { t, language } = useLanguage();
 
+  const localized = useLocalizedBlogPost(post);
+  const localizedRecent = useLocalizedBlogPosts(
+    recentPosts ?? EMPTY_RECENT_POSTS
+  );
+
   const headings = useMemo(
-    () => (post.content ? extractHeadings(post.content) : []),
-    [post.content]
+    () => (localized.content ? extractHeadings(localized.content) : []),
+    [localized.content]
   );
   const headingIds = useMemo(() => headings.map((h) => h.id), [headings]);
   const showToc = headings.length >= 2;
@@ -46,64 +57,64 @@ export default function BlogPostPage({
           <BlogPostTOC items={headings} label={t.blog.tableOfContents} />
         )}
         <div className="max-w-8xl mx-auto px-6 xl:px-10 pt-10 md:pt-16">
-          <BlogBreadcrumb postTitle={post.title} />
+          <BlogBreadcrumb postTitle={localized.title} />
         </div>
         <div className="max-w-[600px] mx-auto px-6 md:px-8 xl:max-w-3xl">
           <header className="mt-4 md:mt-8 pb-8 md:pb-12">
             <div className="flex items-center gap-3 text-xs font-inter-light uppercase tracking-[0.18em] text-dark/50">
-              <span>{formatBlogDate(post.publishedAt, language)}</span>
+              <span>{formatBlogDate(localized.publishedAt, language)}</span>
               <span aria-hidden>·</span>
               <span>
                 {calculateReadTime(
-                  post.content,
-                  post.frequentQuestions,
-                  post.resume
+                  localized.content,
+                  localized.frequentQuestions,
+                  localized.resume
                 )}{" "}
                 {t.blog.readingTime}
               </span>
             </div>
             <h1 className="font-encode text-dark text-3xl md:text-5xl mt-4 leading-tight">
-              {post.title}
+              {localized.title}
             </h1>
-            {post.resume && (
+            {localized.resume && (
               <p className="mt-10 text-dark/70 font-inter-light text-base md:text-lg leading-relaxed">
-                {post.resume}
+                {localized.resume}
               </p>
             )}
           </header>
 
           <figure className="relative w-full aspect-[3/2] mt-12 mb-10 overflow-hidden">
             <Image
-              src={post.coverImage.url}
-              alt={post.coverImage.alt}
+              src={localized.coverImage.url}
+              alt={localized.coverImage.alt}
               fill
               sizes="(max-width: 1024px) 100vw, 768px"
               className="object-cover"
               priority
             />
           </figure>
-          {post.caption && (
+          {localized.caption && (
             <figcaption className="text-xs italic text-dark/60 mb-10 text-center">
-              {post.caption}
+              {localized.caption}
             </figcaption>
           )}
 
           <div className="pb-16 md:pb-24">
-            {post.content && (
+            {localized.content && (
               <RichTextRenderer
-                content={post.content}
+                content={localized.content}
                 headingIds={headingIds}
               />
             )}
-            <BlogPostShare title={post.title} />
-            {post.frequentQuestions && post.frequentQuestions.length > 0 && (
+            <BlogPostShare title={localized.title} />
+            {localized.frequentQuestions && localized.frequentQuestions.length > 0 && (
               <BlogPostFAQSection
-                items={post.frequentQuestions}
+                items={localized.frequentQuestions}
                 title={t.blog.faqTitle}
               />
             )}
-            {recentPosts && recentPosts.length > 0 && (
-              <BlogRecentPosts posts={recentPosts} />
+            {localizedRecent.length > 0 && (
+              <BlogRecentPosts posts={localizedRecent} />
             )}
             <div data-toc-boundary aria-hidden />
           </div>
