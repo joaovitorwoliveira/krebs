@@ -574,7 +574,7 @@ export const pt = {
           O Jardim MGX, em Xangri-lá, foi concebido para uma residência implantada à beira de um lago, em um contexto onde o vento é condicionante permanente e a relação com a água define a orientação do conjunto.
 
           No acesso, o percurso em placas de pedra natural intercaladas com grama conduz o olhar em direção à entrada, enquanto maciços densos de vegetação tropical demarcam os limites laterais com força e presença. A composição prioriza espécies resistentes ao regime de ventos da orla gaúcha, com variação de textura entre folhagens de diferentes portes e estruturas. O jasmim-manga na fachada funciona como elemento pontual de cor e sazonalidade, ancorando a transição entre o jardim de acesso e o volume construído.
-          
+
           Na área da piscina, o deck em madeira e a cobertura tensionada organizam o programa de lazer e definem a relação com o espelho d'água. A vegetação recua para bordas e enquadramentos, sem competir com a abertura visual para o lago. À noite, a iluminação direta sobre os maciços reforça a leitura volumétrica do jardim e dialoga com o reflexo da edificação na água.
         `,
         date: "2024",
@@ -582,6 +582,40 @@ export const pt = {
         photo: "Gabriel Konrath",
         architecture: "Ambidestro",
         services: "Projeto Paisagístico e Execução de Jardim",
+      },
+      "condominio-raro": {
+        title: "Condomínio Raro",
+        description: `
+          O clube foi pensado como o grande refúgio do empreendimento em Xangri-Lá. A proposta parte da integração entre arquitetura, paisagismo e água para criar um espaço de permanência mais natural e acolhedor.
+
+          A piscina se mistura ao lago natural e às áreas de areia em um desenho orgânico, enquanto os decks, percursos e espaços de estar foram distribuídos para valorizar as vistas e proporcionar diferentes formas de uso ao longo do dia. A vegetação tropical, composta por palmeiras, maciços densos e espécies de diferentes texturas, ajuda a construir uma atmosfera mais reservada e imersiva.
+
+          A iluminação foi trabalhada de forma pontual e discreta, destacando a vegetação, os caminhos e os reflexos da água no período noturno. O resultado é um espaço que busca equilibrar sofisticação e naturalidade, criando uma experiência de lazer mais sensorial, tranquila e integrada ao entorno.
+        `,
+        date: "2023",
+        place: "Xangri-la, RS",
+        architecture: "Ronalda Rezende",
+        photo: "Blackhaus Studio",
+        services: "Projeto Paisagístico",
+      },
+      "jardins-reserva": {
+        title: "Jardins Reserva",
+        description: `
+          O Condomínio Jardins Reserva de Porto Alegre é concebido a partir de uma relação precisa entre arquitetura e paisagem, onde o desenho do terreno e a construção do relevo assumem papel fundamental na experiência espacial. Com arquitetura assinada por Isay Weinfeld, de linguagem minimalista, rigorosa e volumetricamente marcante, o paisagismo atua como contraponto sensorial, introduzindo fluidez, densidade e variação ao conjunto.
+
+          Na fachada principal, a composição é definida por volumes puros e contínuos que se assentam sobre uma topografia trabalhada. Os taludes não são apenas soluções técnicas, mas parte integrante do conceito, sendo estruturados e suavizados por massas vegetais densas. A vegetação se distribui em camadas, com forte presença de folhagens e diversidade de espécies, criando uma leitura mais orgânica e dinâmica frente à solidez e ao controle formal da arquitetura.
+
+          Internamente, o projeto se organiza em torno de um jardim central rebaixado, configurado como um espaço de caráter introspectivo e protegido. Envolvido pelas áreas comuns — como academia, piscina e espaços de permanência — este jardim atua como um núcleo de contemplação e convivência, garantindo privacidade e qualificando a experiência dos usuários. A transparência das fachadas, com amplos planos envidraçados, estabelece uma relação direta entre interior e exterior, permitindo que o jardim se projete visualmente para dentro dos ambientes.
+
+          Neste espaço, o paisagismo assume uma atmosfera mais densa e acolhedora, com caráter de bosque. A composição privilegia a estratificação vegetal, o sombreamento e a sobreposição de texturas, criando uma ambiência silenciosa e imersiva. Caminhos orgânicos e áreas de estar pontuais reforçam a escala humana e convidam à permanência.
+
+          Ao longo de todo o empreendimento, a vegetação é tratada como uma infraestrutura viva, capaz de articular níveis, construir limites sutis e promover uma integração contínua entre arquitetura e natureza. O resultado é uma paisagem que equilibra rigor e espontaneidade, traduzindo em forma construída um ideal contemporâneo de refúgio, exclusividade e bem-estar.
+        `,
+        date: "2024",
+        place: "Xangri-la, RS",
+        architecture: "Isay Weinfeld",
+        photo: "Blackhaus Studio",
+        services: "Projeto Paisagístico",
       },
     },
   },

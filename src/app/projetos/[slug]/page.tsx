@@ -7,7 +7,7 @@ import {
   generateProjectSchema,
 } from "@/utils/seo/schemas";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://krebsmais.com.br";
+const siteUrl = "https://krebsmais.com.br";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -56,7 +56,7 @@ const tagLabels: Record<string, string> = {
   natureza: "Natureza",
   jardim: "Jardim",
   internacional: "Internacional",
-  "colégio": "Colégio",
+  colégio: "Colégio",
   urbanismo: "Urbanismo",
   varanda: "Varanda",
   publico: "Público",
@@ -98,7 +98,9 @@ export async function generateMetadata({
   const locationTag = project.tags.find((tag) =>
     locationTagKeys.has(tag.toLowerCase())
   );
-  const locationLabel = locationTag ? locationTagLabels[locationTag.toLowerCase()] : null;
+  const locationLabel = locationTag
+    ? locationTagLabels[locationTag.toLowerCase()]
+    : null;
 
   const formattedTags = project.tags.slice(0, 3).map(formatTag).join(", ");
   const description = `Projeto ${projectTitle} - ${projectType}${locationLabel ? ` em ${locationLabel}` : ""} realizado pelo escritório Krebs +. Arquitetura paisagística com ${formattedTags}.`;

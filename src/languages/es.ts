@@ -590,6 +590,40 @@ export const es = {
         photo: "Gabriel Konrath",
         services: "Proyecto Paisajístico y Ejecución de Jardín",
       },
+      "condominio-raro": {
+        title: "Condominio Raro",
+        description: `
+          El club fue pensado como el gran refugio del emprendimiento en Xangri-Lá. La propuesta parte de la integración entre arquitectura, paisajismo y agua para crear un espacio de permanencia más natural y acogedor.
+
+          La piscina se mezcla con el lago natural y con las áreas de arena en un diseño orgánico, mientras los decks, recorridos y espacios de estar fueron distribuidos para valorizar las vistas y proporcionar diferentes formas de uso a lo largo del día. La vegetación tropical, compuesta por palmeras, macizos densos y especies de diferentes texturas, ayuda a construir una atmósfera más reservada e inmersiva.
+
+          La iluminación fue trabajada de manera puntual y discreta, destacando la vegetación, los caminos y los reflejos del agua en el período nocturno. El resultado es un espacio que busca equilibrar sofisticación y naturalidad, creando una experiencia de ocio más sensorial, tranquila e integrada al entorno.
+        `,
+        date: "2023",
+        place: "Xangri-la, RS",
+        architecture: "Ronalda Rezende",
+        photo: "Blackhaus Studio",
+        services: "Proyecto Paisajístico",
+      },
+      "jardins-reserva": {
+        title: "Jardins Reserva",
+        description: `
+          El Condominio Jardins Reserva de Porto Alegre se concibe a partir de una relación precisa entre arquitectura y paisaje, donde el diseño del terreno y la construcción del relieve asumen un papel fundamental en la experiencia espacial. Con arquitectura firmada por Isay Weinfeld, de lenguaje minimalista, riguroso y volumétricamente marcante, el paisajismo actúa como contrapunto sensorial, introduciendo fluidez, densidad y variación al conjunto.
+
+          En la fachada principal, la composición se define por volúmenes puros y continuos que se asientan sobre una topografía trabajada. Los taludes no son apenas soluciones técnicas, sino parte integrante del concepto, siendo estructurados y suavizados por masas vegetales densas. La vegetación se distribuye en capas, con fuerte presencia de follajes y diversidad de especies, creando una lectura más orgánica y dinámica frente a la solidez y al control formal de la arquitectura.
+
+          Internamente, el proyecto se organiza en torno a un jardín central rebajado, configurado como un espacio de carácter introspectivo y protegido. Envuelto por las áreas comunes —como gimnasio, piscina y espacios de permanencia— este jardín actúa como un núcleo de contemplación y convivencia, garantizando privacidad y cualificando la experiencia de los usuarios. La transparencia de las fachadas, con amplios planos acristalados, establece una relación directa entre interior y exterior, permitiendo que el jardín se proyecte visualmente hacia los ambientes.
+
+          En este espacio, el paisajismo asume una atmósfera más densa y acogedora, con carácter de bosque. La composición privilegia la estratificación vegetal, el sombreado y la superposición de texturas, creando una ambiencia silenciosa e inmersiva. Caminos orgánicos y áreas de estar puntuales refuerzan la escala humana e invitan a la permanencia.
+
+          A lo largo de todo el emprendimiento, la vegetación es tratada como una infraestructura viva, capaz de articular niveles, construir límites sutiles y promover una integración continua entre arquitectura y naturaleza. El resultado es un paisaje que equilibra rigor y espontaneidad, traduciendo en forma construida un ideal contemporáneo de refugio, exclusividad y bienestar.
+        `,
+        date: "2024",
+        place: "Xangri-la, RS",
+        architecture: "Isay Weinfeld",
+        photo: "Blackhaus Studio",
+        services: "Proyecto Paisajístico",
+      },
     },
   },
 

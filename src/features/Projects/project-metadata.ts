@@ -144,4 +144,16 @@ export const projectMetadata: ProjectMetadata[] = [
     tags: ["residencial", "xangrila"],
     conclusionDate: "2024",
   },
+  {
+    slug: "jardins-reserva",
+    coverPhotoIndex: 3,
+    tags: ["condominio", "xangrila", "portoalegre"],
+    conclusionDate: "2024",
+  },
+  {
+    slug: "condominio-raro",
+    coverPhotoIndex: 3,
+    tags: ["condominio", "xangrila"],
+    conclusionDate: "2023",
+  },
 ];

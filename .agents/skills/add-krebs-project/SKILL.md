@@ -13,14 +13,14 @@ Images are stored on UploadThing and fetched at build-time into a local JSON cac
 
 Files that need to be touched (in order):
 
-| File | Purpose |
-|------|---------|
-| UploadThing dashboard | Upload project images with the correct naming convention |
-| _(terminal)_ | Run `npm run fetch-images` to update the cache |
-| `src/features/Projects/project-metadata.ts` | Slug, cover photo index, tags, conclusion year |
-| `src/languages/pt.ts` | Portuguese text (title, description, credits) |
-| `src/languages/en.ts` | English text |
-| `src/languages/es.ts` | Spanish text |
+| File                                        | Purpose                                                  |
+| ------------------------------------------- | -------------------------------------------------------- |
+| UploadThing dashboard                       | Upload project images with the correct naming convention |
+| _(terminal)_                                | Run `npm run fetch-images` to update the cache           |
+| `src/features/Projects/project-metadata.ts` | Slug, cover photo index, tags, conclusion year           |
+| `src/languages/pt.ts`                       | Portuguese text (title, description, credits)            |
+| `src/languages/en.ts`                       | English text                                             |
+| `src/languages/es.ts`                       | Spanish text                                             |
 
 Text content lives **only** in the translation files. `project-metadata.ts` holds no inline text.
 
@@ -30,22 +30,22 @@ Text content lives **only** in the translation files. `project-metadata.ts` hold
 
 Before writing any file, gather:
 
-| Input | Required | Notes |
-|-------|----------|-------|
-| Project name (display title) | Yes | May differ per language |
-| Slug | Yes | kebab-case URL identifier, e.g. `jardim-abc` |
-| Number of images | Yes | Determines how many files need to be uploaded |
-| Cover photo index | Yes | 1-based number of the file that is the cover |
-| Tags | Yes | Must match existing tag keys (see list below) |
-| Conclusion year | Yes | String e.g. `"2026"` |
-| Location | Yes | e.g. `"Canoas, RS"` |
-| Architecture credit | No | Omit if none |
-| Photography credit | No | Omit if none |
-| Interior design credit | No | Omit if none |
-| Services | No | List of services rendered |
-| Description (PT) | Yes | Full paragraph(s) in Portuguese |
-| Description (EN) | No | If not provided, translate from PT |
-| Description (ES) | No | If not provided, translate from PT |
+| Input                        | Required | Notes                                         |
+| ---------------------------- | -------- | --------------------------------------------- |
+| Project name (display title) | Yes      | May differ per language                       |
+| Slug                         | Yes      | kebab-case URL identifier, e.g. `jardim-abc`  |
+| Number of images             | Yes      | Determines how many files need to be uploaded |
+| Cover photo index            | Yes      | 1-based number of the file that is the cover  |
+| Tags                         | Yes      | Must match existing tag keys (see list below) |
+| Conclusion year              | Yes      | String e.g. `"2026"`                          |
+| Location                     | Yes      | e.g. `"Canoas, RS"`                           |
+| Architecture credit          | No       | Omit if none                                  |
+| Photography credit           | No       | Omit if none                                  |
+| Interior design credit       | No       | Omit if none                                  |
+| Services                     | No       | List of services rendered                     |
+| Description (PT)             | Yes      | Full paragraph(s) in Portuguese               |
+| Description (EN)             | No       | If not provided, translate from PT            |
+| Description (ES)             | No       | If not provided, translate from PT            |
 
 ### Available tags (must use exact key)
 
@@ -70,6 +70,7 @@ Instruct the user to upload images in the UploadThing dashboard following this n
 ```
 
 Examples for slug `jardim-abc`:
+
 ```
 jardim-abc-01.jpg
 jardim-abc-02.jpg
@@ -78,6 +79,7 @@ jardim-abc-12.jpg
 ```
 
 Rules:
+
 - Slug must be lowercase, no accents, words separated by hyphens — same slug used in the URL.
 - Number defines gallery order. Use zero-padded two digits (`01`, `02`…).
 - Files not matching `{slug}-{N}` are silently ignored by the fetch script.
@@ -97,8 +99,6 @@ Verify in the terminal output that the new slug appears with the correct image c
 ```
 jardim-abc: 12 images   ✓
 ```
-
-Commit `src/common/data/image-cache.json` after this step.
 
 ---
 
@@ -125,16 +125,16 @@ Append under `projects.items` in **all three language files** (`pt.ts`, `en.ts`,
 
 ### Field reference
 
-| Field | Required | Translated? | Shown in UI? |
-|-------|----------|-------------|--------------|
-| `title` | Yes | Yes | Yes |
-| `description` | Yes | Yes | Yes |
-| `date` | Yes | No (identical in all 3) | Yes |
-| `place` | Yes | No (identical in all 3) | Yes |
-| `architecture` | No | No | Yes (if present) |
-| `interior` | No | No | Yes (if present) |
-| `photo` | No | No | Yes (if present) |
-| `services` | No | Yes | Yes (if present) |
+| Field          | Required | Translated?             | Shown in UI?     |
+| -------------- | -------- | ----------------------- | ---------------- |
+| `title`        | Yes      | Yes                     | Yes              |
+| `description`  | Yes      | Yes                     | Yes              |
+| `date`         | Yes      | No (identical in all 3) | Yes              |
+| `place`        | Yes      | No (identical in all 3) | Yes              |
+| `architecture` | No       | No                      | Yes (if present) |
+| `interior`     | No       | No                      | Yes (if present) |
+| `photo`        | No       | No                      | Yes (if present) |
+| `services`     | No       | Yes                     | Yes (if present) |
 
 ### pt.ts
 

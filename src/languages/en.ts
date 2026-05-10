@@ -590,6 +590,40 @@ export const en = {
         architecture: "Ambidestro",
         services: "Landscape Design and Garden Execution",
       },
+      "condominio-raro": {
+        title: "Raro Condominium",
+        description: `
+          The club was conceived as the great refuge of the development in Xangri-Lá. The proposal stems from the integration of architecture, landscape and water to create a more natural and welcoming space for permanence.
+
+          The pool blends with the natural lake and the sand areas in an organic design, while the decks, paths and seating areas were distributed to enhance the views and provide different forms of use throughout the day. The tropical vegetation, composed of palm trees, dense masses and species of different textures, helps to build a more reserved and immersive atmosphere.
+
+          Lighting was handled in a punctual and discreet way, highlighting vegetation, paths and the reflections of the water at night. The result is a space that seeks to balance sophistication and naturalness, creating a more sensory, peaceful leisure experience integrated with its surroundings.
+        `,
+        date: "2023",
+        place: "Xangri-la, RS",
+        architecture: "Ronalda Rezende",
+        photo: "Blackhaus Studio",
+        services: "Landscape Design",
+      },
+      "jardins-reserva": {
+        title: "Jardins Reserva",
+        description: `
+          The Jardins Reserva Condominium in Porto Alegre is conceived from a precise relationship between architecture and landscape, where the design of the terrain and the construction of the relief play a fundamental role in the spatial experience. With architecture by Isay Weinfeld, of minimalist, rigorous and volumetrically striking language, the landscape acts as a sensory counterpoint, introducing fluidity, density and variation to the ensemble.
+
+          On the main facade, the composition is defined by pure, continuous volumes that rest on a worked topography. The slopes are not merely technical solutions but an integral part of the concept, being structured and softened by dense plant masses. The vegetation is distributed in layers, with a strong presence of foliage and species diversity, creating a more organic and dynamic reading against the solidity and formal control of the architecture.
+
+          Internally, the project is organized around a sunken central garden, configured as an introspective and protected space. Surrounded by common areas — such as the gym, pool and gathering spaces — this garden acts as a nucleus of contemplation and conviviality, ensuring privacy and qualifying the experience of users. The transparency of the facades, with broad glazed planes, establishes a direct relationship between interior and exterior, allowing the garden to project visually into the rooms.
+
+          In this space, the landscape takes on a denser and more welcoming atmosphere, with a woodland character. The composition favors plant stratification, shading and the layering of textures, creating a silent and immersive ambience. Organic paths and punctual seating areas reinforce the human scale and invite permanence.
+
+          Throughout the development, vegetation is treated as a living infrastructure, capable of articulating levels, building subtle boundaries and promoting a continuous integration between architecture and nature. The result is a landscape that balances rigor and spontaneity, translating into built form a contemporary ideal of refuge, exclusivity and well-being.
+        `,
+        date: "2024",
+        place: "Xangri-la, RS",
+        architecture: "Isay Weinfeld",
+        photo: "Blackhaus Studio",
+        services: "Landscape Design",
+      },
     },
   },
 
