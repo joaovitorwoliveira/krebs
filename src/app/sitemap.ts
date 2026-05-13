@@ -1,10 +1,13 @@
 import { MetadataRoute } from "next";
 
+import { transformBlogPostEntries } from "@/features/Blog/utils/transform-entry";
+import { getAllBlogPostEntries } from "@/lib/contentful";
+
 import { projects } from "../features/Projects/get-projects";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://krebsmais.com.br";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPagesConfig = [
     {
       path: "",
@@ -30,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changefreq: "weekly" as const,
       lastModified: new Date("2024-02-01"),
     },
+    {
+      path: "blog",
+      priority: 0.8,
+      changefreq: "weekly" as const,
+      lastModified: new Date(),
+    },
   ];
 
   const dynamicProjectPages = projects.map((project) => {
@@ -44,6 +53,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
+  let dynamicBlogPages: MetadataRoute.Sitemap = [];
+  try {
+    const entries = await getAllBlogPostEntries();
+    const posts = transformBlogPostEntries(entries);
+    dynamicBlogPages = posts.map((post) => ({
+      url: `${siteUrl}/blog/${post.slug}`,
+      lastModified: post.publishedAt,
+      changefreq: "monthly" as const,
+      priority: 0.6,
+    }));
+  } catch {
+    dynamicBlogPages = [];
+  }
+
   return [
     ...staticPagesConfig.map((page) => ({
       url: `${siteUrl}/${page.path}`,
@@ -52,5 +75,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: page.priority,
     })),
     ...dynamicProjectPages,
+    ...dynamicBlogPages,
   ];
 }

@@ -40,11 +40,17 @@ export default function Header() {
     setIsHomePage(currentPath === "/");
   }, [pathname]);
 
+  const isBlogPostPage = /^\/blog\/[^/]+\/?$/.test(pathname ?? "");
+
   const handleScroll = useCallback(() => {
     if (!headerRef.current) return;
+    if (isBlogPostPage) {
+      setShowFloatingContact(false);
+      return;
+    }
     const headerBottom = headerRef.current.getBoundingClientRect().bottom;
     setShowFloatingContact(headerBottom <= 0);
-  }, []);
+  }, [isBlogPostPage]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -54,6 +60,7 @@ export default function Header() {
   const navigationLinks = [
     { href: "/quem-somos", label: t.header.whoWeAre },
     { href: "/projetos", label: t.header.projects },
+    { href: "/blog", label: t.header.blog },
     { href: "/servicos", label: t.header.services },
   ];
 

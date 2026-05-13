@@ -3,9 +3,30 @@ export const pt = {
     projects: "PROJETOS",
     whoWeAre: "QUEM SOMOS",
     services: "SERVIÇOS",
+    blog: "BLOG",
     contact: "CONTATO",
     menu: "MENU",
     close: "FECHAR",
+  },
+
+  blog: {
+    eyebrow: "Diário do estúdio",
+    entriesLabel: "registros",
+    pageTitle: "Blog",
+    pageSubtitle:
+      "Notas de campo, leituras e processos de projeto — uma forma de pensar a paisagem em voz alta.",
+    readMore: "Ler mais",
+    backToList: "Voltar para o blog",
+    notFound: "Post não encontrado",
+    empty: "Em breve novas publicações.",
+    faqTitle: "Perguntas Frequentes",
+    readingTime: "min de leitura",
+    tableOfContents: "Neste artigo",
+    shareOnX: "Compartilhar no X",
+    shareOnLinkedIn: "Compartilhar no LinkedIn",
+    copyLink: "Copiar link",
+    linkCopied: "Link copiado",
+    recentPostsTitle: "Postagens Recentes",
   },
 
   contactDrawer: {

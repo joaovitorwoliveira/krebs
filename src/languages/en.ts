@@ -3,9 +3,30 @@ export const en = {
     projects: "PROJECTS",
     whoWeAre: "WHO WE ARE",
     services: "SERVICES",
+    blog: "BLOG",
     contact: "CONTACT",
     menu: "MENU",
     close: "CLOSE",
+  },
+
+  blog: {
+    eyebrow: "Studio journal",
+    entriesLabel: "entries",
+    pageTitle: "Blog",
+    pageSubtitle:
+      "Field notes, readings and design processes — a way of thinking landscape out loud.",
+    readMore: "Read more",
+    backToList: "Back to blog",
+    notFound: "Post not found",
+    empty: "New publications coming soon.",
+    faqTitle: "Frequently Asked Questions",
+    readingTime: "min read",
+    tableOfContents: "On this article",
+    shareOnX: "Share on X",
+    shareOnLinkedIn: "Share on LinkedIn",
+    copyLink: "Copy link",
+    linkCopied: "Link copied",
+    recentPostsTitle: "Recent Posts",
   },
 
   contactDrawer: {

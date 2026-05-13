@@ -1,3 +1,4 @@
+import { BlogPost } from "@/features/Blog/types";
 import { Project } from "@/features/Projects/types";
 
 const siteUrl = "https://krebsmais.com.br";
@@ -38,6 +39,38 @@ export function generateProjectSchema(
     url: `${siteUrl}/projetos/${slug}`,
     genre: "Landscape Architecture",
     inLanguage: "pt-BR",
+  };
+}
+
+export function generateBlogPostingSchema(post: BlogPost, slug: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.metaDescription,
+    image: [post.coverImage.url],
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    inLanguage: "pt-BR",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/blog/${slug}`,
+    },
+    author: {
+      "@type": "Organization",
+      name: "Krebs +",
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Krebs +",
+      url: siteUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/images/logo_full_textura.png`,
+      },
+    },
+    url: `${siteUrl}/blog/${slug}`,
   };
 }
 

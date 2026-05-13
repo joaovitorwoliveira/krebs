@@ -58,7 +58,7 @@ export default function TagFilterModal({
             exit={{ opacity: 0, scale: 0.95, y: -20 }}
             transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
             className={cn(
-              "fixed bg-white shadow-2xl z-[99999] flex flex-col",
+              "fixed bg-white shadow-2xl z-[99999] flex flex-col rounded-3xl border-2 border-dark",
               "max-w-2xl max-h-[60vh]",
               "top-1/2 -translate-y-1/2",
               "left-4 right-4",

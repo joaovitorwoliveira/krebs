@@ -3,9 +3,30 @@ export const es = {
     projects: "PROYECTOS",
     whoWeAre: "QUIÉNES SOMOS",
     services: "SERVICIOS",
+    blog: "BLOG",
     contact: "CONTACTO",
     menu: "MENÚ",
     close: "CERRAR",
+  },
+
+  blog: {
+    eyebrow: "Diario del estudio",
+    entriesLabel: "registros",
+    pageTitle: "Blog",
+    pageSubtitle:
+      "Notas de campo, lecturas y procesos de proyecto — una forma de pensar el paisaje en voz alta.",
+    readMore: "Leer más",
+    backToList: "Volver al blog",
+    notFound: "Publicación no encontrada",
+    empty: "Próximamente nuevas publicaciones.",
+    faqTitle: "Preguntas Frecuentes",
+    readingTime: "min de lectura",
+    tableOfContents: "En este artículo",
+    shareOnX: "Compartir en X",
+    shareOnLinkedIn: "Compartir en LinkedIn",
+    copyLink: "Copiar enlace",
+    linkCopied: "Enlace copiado",
+    recentPostsTitle: "Publicaciones Recientes",
   },
 
   contactDrawer: {
