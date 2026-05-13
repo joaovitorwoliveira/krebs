@@ -157,25 +157,25 @@ Contentful (Delivery API) → src/lib/contentful.ts → transform-entry.ts → B
 
 ### Content type `blogPost` (campos)
 
-| Campo              | Tipo           | Obs                                                                      |
-| ------------------ | -------------- | ------------------------------------------------------------------------ |
-| `name`             | Short text     | Nome interno                                                             |
-| `title`            | Short text     | Título visível + fonte do slug                                           |
-| `resume`           | Short text     | Resumo no card + fallback de meta description                            |
-| `meta_description` | Short text     | SEO (`<meta name="description">` e Open Graph)                           |
-| `caption`          | Short text     | Legenda opcional                                                         |
-| `content`          | Rich Text      | Renderizado por `RichTextRenderer`                                       |
-| `coverImage`       | Asset (imagem) | Servido pelo CDN `images.ctfassets.net` (registrado em `next.config.ts`) |
+| Campo              | Tipo           | Obs                                                                                                               |
+| ------------------ | -------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `name`             | Short text     | Nome interno                                                                                                      |
+| `title`            | Short text     | Título visível + fonte do slug                                                                                    |
+| `resume`           | Short text     | Resumo no card + fallback de meta description                                                                     |
+| `meta_description` | Short text     | SEO (`<meta name="description">` e Open Graph)                                                                    |
+| `caption`          | Short text     | Legenda opcional                                                                                                  |
+| `content`          | Rich Text      | Renderizado por `RichTextRenderer`                                                                                |
+| `coverImage`       | Asset (imagem) | Servido pelo CDN `images.ctfassets.net` (registrado em `next.config.ts`)                                          |
 | `*_en` / `*_es`    | Mesmos tipos   | Versões traduzidas opcionais de `title`, `resume`, `meta_description`, `caption`, `content`. Vazio = fallback PT. |
 
 ### Content type `frequentQuestions` (campos)
 
-| Campo                       | Tipo       | Obs                                |
-| --------------------------- | ---------- | ---------------------------------- |
-| `question`                  | Short text | Pergunta (PT)                      |
-| `answer`                    | Long text  | Resposta (PT)                      |
-| `question_en` / `question_es` | Short text | Tradução opcional da pergunta      |
-| `answer_en` / `answer_es`   | Long text  | Tradução opcional da resposta      |
+| Campo                         | Tipo       | Obs                           |
+| ----------------------------- | ---------- | ----------------------------- |
+| `question`                    | Short text | Pergunta (PT)                 |
+| `answer`                      | Long text  | Resposta (PT)                 |
+| `question_en` / `question_es` | Short text | Tradução opcional da pergunta |
+| `answer_en` / `answer_es`     | Long text  | Tradução opcional da resposta |
 
 ### Pontos importantes
 
@@ -212,5 +212,4 @@ Contentful (Delivery API) → src/lib/contentful.ts → transform-entry.ts → B
 npm run dev          # Dev com Turbopack
 npm run fetch-images # Atualiza image-cache.json a partir do UploadThing
 npm run build        # Roda fetch-images antes e depois faz o build Next.js
-npm run prettier     # Formata todos os arquivos
 ```
